@@ -1,0 +1,9 @@
+{
+    "PandaBoard": {
+        "comment":	"Dummy test configuration for PandaBoard",
+        "id":		"PandaBoard",
+        "driver":	"PandaBoard",
+        "name":		"PandaBoard",
+        "longname":	"PandaBoard"
+    }
+}

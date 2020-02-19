@@ -1,0 +1,537 @@
+
+!!################################
+!!ALSA Information Script v 0.4.64
+!!################################
+
+!!Script ran on: Wed May  1 11:01:00 UTC 2019
+
+
+!!Linux Distribution
+!!------------------
+
+Ubuntu 19.04 \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 19.04" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 19.04" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=disco
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      Dell Inc.
+Product Name:      XPS 13 9370
+Product Version:   
+Firmware Version:  1.8.1
+Board Vendor:      Dell Inc.
+Board Name:        0F6P3V
+
+
+!!ACPI Device Status Information
+!!---------------
+
+/sys/bus/acpi/devices/ACPI0003:00/status 	 15
+/sys/bus/acpi/devices/ACPI000C:00/status 	 15
+/sys/bus/acpi/devices/DELL07E6:00/status 	 15
+/sys/bus/acpi/devices/DLLK07E6:00/status 	 15
+/sys/bus/acpi/devices/ELAN24F0:00/status 	 15
+/sys/bus/acpi/devices/INT0E0C:00/status 	 15
+/sys/bus/acpi/devices/INT33A1:00/status 	 15
+/sys/bus/acpi/devices/INT33D5:00/status 	 15
+/sys/bus/acpi/devices/INT3400:00/status 	 15
+/sys/bus/acpi/devices/INT3403:00/status 	 15
+/sys/bus/acpi/devices/INT3403:01/status 	 15
+/sys/bus/acpi/devices/INT3403:02/status 	 15
+/sys/bus/acpi/devices/INT3403:03/status 	 15
+/sys/bus/acpi/devices/INT3403:04/status 	 15
+/sys/bus/acpi/devices/INT3403:05/status 	 15
+/sys/bus/acpi/devices/INT340E:00/status 	 15
+/sys/bus/acpi/devices/INT344B:00/status 	 15
+/sys/bus/acpi/devices/INT3F0D:00/status 	 15
+/sys/bus/acpi/devices/LNXPOWER:00/status 	 1
+/sys/bus/acpi/devices/MSFT0101:00/status 	 15
+/sys/bus/acpi/devices/PNP0103:00/status 	 15
+/sys/bus/acpi/devices/PNP0C02:03/status 	 3
+/sys/bus/acpi/devices/PNP0C02:05/status 	 3
+/sys/bus/acpi/devices/PNP0C09:00/status 	 15
+/sys/bus/acpi/devices/PNP0C0A:00/status 	 31
+/sys/bus/acpi/devices/PNP0C0F:00/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:01/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:02/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:03/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:04/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:05/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:06/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:07/status 	 9
+/sys/bus/acpi/devices/USBC000:00/status 	 15
+/sys/bus/acpi/devices/device:09/status 	 15
+/sys/bus/acpi/devices/device:66/status 	 15
+/sys/bus/acpi/devices/device:77/status 	 11
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.0.0-13-generic
+Operating System:  GNU/Linux
+Architecture:      x86_64
+Processor:         x86_64
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.0.0-13-generic
+Library version:    1.1.8
+Utilities version:  1.1.8
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+snd_usb_audio
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 1 [Dock           ]: USB-Audio - WD15 Dock
+                      Dell-WD15-Dock
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:1f.3 Audio device: Intel Corporation Sunrise Point-LP HD Audio (rev 21)
+
+
+!!Advanced information - PCI Vendor/Device/Subsystem ID's
+!!-------------------------------------------------------
+
+00:1f.3 0403: 8086:9d71 (rev 21) (prog-if 80)
+	Subsystem: 1028:07e6
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_usb_audio: index=-2
+snd_usb_caiaq: index=-2
+snd_usb_ua101: index=-2
+snd_usb_us122l: index=-2
+snd_usb_usx2y: index=-2
+snd_cmipci: mpu_port=0x330 fm_port=0x388
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: snd_usb_audio
+	autoclock : Y
+	device_setup : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	enable : Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+	id : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	ignore_ctl_error : N
+	index : -2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	pid : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	quirk_alias : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	use_vmalloc : Y
+	vid : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+
+
+!!USB Mixer information
+!!---------------------
+--startcollapse--
+
+USB Mixer: usb_id=0x0bda4014, ctrlif=0, ctlerr=0
+Card: Dell-WD15-Dock
+  Unit: 3
+    Control: name="Loudness", index=0
+    Info: id=3, control=10, cmask=0x0, channels=1, type="BOOLEAN"
+    Volume: min=0, max=1, dBmin=0, dBmax=0
+  Unit: 3
+    Control: name="Mic Capture Volume", index=0
+    Info: id=3, control=2, cmask=0x3, channels=2, type="S16"
+    Volume: min=-8576, max=7680, dBmin=-3350, dBmax=3000
+  Unit: 3
+    Control: name="Mic Capture Switch", index=0
+    Info: id=3, control=1, cmask=0x0, channels=1, type="INV_BOOLEAN"
+    Volume: min=0, max=1, dBmin=0, dBmax=0
+--endcollapse--
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----  1 root audio 116,  5 May  1 11:51 /dev/snd/controlC1
+crw-rw----  1 root audio 116,  3 May  1 11:52 /dev/snd/pcmC1D0c
+crw-rw----  1 root audio 116,  2 May  1 11:58 /dev/snd/pcmC1D0p
+crw-rw----  1 root audio 116,  4 May  1 11:52 /dev/snd/pcmC1D1p
+crw-rw----  1 root audio 116,  1 May  1 11:51 /dev/snd/seq
+crw-rw----  1 root audio 116, 33 May  1 11:51 /dev/snd/timer
+
+/dev/snd/by-id:
+total 0
+drwxr-xr-x 2 root root  60 May  1 11:51 .
+drwxr-xr-x 4 root root 200 May  1 11:51 ..
+lrwxrwxrwx 1 root root  12 May  1 11:51 usb-Generic_USB_Audio_200901010001-00 -> ../controlC1
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 May  1 11:51 .
+drwxr-xr-x 4 root root 200 May  1 11:51 ..
+lrwxrwxrwx 1 root root  12 May  1 11:51 pci-0000:00:14.0-usb-0:1.5:1.0 -> ../controlC1
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 1: Dock [WD15 Dock], device 0: USB Audio [USB Audio]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+card 1: Dock [WD15 Dock], device 1: USB Audio [USB Audio #1]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 1: Dock [WD15 Dock], device 0: USB Audio [USB Audio]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card 1 [Dock]
+
+Card hw:1 'Dock'/'Dell-WD15-Dock'
+  Mixer name	: 'USB Mixer'
+  Components	: 'USB0bda:4014'
+  Controls      : 7
+  Simple ctrls  : 2
+Simple mixer control 'Mic',0
+  Capabilities: cvolume cswitch cswitch-joined
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 127
+  Front Left: Capture 67 [53%] [0.00dB] [on]
+  Front Right: Capture 67 [53%] [0.00dB] [on]
+Simple mixer control 'Loudness',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.Dock {
+	control.1 {
+		iface PCM
+		name 'Capture Channel Map'
+		value.0 3
+		value.1 4
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.2 {
+		iface PCM
+		name 'Playback Channel Map'
+		value.0 3
+		value.1 4
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.3 {
+		iface PCM
+		device 1
+		name 'Playback Channel Map'
+		value.0 3
+		value.1 4
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Mic Capture Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Mic Capture Volume'
+		value.0 67
+		value.1 67
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 127'
+			dbmin -3350
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name Loudness
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.7 {
+		iface CARD
+		name 'Keep Interface'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+Module
+thunderbolt
+rfcomm
+msr
+ipt_MASQUERADE
+nf_conntrack_netlink
+xfrm_user
+xfrm_algo
+iptable_nat
+nf_nat_ipv4
+xt_addrtype
+iptable_filter
+bpfilter
+xt_conntrack
+nf_nat
+br_netfilter
+bridge
+stp
+llc
+overlay
+aufs
+ccm
+cdc_ether
+usbnet
+snd_usb_audio
+r8152
+mii
+snd_usbmidi_lib
+ebtable_nat
+nf_conntrack
+nf_defrag_ipv6
+nf_defrag_ipv4
+libcrc32c
+cmac
+bnep
+ip_set
+nfnetlink
+ebtable_filter
+ebtables
+btusb
+btrtl
+btbcm
+btintel
+bluetooth
+uvcvideo
+videobuf2_vmalloc
+videobuf2_memops
+videobuf2_v4l2
+videobuf2_common
+ecdh_generic
+videodev
+media
+cdc_acm
+binfmt_misc
+arc4
+nls_iso8859_1
+joydev
+intel_rapl
+x86_pkg_temp_thermal
+intel_powerclamp
+coretemp
+kvm_intel
+dell_laptop
+ledtrig_audio
+crct10dif_pclmul
+crc32_pclmul
+ghash_clmulni_intel
+snd_soc_skl
+input_leds
+snd_soc_hdac_hda
+snd_hda_ext_core
+snd_soc_skl_ipc
+snd_soc_sst_ipc
+snd_soc_sst_dsp
+snd_soc_acpi_intel_match
+snd_soc_acpi
+dell_wmi
+snd_soc_core
+dell_smbios
+dcdbas
+snd_compress
+ac97_bus
+snd_pcm_dmaengine
+snd_hda_intel
+snd_hda_codec
+dell_wmi_descriptor
+wmi_bmof
+snd_hda_core
+snd_hwdep
+intel_wmi_thunderbolt
+snd_pcm
+aesni_intel
+snd_seq_midi
+snd_seq_midi_event
+aes_x86_64
+crypto_simd
+cryptd
+snd_rawmidi
+glue_helper
+ath10k_pci
+intel_cstate
+intel_rapl_perf
+snd_seq
+ath10k_core
+ath
+hid_multitouch
+mac80211
+snd_seq_device
+snd_timer
+rtsx_pci_ms
+serio_raw
+memstick
+cfg80211
+snd
+soundcore
+mei_me
+mei
+intel_xhci_usb_role_switch
+idma64
+virt_dma
+roles
+intel_pch_thermal
+processor_thermal_device
+intel_soc_dts_iosf
+ucsi_acpi
+typec_ucsi
+typec
+int3403_thermal
+mac_hid
+int340x_thermal_zone
+intel_hid
+int3400_thermal
+acpi_thermal_rel
+acpi_pad
+sparse_keymap
+sch_fq_codel
+parport_pc
+ppdev
+lp
+parport
+ip_tables
+x_tables
+autofs4
+usbhid
+mmc_block
+hid_generic
+i915
+kvmgt
+vfio_mdev
+mdev
+vfio_iommu_type1
+vfio
+kvm
+rtsx_pci_sdmmc
+irqbypass
+i2c_algo_bit
+drm_kms_helper
+syscopyarea
+sysfillrect
+sysimgblt
+fb_sys_fops
+rtsx_pci
+psmouse
+drm
+nvme
+i2c_i801
+nvme_core
+intel_lpss_pci
+i2c_hid
+intel_lpss
+hid
+wmi
+pinctrl_sunrisepoint
+video
+pinctrl_intel
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[    0.202462] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.202462] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.202462] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+--
+[   36.234706] AES CTR mode by8 optimization enabled
+[   36.256417] snd_hda_intel 0000:00:1f.3: enabling device (0000 -> 0002)
+[   36.257860] snd_hda_intel 0000:00:1f.3: Linked as a consumer to 0000:00:02.0
+[   36.257897] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[   36.264963] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.3)
+--
+[   36.281622] idma64 idma64.0: Found Intel integrated DMA 64-bit
+[   36.368664] snd_hda_intel 0000:00:1f.3: CORB reset timeout#1, CORBRP = 0
+[   36.370286] snd_hda_intel 0000:00:1f.3: no codecs found!
+[   36.398001] idma64 idma64.1: Found Intel integrated DMA 64-bit
+--
+[   38.142902] usbcore: registered new interface driver cdc_ether
+[   38.748092] usbcore: registered new interface driver snd-usb-audio
+[   38.821823] usb 2-1.2: reset SuperSpeed Gen 1 USB device number 3 using xhci_hcd
+
+

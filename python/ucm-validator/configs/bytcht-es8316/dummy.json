@@ -1,0 +1,32 @@
+{
+    "bytcht-es8316-1": {
+        "comment":	"Dummy test configuration for bytcht-es8316",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316",
+        "components":	"cfg-spk:1 cfg-mic:in1"
+    },
+    "bytcht-es8316-2": {
+        "comment":	"Dummy test configuration for bytcht-es8316",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316-mono-spk-in1-mic"
+    },
+    "bytcht-es8316-3": {
+        "comment":	"Dummy test configuration for bytcht-es8316",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316",
+        "components":	"cfg-spk:2 cfg-mic:in2"
+    },
+    "bytcht-es8316-4": {
+        "comment":	"Dummy test configuration for bytcht-es8316",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316-stereo-spk-in2-mic"
+    }
+}

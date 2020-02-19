@@ -1,0 +1,20 @@
+{
+    "skylake-rt286-1": {
+        "comment":	"Dummy test configuration for skylake-rt286",
+        "id":		"skl-rt286-1",
+        "driver":	"skylake-rt286",
+        "name":		"skylake-rt286",
+        "longname":	"skylake-rt286"
+    },
+    "skylake-rt286-2": {
+        "comment":	"Dummy test configuration for skylake-rt286",
+        "id":		"skl-rt286-2",
+        "driver":	"skylake-rt286",
+        "name":		"skylake-rt286",
+        "longname":	"skylake-rt286",
+        "control": [
+            { "id": "iface=CARD,name='HDMI/DP,pcm=4 Jack'" },
+            { "id": "iface=CARD,name='HDMI/DP,pcm=5 Jack'" }
+        ]
+    }
+}

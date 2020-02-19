@@ -1,0 +1,14 @@
+{
+    "sof-hda-dsp-1": {
+        "comment":	"Dummy test configuration for sof-hda-dsp",
+        "id":		"sof-hda-dsp",
+        "driver":	"sof-hda-dsp",
+        "name":		"sof-hda-dsp",
+        "longname":	"sof-hda-dsp",
+        "components":   "cfg-dmics:2",
+        "control": [
+            { "id": "iface=CARD,name='Headphone Mic Jack'" },
+            { "id": "name='Input Source'" }
+        ]
+    }
+}

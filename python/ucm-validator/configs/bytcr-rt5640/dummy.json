@@ -1,0 +1,47 @@
+{
+    "bytcr-rt5640-1": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:1 cfg-mic:dmic1"
+    },
+    "bytcr-rt5640-2": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640-mono-spk-dmic1-mic"
+    },
+    "bytcr-rt5640-3": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:dmic1"
+    },
+    "bytcr-rt5640-4": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640-stereo-spk-dmic1-mic"
+    },
+    "bytcr-rt5640-5": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in1"
+    },
+    "bytcr-rt5640-6": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640-stereo-spk-in1-mic"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "GoogleNyan": {
+        "comment":	"Dummy test configuration for GoogleNyan",
+        "id":		"GoogleNyan",
+        "driver":	"GoogleNyan",
+        "name":		"GoogleNyan",
+        "longname":	"GoogleNyan"
+    }
+}

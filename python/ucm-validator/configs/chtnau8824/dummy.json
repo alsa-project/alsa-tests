@@ -1,0 +1,9 @@
+{
+    "chtnau8824-1": {
+        "comment":	"Dummy test configuration for chtnau8824",
+        "id":		"chtnau8824",
+        "driver":	"chtnau8824",
+        "name":		"chtnau8824",
+        "longname":	"chtnau8824-mono"
+    }
+}

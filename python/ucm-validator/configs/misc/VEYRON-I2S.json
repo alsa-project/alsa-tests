@@ -1,0 +1,9 @@
+{
+    "VEYRON-I2S": {
+        "comment":	"Dummy test configuration for VEYRON-I2S",
+        "id":		"VEYRON-I2S",
+        "driver":	"VEYRON-I2S",
+        "name":		"VEYRON-I2S",
+        "longname":	"VEYRON-I2S"
+    }
+}

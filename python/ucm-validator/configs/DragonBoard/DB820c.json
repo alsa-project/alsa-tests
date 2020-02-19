@@ -1,0 +1,9 @@
+{
+    "DB820c": {
+        "comment":	"Dummy test configuration for DB820c",
+        "id":		"DB820c",
+        "driver":	"DB820c",
+        "name":		"DB820c",
+        "longname":	"DB820c"
+    }
+}

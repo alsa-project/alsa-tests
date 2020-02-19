@@ -1,0 +1,23 @@
+{
+    "HDAudio1": {
+        "comment":	"Dummy test configuration for HDAudio-Codecs-DualCodecs",
+        "id":		"HDual1",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-DualCodecs"
+    },
+    "HDAudio2": {
+        "comment":	"Dummy test configuration for HDAudio-Lenovo-DualCodecs",
+        "id":		"HDual2",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-Lenovo-DualCodecs"
+    },
+    "HDAudio3": {
+        "comment":	"Dummy test configuration for HDAudio-Gigabyte-ALC1220DualCodecs",
+        "id":		"HDual3",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-Gigabyte-ALC1220DualCodecs"
+    }
+}

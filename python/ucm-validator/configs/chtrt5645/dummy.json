@@ -1,0 +1,30 @@
+{
+    "chtrt5645-1": {
+        "comment":	"Dummy test configuration for chtrt5645",
+        "id":		"chtrt5645",
+        "driver":	"chtrt5645",
+        "name":		"chtrt5645",
+        "longname":	"chtrt5645"
+    },
+    "chtrt5645-2": {
+        "comment":	"Dummy test configuration for chtrt5645",
+        "id":		"chtrt5645",
+        "driver":	"chtrt5645",
+        "name":		"chtrt5645",
+        "longname":	"chtrt5645-dmic1"
+    },
+    "chtrt5645-3": {
+        "comment":	"Dummy test configuration for chtrt5645",
+        "id":		"chtrt5645",
+        "driver":	"chtrt5645",
+        "name":		"chtrt5645",
+        "longname":	"chtrt5645-dmic2"
+    },
+    "chtrt5645-4": {
+        "comment":	"Dummy test configuration for chtrt5645",
+        "id":		"chtrt5645",
+        "driver":	"chtrt5645",
+        "name":		"chtrt5645",
+        "longname":	"chtrt5645-mono-speaker-analog-mic"
+    }
+}

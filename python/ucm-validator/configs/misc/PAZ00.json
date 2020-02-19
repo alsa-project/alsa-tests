@@ -1,0 +1,9 @@
+{
+    "PAZ00": {
+        "comment":	"Dummy test configuration for PAZ00",
+        "id":		"PAZ00",
+        "driver":	"PAZ00",
+        "name":		"PAZ00",
+        "longname":	"PAZ00"
+    }
+}

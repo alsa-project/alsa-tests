@@ -1,0 +1,3444 @@
+
+!!################################
+!!ALSA Information Script v 0.4.64
+!!################################
+
+!!Script ran on: Fri Jul 27 16:59:33 UTC 2018
+
+
+!!Linux Distribution
+!!------------------
+
+Ubuntu 18.04.1 LTS \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 18.04.1 LTS" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 18.04.1 LTS" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=bionic
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      RCA
+Product Name:      W101-CS
+Product Version:   Default string
+Firmware Version:  BSR2EMUS-WT9S10-RCA-V05M_X32
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    4.18.0-041800rc6-generic
+Operating System:  GNU/Linux
+Architecture:      x86_64
+Processor:         x86_64
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k4.18.0-041800rc6-generic
+Library version:    1.1.3
+Utilities version:  1.1.3
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+snd_soc_sst_cht_bsw_nau8824
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [chtnau8824     ]: chtnau8824 - chtnau8824
+                      RCA-W101_CS-Defaultstring-WT9S10WM00
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:03.0 Multimedia controller: Intel Corporation Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series Imaging Unit (rev 36)
+
+
+!!Advanced information - PCI Vendor/Device/Subsystem ID's
+!!-------------------------------------------------------
+
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_usb_audio: index=-2
+snd_usb_caiaq: index=-2
+snd_usb_ua101: index=-2
+snd_usb_us122l: index=-2
+snd_usb_usx2y: index=-2
+snd_cmipci: mpu_port=0x330 fm_port=0x388
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: snd_soc_sst_cht_bsw_nau8824
+	* : 
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----  1 root audio 116,  5 Jul 27 12:24 /dev/snd/comprC0D2
+crw-rw----  1 root audio 116,  6 Jul 27 12:24 /dev/snd/controlC0
+crw-rw----  1 root audio 116,  3 Jul 27 12:51 /dev/snd/pcmC0D0c
+crw-rw----  1 root audio 116,  2 Jul 27 12:51 /dev/snd/pcmC0D0p
+crw-rw----  1 root audio 116,  4 Jul 27 12:24 /dev/snd/pcmC0D1p
+crw-rw----  1 root audio 116,  1 Jul 27 12:24 /dev/snd/seq
+crw-rw----  1 root audio 116, 33 Jul 27 12:24 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jul 27 12:24 .
+drwxr-xr-x 3 root root 200 Jul 27 12:24 ..
+lrwxrwxrwx 1 root root  12 Jul 27 12:24 platform-cht-bsw-nau8824 -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: chtnau8824 [chtnau8824], device 0: Audio (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: chtnau8824 [chtnau8824], device 1: Deep-Buffer Audio (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: chtnau8824 [chtnau8824], device 0: Audio (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card 0 [chtnau8824]
+
+Card hw:0 'chtnau8824'/'RCA-W101_CS-Defaultstring-WT9S10WM00'
+  Mixer name	: ''
+  Components	: ''
+  Controls      : 205
+  Simple ctrls  : 176
+Simple mixer control 'Headphone',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Headphone Left DACL',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [0.00dB]
+Simple mixer control 'Headphone Left DACR',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [0.00dB]
+Simple mixer control 'Headphone Right DACL',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [0.00dB]
+Simple mixer control 'Headphone Right DACR',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [0.00dB]
+Simple mixer control 'Speaker Left DACL',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [24.00dB]
+Simple mixer control 'Speaker Left DACR',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [24.00dB]
+Simple mixer control 'Speaker Right DACL',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [24.00dB]
+Simple mixer control 'Speaker Right DACR',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%] [24.00dB]
+Simple mixer control 'ADC CH0 Select',0
+  Capabilities: enum
+  Items: 'Input CH0' 'Input CH1' 'Input CH2' 'Input CH3'
+  Item0: 'Input CH3'
+Simple mixer control 'ADC CH0 TX',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ADC CH1 Select',0
+  Capabilities: enum
+  Items: 'Input CH0' 'Input CH1' 'Input CH2' 'Input CH3'
+  Item0: 'Input CH0'
+Simple mixer control 'ADC CH1 TX',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ADC CH2 Select',0
+  Capabilities: enum
+  Items: 'Input CH0' 'Input CH1' 'Input CH2' 'Input CH3'
+  Item0: 'Input CH0'
+Simple mixer control 'ADC CH2 TX',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ADC CH3 Select',0
+  Capabilities: enum
+  Items: 'Input CH0' 'Input CH1' 'Input CH2' 'Input CH3'
+  Item0: 'Input CH0'
+Simple mixer control 'ADC CH3 TX',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ADC Companding',0
+  Capabilities: enum
+  Items: 'Off' 'NC' 'u-law' 'A-law'
+  Item0: 'Off'
+Simple mixer control 'ADC Decimation Rate',0
+  Capabilities: enum
+  Items: '32' '64' '128' '256'
+  Item0: '64'
+Simple mixer control 'DAC Companding',0
+  Capabilities: enum
+  Items: 'Off' 'NC' 'u-law' 'A-law'
+  Item0: 'Off'
+Simple mixer control 'DAC Oversampling Rate',0
+  Capabilities: enum
+  Items: '64' '256' '128' '' '32'
+  Item0: '64'
+Simple mixer control 'DACL Channel Source',0
+  Capabilities: enum
+  Items: 'Slot 0' 'Slot 1' 'Slot 2' 'Slot 3'
+  Item0: 'Slot 0'
+Simple mixer control 'DACL LR Mix',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DACL Mux',0
+  Capabilities: enum
+  Items: 'DACL' 'DACR'
+  Item0: 'DACL'
+Simple mixer control 'DACR Channel Source',0
+  Capabilities: enum
+  Items: 'Slot 0' 'Slot 1' 'Slot 2' 'Slot 3'
+  Item0: 'Slot 1'
+Simple mixer control 'DACR LR Mix',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DACR Mux',0
+  Capabilities: enum
+  Items: 'DACL' 'DACR'
+  Item0: 'DACR'
+Simple mixer control 'DMIC1',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 356
+  Mono: 356 [100%] [50.00dB]
+Simple mixer control 'DMIC1 Enable',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DMIC2',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 356
+  Mono: 356 [100%] [50.00dB]
+Simple mixer control 'DMIC2 Enable',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'DMIC3',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 356
+  Mono: 356 [100%] [50.00dB]
+Simple mixer control 'DMIC3 Enable',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'DMIC4',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 356
+  Mono: 356 [100%] [50.00dB]
+Simple mixer control 'DMIC4 Enable',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Ext Spk',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Headset Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Int Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Left ADC HSMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left ADC MIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Left Headphone DAC Left',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Left Headphone DAC Right',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'MIC1',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 18
+  Mono: 18 [100%] [36.00dB]
+Simple mixer control 'MIC2',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 18
+  Mono: 18 [100%] [36.00dB]
+Simple mixer control 'Right ADC HSMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right ADC MIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right Headphone DAC Left',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right Headphone DAC Right',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'THD for key media',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 255
+  Mono: 250 [98%]
+Simple mixer control 'THD for key voice command',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 255
+  Mono: 255 [100%]
+Simple mixer control 'THD for key volume down',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 255
+  Mono: 255 [100%]
+Simple mixer control 'THD for key volume up',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 255
+  Mono: 255 [100%]
+Simple mixer control 'codec_in rx deinterleaver codec_in0_0',0
+  Capabilities: enum
+  Items: 'none' 'slot 0' 'slot 1' 'slot 2' 'slot 3'
+  Item0: 'slot 1'
+Simple mixer control 'codec_in rx deinterleaver codec_in0_1',0
+  Capabilities: enum
+  Items: 'none' 'slot 0' 'slot 1' 'slot 2' 'slot 3'
+  Item0: 'slot 1'
+Simple mixer control 'codec_in rx deinterleaver codec_in1_0',0
+  Capabilities: enum
+  Items: 'none' 'slot 0' 'slot 1' 'slot 2' 'slot 3'
+  Item0: 'slot 2'
+Simple mixer control 'codec_in rx deinterleaver codec_in1_1',0
+  Capabilities: enum
+  Items: 'none' 'slot 0' 'slot 1' 'slot 2' 'slot 3'
+  Item0: 'slot 3'
+Simple mixer control 'codec_in0 Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: 360 [100%] [36.00dB] Playback [on]
+  Front Right: 360 [100%] [36.00dB] Playback [on]
+Simple mixer control 'codec_in0 Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5000 [100%]
+Simple mixer control 'codec_in1 Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: 360 [100%] [36.00dB] Playback [on]
+  Front Right: 360 [100%] [36.00dB] Playback [on]
+Simple mixer control 'codec_in1 Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5000 [100%]
+Simple mixer control 'codec_out tx interleaver slot 0',0
+  Capabilities: enum
+  Items: 'none' 'codec_out0_0' 'codec_out0_1' 'codec_out1_0' 'codec_out1_1'
+  Item0: 'codec_out0_0'
+Simple mixer control 'codec_out tx interleaver slot 1',0
+  Capabilities: enum
+  Items: 'none' 'codec_out0_0' 'codec_out0_1' 'codec_out1_0' 'codec_out1_1'
+  Item0: 'codec_out0_1'
+Simple mixer control 'codec_out tx interleaver slot 2',0
+  Capabilities: enum
+  Items: 'none' 'codec_out0_0' 'codec_out0_1' 'codec_out1_0' 'codec_out1_1'
+  Item0: 'codec_out1_0'
+Simple mixer control 'codec_out tx interleaver slot 3',0
+  Capabilities: enum
+  Items: 'none' 'codec_out0_0' 'codec_out0_1' 'codec_out1_0' 'codec_out1_1'
+  Item0: 'codec_out1_1'
+Simple mixer control 'codec_out0 Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'codec_out0 Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'codec_out0 mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out0 mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'codec_out1 Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'codec_out1 mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'codec_out1 mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media0_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media0_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media0_in Volume 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media0_in Volume 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media0_out mix 0 media0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media0_out mix 0 media1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media0_out mix 0 media2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media0_out mix 0 media3_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media1_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media1_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media1_out mix 0 media0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media1_out mix 0 media1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media1_out mix 0 media2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media1_out mix 0 media3_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media2_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media2_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media3_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media3_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media_loop1_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media_loop1_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media_loop1_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop1_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'media_loop2_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'media_loop2_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'media_loop2_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'modem_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'modem_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'modem_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'modem_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'modem_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'pcm0_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'pcm0_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm0_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_in Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'pcm1_in Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'pcm1_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'pcm1_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'pcm1_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm1_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: 360 [100%] [36.00dB] Playback [off]
+  Front Right: 360 [100%] [36.00dB] Playback [off]
+Simple mixer control 'pcm2_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'pcm2_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'pcm2_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out Gain 0',0
+  Capabilities: volume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: -1440 - 360
+  Front Left: -1440 [0%] [-144.00dB] Playback [off]
+  Front Right: -1440 [0%] [-144.00dB] Playback [off]
+Simple mixer control 'sprot_loop_out Gain 0 Ramp Delay',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 5 - 5000
+  Mono: 5 [0%]
+Simple mixer control 'sprot_loop_out mix 0 codec_in0',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 codec_in1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 media_loop1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 media_loop2_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 modem_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 pcm0_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 pcm1_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'sprot_loop_out mix 0 sprot_loop_in',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.chtnau8824 {
+	control.1 {
+		iface MIXER
+		name 'media0_out mix 0 media0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'media0_out mix 0 media1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'media0_out mix 0 media2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'media0_out mix 0 media3_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'media1_out mix 0 media0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'media1_out mix 0 media1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'media1_out mix 0 media2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'media1_out mix 0 media3_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'pcm0_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'pcm0_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'pcm0_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'pcm0_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'pcm0_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'pcm0_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'pcm0_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'pcm0_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'pcm1_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'pcm1_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'pcm1_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'pcm1_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'pcm1_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'pcm1_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'pcm1_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'pcm1_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'pcm2_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'pcm2_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'pcm2_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'pcm2_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'pcm2_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'pcm2_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'pcm2_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'pcm2_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'sprot_loop_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'media_loop1_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'media_loop1_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'media_loop1_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'media_loop1_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'media_loop1_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'media_loop1_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'media_loop1_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'media_loop1_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.49 {
+		iface MIXER
+		name 'media_loop2_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.50 {
+		iface MIXER
+		name 'media_loop2_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.51 {
+		iface MIXER
+		name 'media_loop2_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.52 {
+		iface MIXER
+		name 'media_loop2_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.53 {
+		iface MIXER
+		name 'media_loop2_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'media_loop2_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'media_loop2_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'media_loop2_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'codec_out0 mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'codec_out0 mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'codec_out0 mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.60 {
+		iface MIXER
+		name 'codec_out0 mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'codec_out0 mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'codec_out0 mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'codec_out0 mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'codec_out0 mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'codec_out1 mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'codec_out1 mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'codec_out1 mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.68 {
+		iface MIXER
+		name 'codec_out1 mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.69 {
+		iface MIXER
+		name 'codec_out1 mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.70 {
+		iface MIXER
+		name 'codec_out1 mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.71 {
+		iface MIXER
+		name 'codec_out1 mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.72 {
+		iface MIXER
+		name 'codec_out1 mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.73 {
+		iface MIXER
+		name 'modem_out mix 0 modem_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.74 {
+		iface MIXER
+		name 'modem_out mix 0 codec_in0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.75 {
+		iface MIXER
+		name 'modem_out mix 0 codec_in1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.76 {
+		iface MIXER
+		name 'modem_out mix 0 sprot_loop_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.77 {
+		iface MIXER
+		name 'modem_out mix 0 media_loop1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.78 {
+		iface MIXER
+		name 'modem_out mix 0 media_loop2_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.79 {
+		iface MIXER
+		name 'modem_out mix 0 pcm0_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.80 {
+		iface MIXER
+		name 'modem_out mix 0 pcm1_in Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.81 {
+		iface MIXER
+		name 'media0_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.82 {
+		iface MIXER
+		name 'media0_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.83 {
+		iface MIXER
+		name 'media0_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.84 {
+		iface MIXER
+		name 'media1_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.85 {
+		iface MIXER
+		name 'media1_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.86 {
+		iface MIXER
+		name 'media1_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.87 {
+		iface MIXER
+		name 'media2_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.88 {
+		iface MIXER
+		name 'media2_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.89 {
+		iface MIXER
+		name 'media2_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.90 {
+		iface MIXER
+		name 'media3_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.91 {
+		iface MIXER
+		name 'media3_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.92 {
+		iface MIXER
+		name 'media3_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.93 {
+		iface MIXER
+		name 'pcm0_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.94 {
+		iface MIXER
+		name 'pcm0_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.95 {
+		iface MIXER
+		name 'pcm0_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.96 {
+		iface MIXER
+		name 'pcm1_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.97 {
+		iface MIXER
+		name 'pcm1_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.98 {
+		iface MIXER
+		name 'pcm1_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.99 {
+		iface MIXER
+		name 'pcm1_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.100 {
+		iface MIXER
+		name 'pcm1_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.101 {
+		iface MIXER
+		name 'pcm1_out Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.102 {
+		iface MIXER
+		name 'pcm2_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.103 {
+		iface MIXER
+		name 'pcm2_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.104 {
+		iface MIXER
+		name 'pcm2_out Gain 0 Volume'
+		value.0 360
+		value.1 360
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 3600
+			dbvalue.1 3600
+		}
+	}
+	control.105 {
+		iface MIXER
+		name 'codec_in0 Gain 0 Ramp Delay'
+		value 5000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.106 {
+		iface MIXER
+		name 'codec_in0 Gain 0 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.107 {
+		iface MIXER
+		name 'codec_in0 Gain 0 Volume'
+		value.0 360
+		value.1 360
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 3600
+			dbvalue.1 3600
+		}
+	}
+	control.108 {
+		iface MIXER
+		name 'codec_in1 Gain 0 Ramp Delay'
+		value 5000
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.109 {
+		iface MIXER
+		name 'codec_in1 Gain 0 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.110 {
+		iface MIXER
+		name 'codec_in1 Gain 0 Volume'
+		value.0 360
+		value.1 360
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 3600
+			dbvalue.1 3600
+		}
+	}
+	control.111 {
+		iface MIXER
+		name 'codec_out0 Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.112 {
+		iface MIXER
+		name 'codec_out0 Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.113 {
+		iface MIXER
+		name 'codec_out0 Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.114 {
+		iface MIXER
+		name 'codec_out1 Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.115 {
+		iface MIXER
+		name 'codec_out1 Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.116 {
+		iface MIXER
+		name 'codec_out1 Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.117 {
+		iface MIXER
+		name 'media_loop1_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.118 {
+		iface MIXER
+		name 'media_loop1_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.119 {
+		iface MIXER
+		name 'media_loop1_out Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.120 {
+		iface MIXER
+		name 'media_loop2_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.121 {
+		iface MIXER
+		name 'media_loop2_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.122 {
+		iface MIXER
+		name 'media_loop2_out Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.123 {
+		iface MIXER
+		name 'sprot_loop_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.124 {
+		iface MIXER
+		name 'sprot_loop_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.125 {
+		iface MIXER
+		name 'sprot_loop_out Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.126 {
+		iface MIXER
+		name 'media0_in Volume 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.127 {
+		iface MIXER
+		name 'media0_in Volume 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.128 {
+		iface MIXER
+		name 'media0_in Volume 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.129 {
+		iface MIXER
+		name 'modem_in Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.130 {
+		iface MIXER
+		name 'modem_in Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.131 {
+		iface MIXER
+		name 'modem_in Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.132 {
+		iface MIXER
+		name 'modem_out Gain 0 Ramp Delay'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '5 - 5000'
+		}
+	}
+	control.133 {
+		iface MIXER
+		name 'modem_out Gain 0 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.134 {
+		iface MIXER
+		name 'modem_out Gain 0 Volume'
+		value.0 -1440
+		value.1 -1440
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '-1440 - 360'
+			dbmin -14400
+			dbmax 3600
+			dbvalue.0 -14400
+			dbvalue.1 -14400
+		}
+	}
+	control.135 {
+		iface MIXER
+		name 'media_loop1_out fir 0 params'
+		value '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 274
+		}
+	}
+	control.136 {
+		iface MIXER
+		name 'media_loop1_out iir 0 params'
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 302
+		}
+	}
+	control.137 {
+		iface MIXER
+		name 'media_loop1_out mdrp 0 params'
+		value '000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 288
+		}
+	}
+	control.138 {
+		iface MIXER
+		name 'media_loop2_out fir 0 params'
+		value '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 274
+		}
+	}
+	control.139 {
+		iface MIXER
+		name 'media_loop2_out iir 0 params'
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 302
+		}
+	}
+	control.140 {
+		iface MIXER
+		name 'media_loop2_out mdrp 0 params'
+		value '000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 288
+		}
+	}
+	control.141 {
+		iface MIXER
+		name 'sprot_loop_out lpro 0 params'
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 194
+		}
+	}
+	control.142 {
+		iface MIXER
+		name 'codec_in0 dcr 0 params'
+		value '000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 54
+		}
+	}
+	control.143 {
+		iface MIXER
+		name 'codec_in1 dcr 0 params'
+		value '000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type BYTES
+			count 54
+		}
+	}
+	control.144 {
+		iface MIXER
+		name 'codec_out tx interleaver slot 0'
+		value codec_out0_0
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 codec_out0_0
+			item.2 codec_out0_1
+			item.3 codec_out1_0
+			item.4 codec_out1_1
+		}
+	}
+	control.145 {
+		iface MIXER
+		name 'codec_out tx interleaver slot 1'
+		value codec_out0_1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 codec_out0_0
+			item.2 codec_out0_1
+			item.3 codec_out1_0
+			item.4 codec_out1_1
+		}
+	}
+	control.146 {
+		iface MIXER
+		name 'codec_out tx interleaver slot 2'
+		value codec_out1_0
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 codec_out0_0
+			item.2 codec_out0_1
+			item.3 codec_out1_0
+			item.4 codec_out1_1
+		}
+	}
+	control.147 {
+		iface MIXER
+		name 'codec_out tx interleaver slot 3'
+		value codec_out1_1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 codec_out0_0
+			item.2 codec_out0_1
+			item.3 codec_out1_0
+			item.4 codec_out1_1
+		}
+	}
+	control.148 {
+		iface MIXER
+		name 'codec_in rx deinterleaver codec_in0_0'
+		value 'slot 1'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 'slot 0'
+			item.2 'slot 1'
+			item.3 'slot 2'
+			item.4 'slot 3'
+		}
+	}
+	control.149 {
+		iface MIXER
+		name 'codec_in rx deinterleaver codec_in0_1'
+		value 'slot 1'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 'slot 0'
+			item.2 'slot 1'
+			item.3 'slot 2'
+			item.4 'slot 3'
+		}
+	}
+	control.150 {
+		iface MIXER
+		name 'codec_in rx deinterleaver codec_in1_0'
+		value 'slot 2'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 'slot 0'
+			item.2 'slot 1'
+			item.3 'slot 2'
+			item.4 'slot 3'
+		}
+	}
+	control.151 {
+		iface MIXER
+		name 'codec_in rx deinterleaver codec_in1_1'
+		value 'slot 3'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 none
+			item.1 'slot 0'
+			item.2 'slot 1'
+			item.3 'slot 2'
+			item.4 'slot 3'
+		}
+	}
+	control.152 {
+		iface MIXER
+		name 'ADC Companding'
+		value Off
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Off
+			item.1 NC
+			item.2 u-law
+			item.3 A-law
+		}
+	}
+	control.153 {
+		iface MIXER
+		name 'DAC Companding'
+		value Off
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Off
+			item.1 NC
+			item.2 u-law
+			item.3 A-law
+		}
+	}
+	control.154 {
+		iface MIXER
+		name 'ADC Decimation Rate'
+		value '64'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '32'
+			item.1 '64'
+			item.2 '128'
+			item.3 '256'
+		}
+	}
+	control.155 {
+		iface MIXER
+		name 'DAC Oversampling Rate'
+		value '64'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '64'
+			item.1 '256'
+			item.2 '128'
+			item.3 ''
+			item.4 '32'
+		}
+	}
+	control.156 {
+		iface MIXER
+		name 'Speaker Right DACR Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 2400
+		}
+	}
+	control.157 {
+		iface MIXER
+		name 'Speaker Left DACL Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 2400
+		}
+	}
+	control.158 {
+		iface MIXER
+		name 'Speaker Left DACR Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 2400
+		}
+	}
+	control.159 {
+		iface MIXER
+		name 'Speaker Right DACL Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 2400
+		}
+	}
+	control.160 {
+		iface MIXER
+		name 'Headphone Right DACR Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -3000
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.161 {
+		iface MIXER
+		name 'Headphone Left DACL Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -3000
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.162 {
+		iface MIXER
+		name 'Headphone Right DACL Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -3000
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.163 {
+		iface MIXER
+		name 'Headphone Left DACR Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -3000
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.164 {
+		iface MIXER
+		name 'MIC1 Volume'
+		value 18
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 18'
+			dbmin 0
+			dbmax 3600
+			dbvalue.0 3600
+		}
+	}
+	control.165 {
+		iface MIXER
+		name 'MIC2 Volume'
+		value 18
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 18'
+			dbmin 0
+			dbmax 3600
+			dbvalue.0 3600
+		}
+	}
+	control.166 {
+		iface MIXER
+		name 'DMIC1 Volume'
+		value 356
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 356'
+			dbmin -12800
+			dbmax 5000
+			dbvalue.0 5000
+		}
+	}
+	control.167 {
+		iface MIXER
+		name 'DMIC2 Volume'
+		value 356
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 356'
+			dbmin -12800
+			dbmax 5000
+			dbvalue.0 5000
+		}
+	}
+	control.168 {
+		iface MIXER
+		name 'DMIC3 Volume'
+		value 356
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 356'
+			dbmin -12800
+			dbmax 5000
+			dbvalue.0 5000
+		}
+	}
+	control.169 {
+		iface MIXER
+		name 'DMIC4 Volume'
+		value 356
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 356'
+			dbmin -12800
+			dbmax 5000
+			dbvalue.0 5000
+		}
+	}
+	control.170 {
+		iface MIXER
+		name 'ADC CH0 Select'
+		value 'Input CH3'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Input CH0'
+			item.1 'Input CH1'
+			item.2 'Input CH2'
+			item.3 'Input CH3'
+		}
+	}
+	control.171 {
+		iface MIXER
+		name 'ADC CH1 Select'
+		value 'Input CH0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Input CH0'
+			item.1 'Input CH1'
+			item.2 'Input CH2'
+			item.3 'Input CH3'
+		}
+	}
+	control.172 {
+		iface MIXER
+		name 'ADC CH2 Select'
+		value 'Input CH0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Input CH0'
+			item.1 'Input CH1'
+			item.2 'Input CH2'
+			item.3 'Input CH3'
+		}
+	}
+	control.173 {
+		iface MIXER
+		name 'ADC CH3 Select'
+		value 'Input CH0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Input CH0'
+			item.1 'Input CH1'
+			item.2 'Input CH2'
+			item.3 'Input CH3'
+		}
+	}
+	control.174 {
+		iface MIXER
+		name 'ADC CH0 TX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.175 {
+		iface MIXER
+		name 'ADC CH1 TX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.176 {
+		iface MIXER
+		name 'ADC CH2 TX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.177 {
+		iface MIXER
+		name 'ADC CH3 TX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.178 {
+		iface MIXER
+		name 'DACL Channel Source'
+		value 'Slot 0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Slot 0'
+			item.1 'Slot 1'
+			item.2 'Slot 2'
+			item.3 'Slot 3'
+		}
+	}
+	control.179 {
+		iface MIXER
+		name 'DACR Channel Source'
+		value 'Slot 1'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Slot 0'
+			item.1 'Slot 1'
+			item.2 'Slot 2'
+			item.3 'Slot 3'
+		}
+	}
+	control.180 {
+		iface MIXER
+		name 'DACL LR Mix'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.181 {
+		iface MIXER
+		name 'DACR LR Mix'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.182 {
+		iface MIXER
+		name 'THD for key media'
+		value 250
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 255'
+		}
+	}
+	control.183 {
+		iface MIXER
+		name 'THD for key voice command'
+		value 255
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 255'
+		}
+	}
+	control.184 {
+		iface MIXER
+		name 'THD for key volume up'
+		value 255
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 255'
+		}
+	}
+	control.185 {
+		iface MIXER
+		name 'THD for key volume down'
+		value 255
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 255'
+		}
+	}
+	control.186 {
+		iface CARD
+		name 'Headphone Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.187 {
+		iface CARD
+		name 'Headset Mic Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.188 {
+		iface MIXER
+		name 'Headphone Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.189 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.190 {
+		iface MIXER
+		name 'Int Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.191 {
+		iface MIXER
+		name 'Ext Spk Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.192 {
+		iface MIXER
+		name 'DMIC1 Enable Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.193 {
+		iface MIXER
+		name 'DMIC2 Enable Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.194 {
+		iface MIXER
+		name 'DMIC3 Enable Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.195 {
+		iface MIXER
+		name 'DMIC4 Enable Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.196 {
+		iface MIXER
+		name 'Left ADC MIC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.197 {
+		iface MIXER
+		name 'Left ADC HSMIC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.198 {
+		iface MIXER
+		name 'Right ADC MIC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.199 {
+		iface MIXER
+		name 'Right ADC HSMIC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.200 {
+		iface MIXER
+		name 'DACL Mux'
+		value DACL
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DACL
+			item.1 DACR
+		}
+	}
+	control.201 {
+		iface MIXER
+		name 'DACR Mux'
+		value DACR
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DACL
+			item.1 DACR
+		}
+	}
+	control.202 {
+		iface MIXER
+		name 'Left Headphone DAC Right Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.203 {
+		iface MIXER
+		name 'Left Headphone DAC Left Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.204 {
+		iface MIXER
+		name 'Right Headphone DAC Left Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.205 {
+		iface MIXER
+		name 'Right Headphone DAC Right Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+Module
+silead
+nls_iso8859_1
+intel_rapl
+intel_powerclamp
+coretemp
+kvm_intel
+kvm
+irqbypass
+punit_atom_debug
+morus1280_sse2
+morus1280_glue
+morus640_sse2
+morus640_glue
+aegis256_aesni
+aegis128l_aesni
+aegis128_aesni
+axp20x_pek
+snd_soc_sst_cht_bsw_nau8824
+crct10dif_pclmul
+crc32_pclmul
+axp288_fuel_gauge
+axp288_charger
+ghash_clmulni_intel
+pcbc
+extcon_axp288
+axp288_adc
+snd_intel_sst_acpi
+snd_intel_sst_core
+aesni_intel
+gpio_keys
+snd_soc_sst_atom_hifi2_platform
+aes_x86_64
+snd_soc_acpi
+snd_soc_acpi_intel_match
+snd_soc_nau8824
+crypto_simd
+cryptd
+snd_soc_core
+glue_helper
+intel_cstate
+snd_compress
+ac97_bus
+snd_pcm_dmaengine
+joydev
+input_leds
+mac_hid
+snd_seq_midi
+snd_seq_midi_event
+snd_rawmidi
+snd_seq
+mei_txe
+snd_seq_device
+mei
+axp20x_i2c
+lpc_ich
+axp20x
+snd_pcm
+snd_timer
+intel_xhci_usb_role_switch
+roles
+r8723bs
+intel_hid
+kxcjk_1013
+sparse_keymap
+industrialio_triggered_buffer
+cfg80211
+kfifo_buf
+intel_cht_int33fe
+dw_dmac
+dw_dmac_core
+snd
+industrialio
+spi_pxa2xx_platform
+soundcore
+8250_dw
+processor_thermal_device
+int3400_thermal
+int3403_thermal
+acpi_thermal_rel
+int340x_thermal_zone
+int3406_thermal
+intel_soc_dts_iosf
+intel_int0002_vgpio
+soc_button_array
+acpi_pad
+sch_fq_codel
+parport_pc
+ppdev
+lp
+parport
+ip_tables
+x_tables
+autofs4
+overlay
+uas
+hid_logitech_hidpp
+usb_storage
+hid_logitech_dj
+hid_generic
+i915
+usbhid
+hid
+mmc_block
+i2c_algo_bit
+drm_kms_helper
+syscopyarea
+sysfillrect
+sysimgblt
+fb_sys_fops
+drm
+video
+sdhci_acpi
+pwm_lpss_platform
+sdhci
+pwm_lpss
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[   17.341187] axp288_extcon axp288_extcon: controlling USB role based on Vbus presence
+[   17.458474] cht-bsw-nau8824 cht-bsw-nau8824: snd-soc-dummy-dai <-> media-cpu-dai mapping ok
+[   17.458538] cht-bsw-nau8824 cht-bsw-nau8824: snd-soc-dummy-dai <-> deepbuffer-cpu-dai mapping ok
+[   17.458582] cht-bsw-nau8824 cht-bsw-nau8824: Compress ASoC: snd-soc-dummy-dai <-> compress-cpu-dai mapping ok
+[   17.461815] cht-bsw-nau8824 cht-bsw-nau8824: nau8824-hifi <-> ssp2-port mapping ok
+[   17.473555] input: chtnau8824 Headset as /devices/pci0000:00/808622A8:00/cht-bsw-nau8824/sound/card0/input21
+[   17.540250] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 16 -> VIRQ 55
+
+

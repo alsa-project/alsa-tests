@@ -1,0 +1,24 @@
+{
+    "broxton-rt298-1": {
+        "comment":	"Dummy test configuration for broxton-rt298",
+        "id":		"broxton-rt298",
+        "driver":	"broxton-rt298",
+        "name":		"broxton-rt298",
+        "longname":	"broxton-rt298",
+        "control": [
+            { "id": "iface=CARD,name='HDMI/DP,pcm=4 Jack'" },
+            { "id": "iface=CARD,name='HDMI/DP,pcm=5 Jack'" }
+        ]
+    },
+    "broxton-rt298-2": {
+        "comment":	"Dummy test configuration for broxton-rt298",
+        "id":		"broxton-rt298",
+        "driver":	"broxton-rt298",
+        "name":		"broxton-rt298",
+        "longname":	"broxton-rt298",
+        "control": [
+            { "id": "iface=CARD,name='HDMI/DP, pcm=4 Jack'" },
+            { "id": "iface=CARD,name='HDMI/DP, pcm=5 Jack'" }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "cht-bsw-rt5672-stereo-dmic2": {
+        "comment":	"Dummy test configuration for cht-bsw-rt5672-stereo-dmic2",
+        "id":		"chtbsw",
+        "driver":	"cht-bsw-rt5672",
+        "name":		"cht-bsw-rt5672-stereo-dmic2",
+        "longname":	"cht-bsw-rt5672-stereo-dmic2"
+    }
+}

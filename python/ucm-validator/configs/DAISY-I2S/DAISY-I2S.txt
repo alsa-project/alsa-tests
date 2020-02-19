@@ -1,0 +1,1853 @@
+
+!!################################
+!!ALSA Information Script v 0.4.64
+!!################################
+
+!!Script ran on: Thu Jan 28 01:02:53 UTC 2016
+
+
+!!Linux Distribution
+!!------------------
+
+Arch Linux \r (\l) NAME="Arch Linux ARM" ID=archarm ID_LIKE=arch PRETTY_NAME="Arch Linux ARM" HOME_URL="http://archlinuxarm.org/" SUPPORT_URL="https://archlinuxarm.org/forum" BUG_REPORT_URL="https://github.com/archlinuxarm/PKGBUILDs/issues"
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      
+Product Name:      
+Product Version:   
+Firmware Version:  
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    3.8.11-3-ARCH
+Operating System:  GNU/Linux
+Architecture:      armv7l
+Processor:         unknown
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k3.8.11-3-ARCH
+Library version:    1.1.0
+Utilities version:  1.1.0
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [DAISYI2S       ]: DAISY-I2S - DAISY-I2S
+                      DAISY-I2S
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+
+
+!!Advanced information - PCI Vendor/Device/Subsystem ID's
+!!-------------------------------------------------------
+
+
+
+!!Loaded sound module options
+!!---------------------------
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----  1 root audio 116,  6 Jan 28 00:54 /dev/snd/controlC0
+crw-rw----  1 root audio 116,  5 Jan 28 00:54 /dev/snd/pcmC0D0c
+crw-rw----  1 root audio 116,  4 Jan 28 00:54 /dev/snd/pcmC0D0p
+crw-rw----  1 root audio 116,  3 Jan 28 00:54 /dev/snd/pcmC0D1c
+crw-rw----  1 root audio 116,  2 Jan 28 00:54 /dev/snd/pcmC0D1p
+crw-rw----  1 root audio 116,  1 Jan 28 00:54 /dev/snd/seq
+crw-rw----  1 root audio 116, 33 Jan 28 00:54 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jan 28 00:54 .
+drwxr-xr-x 3 root root 200 Jan 28 00:54 ..
+lrwxrwxrwx 1 root root  12 Jan 28 00:54 platform-sound.8 -> ../controlC0
+
+
+!!ALSA configuration files
+!!------------------------
+
+!!System wide config file (/etc/asound.conf)
+
+# Use PulseAudio by default
+pcm.!default {
+  type pulse
+  fallback "sysdefault"
+  hint {
+    show on
+    description "Default ALSA Output (currently PulseAudio Sound Server)"
+  }
+}
+
+ctl.!default {
+  type pulse
+  fallback "sysdefault"
+}
+
+# vim:set ft=alsaconf:
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: DAISYI2S [DAISY-I2S], device 0: Playback HiFi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: DAISYI2S [DAISY-I2S], device 1: Capture HiFi-1 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: DAISYI2S [DAISY-I2S], device 0: Playback HiFi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: DAISYI2S [DAISY-I2S], device 1: Capture HiFi-1 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card 0 [DAISYI2S]
+
+Card hw:0 'DAISYI2S'/'DAISY-I2S'
+  Mixer name	: ''
+  Components	: ''
+  Controls      : 110
+  Simple ctrls  : 107
+Simple mixer control 'Headphone',0
+  Capabilities: volume pswitch
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 31
+  Front Left: 18 [58%] [-11.00dB] Playback [on]
+  Front Right: 18 [58%] [-11.00dB] Playback [on]
+Simple mixer control 'Speaker',0
+  Capabilities: volume pswitch
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 31
+  Front Left: 17 [55%] [-8.00dB] Playback [on]
+  Front Right: 17 [55%] [-8.00dB] Playback [on]
+Simple mixer control 'ADCL',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 11 [73%]
+Simple mixer control 'ADCL Boost',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 3
+  Mono: 2 [67%]
+Simple mixer control 'ADCR',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 9 [60%]
+Simple mixer control 'ADCR Boost',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 3
+  Mono: 2 [67%]
+Simple mixer control 'ALC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ALC Multiband',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ALC Release Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 4 [57%]
+Simple mixer control 'ALC Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 5 [71%]
+Simple mixer control 'DAI1 ADC Filter',0
+  Capabilities: enum
+  Items: 'Off' 'fc=258/fs=16k' 'fc=500/fs=16k' 'fc=258/fs=8k' 'fc=500/fs=8k' 'fc=200'
+  Item0: 'Off'
+Simple mixer control 'DAI1 DAC Filter',0
+  Capabilities: enum
+  Items: 'Off' 'fc=258/fs=16k' 'fc=500/fs=16k' 'fc=258/fs=8k' 'fc=500/fs=8k' 'fc=200'
+  Item0: 'Off'
+Simple mixer control 'DAI1 Filter Mode',0
+  Capabilities: enum
+  Items: 'Voice' 'Music'
+  Item0: 'Voice'
+Simple mixer control 'DAI2 DC Block',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'DIGMICL',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'DIGMICR',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'EQ1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'EQ2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'EX Limiter Mode',0
+  Capabilities: enum
+  Items: 'Off' '100Hz' '400Hz' '600Hz' '800Hz' '1000Hz' '200-400Hz' '400-600Hz' '400-800Hz'
+  Item0: 'Off'
+Simple mixer control 'EX Limiter Threshold',0
+  Capabilities: enum
+  Items: '0.6' '1.2' '1.8' '2.4' '3.0' '3.6' '4.2' '4.8'
+  Item0: '0.6'
+Simple mixer control 'External MIC',0
+  Capabilities: enum
+  Items: 'None' 'MIC1' 'MIC2'
+  Item0: 'None'
+Simple mixer control 'HDMI',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'INA',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 7 [100%]
+Simple mixer control 'INB',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 7 [100%]
+Simple mixer control 'Left ADC Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Left ADC Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left ADC Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left ADC Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left ADC Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left ADC Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left HP Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left REC Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left SPK Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'MIC1',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%]
+Simple mixer control 'MIC1 Boost',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 2
+  Mono: 0 [0%] [0.00dB]
+Simple mixer control 'MIC2',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 31 [100%]
+Simple mixer control 'MIC2 Boost',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 2
+  Mono: 0 [0%] [0.00dB]
+Simple mixer control 'PWR Limiter Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 0 [0%]
+Simple mixer control 'PWR Limiter Time1',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 0 [0%]
+Simple mixer control 'PWR Limiter Time2',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 0 [0%]
+Simple mixer control 'PWR Limiter Weight',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 0 [0%]
+Simple mixer control 'Receiver',0
+  Capabilities: volume pswitch
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 31
+  Front Left: 0 [0%] [-62.00dB] Playback [on]
+  Front Right: 0 [0%] [-62.00dB] Playback [on]
+Simple mixer control 'Right ADC Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right ADC Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right ADC Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right ADC Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right ADC Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right ADC Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right HP Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right REC Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right REC Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer INA1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer INA2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer INB1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer INB2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer Left DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer Left DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer MIC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer MIC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right SPK Mixer Right DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right SPK Mixer Right DAC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'THD Limiter Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 4 [27%]
+Simple mixer control 'THD Limiter Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 0 [0%]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.DAISYI2S {
+	control.1 {
+		iface MIXER
+		name 'Headphone Volume'
+		value.0 18
+		value.1 18
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -6700
+			dbmax 300
+			dbvalue.0 -1100
+			dbvalue.1 -1100
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Speaker Volume'
+		value.0 17
+		value.1 17
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -6200
+			dbmax 800
+			dbvalue.0 -800
+			dbvalue.1 -800
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Receiver Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 31'
+			dbmin -6200
+			dbmax 800
+			dbvalue.0 -6200
+			dbvalue.1 -6200
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Headphone Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Speaker Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Receiver Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'MIC1 Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'MIC2 Volume'
+		value 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'MIC1 Boost Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 2'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'MIC2 Boost Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 2'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'INA Volume'
+		value 7
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'INB Volume'
+		value 7
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'ADCL Volume'
+		value 11
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'ADCR Volume'
+		value 9
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'ADCL Boost Volume'
+		value 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 3'
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'ADCR Boost Volume'
+		value 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 3'
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'DIGMICR Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'DIGMICL Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'EQ1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'EQ2 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'EX Limiter Mode'
+		value Off
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Off
+			item.1 '100Hz'
+			item.2 '400Hz'
+			item.3 '600Hz'
+			item.4 '800Hz'
+			item.5 '1000Hz'
+			item.6 '200-400Hz'
+			item.7 '400-600Hz'
+			item.8 '400-800Hz'
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'EX Limiter Threshold'
+		value '0.6'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '0.6'
+			item.1 '1.2'
+			item.2 '1.8'
+			item.3 '2.4'
+			item.4 '3.0'
+			item.5 '3.6'
+			item.6 '4.2'
+			item.7 '4.8'
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'DAI1 Filter Mode'
+		value Voice
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Voice
+			item.1 Music
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'DAI1 DAC Filter'
+		value Off
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Off
+			item.1 'fc=258/fs=16k'
+			item.2 'fc=500/fs=16k'
+			item.3 'fc=258/fs=8k'
+			item.4 'fc=500/fs=8k'
+			item.5 'fc=200'
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'DAI1 ADC Filter'
+		value Off
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Off
+			item.1 'fc=258/fs=16k'
+			item.2 'fc=500/fs=16k'
+			item.3 'fc=258/fs=8k'
+			item.4 'fc=500/fs=8k'
+			item.5 'fc=200'
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'DAI2 DC Block Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'ALC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'ALC Threshold'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'ALC Multiband'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'ALC Release Time'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'PWR Limiter Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'PWR Limiter Weight'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'PWR Limiter Time1'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'PWR Limiter Time2'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'THD Limiter Threshold'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'THD Limiter Time'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'Right ADC Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'Right ADC Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'Right ADC Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'Right ADC Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'Right ADC Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'Right ADC Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'Left ADC Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'Left ADC Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'Left ADC Mixer INA1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'Left ADC Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'Left ADC Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'Left ADC Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.49 {
+		iface MIXER
+		name 'Right REC Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.50 {
+		iface MIXER
+		name 'Right REC Mixer Right DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.51 {
+		iface MIXER
+		name 'Right REC Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.52 {
+		iface MIXER
+		name 'Right REC Mixer Right DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.53 {
+		iface MIXER
+		name 'Right REC Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'Right REC Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'Right REC Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'Right REC Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'Right REC Mixer INB1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'Right REC Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'Left REC Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.60 {
+		iface MIXER
+		name 'Left REC Mixer Right DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'Left REC Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'Left REC Mixer Right DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'Left REC Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'Left REC Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'Left REC Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'Left REC Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'Left REC Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.68 {
+		iface MIXER
+		name 'Left REC Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.69 {
+		iface MIXER
+		name 'Right SPK Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.70 {
+		iface MIXER
+		name 'Right SPK Mixer Right DAC1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.71 {
+		iface MIXER
+		name 'Right SPK Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.72 {
+		iface MIXER
+		name 'Right SPK Mixer Right DAC2 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.73 {
+		iface MIXER
+		name 'Right SPK Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.74 {
+		iface MIXER
+		name 'Right SPK Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.75 {
+		iface MIXER
+		name 'Right SPK Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.76 {
+		iface MIXER
+		name 'Right SPK Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.77 {
+		iface MIXER
+		name 'Right SPK Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.78 {
+		iface MIXER
+		name 'Right SPK Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.79 {
+		iface MIXER
+		name 'Left SPK Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.80 {
+		iface MIXER
+		name 'Left SPK Mixer Right DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.81 {
+		iface MIXER
+		name 'Left SPK Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.82 {
+		iface MIXER
+		name 'Left SPK Mixer Right DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.83 {
+		iface MIXER
+		name 'Left SPK Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.84 {
+		iface MIXER
+		name 'Left SPK Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.85 {
+		iface MIXER
+		name 'Left SPK Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.86 {
+		iface MIXER
+		name 'Left SPK Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.87 {
+		iface MIXER
+		name 'Left SPK Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.88 {
+		iface MIXER
+		name 'Left SPK Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.89 {
+		iface MIXER
+		name 'Right HP Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.90 {
+		iface MIXER
+		name 'Right HP Mixer Right DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.91 {
+		iface MIXER
+		name 'Right HP Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.92 {
+		iface MIXER
+		name 'Right HP Mixer Right DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.93 {
+		iface MIXER
+		name 'Right HP Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.94 {
+		iface MIXER
+		name 'Right HP Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.95 {
+		iface MIXER
+		name 'Right HP Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.96 {
+		iface MIXER
+		name 'Right HP Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.97 {
+		iface MIXER
+		name 'Right HP Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.98 {
+		iface MIXER
+		name 'Right HP Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.99 {
+		iface MIXER
+		name 'Left HP Mixer Left DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.100 {
+		iface MIXER
+		name 'Left HP Mixer Right DAC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.101 {
+		iface MIXER
+		name 'Left HP Mixer Left DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.102 {
+		iface MIXER
+		name 'Left HP Mixer Right DAC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.103 {
+		iface MIXER
+		name 'Left HP Mixer MIC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.104 {
+		iface MIXER
+		name 'Left HP Mixer MIC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.105 {
+		iface MIXER
+		name 'Left HP Mixer INA1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.106 {
+		iface MIXER
+		name 'Left HP Mixer INA2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.107 {
+		iface MIXER
+		name 'Left HP Mixer INB1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.108 {
+		iface MIXER
+		name 'Left HP Mixer INB2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.109 {
+		iface MIXER
+		name 'External MIC'
+		value None
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 None
+			item.1 MIC1
+			item.2 MIC2
+		}
+	}
+	control.110 {
+		iface MIXER
+		name 'HDMI Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+Module
+uvcvideo
+videobuf2_vmalloc
+exynos_gsc
+v4l2_mem2mem
+mwifiex_sdio
+mwifiex
+btmrvl_sdio
+joydev
+btmrvl
+sbs_battery
+bluetooth
+cfg80211
+mousedev
+s5p_mfc
+videobuf2_dma_contig
+videobuf2_memops
+videobuf2_core
+rtc_s3c
+ip_tables
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[    0.813063] of_get_named_gpio_flags exited with status 150
+[    0.813573] daisy-snd-max98095 sound.8:  HiFi <-> 3830000.i2s mapping ok
+[    0.815502] daisy-snd-max98095 sound.8:  HiFi <-> 3830000.i2s mapping ok
+[    0.817323] input: DAISY-I2S HDMI Jack as /devices/sound.8/sound/card0/input1
+[    0.818738] input: DAISY-I2S Headphone Jack as /devices/sound.8/sound/card0/input2
+[    0.820146] input: DAISY-I2S Mic Jack as /devices/sound.8/sound/card0/input3
+[    0.822570] Netfilter messages via NETLINK v0.30.
+--
+[    1.275350] VDD_INT Voltage table set with 2 Group
+[    1.277625] ALSA device list:
+[    1.278784]   #0: DAISY-I2S
+
+
