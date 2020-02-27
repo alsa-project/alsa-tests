@@ -189,10 +189,13 @@ class AlsaInfoAmixer:
         self.text = text
         blocks = text.split('!!--')
         r1 = r".*--Mixer controls for card (?P<card>\w+) \[(?P<id>.*)\]\n\nCard hw:.*\n[ \t]*Mixer name[ \t]*: '(?P<mixername>.*)'\n[ \t]*Components[ \t]*: '(?P<components>.*)'\n"
+        r2 = r".*--Mixer controls for card (?P<id>.*)\n\nCard hw:(?P<card>\w+).*\n[ \t]*Mixer name[ \t]*: '(?P<mixername>.*)'\n[ \t]*Components[ \t]*: '(?P<components>.*)'\n"
         for block in blocks:
             if not block:
                 continue
             m = re.match(r1, block)
+            if not m:
+                m = re.match(r2, block)
             d = m.groupdict()
             card = int(d['card'])
             c = self.parent.card(card)

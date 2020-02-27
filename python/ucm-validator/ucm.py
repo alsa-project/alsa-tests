@@ -115,11 +115,19 @@ def do_configs(*args):
                 card = info.cards[cardnum]
                 if card.driver in SKIP_DRIVERS:
                     continue
-                l = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.longname) + '.conf'
+                l1 = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.longname) + '.conf'
+                l2 = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.driver) + '.conf'
+                l = l1
                 if not os.path.exists(l):
                     if card.driver in SKIP_DRIVERS2:
                         continue
-                    l = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.driver) + '.conf'
+                    l = l2
+                if not os.path.exists(l):
+                    warning('Unable to find UCM configuration for %s', repr(path2))
+                    warning('  First path: %s', repr(l1))
+                    if l1 != l2:
+                        warning('  Second path: %s', repr(l2))
+                    continue
                 c = Ucm2(verify=card)
                 c.conditions = conditions
                 c.load(l)
