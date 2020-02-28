@@ -98,12 +98,15 @@ def do_configs(*args):
 
     def config_walk(path1):
         errors = 0
+        warnings = 0
         for file in os.listdir(path1):
             if file.startswith('.'):
                 continue
             path2 = path1 + '/' + file
             if os.path.isdir(path2):
-                errors += config_walk(path2)
+                errors1, warnings1 = config_walk(path2)
+                errors += errors1
+                warnings += warnings1
                 continue
             if not file.endswith('.txt') and not file.endswith('.json'):
                 continue
@@ -123,6 +126,7 @@ def do_configs(*args):
                         continue
                     l = l2
                 if not os.path.exists(l):
+                    warnings += 1
                     warning('Unable to find UCM configuration for %s', repr(path2))
                     warning('  First path: %s', repr(l1))
                     if l1 != l2:
@@ -137,7 +141,7 @@ def do_configs(*args):
                 except UcmError as e:
                     error1(str(e))
                     errors += 1
-        return errors
+        return errors, warnings
 
     paths = []
     ucm_path = args[0]
@@ -145,7 +149,7 @@ def do_configs(*args):
     alsainfo_path = args[1]
     filter = args[2:]
     conditions = {}
-    errors = config_walk(alsainfo_path)
+    errors, warnings = config_walk(alsainfo_path)
     # check, if all configuration files were handled
     cs = ucm_get_configs(args[0], short=True, link=False)
     for c in cs:
@@ -160,6 +164,8 @@ def do_configs(*args):
                 what = 'True' in v and 'False' or 'True'
                 error1('%s: %s - %s block not executed', filename, v['id'], what)
                 errors += 1
+    if warnings > 0:
+        warning('total warnings: %s' % warnings)
     if errors > 0:
         error1('total errors: %s' % errors)
     return errors and 1 or 0
