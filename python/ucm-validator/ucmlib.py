@@ -505,11 +505,13 @@ class UcmVerb:
     def check_jackhwmute(self):
         for device in self.devices:
             dev = self.devices[device]
-            hwmute = self.getval('JackHWMute')
+            hwmute = dev.getval('JackHWMute')
             if not hwmute:
                 continue
-            if not hwmute in self.verb.devices:
-                self.error(0, 'JackHWMute device name %s unknown' % repr(device))
+            if not hwmute in self.devices:
+                self.error(0, 'Device %s JackHWMute device name %s unknown' % (repr(device), repr(hwmute)))
+            if not dev.getval('JackControl'):
+                self.error(0, 'Device %s JackControl is not defined (JackHWMute)' % repr(device))
 
     def check(self):
         self.check_device_names()
