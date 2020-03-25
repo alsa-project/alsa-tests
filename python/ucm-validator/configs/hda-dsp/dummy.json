@@ -1,0 +1,14 @@
+{
+    "hda-dsp-1": {
+        "comment":	"Dummy test configuration for hda-dsp",
+        "id":		"hdadsp",
+        "driver":	"hda-dsp",
+        "name":		"hda-dsp",
+        "longname":	"hda-dsp",
+        "components":   "",
+        "control": [
+            { "id": "iface=CARD,name='HDMI/DP,pcm=17 Jack'" },
+            { "id": "iface=CARD,name='HDMI/DP,pcm=18 Jack'" }
+        ]
+    }
+}
