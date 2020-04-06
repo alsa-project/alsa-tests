@@ -332,6 +332,25 @@ class UcmDevice:
         self.check_device_list('ConflictingDevices', self.conflicting)
         self.check_device_list('SupportedDevices', self.supported)
 
+    def dump_device_list(self, what, devices):
+        r = ''
+        if devices:
+            for idx in range(len(devices)):
+                r += '%s.%s = %s' % (what, idx, devices[idx])
+        return r
+
+    def dump(self):
+        r = 'Device: "%s"\n' % self.name
+        v = self.dump_device_list('ConflictingDevices', self.conflicting)
+        if v:
+            r += '\n'.join(map(lambda x: '  ' + x, v.splitlines())) + '\n'
+        v = self.dump_device_list('SupportedDevices', self.supported)
+        if v:
+            r += '\n'.join(map(lambda x: '  ' + x, v.splitlines())) + '\n'
+        for v in self.values:
+            r += '  Value.%s = %s\n' % (v, repr(self.values[v]))
+        return r
+
 class UcmVerb:
 
     def __init__(self, ucm):
@@ -448,6 +467,7 @@ class UcmVerb:
             elif not src in self.devices:
                 self.error(0, 'RenameDevice - %s does not exist' % repr(src))
             self.devices[dst] = self.devices[src]
+            self.devices[dst].name = dst
             del self.devices[src]
             for dev in self.devices.values():
                 self.list_rename('ConflictingDevices', dev.conflicting, src, dst)
@@ -519,6 +539,15 @@ class UcmVerb:
             self.devices[device].check()
         self.check_priorities()
         self.check_jackhwmute()
+
+    def dump(self):
+        r = 'Verb: "%s"\n' % self.name
+        r += '  File: %s\n' % self.filename
+        for device in self.devices:
+            v = self.devices[device].dump()
+            if v:
+                r += '\n'.join(map(lambda x: '  ' + x, v.splitlines())) + '\n'
+        return r
 
 class Ucm:
 
@@ -716,6 +745,14 @@ class Ucm:
             raise UcmError("cannot verify abstract contents")
         for verb in self.verbs:
             verb.check()
+
+    def dump(self):
+        r = 'File: %s\n' % self.filename
+        for verb in self.verbs:
+            v = verb.dump()
+            if v:
+                r += '\n'.join(map(lambda x: '  ' + x, v.splitlines())) + '\n'
+        return r
 
 def ucm_env_get(alsa_config_path):
     env = 'ALSA_CONFIG_DIR' in os.environ and os.environ['ALSA_CONFIG_DIR'] or None

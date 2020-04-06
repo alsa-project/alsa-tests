@@ -141,6 +141,8 @@ def do_configs(*args):
                 except UcmError as e:
                     error1(str(e))
                     errors += 1
+                if LOG_LEVEL > 255:
+                    sys.stdout.write(c.dump())
         return errors, warnings
 
     paths = []
@@ -153,6 +155,8 @@ def do_configs(*args):
     # check, if all configuration files were handled
     cs = ucm_get_configs(args[0], short=True, link=False)
     for c in cs:
+        if filter and alsainfo_path + '/' + c != filter:
+            continue
         if not c in paths:
             error1('%s: no alsa-info files!', c)
             errors += 1
