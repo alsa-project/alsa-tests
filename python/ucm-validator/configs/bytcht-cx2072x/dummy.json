@@ -1,0 +1,19 @@
+{
+    "bytcht-cx2072x-1": {
+        "comment":	"Dummy test configuration for bytcht-cx2072x",
+        "id":		"bytcht-cx2072x",
+        "driver":	"bytcht-cx2072x",
+        "name":		"bytcht-cx2072x",
+        "longname":	"bytcht-cx2072x",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },    
+    "bytcht-cx2072x-2": {
+        "comment":	"Dummy test configuration for bytcht-cx2072x in SOF mode",
+        "id":		"bytcht-cx2072x",
+        "driver":	"bytcht-cx2072x",
+        "name":		"bytcht-cx2072x",
+        "longname":	"bytcht-cx2072x"
+    }
+}
