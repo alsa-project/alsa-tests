@@ -1,19 +1,19 @@
 {
-    "cht-bsw-rt5672-stereo-dmic2": {
+    "cht-bsw-rt5672-1": {
         "comment":	"Dummy test configuration for cht-bsw-rt5672-stereo-dmic2",
         "id":		"chtbsw",
         "driver":	"cht-bsw-rt5672",
-        "name":		"cht-bsw-rt5672-stereo-dmic2",
-        "longname":	"cht-bsw-rt5672-stereo-dmic2",
+        "name":		"cht-bsw-rt5672",
+        "longname":	"cht-bsw-rt5672",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
     },
-    "cht-bsw-rt5672-stereo-dmic2-SOF": {
+    "cht-bsw-rt5672-2": {
         "comment":	"Dummy test configuration for cht-bsw-rt5672-stereo-dmic2 in SOF mode",
         "id":		"chtbsw",
         "driver":	"cht-bsw-rt5672",
-        "name":		"cht-bsw-rt5672-stereo-dmic2",
-        "longname":	"cht-bsw-rt5672-stereo-dmic2"
+        "name":		"cht-bsw-rt5672",
+        "longname":	"cht-bsw-rt5672"
     }
 }
