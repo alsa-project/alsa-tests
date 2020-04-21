@@ -253,6 +253,14 @@ class UcmDevice:
             self.error(array_node, "is empty")
         return v
 
+    def load_sequence(self, array_node):
+        v = self.load_array(array_node)
+        for idx in range(0, len(v), 2):
+            cmd, arg = v[idx], v[idx + 1]
+            if cmd == 'cdev' and arg.find('CardId') >= 0:
+                self.error(array_node, "cdev is aready set in alsa-lib")
+        return v
+
     def load_device(self, device_node):
         self.log(1, "Device '%s'", device_node.id)
         self.reset()
@@ -265,9 +273,9 @@ class UcmDevice:
             elif node.id == 'Comment':
                 self.comment = node.value()
             elif node.id == 'EnableSequence':
-                self.enable = self.load_array(node)
+                self.enable = self.load_sequence(node)
             elif node.id == 'DisableSequence':
-                self.disable = self.load_array(node)
+                self.disable = self.load_sequence(node)
             elif node.id == 'ConflictingDevice':
                 self.conflicting = self.load_array(node)
             elif node.id == 'SupportedDevice':
