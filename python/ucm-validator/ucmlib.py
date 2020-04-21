@@ -490,6 +490,9 @@ class UcmVerb:
             d = m.groupdict(m)
             if not d['base'] in VALID_DEVICE_NAMES:
                 self.error(0, 'device name "%s" unknown (see the specification)' % name)
+            if d['base'] + d['index'] != name and \
+               d['base'] + ' ' + d['index'] != name:
+                self.error(0, 'device name "%s" is not valid (%s[ %s])' % (name, d['base'], d['index']))
             index = None
             if prev and prev['base'] == d['base']:
                 if d['index']:
