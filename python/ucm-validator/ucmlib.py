@@ -249,6 +249,8 @@ class UcmDevice:
         v = array_node.value()
         if type(v) != type([]):
             self.error(array_node, "is not array")
+        if len(v) == 0:
+            self.error(array_node, "is empty")
         return v
 
     def load_device(self, device_node):
