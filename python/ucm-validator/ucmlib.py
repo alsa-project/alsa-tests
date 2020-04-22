@@ -729,11 +729,23 @@ class Ucm:
             self.error(compound, "field 'File' not found")
         self.verbs.append(verb)
 
+    def indent_check(self, filename):
+        fp = open(filename)
+        lineno = 1
+        while 1:
+            line = fp.readline()
+            if not line:
+                break
+            if line.startswith('    '):
+                self.error(None, "%s:%d: Wrong indentation (use tabs to save space!)" % (filename, lineno))
+            lineno += 1
+
     def load(self, filename):
         """Load ucm configuration from filename."""
         self.reset()
         filename = os.path.abspath(filename)
         self.filename = filename
+        self.indent_check(filename)
         aconfig = AlsaConfig()
         self.log(1, "Device file '%s'", self.shortfn())
         aconfig.load(filename)
