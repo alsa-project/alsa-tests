@@ -246,20 +246,10 @@ class UcmDevice:
         return self.ucm.evaluate_if(if_node, add, origin and origin or self)
 
     def load_array(self, array_node):
-        v = array_node.value()
-        if type(v) != type([]):
-            self.error(array_node, "is not array")
-        if len(v) == 0:
-            self.error(array_node, "is empty")
-        return v
+        return self.verb.load_array(array_node)
 
     def load_sequence(self, array_node):
-        v = self.load_array(array_node)
-        for idx in range(0, len(v), 2):
-            cmd, arg = v[idx], v[idx + 1]
-            if cmd == 'cdev' and arg.find('CardId') >= 0:
-                self.error(array_node, "cdev is aready set in alsa-lib")
-        return v
+        return self.verb.load_sequence(array_node)
 
     def load_device(self, device_node):
         self.log(1, "Device '%s'", device_node.id)
@@ -409,6 +399,16 @@ class UcmVerb:
         v = array_node.value()
         if type(v) != type([]):
             self.error(array_node, "is not array")
+        if len(v) == 0:
+            self.error(array_node, "is empty")
+        return v
+
+    def load_sequence(self, array_node):
+        v = self.load_array(array_node)
+        for idx in range(0, len(v), 2):
+            cmd, arg = v[idx], v[idx + 1]
+            if cmd == 'cdev' and arg.find('CardId') >= 0:
+                self.error(array_node, "cdev is aready set in alsa-lib")
         return v
 
     def section_verb(self, node):
@@ -418,9 +418,9 @@ class UcmVerb:
             if node.id == 'If':
                 self.evaluate_if(node, add)
             elif node.id == 'EnableSequence':
-                self.enable = self.load_array(node)
+                self.enable = self.load_sequence(node)
             elif node.id == 'DisableSequence':
-                self.disable = self.load_array(node)
+                self.disable = self.load_sequence(node)
             elif node.id == 'Value':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
