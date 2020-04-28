@@ -94,7 +94,8 @@ VALID_DEVICE_NAMES = {
     'Bluetooth',
     'Earpiece',
     'SPDIF',
-    'HDMI'
+    'HDMI',
+    'USB'
 }
 
 def dict_array_append(d, key, val):
