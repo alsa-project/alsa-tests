@@ -6,7 +6,7 @@
         "name":		"chtrt5645",
         "longname":	"chtrt5645",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "chtrt5645-2": {
@@ -16,7 +16,7 @@
         "name":		"chtrt5645",
         "longname":	"chtrt5645-dmic1",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "chtrt5645-3": {
@@ -26,7 +26,7 @@
         "name":		"chtrt5645",
         "longname":	"chtrt5645-dmic2",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "chtrt5645-4": {
@@ -36,32 +36,32 @@
         "name":		"chtrt5645",
         "longname":	"chtrt5645-mono-speaker-analog-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
-    "chtrt5645-5": {
-        "comment":	"Dummy test configuration for chtrt5645 in SOF mode",
+    "chtrt5645-sof-1": {
+        "comment":	"Dummy test configuration for chtrt5645 with SOF",
         "id":		"chtrt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
         "longname":	"chtrt5645"
     },
-    "chtrt5645-6": {
-        "comment":	"Dummy test configuration for chtrt5645 in SOF mode",
+    "chtrt5645-sof-2": {
+        "comment":	"Dummy test configuration for chtrt5645 with SOF",
         "id":		"chtrt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
         "longname":	"chtrt5645-dmic1"
     },
-    "chtrt5645-7": {
-        "comment":	"Dummy test configuration for chtrt5645 in SOF mode",
+    "chtrt5645-sof-3": {
+        "comment":	"Dummy test configuration for chtrt5645 with SOF",
         "id":		"chtrt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
         "longname":	"chtrt5645-dmic2"
     },
-    "chtrt5645-8": {
-        "comment":	"Dummy test configuration for chtrt5645 in SOF mode",
+    "chtrt5645-sof-4": {
+        "comment":	"Dummy test configuration for chtrt5645 with SOF",
         "id":		"chtrt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
