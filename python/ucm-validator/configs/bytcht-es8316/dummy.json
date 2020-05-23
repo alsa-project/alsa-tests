@@ -7,7 +7,7 @@
         "longname":	"bytcht-es8316",
         "components":	"cfg-spk:1 cfg-mic:in1",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcht-es8316-2": {
@@ -17,7 +17,7 @@
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316-mono-spk-in1-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcht-es8316-3": {
@@ -28,7 +28,7 @@
         "longname":	"bytcht-es8316",
         "components":	"cfg-spk:2 cfg-mic:in2",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcht-es8316-4": {
@@ -38,11 +38,34 @@
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316-stereo-spk-in2-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
-    "bytcht-es8316-5": {
-        "comment":	"Dummy test configuration for bytcht-es8316 in SOF mode",
+    "bytcht-es8316-sof-1": {
+        "comment":	"Dummy test configuration for bytcht-es8316 with SOF",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316",
+        "components":	"cfg-spk:1 cfg-mic:in1"
+    },
+    "bytcht-es8316-sof-2": {
+        "comment":	"Dummy test configuration for bytcht-es8316 with SOF",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316-mono-spk-in1-mic"
+    },
+    "bytcht-es8316-sof-3": {
+        "comment":	"Dummy test configuration for bytcht-es8316 with SOF",
+        "id":		"bytcht-es8316",
+        "driver":	"bytcht-es8316",
+        "name":		"bytcht-es8316",
+        "longname":	"bytcht-es8316",
+        "components":	"cfg-spk:2 cfg-mic:in2"
+    },
+    "bytcht-es8316-sof-4": {
+        "comment":	"Dummy test configuration for bytcht-es8316 with SOF",
         "id":		"bytcht-es8316",
         "driver":	"bytcht-es8316",
         "name":		"bytcht-es8316",
