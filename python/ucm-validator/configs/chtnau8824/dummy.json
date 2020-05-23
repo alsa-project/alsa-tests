@@ -6,7 +6,7 @@
         "name":		"chtnau8824",
         "longname":	"chtnau8824-mono",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "chtnau8824-2": {
@@ -16,18 +16,18 @@
         "name":		"chtnau8824",
         "longname":	"chtnau8824",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
-    "chtnau8824-3": {
-        "comment":	"Dummy test configuration for chtnau8824 in SOF mode",
+    "chtnau8824-sof-1": {
+        "comment":	"Dummy test configuration for chtnau8824 with SOF",
         "id":		"chtnau8824",
         "driver":	"chtnau8824",
         "name":		"chtnau8824",
         "longname":	"chtnau8824-mono"
     },
-    "chtnau8824-4": {
-        "comment":	"Dummy test configuration for chtnau8824 in SOF mode",
+    "chtnau8824-sof-2": {
+        "comment":	"Dummy test configuration for chtnau8824 with SOF",
         "id":		"chtnau8824",
         "driver":	"chtnau8824",
         "name":		"chtnau8824",
