@@ -23,6 +23,10 @@ class AlsaJsonSoundcard:
         self.card = card
         self.reset()
 
+    def __repr__(self):
+        return 'AlsaJsonSoundcard(id=%s, driver=%s, name=%s, longname=%s)' % \
+                (repr(self.id), repr(self.driver), repr(self.name), repr(self.longname))
+
     def reset(self):
         self.id = ''
         self.driver = ''

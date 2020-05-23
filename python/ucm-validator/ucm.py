@@ -140,6 +140,7 @@ def do_configs(*args):
                     c.check()
                 except UcmError as e:
                     error1(str(e))
+                    error1('  ' + repr(card))
                     errors += 1
                 if LOG_LEVEL > 255:
                     sys.stdout.write(c.dump())
