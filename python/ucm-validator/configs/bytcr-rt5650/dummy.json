@@ -1,0 +1,9 @@
+{
+    "chtrt5650-1": {
+        "comment":	"Dummy test configuration for chtrt5650",
+        "id":		"chtrt5650",
+        "driver":	"chtrt5650",
+        "name":		"chtrt5650",
+        "longname":	"chtrt5650"
+    }
+}
