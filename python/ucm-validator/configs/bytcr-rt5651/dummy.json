@@ -7,7 +7,7 @@
         "longname":	"bytcr-rt5651",
         "components":	"cfg-spk:1 cfg-hp:lrswap cfg-mic:dmic1",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-2": {
@@ -17,7 +17,7 @@
         "name":		"bytcr-rt5651",
         "longname":	"bytcr-rt5651-mono-spk-mic-hp-swapped-dmic1-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-3": {
@@ -28,7 +28,7 @@
         "longname":	"bytcr-rt5651",
         "components":	"cfg-spk:2 cfg-mic:in1",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-4": {
@@ -38,7 +38,7 @@
         "name":		"bytcr-rt5651",
         "longname":	"bytcr-rt5651-stereo-spk-in1-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-5": {
@@ -49,7 +49,7 @@
         "longname":	"bytcr-rt5651",
         "components":	"cfg-spk:2 cfg-mic:in2",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-6": {
@@ -59,7 +59,7 @@
         "name":		"bytcr-rt5651",
         "longname":	"bytcr-rt5651-stereo-spk-in2-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-7": {
@@ -70,7 +70,7 @@
         "longname":	"bytcr-rt5651",
         "components":	"cfg-spk:2 cfg-mic:in12",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5651-8": {
@@ -80,10 +80,63 @@
         "name":		"bytcr-rt5651",
         "longname":	"bytcr-rt5651-stereo-spk-in12-mic",
 	"control": [
-            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
     },
-    "bytcr-rt5651-9": {
+    "bytcr-rt5651-sof-1": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651",
+        "components":	"cfg-spk:1 cfg-hp:lrswap cfg-mic:dmic1"
+    },
+    "bytcr-rt5651-2": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651-mono-spk-mic-hp-swapped-dmic1-mic"
+    },
+    "bytcr-rt5651-3": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651",
+        "components":	"cfg-spk:2 cfg-mic:in1"
+    },
+    "bytcr-rt5651-4": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651-stereo-spk-in1-mic"
+    },
+    "bytcr-rt5651-5": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651",
+        "components":	"cfg-spk:2 cfg-mic:in2"
+    },
+    "bytcr-rt5651-6": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651-stereo-spk-in2-mic"
+    },
+    "bytcr-rt5651-7": {
+        "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
+        "id":		"bytcr-rt5651",
+        "driver":	"bytcr-rt5651",
+        "name":		"bytcr-rt5651",
+        "longname":	"bytcr-rt5651",
+        "components":	"cfg-spk:2 cfg-mic:in12"
+    },
+    "bytcr-rt5651-8": {
         "comment":	"Dummy test configuration for bytcr-rt5651 in SOF mode",
         "id":		"bytcr-rt5651",
         "driver":	"bytcr-rt5651",
