@@ -1,0 +1,114 @@
+{
+    "rt5640-1": {
+        "comment":	"Dummy test configuration for rt5640",
+        "id":		"rt5640",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5640",
+        "longname":	"sof-bytcht rt5640"
+    },
+    "rt5640-2": {
+        "comment":	"Dummy test configuration for rt5640",
+        "id":		"rt5640",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad rt5640",
+        "longname":	"sof-bytcht-bad rt5640"
+    },    
+    "rt5651-1": {
+        "comment":	"Dummy test configuration for rt5651",
+        "id":		"rt5651",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5651",
+        "longname":	"sof-bytcht rt5651"
+    },
+    "rt5651-2": {
+        "comment":	"Dummy test configuration for rt5651",
+        "id":		"rt5651",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad rt5651",
+        "longname":	"sof-bytcht-bad rt5651"
+    },
+    "cx2072x-1": {
+        "comment":	"Dummy test configuration for cx2072x",
+        "id":		"cx2072x",
+        "driver":	"SOF",
+        "name":		"sof-bytcht cx2072x",
+        "longname":	"sof-bytcht cx2072x"
+    },
+    "cx2072x-2": {
+        "comment":	"Dummy test configuration for cx2072x",
+        "id":		"cx2072x",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad cx2072x",
+        "longname":	"sof-bytcht-bad cx2072x"
+    },
+    "es8316-1": {
+        "comment":	"Dummy test configuration for es8316",
+        "id":		"es8316",
+        "driver":	"SOF",
+        "name":		"sof-bytcht es8316",
+        "longname":	"sof-bytcht es8316"
+    },
+    "es8316-2": {
+        "comment":	"Dummy test configuration for es8316",
+        "id":		"es8316",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad es8316",
+        "longname":	"sof-bytcht-bad es8316"
+    },
+    "rt5672-1": {
+        "comment":	"Dummy test configuration for rt5672",
+        "id":		"rt5672",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5672",
+        "longname":	"sof-bytcht rt5672"
+    },
+    "rt5672-2": {
+        "comment":	"Dummy test configuration for rt5672",
+        "id":		"rt5672",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad rt5672",
+        "longname":	"sof-bytcht-bad rt5672"
+    },
+    "nau8824-1": {
+        "comment":	"Dummy test configuration for nau8824",
+        "id":		"nau8824",
+        "driver":	"SOF",
+        "name":		"sof-bytcht nau8824",
+        "longname":	"sof-bytcht nau8824"
+    },
+    "nau8824-2": {
+        "comment":	"Dummy test configuration for nau8824",
+        "id":		"nau8824",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad nau8824",
+        "longname":	"sof-bytcht-bad nau8824"
+    },
+    "rt5645-1": {
+        "comment":	"Dummy test configuration for rt5645",
+        "id":		"rt5645",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5645",
+        "longname":	"sof-bytcht rt5645"
+    },
+    "rt5645-2": {
+        "comment":	"Dummy test configuration for rt5645",
+        "id":		"rt5645",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad rt5645",
+        "longname":	"sof-bytcht-bad rt5645"
+    },
+    "rt5650-1": {
+        "comment":	"Dummy test configuration for rt5650",
+        "id":		"rt5650",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5650",
+        "longname":	"sof-bytcht rt5650"
+    },
+    "rt5650-2": {
+        "comment":	"Dummy test configuration for rt5650",
+        "id":		"rt5650",
+        "driver":	"SOF",
+        "name":		"sof-bytcht-bad rt5650",
+        "longname":	"sof-bytcht-bad rt5650"
+    }
+}
