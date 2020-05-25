@@ -39,20 +39,17 @@ VALID_ID_LISTS = {
         'Comment': 'string'
     },
     'UseCaseFile': {
-        'If': 'compound',
         'SectionVerb': 'compound',
         'SectionDevice': 'compound',
         'RenameDevice': 'compound',
         'RemoveDevice': 'compound'
     },
     'SectionVerb': {
-        'If': 'compound',
         'Value': 'compound',
         'EnableSequence': 'compound',
         'DisableSequence': 'compound'
     },
     'SectionDevice': {
-        'If': 'compound',
         'Comment': 'string',
         'EnableSequence': 'compound',
         'DisableSequence': 'compound',
@@ -61,7 +58,6 @@ VALID_ID_LISTS = {
         'Value': 'compound'
     },
     'Value': {
-        'If': 'compound',
         'TQ': 'string',
         'PlaybackPriority': 'intstring',
         'PlaybackChannels': 'intstring',
@@ -788,6 +784,8 @@ class Ucm:
             if_flag = False
             if 'If' in top_node:
                 if_flag = self.evaluate_if(top_node['If'], origin)
+        if 'If' in top_node:
+            top_node['If'].remove()
 
     def load_use_case_top(self, compound):
         verb = None
