@@ -30,6 +30,11 @@ VALID_ID_LISTS = {
         'After': 'compound',
         'Before': 'compound'
     },
+    'DefineRegex': {
+        'String': 'string',
+        'Regex': 'string',
+        'Flags': 'string'
+    },
     'ConditionControlExists': {
         'Type': 'string',
         'Control': 'string',
@@ -534,6 +539,7 @@ class Ucm:
     def __init__(self, verify=None):
         """Ucm configuration class."""
         self.verify = verify
+        self.var = {}
 
     def id(self):
         return self.shortfn(self.filename)
@@ -815,7 +821,7 @@ class Ucm:
             node.remove()
             if ctx_node is None:
                 self.error(inc_node, 'File string is not defined')
-            filename = ctx_node.value()
+            filename = self.substitute(ctx_node)
             if filename[0] != '/':
                 filename = self.cfgdir() + '/' + filename
             else:
@@ -830,14 +836,48 @@ class Ucm:
             r = True
         return r
 
-    def evaluate_define(self, inc_node, origin=None):
+    def evaluate_define(self, def_node, origin=None):
         if self.syntax < 3:
-            self.error(inc_node, "Define is not supported (requires 'Syntax 3')")
-        return False
+            self.error(def_node, "Define is not supported (requires 'Syntax 3')")
+        for node in def_node:
+            self.var[node.id] = node.value()
 
-    def evaluate_defineregex(self, inc_node, origin=None):
+    def evaluate_defineregex(self, re_node, origin=None):
         if self.syntax < 3:
-            self.error(inc_node, "DefineRegex is not supported (requires 'Syntax 3')")
+            self.error(re_node, "DefineRegex is not supported (requires 'Syntax 3')")
+        for node in re_node:
+            if not node.is_compound():
+                self.error(node, "DefineRegex must be compound")
+            string = None
+            reg = None
+            flags = ''
+            for node2 in node:
+                self.validate('DefineRegex', node2)
+                if node2.id == 'String':
+                    string = self.substitute(node2)
+                elif node2.id == 'Regex':
+                    reg = self.substitute(node2)
+                elif node2.id == 'Flags':
+                    flags = node2.value().tolower()
+            if string is None:
+                self.error(node, "DefineRegex must contain 'String'")
+            if reg is None:
+                self.error(node, "DefineRegex must contain 'Regex'")
+            rflags = 0
+            if flags:
+                if 'i' in flags:
+                    rflags |= re.IGNORECASE
+            node.remove()
+            m = re.match('.*' + reg, string)
+            if not m:
+                continue
+            self.var[node.id] = m.group(0)
+            g = m.groups()
+            idx = 1
+            for a in g:
+                self.var[node.id + str(idx)] = a
+                idx += 1
+            m = True
         return False
 
     def evaluate_inplace(self, top_node, origin=None):
