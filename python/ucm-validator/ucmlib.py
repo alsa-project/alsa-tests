@@ -17,6 +17,11 @@ VALID_ID_LISTS = {
         'SectionUseCase': 'compound',
         'ValueDefaults': 'compound'
     },
+    'Include': {
+        'File': 'string',
+        'After': 'compound',
+        'Before': 'compound'
+    },
     'If': {
         'Condition': 'compound',
         'True': 'compound',
@@ -413,9 +418,10 @@ class UcmVerb:
         self.reset()
         self.name = verbname
         self.filename = filename
-        topdir = self.ucm.topdir()
         if filename[0] != '/':
             filename = self.ucm.cfgdir() + '/' + filename
+        else:
+            filename = self.ucm.cfgtop() + '/' + filename[1:]
         aconfig = AlsaConfig()
         self.log(1, "Verb '%s', file '%s'", verbname, self.ucm.shortfn(filename))
         aconfig.load(filename)
@@ -724,8 +730,6 @@ class Ucm:
         pass
 
     def evaluate_condition(self, condition_node, origin):
-        if self.syntax < 2:
-            self.error(condition_node, "If is not supported (requires 'Syntax 2')")
         try:
             type = condition_node['Type']
             if not type.is_string():
@@ -745,6 +749,9 @@ class Ucm:
             if not nodes.is_compound():
                 self.error(nodes, "True or False block is not a compound")
             self.merge_config(if_node.parent, nodes, before_node, after_node)
+
+        if self.syntax < 2:
+            self.error(condition_node, "If is not supported (requires 'Syntax 2')")
 
         r = False
         for node in if_node:
@@ -778,14 +785,53 @@ class Ucm:
 
         return r
 
+    def evaluate_include(self, inc_node, origin=None):
+        if self.syntax < 3:
+            self.error(inc_node, "Include is not supported (requires 'Syntax 3')")
+        r = False
+        for node in inc_node:
+            self.log(2, "Evaluate include '%s'", node.id)
+            ctx_node = None
+            before_node = None
+            after_node = None
+            for node2 in node:
+                self.validate('Include', node2)
+                if node2.id == 'File':
+                    ctx_node = node2
+                elif node2.id == 'Before':
+                    before_node = node2
+                elif node2.id == 'After':
+                    after_node = node2
+            node.remove()
+            if ctx_node is None:
+                self.error(inc_node, 'File string is not defined')
+            filename = ctx_node.value()
+            if filename[0] != '/':
+                filename = self.cfgdir() + '/' + filename
+            else:
+                filename = self.topdir() + '/' + filename[1:]
+            nodes = AlsaConfig()
+            self.log(1, "Include '%s', file '%s'", node.full_id(), self.shortfn(filename))
+            nodes.load(filename)
+            if not nodes.is_compound():
+                self.error(ctx_node, 'included block is not a compound')
+            self.merge_config(inc_node.parent, nodes, before_node, after_node)
+            r = True
+        return r
+
     def evaluate_inplace(self, top_node, origin=None):
         if_flag = True
-        while if_flag:
+        include_flag = True
+        while if_flag or include_flag:
+            include_flag = False
             if_flag = False
+            if 'Include' in top_node:
+                include_flag = self.evaluate_include(top_node['Include'], origin)
             if 'If' in top_node:
                 if_flag = self.evaluate_if(top_node['If'], origin)
-        if 'If' in top_node:
-            top_node['If'].remove()
+        for id in ('Include', 'If'):
+            if id in top_node:
+                top_node[id].remove()
 
     def load_use_case_top(self, compound):
         verb = None
@@ -818,11 +864,13 @@ class Ucm:
         aconfig = AlsaConfig()
         self.log(1, "Device file '%s'", self.shortfn())
         aconfig.load(filename)
+        if 'Syntax' in aconfig:
+            self.syntax = int(aconfig['Syntax'].value())
         self.evaluate_inplace(aconfig)
         for node in aconfig:
             self.validate('top', node)
             if node.id == 'Syntax':
-                self.syntax = int(node.value())
+                continue
             elif node.id == 'Comment':
                 self.comment = node.value()
             elif node.id == 'SectionUseCase':
