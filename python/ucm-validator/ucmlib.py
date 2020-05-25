@@ -820,17 +820,37 @@ class Ucm:
             r = True
         return r
 
+    def evaluate_define(self, inc_node, origin=None):
+        if self.syntax < 3:
+            self.error(inc_node, "Define is not supported (requires 'Syntax 3')")
+        return False
+
+    def evaluate_defineregex(self, inc_node, origin=None):
+        if self.syntax < 3:
+            self.error(inc_node, "DefineRegex is not supported (requires 'Syntax 3')")
+        return False
+
     def evaluate_inplace(self, top_node, origin=None):
+        define_flag = True
+        defineregex_flag = True
         if_flag = True
         include_flag = True
-        while if_flag or include_flag:
+        while define_flag or defineregex_flag or if_flag or include_flag:
+            define_flag = False
+            defineregex_flag = False
             include_flag = False
             if_flag = False
+            if 'Define' in top_node:
+                define_flag = self.evaluate_define(top_node['Define'], origin)
+            if 'DefineRegex' in top_node:
+                defineregex_flag = self.evaluate_defineregex(top_node['DefineRegex'], origin)
             if 'Include' in top_node:
                 include_flag = self.evaluate_include(top_node['Include'], origin)
+            if include_flag:
+                continue
             if 'If' in top_node:
                 if_flag = self.evaluate_if(top_node['If'], origin)
-        for id in ('Include', 'If'):
+        for id in ('Define', 'DefineRegex', 'Include', 'If'):
             if id in top_node:
                 top_node[id].remove()
 
