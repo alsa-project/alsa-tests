@@ -141,29 +141,6 @@ class AlsaControl:
 class UcmError(Exception):
     """Indicates exceptions raised by ucm."""
 
-class UcmCompoundIterator:
-
-    def __init__(self, base, extra):
-        """Iterate through base and then through extra."""
-        self.base = base
-        self.extra = extra
-        self.baseiter = iter(base)
-        self.extraiter = None
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if not self.baseiter is None:
-            try:
-                return next(self.baseiter)
-            except StopIteration:
-                self.baseiter = None
-        if self.baseiter is None:
-            if self.extraiter is None:
-                self.extraiter = iter(self.extra)
-            return next(self.extraiter)
-
 class UcmValue:
 
     def __init__(self, parent):
@@ -195,11 +172,9 @@ class UcmValue:
         return self.parent.validate(what, node)
 
     def load_value(self, value_node):
-        add = []
-        for node in UcmCompoundIterator(value_node, add):
+        self.parent.evaluate_inplace(value_node)
+        for node in value_node:
             self.validate('Value', node)
-            if node.id == 'If':
-                self.parent.evaluate_if(node, add, self)
             self.values[node.id] = node.value()
 
 class UcmDevice:
@@ -243,8 +218,8 @@ class UcmDevice:
         v = self.getval(name)
         return v is None and None or int(v)
 
-    def evaluate_if(self, if_node, add, origin=None):
-        return self.ucm.evaluate_if(if_node, add, origin and origin or self)
+    def evaluate_inplace(self, if_node, origin=None):
+        return self.ucm.evaluate_inplace(if_node, origin and origin or self)
 
     def load_array(self, array_node):
         return self.verb.load_array(array_node)
@@ -257,11 +232,10 @@ class UcmDevice:
         self.reset()
         self.name = device_node.id
         add = []
-        for node in UcmCompoundIterator(device_node, add):
+        self.ucm.evaluate_inplace(device_node, self)
+        for node in device_node:
             self.validate('SectionDevice', node)
-            if node.id == 'If':
-                self.ucm.evaluate_if(node, add, self)
-            elif node.id == 'Comment':
+            if node.id == 'Comment':
                 self.comment = node.value()
             elif node.id == 'EnableSequence':
                 self.enable = self.load_sequence(node)
@@ -393,8 +367,8 @@ class UcmVerb:
                 count += 1
         return count
 
-    def evaluate_if(self, if_node, add, origin=None):
-        return self.ucm.evaluate_if(if_node, add, origin and origin or self)
+    def evaluate_inplace(self, if_node, origin=None):
+        return self.ucm.evaluate_inplace(if_node, origin and origin or self)
 
     def load_array(self, array_node):
         v = array_node.value()
@@ -412,13 +386,11 @@ class UcmVerb:
                 self.error(array_node, "cdev is aready set in alsa-lib")
         return v
 
-    def section_verb(self, node):
-        add = []
-        for node in UcmCompoundIterator(node, add):
+    def section_verb(self, verb_node):
+        self.evaluate_inplace(verb_node)
+        for node in verb_node:
             self.validate('SectionVerb', node)
-            if node.id == 'If':
-                self.evaluate_if(node, add)
-            elif node.id == 'EnableSequence':
+            if node.id == 'EnableSequence':
                 self.enable = self.load_sequence(node)
             elif node.id == 'DisableSequence':
                 self.disable = self.load_sequence(node)
@@ -453,12 +425,10 @@ class UcmVerb:
         aconfig.load(filename)
         rename_dict = {}
         remove_list = {}
-        add = []
-        for node in UcmCompoundIterator(aconfig, add):
+        self.evaluate_inplace(aconfig)
+        for node in aconfig:
             self.validate('UseCaseFile', node)
-            if node.id == 'If':
-                self.evaluate_if(node, add)
-            elif node.id == 'SectionVerb':
+            if node.id == 'SectionVerb':
                 self.section_verb(node)
             elif node.id == 'SectionDevice':
                 for node2 in node:
@@ -616,9 +586,12 @@ class Ucm:
         if not what in VALID_ID_LISTS:
             raise UcmError("%sdefine validity list for '%s'" % (prefix, what))
         vlist = VALID_ID_LISTS[what]
-        if not node.id in vlist:
+        id = node.id
+        if not self.verify and node.id.find('#') >= 0:
+            id, id2 = node.id.split('#')
+        if not id in vlist:
             self.error(node, "%sfield is not known" % prefix)
-        t = vlist[node.id]
+        t = vlist[id]
         t2 = node.typename()
         if t == 'intstring':
             if t2 == 'string':
@@ -664,6 +637,75 @@ class Ucm:
               replace('${CardComponents}', self.verify.components)
         return s
 
+    def merge_config(self, dst, src, before_node, after_node):
+
+        def get_position_node(node, what):
+            if not node:
+                return None
+            n = node[snode.id]
+            if n and not n.is_string():
+                self.error(node, '%s node has not a string value', what)
+            return dnode[n.value()]
+
+        def unique_id(node1, node2):
+            if not self.verify:
+                id = node2.id
+                idx = 0
+                while node2 in node1:
+                    node2.set_id(id + '#' + str(idx))
+                    idx += 1
+
+        if not src.is_compound():
+            self.error(nodes, "merge block is not a compound")
+        for snode in src:
+            if not snode.id:
+                snode.remove()
+                dst.add(snode)
+                continue
+            else:
+                dnode = dst.search(snode.id)
+                if not dnode:
+                    snode.remove()
+                    dst.add(snode)
+                    continue
+            if not snode.is_compound():
+                if not self.verify and snode.type_compare(dnode):
+                    snode.remove()
+                    unique_id(dst, snode)
+                    dst.add(snode)
+                    continue
+                else:
+                    self.error(snode, 'compound type expected for the merged block')
+            before = get_position_node(before_node, 'Before')
+            after = get_position_node(after_node, 'After')
+            if before and ater:
+                self.error('both Before and After identifiers in the If or Include block')
+            array = False
+            if snode.is_array():
+                if not dnode.is_array():
+                    self.error(snode, 'source and destination nodes must be arrays!')
+                array = True
+            idx = 0
+            for ctx in snode:
+                ctx.remove()
+                if array:
+                    ctx.set_id("_tmp_%s" % idx)
+                    idx += 1
+                if before:
+                    unique_id(before.parent, ctx)
+                    before.add_before(ctx)
+                elif after:
+                    unique_id(after.parent, ctx)
+                    after.add_after(ctx)
+                else:
+                    unique_id(dnode, ctx)
+                    dnode.add(ctx)
+            if array:
+                idx = 0
+                for ctx in dnode:
+                    ctx.set_id(str(idx))
+                    idx += 1
+
     def condition_ControlExists(self, node):
         control = node['Control'].value()
         c = AlsaControl()
@@ -701,36 +743,51 @@ class Ucm:
         self.condition_ran(condition_node, r, origin)
         return r
 
-    def evaluate_if(self, if_node, add, origin=None):
+    def evaluate_if(self, if_node, origin=None):
 
-        def append_nodes(nodes):
+        def append_nodes(nodes, before_node, after_node):
             if not nodes.is_compound():
                 self.error(nodes, "True or False block is not a compound")
-            for node in nodes:
-                add.append(node)
+            self.merge_config(if_node.parent, nodes, before_node, after_node)
 
-        add1 = []
-        for node in UcmCompoundIterator(if_node, add1):
+        r = False
+        for node in if_node:
             self.log(2, "Evaluate if '%s'", node.id)
-            result = None
             true_node = None
             false_node = None
+            before_node = None
+            after_node = None
             for node2 in node:
                 self.validate('If', node2)
                 if node2.id == 'If':
-                    self.evaluate_if(node2, add1)
+                    self.evaluate_if(node2, origin)
                 elif node2.id == 'Condition':
                     result = self.evaluate_condition(node2, origin)
                 elif node2.id == 'True':
                     true_node = node2
                 elif node2.id == 'False':
                     false_node = node2
+                elif node2.id == 'Before':
+                    before_node = node2
+                elif node2.id == 'After':
+                    after_node = node2
+            node.remove()
             if true_node is None and false_node is None:
                 self.error(if_node, 'True or False block is not defined')
             if (result or not self.verify) and not true_node is None:
-                append_nodes(true_node)
+                append_nodes(true_node, before_node, after_node)
             if (not result or not self.verify) and not false_node is None:
-                append_nodes(false_node)
+                append_nodes(false_node, before_node, after_node)
+            r = True
+
+        return r
+
+    def evaluate_inplace(self, top_node, origin=None):
+        if_flag = True
+        while if_flag:
+            if_flag = False
+            if 'If' in top_node:
+                if_flag = self.evaluate_if(top_node['If'], origin)
 
     def load_use_case_top(self, compound):
         verb = None
@@ -763,11 +820,9 @@ class Ucm:
         aconfig = AlsaConfig()
         self.log(1, "Device file '%s'", self.shortfn())
         aconfig.load(filename)
-        add = []
-        for node in UcmCompoundIterator(aconfig, add):
+        self.evaluate_inplace(aconfig)
+        for node in aconfig:
             self.validate('top', node)
-            if node.id == 'If':
-                self.evaluate_if(node, add)
             if node.id == 'Syntax':
                 self.syntax = int(node.value())
             elif node.id == 'Comment':
@@ -777,7 +832,7 @@ class Ucm:
                     self.load_use_case_top(node2)
             elif node.id == 'ValueDefaults':
                 self.values = UcmValue(self)
-                self.values.load_value(node)                
+                self.values.load_value(node)
 
     def check(self):
         if not self.verify:

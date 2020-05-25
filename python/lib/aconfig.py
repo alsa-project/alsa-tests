@@ -5,6 +5,7 @@
 # Copyright (c) 2020 Jaroslav Kysela <perex@perex.cz>
 
 from ctypes import *
+from errno import errorcode, ENOENT
 
 alsalib = CDLL('libasound.so')
 
@@ -29,6 +30,11 @@ deff('snd_config_top', [c_void_p], c_int)
 deff('snd_config_load', [c_void_p, c_void_p], c_int)
 deff('snd_config_save', [c_void_p, c_void_p], c_int)
 deff('snd_config_delete', [c_void_p], c_int)
+deff('snd_config_remove', [c_void_p], c_int)
+deff('snd_config_copy', [c_void_p, c_void_p], c_int)
+deff('snd_config_add', [c_void_p, c_void_p], c_int)
+deff('snd_config_add_after', [c_void_p, c_void_p], c_int)
+deff('snd_config_add_before', [c_void_p, c_void_p], c_int)
 deff('snd_config_iterator_first', [c_void_p], c_void_p)
 deff('snd_config_iterator_next', [c_void_p], c_void_p)
 deff('snd_config_iterator_end', [c_void_p], c_void_p)
@@ -40,6 +46,7 @@ deff('snd_config_get_integer', [c_void_p, c_void_p], c_int)
 deff('snd_config_get_integer64', [c_void_p, c_void_p], c_int)
 deff('snd_config_get_real', [c_void_p, c_void_p], c_int)
 deff('snd_config_get_string', [c_void_p, c_void_p], c_int)
+deff('snd_config_set_id', [c_void_p, c_char_p], c_int)
 
 SND_CONFIG_TYPE_INTEGER = 0
 SND_CONFIG_TYPE_INTEGER64 = 1
@@ -97,6 +104,14 @@ class AlsaConfig:
             return AlsaConfigIterator(self)
         raise AlsaConfigError("only compound nodes are iterable")
 
+    def __contains__(self, node):
+        id = node
+        if type(node) != type(''):
+            id = node.id
+        p = c_void_p()
+        r = snd_config_search(self.config, id.encode('utf-8'), byref(p))
+        return r == 0
+
     def __getitem__(self, key):
         if self.type == SND_CONFIG_TYPE_COMPOUND:
             p = c_void_p()
@@ -106,7 +121,10 @@ class AlsaConfig:
             c = AlsaConfig(self)
             c.loadp(p)
             return c
-        raise AlsaConfigError("only compound nodes implements __contains__")
+        raise AlsaConfigError("only compound nodes implements __getitem__")
+
+    def type_compare(self, node):
+        return self.type == node.type
 
     def is_integer(self):
         return self.type == SND_CONFIG_TYPE_INTEGER
@@ -125,6 +143,18 @@ class AlsaConfig:
 
     def is_compound(self):
         return self.type == SND_CONFIG_TYPE_COMPOUND
+        
+    def is_array(self):
+        if self.type != SND_CONFIG_TYPE_COMPOUND:
+            return False
+        x = 0
+        a = True
+        for node in self:
+            if node.id != str(x):
+               a = False
+               break
+            x += 1
+        return a
 
     def typename(self):
         if self.type in ALSACONFIG_TYPES:
@@ -139,6 +169,12 @@ class AlsaConfig:
                 id = repr(parent.id) + '.' + id
             parent = parent.parent
         return id
+
+    def set_id(self, id):
+        """Set new id string"""
+        if snd_config_set_id(self.config, str(id).encode('utf-8')):
+            raise AlsaConfigError("unable to set new id")
+        self.id = str(id)
 
     def _load(self, input):
         config = c_void_p()
@@ -158,6 +194,19 @@ class AlsaConfig:
         if snd_input_stdio_open(byref(input), filename.encode('utf-8'), b"r"):
             raise AlsaConfigError("unable to open filename: %s" % filename)
         return self._load(input)
+
+    def copy(self):
+        """Create a new duplicate value"""
+        c = AlsaConfig()
+        if snd_config_copy(byref(c.config), self.config):
+            raise AlsaConfigError("unable to copy configuration node")
+        return c
+
+    def remove(self):
+        """Remove this node from the parent"""
+        if snd_config_remove(self.config):
+            raise AlsaConfigError("unable to remove node")
+        self.parent = None
 
     def loadp(self, config):
         """Load configuration node from C pointer"""
@@ -220,14 +269,7 @@ class AlsaConfig:
             if self.is_pointer():
                 raise AlsaConfigError("cannot handle pointer type")
         else:
-            x = 0
-            a = True
-            for node in self:
-                if node.id != str(x):
-                    a = False
-                    break
-                x += 1
-            if a:
+            if self.is_array():
                 d = []
                 for node in self:
                     d.append(node.value())
@@ -236,6 +278,54 @@ class AlsaConfig:
                 for node in self:
                     d[node.id] = node.value()
             return d                
+
+    def add(self, node):
+        r = snd_config_add(self.config, node.config)
+        if r:
+            raise AlsaConfigError("cannot add node %s to parent node %s [%s]" % (repr(node.id), repr(self.id), errorcode[-r]))
+        node.parent = self.parent
+
+    def add_before(self, node):
+        r = snd_config_add_before(self.config, node.config)
+        if r:
+            raise AlsaConfigError("cannot add node %s before node %s [%s]" % (repr(node.id), repr(self.id), errorcode[-r]))
+        node.parent = self.parent
+
+    def add_after(self, node):
+        r = snd_config_add_after(self.config, node.config)
+        if r:
+            raise AlsaConfigError("cannot add node %s after node %s [%s]" % (repr(node.id), repr(self.id), errorcode[-r]))
+        node.parent = self.parent
+
+    def split_id(self, id):
+        r = []
+        id1 = id
+        while id1:
+            if id1[0] in ('"', "'"):
+                d = id1[0]
+                id = id1[1:]
+                p = id1.find(id1, d)
+                if p < 0:
+                    raise AlsaConfigError("wrong id %s" % repr(id))
+                r.append(id1[:p])
+                id1 = id1[1:]
+                if id1 and not id1['.']:
+                    raise AlsaConfigError("wrong id %s" % repr(id))
+                id1 = id1[1:]
+            else:
+                r.append(id1)
+                break
+        return r
+
+    def search(self, id):
+        """Search (complex / dot separated) id in the tree"""
+        a = self.split_id(id)
+        parent = self
+        for k in a:
+            if not k in parent:
+                return None
+            parent = parent[k]
+        return parent
 
 if __name__ == '__main__':
 
