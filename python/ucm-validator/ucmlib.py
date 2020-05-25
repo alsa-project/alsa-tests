@@ -762,13 +762,13 @@ class Ucm:
             after_node = None
             for node2 in node:
                 self.validate('If', node2)
-                if node2.id == 'If':
-                    self.evaluate_if(node2, origin)
-                elif node2.id == 'Condition':
+                if node2.id == 'Condition':
                     result = self.evaluate_condition(node2, origin)
                 elif node2.id == 'True':
+                    self.evaluate_inplace(node2, origin)
                     true_node = node2
                 elif node2.id == 'False':
+                    self.evaluate_inplace(node2, origin)
                     false_node = node2
                 elif node2.id == 'Before':
                     before_node = node2
@@ -813,6 +813,7 @@ class Ucm:
             nodes = AlsaConfig()
             self.log(1, "Include '%s', file '%s'", node.full_id(), self.shortfn(filename))
             nodes.load(filename)
+            self.evaluate_inplace(nodes, origin)
             if not nodes.is_compound():
                 self.error(ctx_node, 'included block is not a compound')
             self.merge_config(inc_node.parent, nodes, before_node, after_node)
