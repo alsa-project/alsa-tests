@@ -18,14 +18,15 @@ class AlsaJsonError(Exception):
 
 class AlsaJsonSoundcard:
 
-    def __init__(self, card):
+    def __init__(self, json_id, card):
         """The class with the soundcard information."""
+        self.json_id = json_id
         self.card = card
         self.reset()
 
     def __repr__(self):
-        return 'AlsaJsonSoundcard(id=%s, driver=%s, name=%s, longname=%s)' % \
-                (repr(self.id), repr(self.driver), repr(self.name), repr(self.longname))
+        return 'AlsaJsonSoundcard(json=%s, id=%s, driver=%s, name=%s, longname=%s)' % \
+                (repr(self.json_id), repr(self.id), repr(self.driver), repr(self.name), repr(self.longname))
 
     def reset(self):
         self.id = ''
@@ -90,7 +91,7 @@ class AlsaJson:
         fp.close()
         index = 0
         for c in self.json:
-             card = AlsaJsonSoundcard(index)
+             card = AlsaJsonSoundcard(c, index)
              card.load(self.json[c])
              self.cards[index] = card
              index += 1
