@@ -644,6 +644,14 @@ class Ucm:
             self.error(node, "cannot substitute (requires 'Syntax 2')")
         if self.verify is None:
             return s
+        if s.find('${ConfTopDir}') >= 0:
+            if self.syntax < 3:
+                self.error(node, "cannot substitute ${ConfTopDir} (requires 'Syntax 3')")
+            s = s.replace('${ConfTopDir}', self.topdir())
+        if s.find('${ConfDir}') >= 0:
+            if self.syntax < 3:
+                self.error(node, "cannot substitute ${ConfDir} (requires 'Syntax 3')")
+            s = s.replace('${ConfDir}', self.cfgdir())
         r1 = r"\${(env|sys):(.*)}"
         for m in re.findall(r1, s):
             raise UcmError("substitution for ${%s:%s} is not implemented" % m)
