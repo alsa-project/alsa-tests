@@ -15,6 +15,7 @@ VALID_ID_LISTS = {
         'Comment': 'string',
         'SectionDefaults': 'compound',
         'SectionUseCase': 'compound',
+        'BootSequence': 'compound',
         'ValueDefaults': 'compound'
     },
     'Include': {
@@ -347,6 +348,9 @@ class UcmVerb:
         self.name = None
         self.comment = None
         self.values = None
+        self.enable = []
+        self.disable = []
+        self.boot = []
         self.devices = {}
 
     def validate(self, what, node, prefix=''):
@@ -372,20 +376,10 @@ class UcmVerb:
         return self.ucm.evaluate_inplace(if_node, origin and origin or self)
 
     def load_array(self, array_node):
-        v = array_node.value()
-        if type(v) != type([]):
-            self.error(array_node, "is not array")
-        if len(v) == 0:
-            self.error(array_node, "is empty")
-        return v
+        return self.ucm.load_array(array_node, self)
 
     def load_sequence(self, array_node):
-        v = self.load_array(array_node)
-        for idx in range(0, len(v), 2):
-            cmd, arg = v[idx], v[idx + 1]
-            if cmd == 'cdev' and arg.find('CardId') >= 0:
-                self.error(array_node, "cdev is aready set in alsa-lib")
-        return v
+        return self.ucm.load_sequence(array_node, self)
 
     def section_verb(self, verb_node):
         self.evaluate_inplace(verb_node)
@@ -610,6 +604,22 @@ class Ucm:
         if self.values and name in self.values:
             return self.values[name]
         return None
+
+    def load_array(self, array_node, origin=None):
+        v = array_node.value()
+        if type(v) != type([]):
+            self.error(array_node, "is not array")
+        if len(v) == 0:
+            self.error(array_node, "is empty")
+        return v
+
+    def load_sequence(self, array_node, origin=None):
+        v = self.load_array(array_node)
+        for idx in range(0, len(v), 2):
+            cmd, arg = v[idx], v[idx + 1]
+            if cmd == 'cdev' and arg.find('CardId') >= 0:
+                self.error(array_node, "cdev is aready set in alsa-lib")
+        return v
 
     def substitute(self, node):
         s = node.value()
@@ -900,6 +910,8 @@ class Ucm:
             elif node.id == 'ValueDefaults':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
+            elif node.id == 'BootSequence':
+                self.boot = self.load_sequence(node)
 
     def check(self):
         if not self.verify:
