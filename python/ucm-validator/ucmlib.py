@@ -636,10 +636,13 @@ class Ucm:
             return self.values[name]
         return None
 
-    def substitute(self, s):
-        if self.verify is None:
-            return s
+    def substitute(self, node):
+        s = node.value()
         if s.find('${') < 0:
+            return s
+        if self.syntax < 2:
+            self.error(node, "cannot substitute (requires 'Syntax 2')")
+        if self.verify is None:
             return s
         r1 = r"\${(env|sys):(.*)}"
         for m in re.findall(r1, s):
@@ -664,8 +667,8 @@ class Ucm:
         return r
 
     def condition_String(self, node):
-        haystack = self.substitute(node['Haystack'].value())
-        needle = self.substitute(node['Needle'].value())
+        haystack = self.substitute(node['Haystack'])
+        needle = self.substitute(node['Needle'])
         r = haystack.find(needle) >= 0
         self.log(2, "Contains(%s, %s): %s", repr(haystack), repr(needle), r)
         return r
@@ -675,6 +678,8 @@ class Ucm:
         pass
 
     def evaluate_condition(self, condition_node, origin):
+        if self.syntax < 2:
+            self.error(condition_node, "If is not supported (requires 'Syntax 2')")
         try:
             type = condition_node['Type']
             if not type.is_string():
@@ -756,7 +761,7 @@ class Ucm:
             if node.id == 'If':
                 self.evaluate_if(node, add)
             if node.id == 'Syntax':
-                self.syntax = node.value()
+                self.syntax = int(node.value())
             elif node.id == 'Comment':
                 self.comment = node.value()
             elif node.id == 'SectionUseCase':
