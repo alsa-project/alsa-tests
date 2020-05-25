@@ -1,23 +1,53 @@
 {
-    "HDAudio1": {
+    "HDAudio1-1": {
         "comment":	"Dummy test configuration for HDAudio-Codecs-DualCodecs",
         "id":		"HDual1",
         "driver":	"HDA-Intel",
         "name":		"HDA Intel PCH",
         "longname":	"HDAudio-DualCodecs"
     },
-    "HDAudio2": {
+    "HDAudio1-2": {
+        "comment":	"Dummy test configuration for HDAudio-Codecs-DualCodecs",
+        "id":		"HDual1",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-DualCodecs",
+        "control": [
+            { "id": "name='Line Boost Volume'" }
+        ]
+    },
+    "HDAudio2-1": {
         "comment":	"Dummy test configuration for HDAudio-Lenovo-DualCodecs",
         "id":		"HDual2",
         "driver":	"HDA-Intel",
         "name":		"HDA Intel PCH",
         "longname":	"HDAudio-Lenovo-DualCodecs"
     },
-    "HDAudio3": {
+    "HDAudio2-2": {
+        "comment":	"Dummy test configuration for HDAudio-Lenovo-DualCodecs",
+        "id":		"HDual2",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-Lenovo-DualCodecs",
+        "control": [
+            { "id": "name='Line Boost Volume'" }
+        ]
+    },
+    "HDAudio3-1": {
         "comment":	"Dummy test configuration for HDAudio-Gigabyte-ALC1220DualCodecs",
         "id":		"HDual3",
         "driver":	"HDA-Intel",
         "name":		"HDA Intel PCH",
         "longname":	"HDAudio-Gigabyte-ALC1220DualCodecs"
+    },
+    "HDAudio3-2": {
+        "comment":	"Dummy test configuration for HDAudio-Gigabyte-ALC1220DualCodecs",
+        "id":		"HDual3",
+        "driver":	"HDA-Intel",
+        "name":		"HDA Intel PCH",
+        "longname":	"HDAudio-Gigabyte-ALC1220DualCodecs",
+        "control": [
+            { "id": "name='Line Boost Volume'" }
+        ]
     }
 }
