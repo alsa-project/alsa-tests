@@ -7,7 +7,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.realpath(os.path.dirname('__file__')) + '/../lib')
-from ucmlib import Ucm, UcmError, ucm_get_configs, ucm_env_get, ucm_env_put, ucm_safe_fn
+from ucmlib import Ucm, UcmError, ucm_get_configs, ucm_env_get, ucm_env_put
 from alsainfo import AlsaInfo
 from alsajson import AlsaJson
 
@@ -122,21 +122,20 @@ def do_configs(*args):
                 card = info.cards[cardnum]
                 if card.driver in SKIP_DRIVERS:
                     continue
-                l1 = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.longname) + '.conf'
-                l2 = ucm_path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.driver) + '.conf'
-                l = l1
-                if not os.path.exists(l):
+                c = Ucm2(verify=card)
+                for l in c.get_file_list(ucm_path):
+                    if os.path.exists(l):
+                        break
+                    l = None
+                if not l:
                     if card.driver in SKIP_DRIVERS2:
                         continue
-                    l = l2
-                if not os.path.exists(l):
                     warnings += 1
                     warning('Unable to find UCM configuration for %s', repr(path2))
                     warning('  First path: %s', repr(l1))
                     if l1 != l2:
                         warning('  Second path: %s', repr(l2))
                     continue
-                c = Ucm2(verify=card)
                 c.conditions = conditions
                 c.load(l)
                 paths.append(c.shortfn())

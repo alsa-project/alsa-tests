@@ -12,6 +12,14 @@ from aconfig import AlsaConfig
 VALID_ID_LISTS = {
     'top': {
         'Syntax': 'integer',
+        'UseCasePath': 'compound',
+    },
+    'UseCasePath': {
+        'Directory': 'string',
+        'File': 'string'
+    },
+    'master': {
+        'Syntax': 'integer',
         'Comment': 'string',
         'SectionDefaults': 'compound',
         'SectionUseCase': 'compound',
@@ -42,8 +50,11 @@ VALID_ID_LISTS = {
     },
     'ConditionString': {
         'Type': 'string',
+        'String1': 'string',
+        'String2': 'string',
         'Haystack': 'string',
-        'Needle': 'string'
+        'Needle': 'string',
+        'Empty': 'string'
     },
     'SectionUseCase': {
         'File': 'string',
@@ -569,6 +580,7 @@ class Ucm:
         self.comment = None
         self.verbs = []
         self.values = None
+        self.filename = ''
 
     def cfgdir(self):
         return os.path.split(self.filename)[0]
@@ -743,10 +755,22 @@ class Ucm:
         return r
 
     def condition_String(self, node):
-        haystack = self.substitute(node['Haystack'])
-        needle = self.substitute(node['Needle'])
-        r = haystack.find(needle) >= 0
-        self.log(2, "Contains(%s, %s): %s", repr(haystack), repr(needle), r)
+        if 'Haystack' in node or 'Needle' in node:
+            haystack = self.substitute(node['Haystack'])
+            needle = self.substitute(node['Needle'])
+            r = haystack.find(needle) >= 0
+            self.log(2, "Contains(%s, %s): %s", repr(haystack), repr(needle), r)
+        elif 'String1' in node or 'String2' in node:
+            string1 = self.substitute(node['String1'])
+            string2 = self.substitute(node['String2'])
+            r = string1 == string2
+            self.log(2, "IsEqual(%s, %s): %s", repr(string1), repr(string2), r)
+        elif 'Empty' in node:
+            if self.syntax < 3:
+                self.error(node, 'Empty condition is not supported (requires syntax 3+)')
+            empty = self.substitute(node['Empty'])
+            r = not empty
+            self.log(2, "Empty(%s): %s", repr(empty), r)
         return r
 
     def condition_ran(self, condition_node, result, true_node, false_node, origin):
@@ -950,7 +974,7 @@ class Ucm:
             self.syntax = int(aconfig['Syntax'].value())
         self.evaluate_inplace(aconfig)
         for node in aconfig:
-            self.validate('top', node)
+            self.validate('master', node)
             if node.id == 'Syntax':
                 continue
             elif node.id == 'Comment':
@@ -967,7 +991,6 @@ class Ucm:
     def check(self):
         if not self.verify:
             raise UcmError("cannot verify abstract contents")
-        for verb in self.verbs:
             verb.check()
 
     def dump(self):
@@ -976,6 +999,44 @@ class Ucm:
             v = verb.dump()
             if v:
                 r += '\n'.join(map(lambda x: '  ' + x, v.splitlines())) + '\n'
+        return r
+
+    def get_file_list1(self, path):
+        card = self.verify
+        l1 = path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.longname) + '.conf'
+        l2 = path + '/' + ucm_safe_fn(card.driver) + '/' + ucm_safe_fn(card.driver) + '.conf'
+        return [l1, l2]
+
+    def get_file_list(self, path):
+        self.reset()
+        fn = path + '/ucm.conf'
+        if not os.path.exists(fn):
+            return self.get_file_list1(path)
+        c = AlsaConfig()
+        c.load(fn)
+        if not 'Syntax' in c:
+            self.error(c, 'Syntax field is missing in toplevel file')
+        self.syntax = int(c['Syntax'].value())
+        if self.syntax < 2:
+            self.error(c, 'Minimal supported Syntax is 2')
+        self.evaluate_inplace(c)
+        r = []
+        for node in c:
+            self.validate('top', node)
+            if node.id == 'UseCasePath':
+                for node2 in node:
+                    dir = None
+                    file = None
+                    for node3 in node2:
+                        self.validate('UseCasePath', node3)
+                        if node3.id == 'Directory':
+                            dir = self.substitute(node3)
+                        elif node3.id == 'File':
+                            file = self.substitute(node3)
+                    fn2 = path + '/' + dir + '/' + file
+                    if r and fn2 in r:
+                        continue
+                    r.append(path + '/' + dir + '/' + file)
         return r
 
 def ucm_env_get(alsa_config_path):
