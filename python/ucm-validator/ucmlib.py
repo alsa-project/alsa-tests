@@ -625,16 +625,17 @@ class Ucm:
             cmd, arg = v[idx], v[idx + 1]
             if cmd == 'cdev' and arg.find('CardId') >= 0:
                 self.error(array_node, "cdev is aready set in alsa-lib")
+            self.substitute(array_node[str(idx + 1)])
         return v
 
     def substitute(self, node):
-        s = node.value()
+        if node.is_compound():
+            self.error(node, "expected a string or integer")
+        s = str(node.value())
         if s.find('${') < 0:
             return s
         if self.syntax < 2:
             self.error(node, "cannot substitute (requires 'Syntax 2')")
-        if self.verify is None:
-            return s
         if s.find('${ConfTopDir}') >= 0:
             if self.syntax < 3:
                 self.error(node, "cannot substitute ${ConfTopDir} (requires 'Syntax 3')")
@@ -643,7 +644,14 @@ class Ucm:
             if self.syntax < 3:
                 self.error(node, "cannot substitute ${ConfDir} (requires 'Syntax 3')")
             s = s.replace('${ConfDir}', self.cfgdir())
-        r1 = r"\${(env|sys):(.*)}"
+        r1 = r"\${var:([a-zA-Z0-9_]+)}"
+        for m in re.findall(r1, s):
+            if not m in self.var:
+                raise UcmError("variable ${var:%s} is not defined" % m)
+            s = s.replace('${var:%s}' % m, self.var[m])
+        if self.verify is None:
+            return s
+        r1 = r"\${(env|sys):([a-zA-Z0-9_]+)}"
         for m in re.findall(r1, s):
             raise UcmError("substitution for ${%s:%s} is not implemented" % m)
         confname = os.path.split(self.filename)[1]
