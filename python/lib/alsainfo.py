@@ -31,7 +31,8 @@ SECTIONS = {
     'Alsactl output': 'Alsactl',
     'All Loaded Modules': 'AllModules',
     'Sysfs Files': 'Sysfs',
-    'ALSA/HDA dmesg': 'Dmesg'
+    'ALSA/HDA dmesg': 'Dmesg',
+    'Packages installed': 'Packages'
 }
 
 class AlsaInfoError(Exception):
@@ -74,6 +75,12 @@ class AlsaInfoDistro:
         self.parent = parent
         self.text = text
 
+class AlsaInfoDmesg:
+
+    def __init__(self, parent, text):
+        self.parent = parent
+        self.text = text
+
 class AlsaInfoDmi:
 
     def __init__(self, parent, text):
@@ -99,6 +106,12 @@ class AlsaInfoVersion:
         self.text = text
 
 class AlsaInfoModules:
+
+    def __init__(self, parent, text):
+        self.parent = parent
+        self.text = text
+
+class AlsaInfoPackages:
 
     def __init__(self, parent, text):
         self.parent = parent
