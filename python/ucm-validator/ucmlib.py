@@ -669,7 +669,7 @@ class Ucm:
             if not node:
                 return None
             n = node[snode.id]
-            if n and not n.is_string():
+            if not n is None and not n.is_string():
                 self.error(node, '%s node has not a string value', what)
             return dnode[n.value()]
 
@@ -690,7 +690,7 @@ class Ucm:
                 continue
             else:
                 dnode = dst.search(snode.id)
-                if not dnode:
+                if dnode is None:
                     snode.remove()
                     dst.add(snode)
                     continue
@@ -749,7 +749,7 @@ class Ucm:
         self.log(2, "Contains(%s, %s): %s", repr(haystack), repr(needle), r)
         return r
 
-    def condition_ran(self, condition_node, result, origin):
+    def condition_ran(self, condition_node, result, true_node, false_node, origin):
         """A notifier that the condition was run to override."""
         pass
 
@@ -763,9 +763,7 @@ class Ucm:
             self.error(condition_node, "has not 'Type' field")
         for node in condition_node:
             self.validate('Condition%s' % type, node)
-        r = getattr(self, 'condition_%s' % type)(condition_node)
-        self.condition_ran(condition_node, r, origin)
-        return r
+        return getattr(self, 'condition_%s' % type)(condition_node)
 
     def evaluate_if(self, if_node, origin=None):
 
@@ -775,11 +773,14 @@ class Ucm:
             self.merge_config(if_node.parent, nodes, before_node, after_node)
 
         if self.syntax < 2:
-            self.error(condition_node, "If is not supported (requires 'Syntax 2')")
+            self.error(if_node, "If is not supported (requires 'Syntax 2')")
 
         r = False
         for node in if_node:
             self.log(2, "Evaluate if '%s'", node.id)
+            if not 'Condition' in node:
+                self.error(node, "If requires condition section")
+            condition_node = None
             true_node = None
             false_node = None
             before_node = None
@@ -787,7 +788,7 @@ class Ucm:
             for node2 in node:
                 self.validate('If', node2)
                 if node2.id == 'Condition':
-                    result = self.evaluate_condition(node2, origin)
+                    condition_node = node2
                 elif node2.id == 'True':
                     self.evaluate_inplace(node2, origin)
                     true_node = node2
@@ -799,6 +800,8 @@ class Ucm:
                 elif node2.id == 'After':
                     after_node = node2
             node.remove()
+            result = self.evaluate_condition(condition_node, origin)
+            self.condition_ran(condition_node, result, true_node, false_node, origin)
             if true_node is None and false_node is None:
                 self.error(if_node, 'True or False block is not defined')
             if (result or not self.verify) and not true_node is None:

@@ -123,6 +123,16 @@ class AlsaConfig:
             return c
         raise AlsaConfigError("only compound nodes implements __getitem__")
 
+    def __len__(self):
+        if not self.is_compound():
+            raise AlsaConfigError("node %s is not a compound" % self.full_id())
+        r = 0
+        n = snd_config_iterator_first(self.config)
+        while n != snd_config_iterator_end(self.config):
+            n = snd_config_iterator_next(n)
+            r += 1
+        return r
+
     def type_compare(self, node):
         return self.type == node.type
 
@@ -155,6 +165,9 @@ class AlsaConfig:
                break
             x += 1
         return a
+
+    def is_empty(self):
+        return len(self) == 0
 
     def typename(self):
         if self.type in ALSACONFIG_TYPES:

@@ -33,7 +33,7 @@ class Ucm2(Ucm):
     def warn(self, msg, *args):
         warning(msg, *args)
 
-    def condition_ran(self, condition_node, result, origin):
+    def condition_ran(self, condition_node, result, true_node, false_node, origin):
 
         def ee(d, k):
             if not k in d:
@@ -51,6 +51,10 @@ class Ucm2(Ucm):
         d = self.conditions[f][v]
         d['id'] = id
         d[r] = 1
+        if true_node is None or true_node.is_empty():
+            d[repr(True)] = 1
+        if false_node is None or false_node.is_empty():
+            d[repr(False)] = 1
 
 def error1(msg, *args):
     sys.stderr.write('ERR: ')
