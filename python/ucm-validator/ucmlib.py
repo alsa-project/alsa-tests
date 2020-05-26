@@ -628,7 +628,7 @@ class Ucm:
             self.substitute(array_node[str(idx + 1)])
         return v
 
-    def substitute(self, node):
+    def substitute(self, node, origin=None):
         if node.is_compound():
             self.error(node, "expected a string or integer")
         s = str(node.value())
@@ -848,7 +848,7 @@ class Ucm:
         if self.syntax < 3:
             self.error(def_node, "Define is not supported (requires 'Syntax 3')")
         for node in def_node:
-            self.var[node.id] = node.value()
+            self.var[node.id] = self.substitute(node, origin)
 
     def evaluate_defineregex(self, re_node, origin=None):
         if self.syntax < 3:
