@@ -669,7 +669,7 @@ class Ucm:
             cmd, arg = v[idx], v[idx + 1]
             if cmd == 'cdev' and arg.find('CardId') >= 0:
                 self.error(array_node, "cdev is aready set in alsa-lib")
-            self.substitute(0, array_node[str(idx + 1)])
+            self.substitute(3, array_node[str(idx + 1)])
         return v
 
     def substitute(self, syntax, node, origin=None):
