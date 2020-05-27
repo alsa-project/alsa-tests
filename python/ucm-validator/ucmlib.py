@@ -769,9 +769,12 @@ class Ucm:
                 if before:
                     unique_id(before.parent, ctx)
                     before.add_before(ctx)
+                    before = None
+                    after = ctx
                 elif after:
                     unique_id(after.parent, ctx)
                     after.add_after(ctx)
+                    after = ctx
                 else:
                     unique_id(dnode, ctx)
                     dnode.add(ctx)
