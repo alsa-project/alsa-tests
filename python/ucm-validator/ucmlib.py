@@ -191,7 +191,7 @@ class UcmValue:
         return self.parent.validate(what, node)
 
     def substitute(self, node):
-        return self.parent.substitute(node, self)
+        return self.parent.substitute(0, node, self)
 
     def load_value(self, value_node):
         self.parent.evaluate_inplace(value_node)
@@ -228,11 +228,11 @@ class UcmDevice:
         prefix = "%s(Device=%s) " % (prefix, self.name)
         return self.verb.validate(what, node, prefix)
 
-    def substitute(self, node, origin=None):
-        return self.verb.substitute(node, origin and origin or self)
+    def substitute(self, syntax, node, origin=None):
+        return self.verb.substitute(syntax, node, origin and origin or self)
 
-    def substitute2(self, node, s, origin=None):
-        return self.verb.substitute2(node, s, origin and origin or self)
+    def substitute2(self, syntax, node, s, origin=None):
+        return self.verb.substitute2(syntax, node, s, origin and origin or self)
 
     def shortfn(self):
         return self.verb.shortfn()
@@ -259,10 +259,7 @@ class UcmDevice:
         return self.verb.load_sequence(array_node)
 
     def load_device(self, device_node):
-        if self.ucm.syntax < 3:
-            name = device_node.id
-        else:
-            name = self.substitute2(device_node, device_node.id)
+        name = self.substitute2(3, device_node, device_node.id)
         self.log(1, "Device '%s'", name)
         self.reset()
         self.name = name
@@ -390,11 +387,11 @@ class UcmVerb:
         prefix = "%s(Verb=%s) " % (prefix, self.name)
         return self.ucm.validate(what, node, prefix)
 
-    def substitute(self, node, origin=None):
-        return self.ucm.substitute(node, origin and origin or self)
+    def substitute(self, syntax, node, origin=None):
+        return self.ucm.substitute(syntax, node, origin and origin or self)
 
-    def substitute2(self, node, s, origin=None):
-        return self.ucm.substitute2(node, s, origin and origin or self)
+    def substitute2(self, syntax, node, s, origin=None):
+        return self.ucm.substitute2(syntax, node, s, origin and origin or self)
 
     def shortfn(self):
         return self.ucm.shortfn() + '@' + self.filename
@@ -662,8 +659,7 @@ class Ucm:
             self.error(dlist_node, "is not array")
         r = []
         for v in dlist_node.value():
-            if self.syntax > 2:
-                v = self.substitute2(dlist_node, v, origin)
+            v = self.substitute2(3, dlist_node, v, origin)
             r.append(v)
         return r
 
@@ -673,16 +669,18 @@ class Ucm:
             cmd, arg = v[idx], v[idx + 1]
             if cmd == 'cdev' and arg.find('CardId') >= 0:
                 self.error(array_node, "cdev is aready set in alsa-lib")
-            self.substitute(array_node[str(idx + 1)])
+            self.substitute(0, array_node[str(idx + 1)])
         return v
 
-    def substitute(self, node, origin=None):
+    def substitute(self, syntax, node, origin=None):
         if node.is_compound():
             self.error(node, "expected a string or integer")
-        return self.substitute2(node, str(node.value()), origin)
+        return self.substitute2(syntax, node, str(node.value()), origin)
 
-    def substitute2(self, node, s, origin=None):
+    def substitute2(self, syntax, node, s, origin=None):
         s = str(s)
+        if self.syntax < syntax:
+            return s
         if s.find('${') < 0:
             return s
         if self.syntax < 2:
@@ -795,19 +793,19 @@ class Ucm:
 
     def condition_String(self, node):
         if 'Haystack' in node or 'Needle' in node:
-            haystack = self.substitute(node['Haystack'])
-            needle = self.substitute(node['Needle'])
+            haystack = self.substitute(0, node['Haystack'])
+            needle = self.substitute(0, node['Needle'])
             r = haystack.find(needle) >= 0
             self.log(2, "Contains(%s, %s): %s", repr(haystack), repr(needle), r)
         elif 'String1' in node or 'String2' in node:
-            string1 = self.substitute(node['String1'])
-            string2 = self.substitute(node['String2'])
+            string1 = self.substitute(0, node['String1'])
+            string2 = self.substitute(0, node['String2'])
             r = string1 == string2
             self.log(2, "IsEqual(%s, %s): %s", repr(string1), repr(string2), r)
         elif 'Empty' in node:
             if self.syntax < 3:
                 self.error(node, 'Empty condition is not supported (requires syntax 3+)')
-            empty = self.substitute(node['Empty'])
+            empty = self.substitute(0, node['Empty'])
             r = not empty
             self.log(2, "Empty(%s): %s", repr(empty), r)
         return r
@@ -895,7 +893,7 @@ class Ucm:
             node.remove()
             if ctx_node is None:
                 self.error(inc_node, 'File string is not defined')
-            filename = self.substitute(ctx_node)
+            filename = self.substitute(0, ctx_node)
             if filename[0] != '/':
                 filename = self.cfgdir() + '/' + filename
             else:
@@ -914,7 +912,7 @@ class Ucm:
         if self.syntax < 3:
             self.error(def_node, "Define is not supported (requires 'Syntax 3')")
         for node in def_node:
-            self.var[node.id] = self.substitute(node, origin)
+            self.var[node.id] = self.substitute(0, node, origin)
 
     def evaluate_defineregex(self, re_node, origin=None):
         if self.syntax < 3:
@@ -928,9 +926,9 @@ class Ucm:
             for node2 in node:
                 self.validate('DefineRegex', node2)
                 if node2.id == 'String':
-                    string = self.substitute(node2)
+                    string = self.substitute(0, node2)
                 elif node2.id == 'Regex':
-                    reg = self.substitute(node2)
+                    reg = self.substitute(0, node2)
                 elif node2.id == 'Flags':
                     flags = node2.value().tolower()
             if string is None:
@@ -984,7 +982,7 @@ class Ucm:
             self.validate('SectionUseCase', node)
             if node.id == 'File':
                 verb = UcmVerb(self)
-                verb.load_verb(compound.id, node.value())
+                verb.load_verb(self.substitute2(3, compound, compound.id), self.substitute(3, node))
         if verb is None:
             self.error(compound, "field 'File' not found")
         self.verbs.append(verb)
@@ -1070,11 +1068,11 @@ class Ucm:
                     for node3 in node2:
                         self.validate('UseCasePath', node3)
                         if node3.id == 'Version':
-                            version = int(self.substitute(node3))
+                            version = int(self.substitute(0, node3))
                         elif node3.id == 'Directory':
-                            dir = self.substitute(node3)
+                            dir = self.substitute(0, node3)
                         elif node3.id == 'File':
-                            file = self.substitute(node3)
+                            file = self.substitute(0, node3)
                     if version < 2:
                         continue
                     fn2 = path + '/' + dir + '/' + file
