@@ -15,6 +15,7 @@ VALID_ID_LISTS = {
         'UseCasePath': 'compound',
     },
     'UseCasePath': {
+        'Version': 'integer',
         'Directory': 'string',
         'File': 'string'
     },
@@ -1027,12 +1028,17 @@ class Ucm:
                 for node2 in node:
                     dir = None
                     file = None
+                    version = 2
                     for node3 in node2:
                         self.validate('UseCasePath', node3)
-                        if node3.id == 'Directory':
+                        if node3.id == 'Version':
+                            version = int(self.substitute(node3))
+                        elif node3.id == 'Directory':
                             dir = self.substitute(node3)
                         elif node3.id == 'File':
                             file = self.substitute(node3)
+                    if version < 2:
+                        continue
                     fn2 = path + '/' + dir + '/' + file
                     if r and fn2 in r:
                         continue
