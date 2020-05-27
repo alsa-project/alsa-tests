@@ -132,9 +132,10 @@ def do_configs(*args):
                         continue
                     warnings += 1
                     warning('Unable to find UCM configuration for %s', repr(path2))
-                    warning('  First path: %s', repr(l1))
-                    if l1 != l2:
-                        warning('  Second path: %s', repr(l2))
+                    idx = 0
+                    for l in c.get_file_list(ucm_path):
+                        warning('  Path#%s: %s', idx, repr(l))
+                        idx += 1
                     continue
                 c.conditions = conditions
                 c.load(l)
