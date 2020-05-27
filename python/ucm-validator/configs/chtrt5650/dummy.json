@@ -5,5 +5,15 @@
         "driver":	"chtrt5650",
         "name":		"chtrt5650",
         "longname":	"chtrt5650"
+    },
+    "chtrt5650-2": {
+        "comment":	"Dummy test configuration for chtrt5650",
+        "id":		"chtrt5650",
+        "driver":	"chtrt5650",
+        "name":		"chtrt5650",
+        "longname":	"chtrt5650",
+        "control": [
+            { "id": "name='media0_in Gain 0 Switch'" }
+         ]
     }
 }
