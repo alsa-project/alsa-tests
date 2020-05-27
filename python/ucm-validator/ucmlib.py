@@ -196,8 +196,8 @@ class UcmValue:
     def load_value(self, value_node):
         self.parent.evaluate_inplace(value_node)
         for node in value_node:
-            self.validate('Value', node)
-            self.values[node.id] = self.substitute(node)
+            id = self.validate('Value', node)
+            self.values[id] = self.substitute(node)
 
 class UcmDevice:
 
@@ -266,18 +266,18 @@ class UcmDevice:
         add = []
         self.ucm.evaluate_inplace(device_node, self)
         for node in device_node:
-            self.validate('SectionDevice', node)
-            if node.id == 'Comment':
+            id = self.validate('SectionDevice', node)
+            if id == 'Comment':
                 self.comment = node.value()
-            elif node.id == 'EnableSequence':
+            elif id == 'EnableSequence':
                 self.enable = self.load_sequence(node)
-            elif node.id == 'DisableSequence':
+            elif id == 'DisableSequence':
                 self.disable = self.load_sequence(node)
-            elif node.id == 'ConflictingDevice':
+            elif id == 'ConflictingDevice':
                 self.conflicting = self.load_device_list(node)
-            elif node.id == 'SupportedDevice':
+            elif id == 'SupportedDevice':
                 self.supported = self.load_device_list(node)
-            elif node.id == 'Value':
+            elif id == 'Value':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
 
@@ -423,12 +423,12 @@ class UcmVerb:
     def section_verb(self, verb_node):
         self.evaluate_inplace(verb_node)
         for node in verb_node:
-            self.validate('SectionVerb', node)
-            if node.id == 'EnableSequence':
+            id = self.validate('SectionVerb', node)
+            if id == 'EnableSequence':
                 self.enable = self.load_sequence(node)
-            elif node.id == 'DisableSequence':
+            elif id == 'DisableSequence':
                 self.disable = self.load_sequence(node)
-            elif node.id == 'Value':
+            elif id == 'Value':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
 
@@ -462,17 +462,17 @@ class UcmVerb:
         remove_list = {}
         self.evaluate_inplace(aconfig)
         for node in aconfig:
-            self.validate('UseCaseFile', node)
-            if node.id == 'SectionVerb':
+            id = self.validate('UseCaseFile', node)
+            if id == 'SectionVerb':
                 self.section_verb(node)
-            elif node.id == 'SectionDevice':
+            elif id == 'SectionDevice':
                 for node2 in node:
                     dev = UcmDevice(self)
                     dev.load_device(node2)
                     self.devices[dev.name] = dev
-            elif node.id == 'RenameDevice':
+            elif id == 'RenameDevice':
                 rename_dict = node.value()
-            elif node.id == 'RemoveDevice':
+            elif id == 'RemoveDevice':
                 remove_list = node.value()
         if not self.ucm.verify:
             return
@@ -619,13 +619,18 @@ class Ucm:
             raise UcmError("shortfn mismatch '%s' / '%s'" % (topdir, filename))
         return filename[len(topdir)+1:]
 
+    def get_id(self, node):
+        if not self.verify and node.id.find('#') >= 0:
+            id, id2 = node.id.split('#')
+        else:
+            id = node.id
+        return id
+
     def validate(self, what, node, prefix=''):
         if not what in VALID_ID_LISTS:
             raise UcmError("%sdefine validity list for '%s'" % (prefix, what))
         vlist = VALID_ID_LISTS[what]
-        id = node.id
-        if not self.verify and node.id.find('#') >= 0:
-            id, id2 = node.id.split('#')
+        id = self.get_id(node)
         if not id in vlist:
             self.error(node, "%sfield is not known" % prefix)
         t = vlist[id]
@@ -640,6 +645,7 @@ class Ucm:
             t = 'integer'
         if t != node.typename():
             self.error(node, "%sis not type %s (has type '%s')" % (prefix, repr(t), node.typename()))
+        return id
 
     def getval(self, name):
         if self.values and name in self.values:
@@ -811,6 +817,8 @@ class Ucm:
             empty = self.substitute(0, node['Empty'])
             r = not empty
             self.log(2, "Empty(%s): %s", repr(empty), r)
+        else:
+            self.error(node, 'Empty condition')
         return r
 
     def condition_ran(self, condition_node, result, true_node, false_node, origin):
@@ -850,18 +858,18 @@ class Ucm:
             before_node = None
             after_node = None
             for node2 in node:
-                self.validate('If', node2)
-                if node2.id == 'Condition':
+                id = self.validate('If', node2)
+                if id == 'Condition':
                     condition_node = node2
-                elif node2.id == 'True':
+                elif id == 'True':
                     self.evaluate_inplace(node2, origin)
                     true_node = node2
-                elif node2.id == 'False':
+                elif id == 'False':
                     self.evaluate_inplace(node2, origin)
                     false_node = node2
-                elif node2.id == 'Before':
+                elif id == 'Before':
                     before_node = node2
-                elif node2.id == 'After':
+                elif id == 'After':
                     after_node = node2
             node.remove()
             result = self.evaluate_condition(condition_node, origin)
@@ -886,12 +894,12 @@ class Ucm:
             before_node = None
             after_node = None
             for node2 in node:
-                self.validate('Include', node2)
-                if node2.id == 'File':
+                id = self.validate('Include', node2)
+                if id == 'File':
                     ctx_node = node2
-                elif node2.id == 'Before':
+                elif id == 'Before':
                     before_node = node2
-                elif node2.id == 'After':
+                elif id == 'After':
                     after_node = node2
             node.remove()
             if ctx_node is None:
@@ -927,12 +935,12 @@ class Ucm:
             reg = None
             flags = ''
             for node2 in node:
-                self.validate('DefineRegex', node2)
-                if node2.id == 'String':
+                id = self.validate('DefineRegex', node2)
+                if id == 'String':
                     string = self.substitute(0, node2)
-                elif node2.id == 'Regex':
+                elif id == 'Regex':
                     reg = self.substitute(0, node2)
-                elif node2.id == 'Flags':
+                elif id == 'Flags':
                     flags = node2.value().tolower()
             if string is None:
                 self.error(node, "DefineRegex must contain 'String'")
@@ -965,25 +973,34 @@ class Ucm:
             defineregex_flag = False
             include_flag = False
             if_flag = False
-            if 'Define' in top_node:
-                define_flag = self.evaluate_define(top_node['Define'], origin)
-            if 'DefineRegex' in top_node:
-                defineregex_flag = self.evaluate_defineregex(top_node['DefineRegex'], origin)
-            if 'Include' in top_node:
-                include_flag = self.evaluate_include(top_node['Include'], origin)
+            for node in top_node:
+                id = self.get_id(node)
+                if id == 'Define' and self.evaluate_define(node, origin):
+                    define_flag = True
+            for node in top_node:
+                id = self.get_id(node)
+                if id == 'DefineRegex' and self.evaluate_defineregex(node, origin):
+                    defineregex_flag = True
+            for node in top_node:
+                id = self.get_id(node)
+                if id == 'Include' and self.evaluate_include(node, origin):
+                    include_flag = True
             if include_flag:
                 continue
-            if 'If' in top_node:
-                if_flag = self.evaluate_if(top_node['If'], origin)
+            for node in top_node:
+                id = self.get_id(node)
+                if id == 'If' and self.evaluate_if(node, origin):
+                    if_flag = True
         for id in ('Define', 'DefineRegex', 'Include', 'If'):
-            if id in top_node:
-                top_node[id].remove()
+            for node in top_node:
+                if node.id == id or node.id.startswith(id + '#'):
+                    node.remove()
 
     def load_use_case_top(self, compound):
         verb = None
         for node in compound:
-            self.validate('SectionUseCase', node)
-            if node.id == 'File':
+            id = self.validate('SectionUseCase', node)
+            if id == 'File':
                 verb = UcmVerb(self)
                 verb.load_verb(self.substitute2(3, compound, compound.id), self.substitute(3, node))
         if verb is None:
@@ -1014,18 +1031,18 @@ class Ucm:
             self.syntax = int(aconfig['Syntax'].value())
         self.evaluate_inplace(aconfig)
         for node in aconfig:
-            self.validate('master', node)
-            if node.id == 'Syntax':
+            id = self.validate('master', node)
+            if id == 'Syntax':
                 continue
-            elif node.id == 'Comment':
+            elif id == 'Comment':
                 self.comment = node.value()
-            elif node.id == 'SectionUseCase':
+            elif id == 'SectionUseCase':
                 for node2 in node:
                     self.load_use_case_top(node2)
-            elif node.id == 'ValueDefaults':
+            elif id == 'ValueDefaults':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
-            elif node.id == 'BootSequence':
+            elif id == 'BootSequence':
                 self.boot = self.load_sequence(node)
 
     def check(self):
@@ -1062,8 +1079,8 @@ class Ucm:
         self.evaluate_inplace(c)
         r = []
         for node in c:
-            self.validate('top', node)
-            if node.id == 'UseCasePath':
+            id = self.validate('top', node)
+            if id == 'UseCasePath':
                 for node2 in node:
                     dir = None
                     file = None
