@@ -1048,6 +1048,7 @@ class Ucm:
     def check(self):
         if not self.verify:
             raise UcmError("cannot verify abstract contents")
+        for verb in self.verbs:
             verb.check()
 
     def dump(self):
