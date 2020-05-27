@@ -252,6 +252,9 @@ class UcmDevice:
     def load_array(self, array_node):
         return self.verb.load_array(array_node)
 
+    def load_device_list(self, dlist_node):
+        return self.verb.load_device_list(dlist_node)
+
     def load_sequence(self, array_node):
         return self.verb.load_sequence(array_node)
 
@@ -274,9 +277,9 @@ class UcmDevice:
             elif node.id == 'DisableSequence':
                 self.disable = self.load_sequence(node)
             elif node.id == 'ConflictingDevice':
-                self.conflicting = self.load_array(node)
+                self.conflicting = self.load_device_list(node)
             elif node.id == 'SupportedDevice':
-                self.supported = self.load_array(node)
+                self.supported = self.load_device_list(node)
             elif node.id == 'Value':
                 self.values = UcmValue(self)
                 self.values.load_value(node)
@@ -413,6 +416,9 @@ class UcmVerb:
 
     def load_array(self, array_node):
         return self.ucm.load_array(array_node, self)
+
+    def load_device_list(self, dlist_node):
+        return self.ucm.load_device_list(dlist_node, self)
 
     def load_sequence(self, array_node):
         return self.ucm.load_sequence(array_node, self)
@@ -644,12 +650,22 @@ class Ucm:
         return None
 
     def load_array(self, array_node, origin=None):
-        v = array_node.value()
-        if type(v) != type([]):
+        if not array_node.is_array():
             self.error(array_node, "is not array")
+        v = array_node.value()
         if len(v) == 0:
             self.error(array_node, "is empty")
         return v
+
+    def load_device_list(self, dlist_node, origin=None):
+        if not dlist_node.is_array():
+            self.error(dlist_node, "is not array")
+        r = []
+        for v in dlist_node.value():
+            if self.syntax > 2:
+                v = self.substitute2(dlist_node, v, origin)
+            r.append(v)
+        return r
 
     def load_sequence(self, array_node, origin=None):
         v = self.load_array(array_node)
