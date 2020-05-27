@@ -871,9 +871,9 @@ class Ucm:
                     before_node = node2
                 elif id == 'After':
                     after_node = node2
-            node.remove()
             result = self.evaluate_condition(condition_node, origin)
             self.condition_ran(condition_node, result, true_node, false_node, origin)
+            node.remove()
             if true_node is None and false_node is None:
                 self.error(if_node, 'True or False block is not defined')
             if (result or not self.verify) and not true_node is None:
