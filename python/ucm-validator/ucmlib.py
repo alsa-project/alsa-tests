@@ -197,7 +197,8 @@ class UcmValue:
         self.parent.evaluate_inplace(value_node)
         for node in value_node:
             id = self.validate('Value', node)
-            self.values[id] = self.substitute(node)
+            self.substitute(node) # only for test
+            self.values[id] = node.value()
 
 class UcmDevice:
 
