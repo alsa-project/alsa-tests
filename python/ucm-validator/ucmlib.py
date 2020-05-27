@@ -190,11 +190,14 @@ class UcmValue:
     def validate(self, what, node, prefix=''):
         return self.parent.validate(what, node)
 
+    def substitute(self, node):
+        return self.parent.substitute(node, self)
+
     def load_value(self, value_node):
         self.parent.evaluate_inplace(value_node)
         for node in value_node:
             self.validate('Value', node)
-            self.values[node.id] = node.value()
+            self.values[node.id] = self.substitute(node)
 
 class UcmDevice:
 
@@ -225,6 +228,12 @@ class UcmDevice:
         prefix = "%s(Device=%s) " % (prefix, self.name)
         return self.verb.validate(what, node, prefix)
 
+    def substitute(self, node, origin=None):
+        return self.verb.substitute(node, origin and origin or self)
+
+    def substitute2(self, node, s, origin=None):
+        return self.verb.substitute2(node, s, origin and origin or self)
+
     def shortfn(self):
         return self.verb.shortfn()
 
@@ -247,9 +256,13 @@ class UcmDevice:
         return self.verb.load_sequence(array_node)
 
     def load_device(self, device_node):
-        self.log(1, "Device '%s'", device_node.id)
+        if self.ucm.syntax < 3:
+            name = device_node.id
+        else:
+            name = self.substitute2(device_node, device_node.id)
+        self.log(1, "Device '%s'", name)
         self.reset()
-        self.name = device_node.id
+        self.name = name
         add = []
         self.ucm.evaluate_inplace(device_node, self)
         for node in device_node:
@@ -373,6 +386,12 @@ class UcmVerb:
     def validate(self, what, node, prefix=''):
         prefix = "%s(Verb=%s) " % (prefix, self.name)
         return self.ucm.validate(what, node, prefix)
+
+    def substitute(self, node, origin=None):
+        return self.ucm.substitute(node, origin and origin or self)
+
+    def substitute2(self, node, s, origin=None):
+        return self.ucm.substitute2(node, s, origin and origin or self)
 
     def shortfn(self):
         return self.ucm.shortfn() + '@' + self.filename
@@ -561,7 +580,7 @@ class Ucm:
         pass
 
     def error(self, node, msg, *args):
-        if node:
+        if not node is None:
             raise UcmError("%s: %s %s" % (self.id(), node.full_id(), msg % args))
         else:
             raise UcmError("%s: %s" % (self.id(), msg % args))
@@ -644,7 +663,10 @@ class Ucm:
     def substitute(self, node, origin=None):
         if node.is_compound():
             self.error(node, "expected a string or integer")
-        s = str(node.value())
+        return self.substitute2(node, str(node.value()), origin)
+
+    def substitute2(self, node, s, origin=None):
+        s = str(s)
         if s.find('${') < 0:
             return s
         if self.syntax < 2:
