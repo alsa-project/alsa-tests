@@ -45,7 +45,7 @@ class Ucm2(Ucm):
         v = repr(condition_node.value())
         r = repr(result)
         f = origin and origin.shortfn() or self.shortfn()
-        id = condition_node.full_id()
+        id = condition_node.origin_id()
         ee(self.conditions, f)
         ee(self.conditions[f], v)
         d = self.conditions[f][v]

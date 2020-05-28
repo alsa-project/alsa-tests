@@ -2,6 +2,7 @@ DBGCMD?=
 LOGLEVEL?=0
 ALSA_UCM_DIR?=../../../alsa-ucm-conf/ucm2
 #CONFIGS_FILTER=configs/cht-bsw-rt5672/Lenovo_Miix_2_10.txt
+#CONFIGS_FILTER=configs/HDA/DualCodecs.json
 
 all: verify configs
 	@exit 0

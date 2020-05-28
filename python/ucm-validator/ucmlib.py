@@ -7,7 +7,7 @@
 import os
 import sys
 import re
-from aconfig import AlsaConfig
+from aconfig import AlsaConfigTree
 
 VALID_ID_LISTS = {
     'top': {
@@ -121,6 +121,28 @@ def dict_array_append(d, key, val):
     if not key in d:
         d[key] = []
     d[key].append(val)
+
+class AlsaConfigUcm(AlsaConfigTree):
+    """Class to trace origin"""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.origin = None
+
+    def origin_id(self):
+        return self.origin
+
+    def _load(self, c):
+
+        def one(n):
+            n.origin = n.full_id()
+            if n.is_compound():
+                for n2 in n:
+                    one(n2)
+
+        super()._load(c)
+        one(self)
+
 
 class AlsaControlError(Exception):
     """Indicates exceptions raised by AlsaControl class."""
@@ -456,7 +478,7 @@ class UcmVerb:
             filename = self.ucm.cfgdir() + '/' + filename
         else:
             filename = self.ucm.cfgtop() + '/' + filename[1:]
-        aconfig = AlsaConfig()
+        aconfig = AlsaConfigUcm()
         self.log(1, "Verb '%s', file '%s'", verbname, self.ucm.shortfn(filename))
         aconfig.load(filename)
         rename_dict = {}
@@ -760,7 +782,7 @@ class Ucm:
                     self.error(snode, 'compound type expected for the merged block')
             before = get_position_node(before_node, 'Before')
             after = get_position_node(after_node, 'After')
-            if before and ater:
+            if before and after:
                 self.error('both Before and After identifiers in the If or Include block')
             array = False
             if snode.is_array():
@@ -910,7 +932,7 @@ class Ucm:
                 filename = self.cfgdir() + '/' + filename
             else:
                 filename = self.topdir() + '/' + filename[1:]
-            nodes = AlsaConfig()
+            nodes = AlsaConfigUcm()
             self.log(1, "Include '%s', file '%s'", node.full_id(), self.shortfn(filename))
             nodes.load(filename)
             self.evaluate_inplace(nodes, origin)
@@ -1025,7 +1047,7 @@ class Ucm:
         filename = os.path.abspath(filename)
         self.filename = filename
         self.indent_check(filename)
-        aconfig = AlsaConfig()
+        aconfig = AlsaConfigUcm()
         self.log(1, "Device file '%s'", self.shortfn())
         aconfig.load(filename)
         if 'Syntax' in aconfig:
@@ -1071,7 +1093,7 @@ class Ucm:
         fn = path + '/ucm.conf'
         if not os.path.exists(fn):
             return self.get_file_list1(path)
-        c = AlsaConfig()
+        c = AlsaConfigUcm()
         c.load(fn)
         if not 'Syntax' in c:
             self.error(c, 'Syntax field is missing in toplevel file')
