@@ -100,6 +100,21 @@ def do_all(*args):
 
 def do_configs(*args):
 
+    def import_config(filename):
+        fp = open(filename)
+        ctx = fp.read(128 * 1024)
+        glob = {}
+        exec(compile(ctx, filename, 'exec'), glob)
+        topdir = os.path.abspath(filename + '/../..')
+        config = glob['generate_config'](topdir)
+        if not config:
+            return
+        for k in config:
+            if not k in configs:
+                configs[k] = config[k]
+            else:
+                configs[k].update(config[k])
+
     def config_walk(path1):
         errors = 0
         warnings = 0
@@ -111,6 +126,9 @@ def do_configs(*args):
                 errors1, warnings1 = config_walk(path2)
                 errors += errors1
                 warnings += warnings1
+                continue
+            if file.endswith('.conf.py'):
+                import_config(path2)
                 continue
             if not file.endswith('.txt') and not file.endswith('.json') and \
                not file.endswith('.py'):
@@ -157,6 +175,7 @@ def do_configs(*args):
     alsainfo_path = args[1]
     filter = args[2:]
     conditions = {}
+    configs = {'suppress_if': {}}
     errors, warnings = config_walk(alsainfo_path)
     # check, if all configuration files were handled
     cs = ucm_get_configs(args[0], short=True, link=False)
@@ -172,8 +191,10 @@ def do_configs(*args):
             v = conditions[filename][cond]
             if not ('True' in v and 'False' in v):
                 what = 'True' in v and 'False' or 'True'
-                error1('%s: %s - %s block not executed', filename, v['id'], what)
-                errors += 1
+                ifstr = '%s: %s - %s' % (filename, v['id'], what)
+                if not ifstr in configs['suppress_if'] or not configs['suppress_if'][ifstr]:
+                    error1('%s block not executed', ifstr)
+                    errors += 1
     if warnings > 0:
         warning('total warnings: %s' % warnings)
     if errors > 0:
