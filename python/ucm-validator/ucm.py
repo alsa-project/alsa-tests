@@ -112,9 +112,10 @@ def do_configs(*args):
                 errors += errors1
                 warnings += warnings1
                 continue
-            if not file.endswith('.txt') and not file.endswith('.json'):
+            if not file.endswith('.txt') and not file.endswith('.json') and \
+               not file.endswith('.py'):
                 continue
-            info = file.endswith('.json') and AlsaJson() or AlsaInfo()
+            info = file.endswith('.txt') and AlsaInfo() or AlsaJson()
             if filter and not path2 in filter:
                 continue
             info.load(path2)

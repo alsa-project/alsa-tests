@@ -87,7 +87,14 @@ class AlsaJson:
         self.reset()
         self.filename = filename
         fp = open(filename)
-        self.json = json.load(fp)
+        if filename.endswith('.py'):
+            ctx = fp.read(128 * 1024)
+            glob = {}
+            exec(compile(ctx, filename, 'exec'), glob)
+            topdir = os.path.abspath(filename + '/../..')
+            self.json = glob['generate_json'](topdir)
+        else:
+            self.json = json.load(fp)
         fp.close()
         index = 0
         for c in self.json:
