@@ -57,5 +57,13 @@
         "driver":	"SOF",
         "name":		"sof-bytcht rt5650",
         "longname":	"sof-bytcht rt5650"
+    },
+    "max98090-1": {
+        "comment":	"Dummy test configuration for max98090",
+        "id":		"max98090",
+        "driver":	"SOF",
+        "name":		"sof-bytcht max98090",
+        "longname":	"sof-bytcht max98090"
     }
+
 }
