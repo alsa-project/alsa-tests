@@ -863,10 +863,8 @@ class Ucm:
                 if id == 'Condition':
                     condition_node = node2
                 elif id == 'True':
-                    self.evaluate_inplace(node2, origin)
                     true_node = node2
                 elif id == 'False':
-                    self.evaluate_inplace(node2, origin)
                     false_node = node2
                 elif id == 'Before':
                     before_node = node2
@@ -874,13 +872,15 @@ class Ucm:
                     after_node = node2
             result = self.evaluate_condition(condition_node, origin)
             self.condition_ran(condition_node, result, true_node, false_node, origin)
-            node.remove()
             if true_node is None and false_node is None:
                 self.error(if_node, 'True or False block is not defined')
             if (result or not self.verify) and not true_node is None:
+                self.evaluate_inplace(true_node, origin)
                 append_nodes(true_node, before_node, after_node)
             if (not result or not self.verify) and not false_node is None:
+                self.evaluate_inplace(false_node, origin)
                 append_nodes(false_node, before_node, after_node)
+            node.remove()
             r = True
 
         return r
