@@ -11,6 +11,8 @@ SUPPRESS_IF = {
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5651'.'True'.'If'.'0'.'True'.'If'.'headphones'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5651'.'True'.'If'.'0'.'True'.'If'.'dmic'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5651'.'True'.'If'.'0'.'True'.'If'.'in12'.'Condition' - True": 1,
+  "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_max98090'.'True'.'SectionVerb'.'If'.'platform'.'Condition' - True": 1,
+  "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_max98090'.'True'.'SectionVerb'.'If'.'Quawks'.'Condition' - True": 1,
   "cht-bsw-rt5672/cht-bsw-rt5672-stereo-dmic2.conf@HiFi-stereo-dmic2.conf: 'SectionVerb'.'If'.'Controls'.'Condition' - False": 1,
   "cht-bsw-rt5672/cht-bsw-rt5672.conf@HiFi.conf: 'SectionVerb'.'If'.'Controls'.'Condition' - False": 1,
   "bytcht-es8316/bytcht-es8316.conf@HiFi.conf: 'SectionVerb'.'If'.'Controls'.'Condition' - False": 1,
