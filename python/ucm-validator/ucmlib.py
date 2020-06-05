@@ -478,6 +478,7 @@ class UcmVerb:
             filename = self.ucm.cfgdir() + '/' + filename
         else:
             filename = self.ucm.cfgtop() + '/' + filename[1:]
+        self.ucm.indent_check(filename)
         aconfig = AlsaConfigUcm()
         self.log(1, "Verb '%s', file '%s'", verbname, self.ucm.shortfn(filename))
         aconfig.load(filename)
@@ -1037,8 +1038,10 @@ class Ucm:
             line = fp.readline()
             if not line:
                 break
-            if line.startswith('    '):
+            if line.startswith(' ') and (line.startswith('  ') or len(line) < 3):
                 self.error(None, "%s:%d: Wrong indentation (use tabs to save space!)" % (filename, lineno))
+            if line.endswith(' ') or line.endswith('\t'):
+                self.error(None, "%s:%d: Trailing space or tabelator!" % (filename, lineno))
             lineno += 1
 
     def load(self, filename):
