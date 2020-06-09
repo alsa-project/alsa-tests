@@ -73,6 +73,13 @@
         "driver":	"SOF",
         "name":		"sof-bytcht max98090",
         "longname":	"sof-bytcht max98090"
+    },
+    "rt286-1": {
+        "comment":	"Dummy test configuration for rt286",
+        "id":		"rt286",
+        "module":	"snd_soc_sst_broadwell",
+        "driver":	"SOF",
+        "name":		"sof-bdw rt286",
+        "longname":	"sof-bdw rt286"
     }
-
 }
