@@ -1,15 +1,15 @@
 
 !!################################
-!!ALSA Information Script v 0.4.64
+!!ALSA Information Script v 0.4.65
 !!################################
 
-!!Script ran on: Thu Feb 27 18:59:15 UTC 2020
+!!Script ran on: Tue Jun  9 01:25:21 UTC 2020
 
 
 !!Linux Distribution
 !!------------------
 
-Ubuntu 19.10 \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 19.10" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 19.10" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=eoan
+Ubuntu 20.04 LTS \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04 LTS" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=focal
 
 
 !!DMI Information
@@ -60,7 +60,7 @@ Board Name:
 !!Kernel Information
 !!------------------
 
-Kernel release:    5.6.0-rc2-test 
+Kernel release:    5.4.0-33-generic
 Operating System:  GNU/Linux
 Architecture:      x86_64
 Processor:         x86_64
@@ -70,15 +70,14 @@ SMP Enabled:       Yes
 !!ALSA Version
 !!------------
 
-Driver version:     k5.6.0-rc2-test 
-Library version:    1.2.1.2
-Utilities version:  1.1.9
+Driver version:     k5.4.0-33-generic
+Library version:    1.2.2
+Utilities version:  1.2.2
 
 
 !!Loaded ALSA modules
 !!-------------------
 
-snd_hda_intel
 snd_soc_sst_bdw_rt5677_mach
 
 
@@ -93,10 +92,8 @@ Pulseaudio:
 !!Soundcards recognised by ALSA
 !!-----------------------------
 
- 0 [HDMI           ]: HDA-Intel - HDA Intel HDMI
-                      HDA Intel HDMI at 0xe1218000 irq 47
- 1 [sofbdwrt5677   ]: sof-bdw-rt5677 - sof-bdw-rt5677
-                      sof-bdw-rt5677
+ 0 [bdwrt5677      ]: bdw-rt5677 - bdw-rt5677
+                      bdw-rt5677
 
 
 !!PCI Soundcards installed in the system
@@ -131,151 +128,24 @@ snd_hda_intel: model=,alc283-dac-wcaps
 !!Loaded sound module options
 !!---------------------------
 
-!!Module: snd_hda_intel
-	align_buffer_size : -1
-	bdl_pos_adj : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
-	beep_mode : Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
-	dmic_detect : Y
-	enable : Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
-	enable_msi : -1
-	id : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
-	index : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
-	jackpoll_ms : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-	model : ,alc283-dac-wcaps,(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
-	patch : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
-	pm_blacklist : Y
-	position_fix : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
-	power_save : 0
-	power_save_controller : Y
-	probe_mask : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
-	probe_only : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-	single_cmd : -1
-	snoop : -1
-
 !!Module: snd_soc_sst_bdw_rt5677_mach
 	* : 
-
-
-!!HDA-Intel Codec information
-!!---------------------------
---startcollapse--
-
-Codec: Intel Broadwell HDMI
-Address: 0
-AFG Function Id: 0x1 (unsol 0)
-Vendor Id: 0x80862808
-Subsystem Id: 0x80860101
-Revision Id: 0x100000
-No Modem Function Group found
-Default PCM:
-    rates [0x0]:
-    bits [0x0]:
-    formats [0x0]:
-Default Amp-In caps: N/A
-Default Amp-Out caps: N/A
-State of AFG node 0x01:
-  Power states:  D0 D3 CLKSTOP EPSS
-  Power: setting=D0, actual=D0, Clock-stop-OK
-GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
-Node 0x02 [Audio Output] wcaps 0x6611: 8-Channels Digital
-  Converter: stream=0, channel=0
-  Digital: Enabled KAE
-  Digital category: 0x0
-  IEC Coding Type: 0x0
-  PCM:
-    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
-    bits [0x1e]: 16 20 24 32
-    formats [0x5]: PCM AC3
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-Node 0x03 [Audio Output] wcaps 0x6611: 8-Channels Digital
-  Converter: stream=0, channel=0
-  Digital: Enabled KAE
-  Digital category: 0x0
-  IEC Coding Type: 0x0
-  PCM:
-    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
-    bits [0x1e]: 16 20 24 32
-    formats [0x5]: PCM AC3
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
-  Converter: stream=0, channel=0
-  Digital: Enabled KAE
-  Digital category: 0x0
-  IEC Coding Type: 0x0
-  PCM:
-    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
-    bits [0x1e]: 16 20 24 32
-    formats [0x5]: PCM AC3
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
-  Amp-Out vals:  [0x00 0x00]
-  Pincap 0x0b000094: OUT Detect HBR HDMI DP
-  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
-    Conn = Digital, Color = Unknown
-    DefAssociation = 0x1, Sequence = 0x0
-  Pin-ctls: 0x00:
-  Unsolicited: tag=00, enabled=0
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-  Devices: 0
-  Connection: 0
-Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
-  Amp-Out vals:  [0x00 0x00]
-  Pincap 0x0b000094: OUT Detect HBR HDMI DP
-  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
-    Conn = Digital, Color = Unknown
-    DefAssociation = 0x1, Sequence = 0x0
-  Pin-ctls: 0x00:
-  Unsolicited: tag=00, enabled=0
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-  Devices: 0
-  Connection: 0
-Node 0x07 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
-  Amp-Out vals:  [0x00 0x00]
-  Pincap 0x0b000094: OUT Detect HBR HDMI DP
-  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
-    Conn = Digital, Color = Unknown
-    DefAssociation = 0x1, Sequence = 0x0
-  Pin-ctls: 0x00:
-  Unsolicited: tag=00, enabled=0
-  Power states:  D0 D3 EPSS
-  Power: setting=D0, actual=D0
-  Devices: 0
-  Connection: 0
-Node 0x08 [Vendor Defined Widget] wcaps 0xf00000: Mono
---endcollapse--
 
 
 !!ALSA Device nodes
 !!-----------------
 
-crw-rw----  1 root audio 116, 12 Feb 27 13:32 /dev/snd/controlC0
-crw-rw----  1 root audio 116,  5 Feb 27 13:32 /dev/snd/controlC1
-crw-rw----  1 root audio 116, 11 Feb 27 13:32 /dev/snd/hwC0D0
-crw-rw----  1 root audio 116, 10 Feb 27 13:33 /dev/snd/pcmC0D10p
-crw-rw----  1 root audio 116,  6 Feb 27 13:33 /dev/snd/pcmC0D3p
-crw-rw----  1 root audio 116,  7 Feb 27 13:33 /dev/snd/pcmC0D7p
-crw-rw----  1 root audio 116,  8 Feb 27 13:33 /dev/snd/pcmC0D8p
-crw-rw----  1 root audio 116,  9 Feb 27 13:33 /dev/snd/pcmC0D9p
-crw-rw----  1 root audio 116,  3 Feb 27 13:33 /dev/snd/pcmC1D0c
-crw-rw----  1 root audio 116,  2 Feb 27 13:33 /dev/snd/pcmC1D0p
-crw-rw----  1 root audio 116,  4 Feb 27 13:32 /dev/snd/pcmC1D1p
-crw-rw----  1 root audio 116,  1 Feb 27 13:32 /dev/snd/seq
-crw-rw----  1 root audio 116, 33 Feb 27 13:32 /dev/snd/timer
+crw-rw----  1 root audio 116,  4 Jun  8 21:24 /dev/snd/controlC0
+crw-rw----  1 root audio 116,  3 Jun  8 21:24 /dev/snd/pcmC0D0c
+crw-rw----  1 root audio 116,  2 Jun  8 21:24 /dev/snd/pcmC0D0p
+crw-rw----  1 root audio 116,  1 Jun  8 21:24 /dev/snd/seq
+crw-rw----  1 root audio 116, 33 Jun  8 21:24 /dev/snd/timer
 
 /dev/snd/by-path:
 total 0
-drwxr-xr-x 2 root root  80 Feb 27 13:32 .
-drwxr-xr-x 3 root root 320 Feb 27 13:32 ..
-lrwxrwxrwx 1 root root  12 Feb 27 13:32 pci-0000:00:03.0 -> ../controlC0
-lrwxrwxrwx 1 root root  12 Feb 27 13:32 platform-bdw-rt5677 -> ../controlC1
+drwxr-xr-x 2 root root  60 Jun  8 21:24 .
+drwxr-xr-x 3 root root 160 Jun  8 21:24 ..
+lrwxrwxrwx 1 root root  12 Jun  8 21:24 platform-bdw-rt5677 -> ../controlC0
 
 
 !!Aplay/Arecord output
@@ -284,73 +154,34 @@ lrwxrwxrwx 1 root root  12 Feb 27 13:32 platform-bdw-rt5677 -> ../controlC1
 APLAY
 
 **** List of PLAYBACK Hardware Devices ****
-card 0: HDMI [HDA Intel HDMI], device 3: HDMI 0 [HDMI 0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 0: HDMI [HDA Intel HDMI], device 7: HDMI 1 [HDMI 1]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 0: HDMI [HDA Intel HDMI], device 8: HDMI 2 [HDMI 2]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 0: HDMI [HDA Intel HDMI], device 9: HDMI 3 [HDMI 3]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 0: HDMI [HDA Intel HDMI], device 10: HDMI 4 [HDMI 4]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 1: sofbdwrt5677 [sof-bdw-rt5677], device 0: Low Latency (*) []
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 1: sofbdwrt5677 [sof-bdw-rt5677], device 1: Media Playback 1 (*) []
+card 0: bdwrt5677 [bdw-rt5677], device 0: System Playback/Capture (*) []
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 
 ARECORD
 
 **** List of CAPTURE Hardware Devices ****
-card 1: sofbdwrt5677 [sof-bdw-rt5677], device 0: Low Latency (*) []
+card 0: bdwrt5677 [bdw-rt5677], device 0: System Playback/Capture (*) []
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 
 !!Amixer output
 !!-------------
 
-!!-------Mixer controls for card HDMI
+!!-------Mixer controls for card bdwrt5677
 
-Card hw:0 'HDMI'/'HDA Intel HDMI at 0xe1218000 irq 47'
-  Mixer name	: 'Intel Broadwell HDMI'
-  Components	: 'HDA:80862808,80860101,00100000'
-  Controls      : 35
-  Simple ctrls  : 5
-Simple mixer control 'IEC958',0
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',1
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',2
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',3
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',4
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-
-!!-------Mixer controls for card sofbdwrt5677
-
-Card hw:1 'sofbdwrt5677'/'sof-bdw-rt5677'
+Card hw:0 'bdwrt5677'/'bdw-rt5677'
   Mixer name	: ''
   Components	: ''
-  Controls      : 222
-  Simple ctrls  : 215
+  Controls      : 224
+  Simple ctrls  : 216
+Simple mixer control 'Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 30
+  Mono:
+  Front Left: Playback 23 [77%] [-21.00dB]
+  Front Right: Playback 23 [77%] [-21.00dB]
 Simple mixer control 'Headphone',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -369,10 +200,20 @@ Simple mixer control 'Sidetone Mux',0
   Capabilities: enum
   Items: 'DMIC1 L' 'DMIC2 L' 'DMIC3 L' 'DMIC4 L' 'ADC1' 'ADC2'
   Item0: 'DMIC1 L'
+Simple mixer control 'Waves',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
 Simple mixer control 'DSP VAD',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
   Mono: Playback [off]
+Simple mixer control 'Mic',0
+  Capabilities: cvolume
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 30
+  Front Left: Capture 0 [0%] [-99999.99dB]
+  Front Right: Capture 0 [0%] [-99999.99dB]
 Simple mixer control 'Mono ADC',0
   Capabilities: cvolume cswitch
   Capture channels: Front Left - Front Right
@@ -384,8 +225,8 @@ Simple mixer control 'Mono ADC Boost',0
   Playback channels: Front Left - Front Right
   Capture channels: Front Left - Front Right
   Limits: 0 - 3
-  Front Left: 2 [67%] [24.00dB]
-  Front Right: 2 [67%] [24.00dB]
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
 Simple mixer control 'Mono ADC MIXL ADC1',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -393,7 +234,7 @@ Simple mixer control 'Mono ADC MIXL ADC1',0
 Simple mixer control 'Mono ADC MIXL ADC2',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
-  Mono: Playback [on]
+  Mono: Playback [off]
 Simple mixer control 'Mono ADC MIXR ADC1',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -462,8 +303,8 @@ Simple mixer control 'ADC1',0
   Capabilities: cvolume cswitch
   Capture channels: Front Left - Front Right
   Limits: Capture 0 - 63
-  Front Left: Capture 31 [49%] [6.00dB] [on]
-  Front Right: Capture 31 [49%] [6.00dB] [on]
+  Front Left: Capture 23 [37%] [0.00dB] [on]
+  Front Right: Capture 23 [37%] [0.00dB] [on]
 Simple mixer control 'ADC2',0
   Capabilities: cvolume cswitch
   Capture channels: Front Left - Front Right
@@ -491,8 +332,8 @@ Simple mixer control 'DAC1',0
   Playback channels: Front Left - Front Right
   Limits: Playback 0 - 127
   Mono:
-  Front Left: Playback 127 [100%] [30.00dB]
-  Front Right: Playback 127 [100%] [30.00dB]
+  Front Left: Playback 87 [69%] [0.00dB]
+  Front Right: Playback 87 [69%] [0.00dB]
 Simple mixer control 'DAC1 MIXL DAC1',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -522,8 +363,8 @@ Simple mixer control 'DAC2',0
   Playback channels: Front Left - Front Right
   Limits: Playback 0 - 127
   Mono:
-  Front Left: Playback 127 [100%] [30.00dB]
-  Front Right: Playback 127 [100%] [30.00dB]
+  Front Left: Playback 87 [69%] [0.00dB]
+  Front Right: Playback 87 [69%] [0.00dB]
 Simple mixer control 'DAC2 L Mux',0
   Capabilities: enum
   Items: 'IF1 DAC 2' 'IF2 DAC 2' 'IF3 DAC L' 'IF4 DAC L' 'SLB DAC 2' 'OB 2'
@@ -641,7 +482,7 @@ Simple mixer control 'IB01 Bypass Mux',0
 Simple mixer control 'IB01 Mux',0
   Capabilities: enum
   Items: 'IF1 DAC 01' 'IF2 DAC 01' 'SLB DAC 01' 'STO1 ADC MIX' 'VAD ADC/DAC1 FS'
-  Item0: 'VAD ADC/DAC1 FS'
+  Item0: 'IF1 DAC 01'
 Simple mixer control 'IB23 Bypass Mux',0
   Capabilities: enum
   Items: 'Bypass' 'Pass SRC'
@@ -834,6 +675,20 @@ Simple mixer control 'Local DMICs',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
   Mono: Playback [on]
+Simple mixer control 'Media0',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 30
+  Mono:
+  Front Left: Playback 0 [0%] [-99999.99dB]
+  Front Right: Playback 0 [0%] [-99999.99dB]
+Simple mixer control 'Media1',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 30
+  Mono:
+  Front Left: Playback 0 [0%] [-99999.99dB]
+  Front Right: Playback 0 [0%] [-99999.99dB]
 Simple mixer control 'OB01 Bypass Mux',0
   Capabilities: enum
   Items: 'Bypass' 'Pass SRC'
@@ -1038,33 +893,6 @@ Simple mixer control 'PDM2 R Mux',0
   Capabilities: enum
   Items: 'STO1 DAC MIX' 'MONO DAC MIX' 'DD MIX1' 'DD MIX2'
   Item0: 'STO1 DAC MIX'
-Simple mixer control 'PGA1.0 1 PCM 0',0
-  Capabilities: pvolume
-  Playback channels: Front Left - Front Right
-  Limits: Playback 0 - 32
-  Mono:
-  Front Left: Playback 32 [100%] [0.00dB]
-  Front Right: Playback 32 [100%] [0.00dB]
-Simple mixer control 'PGA1.1 1 Master',0
-  Capabilities: pvolume
-  Playback channels: Front Left - Front Right
-  Limits: Playback 0 - 32
-  Mono:
-  Front Left: Playback 32 [100%] [0.00dB]
-  Front Right: Playback 32 [100%] [0.00dB]
-Simple mixer control 'PGA2.0 2 PCM 0',0
-  Capabilities: cvolume
-  Capture channels: Front Left - Front Right
-  Limits: Capture 0 - 40
-  Front Left: Capture 32 [80%] [0.00dB]
-  Front Right: Capture 32 [80%] [0.00dB]
-Simple mixer control 'PGA3.0 3 PCM 1',0
-  Capabilities: pvolume
-  Playback channels: Front Left - Front Right
-  Limits: Playback 0 - 32
-  Mono:
-  Front Left: Playback 32 [100%] [0.00dB]
-  Front Right: Playback 32 [100%] [0.00dB]
 Simple mixer control 'Remote DMICs',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -1090,8 +918,8 @@ Simple mixer control 'STO1 ADC Boost',0
   Playback channels: Front Left - Front Right
   Capture channels: Front Left - Front Right
   Limits: 0 - 3
-  Front Left: 2 [67%] [24.00dB]
-  Front Right: 2 [67%] [24.00dB]
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
 Simple mixer control 'STO2 ADC Boost',0
   Capabilities: volume
   Playback channels: Front Left - Front Right
@@ -1120,7 +948,7 @@ Simple mixer control 'Stereo DAC MIXL DAC1 L',0
 Simple mixer control 'Stereo DAC MIXL DAC1 R',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
-  Mono: Playback [on]
+  Mono: Playback [off]
 Simple mixer control 'Stereo DAC MIXL DAC2 L',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -1132,7 +960,7 @@ Simple mixer control 'Stereo DAC MIXL ST L',0
 Simple mixer control 'Stereo DAC MIXR DAC1 L',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
-  Mono: Playback [on]
+  Mono: Playback [off]
 Simple mixer control 'Stereo DAC MIXR DAC1 R',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -1204,7 +1032,7 @@ Simple mixer control 'Sto1 ADC MIXL ADC1',0
 Simple mixer control 'Sto1 ADC MIXL ADC2',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
-  Mono: Playback [on]
+  Mono: Playback [off]
 Simple mixer control 'Sto1 ADC MIXR ADC1',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -1212,7 +1040,7 @@ Simple mixer control 'Sto1 ADC MIXR ADC1',0
 Simple mixer control 'Sto1 ADC MIXR ADC2',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
-  Mono: Playback [on]
+  Mono: Playback [off]
 Simple mixer control 'Sto2 ADC MIXL ADC1',0
   Capabilities: pswitch pswitch-joined
   Playback channels: Mono
@@ -1264,58 +1092,82 @@ Simple mixer control 'Sto4 ADC MIXR ADC2',0
 Simple mixer control 'VAD ADC Mux',0
   Capabilities: enum
   Items: 'STO1 ADC MIX L' 'MONO ADC MIX L' 'MONO ADC MIX R' 'STO2 ADC MIX L' 'STO3 ADC MIX L'
-  Item0: 'MONO ADC MIX L'
+  Item0: 'STO1 ADC MIX L'
 
 
 !!Alsactl output
 !!--------------
 
 --startcollapse--
-state.HDMI {
+state.bdwrt5677 {
 	control.1 {
-		iface CARD
-		name 'HDMI/DP,pcm=3 Jack'
-		value false
+		iface MIXER
+		name 'Master Playback Volume'
+		value.0 23
+		value.1 23
 		comment {
-			access read
-			type BOOLEAN
-			count 1
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 30'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -2100
+			dbvalue.1 -2100
 		}
 	}
 	control.2 {
 		iface MIXER
-		name 'IEC958 Playback Con Mask'
-		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		name 'Media0 Playback Volume'
+		value.0 0
+		value.1 0
 		comment {
-			access read
-			type IEC958
-			count 1
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 30'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -9999999
+			dbvalue.1 -9999999
 		}
 	}
 	control.3 {
 		iface MIXER
-		name 'IEC958 Playback Pro Mask'
-		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		name 'Media1 Playback Volume'
+		value.0 0
+		value.1 0
 		comment {
-			access read
-			type IEC958
-			count 1
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 30'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -9999999
+			dbvalue.1 -9999999
 		}
 	}
 	control.4 {
 		iface MIXER
-		name 'IEC958 Playback Default'
-		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		name 'Mic Capture Volume'
+		value.0 0
+		value.1 0
 		comment {
 			access 'read write'
-			type IEC958
-			count 1
+			type INTEGER
+			count 2
+			range '0 - 30'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -9999999
+			dbvalue.1 -9999999
 		}
 	}
 	control.5 {
 		iface MIXER
-		name 'IEC958 Playback Switch'
-		value true
+		name 'Waves Switch'
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -1323,374 +1175,16 @@ state.HDMI {
 		}
 	}
 	control.6 {
-		iface PCM
-		device 3
-		name ELD
-		value ''
+		iface MIXER
+		name 'Waves Set Param'
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
 		comment {
-			access 'read volatile'
+			access 'read write'
 			type BYTES
-			count 0
+			count 128
 		}
 	}
 	control.7 {
-		iface CARD
-		name 'HDMI/DP,pcm=7 Jack'
-		value false
-		comment {
-			access read
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.8 {
-		iface MIXER
-		name 'IEC958 Playback Con Mask'
-		index 1
-		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.9 {
-		iface MIXER
-		name 'IEC958 Playback Pro Mask'
-		index 1
-		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.10 {
-		iface MIXER
-		name 'IEC958 Playback Default'
-		index 1
-		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access 'read write'
-			type IEC958
-			count 1
-		}
-	}
-	control.11 {
-		iface MIXER
-		name 'IEC958 Playback Switch'
-		index 1
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.12 {
-		iface PCM
-		device 7
-		name ELD
-		value ''
-		comment {
-			access 'read volatile'
-			type BYTES
-			count 0
-		}
-	}
-	control.13 {
-		iface CARD
-		name 'HDMI/DP,pcm=8 Jack'
-		value false
-		comment {
-			access read
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.14 {
-		iface MIXER
-		name 'IEC958 Playback Con Mask'
-		index 2
-		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.15 {
-		iface MIXER
-		name 'IEC958 Playback Pro Mask'
-		index 2
-		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.16 {
-		iface MIXER
-		name 'IEC958 Playback Default'
-		index 2
-		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access 'read write'
-			type IEC958
-			count 1
-		}
-	}
-	control.17 {
-		iface MIXER
-		name 'IEC958 Playback Switch'
-		index 2
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.18 {
-		iface PCM
-		device 8
-		name ELD
-		value ''
-		comment {
-			access 'read volatile'
-			type BYTES
-			count 0
-		}
-	}
-	control.19 {
-		iface CARD
-		name 'HDMI/DP,pcm=9 Jack'
-		value false
-		comment {
-			access read
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.20 {
-		iface MIXER
-		name 'IEC958 Playback Con Mask'
-		index 3
-		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.21 {
-		iface MIXER
-		name 'IEC958 Playback Pro Mask'
-		index 3
-		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.22 {
-		iface MIXER
-		name 'IEC958 Playback Default'
-		index 3
-		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access 'read write'
-			type IEC958
-			count 1
-		}
-	}
-	control.23 {
-		iface MIXER
-		name 'IEC958 Playback Switch'
-		index 3
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.24 {
-		iface PCM
-		device 9
-		name ELD
-		value ''
-		comment {
-			access 'read volatile'
-			type BYTES
-			count 0
-		}
-	}
-	control.25 {
-		iface CARD
-		name 'HDMI/DP,pcm=10 Jack'
-		value false
-		comment {
-			access read
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.26 {
-		iface MIXER
-		name 'IEC958 Playback Con Mask'
-		index 4
-		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.27 {
-		iface MIXER
-		name 'IEC958 Playback Pro Mask'
-		index 4
-		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access read
-			type IEC958
-			count 1
-		}
-	}
-	control.28 {
-		iface MIXER
-		name 'IEC958 Playback Default'
-		index 4
-		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
-		comment {
-			access 'read write'
-			type IEC958
-			count 1
-		}
-	}
-	control.29 {
-		iface MIXER
-		name 'IEC958 Playback Switch'
-		index 4
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.30 {
-		iface PCM
-		device 10
-		name ELD
-		value ''
-		comment {
-			access 'read volatile'
-			type BYTES
-			count 0
-		}
-	}
-	control.31 {
-		iface PCM
-		device 3
-		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
-		value.2 0
-		value.3 0
-		value.4 0
-		value.5 0
-		value.6 0
-		value.7 0
-		comment {
-			access 'read write'
-			type INTEGER
-			count 8
-			range '0 - 36'
-		}
-	}
-	control.32 {
-		iface PCM
-		device 7
-		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
-		value.2 0
-		value.3 0
-		value.4 0
-		value.5 0
-		value.6 0
-		value.7 0
-		comment {
-			access 'read write'
-			type INTEGER
-			count 8
-			range '0 - 36'
-		}
-	}
-	control.33 {
-		iface PCM
-		device 8
-		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
-		value.2 0
-		value.3 0
-		value.4 0
-		value.5 0
-		value.6 0
-		value.7 0
-		comment {
-			access 'read write'
-			type INTEGER
-			count 8
-			range '0 - 36'
-		}
-	}
-	control.34 {
-		iface PCM
-		device 9
-		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
-		value.2 0
-		value.3 0
-		value.4 0
-		value.5 0
-		value.6 0
-		value.7 0
-		comment {
-			access 'read write'
-			type INTEGER
-			count 8
-			range '0 - 36'
-		}
-	}
-	control.35 {
-		iface PCM
-		device 10
-		name 'Playback Channel Map'
-		value.0 0
-		value.1 0
-		value.2 0
-		value.3 0
-		value.4 0
-		value.5 0
-		value.6 0
-		value.7 0
-		comment {
-			access 'read write'
-			type INTEGER
-			count 8
-			range '0 - 36'
-		}
-	}
-}
-state.sofbdwrt5677 {
-	control.1 {
 		iface MIXER
 		name 'OUT1 Playback Switch'
 		value false
@@ -1700,7 +1194,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.2 {
+	control.8 {
 		iface MIXER
 		name 'OUT2 Playback Switch'
 		value false
@@ -1710,7 +1204,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.3 {
+	control.9 {
 		iface MIXER
 		name 'OUT3 Playback Switch'
 		value false
@@ -1720,11 +1214,11 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.4 {
+	control.10 {
 		iface MIXER
 		name 'DAC1 Playback Volume'
-		value.0 127
-		value.1 127
+		value.0 87
+		value.1 87
 		comment {
 			access 'read write'
 			type INTEGER
@@ -1732,15 +1226,15 @@ state.sofbdwrt5677 {
 			range '0 - 127'
 			dbmin -6525
 			dbmax 3000
-			dbvalue.0 3000
-			dbvalue.1 3000
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
-	control.5 {
+	control.11 {
 		iface MIXER
 		name 'DAC2 Playback Volume'
-		value.0 127
-		value.1 127
+		value.0 87
+		value.1 87
 		comment {
 			access 'read write'
 			type INTEGER
@@ -1748,11 +1242,11 @@ state.sofbdwrt5677 {
 			range '0 - 127'
 			dbmin -6525
 			dbmax 3000
-			dbvalue.0 3000
-			dbvalue.1 3000
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
-	control.6 {
+	control.12 {
 		iface MIXER
 		name 'DAC3 Playback Volume'
 		value.0 87
@@ -1768,7 +1262,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.7 {
+	control.13 {
 		iface MIXER
 		name 'DAC4 Playback Volume'
 		value.0 87
@@ -1784,7 +1278,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.8 {
+	control.14 {
 		iface MIXER
 		name 'IN1 Boost'
 		value 0
@@ -1798,7 +1292,7 @@ state.sofbdwrt5677 {
 			dbvalue.0 0
 		}
 	}
-	control.9 {
+	control.15 {
 		iface MIXER
 		name 'IN2 Boost'
 		value 0
@@ -1812,7 +1306,7 @@ state.sofbdwrt5677 {
 			dbvalue.0 0
 		}
 	}
-	control.10 {
+	control.16 {
 		iface MIXER
 		name 'ADC1 Capture Switch'
 		value.0 true
@@ -1823,7 +1317,7 @@ state.sofbdwrt5677 {
 			count 2
 		}
 	}
-	control.11 {
+	control.17 {
 		iface MIXER
 		name 'ADC2 Capture Switch'
 		value.0 true
@@ -1834,7 +1328,7 @@ state.sofbdwrt5677 {
 			count 2
 		}
 	}
-	control.12 {
+	control.18 {
 		iface MIXER
 		name 'ADC3 Capture Switch'
 		value.0 true
@@ -1845,7 +1339,7 @@ state.sofbdwrt5677 {
 			count 2
 		}
 	}
-	control.13 {
+	control.19 {
 		iface MIXER
 		name 'ADC4 Capture Switch'
 		value.0 true
@@ -1856,7 +1350,7 @@ state.sofbdwrt5677 {
 			count 2
 		}
 	}
-	control.14 {
+	control.20 {
 		iface MIXER
 		name 'Mono ADC Capture Switch'
 		value.0 true
@@ -1867,11 +1361,11 @@ state.sofbdwrt5677 {
 			count 2
 		}
 	}
-	control.15 {
+	control.21 {
 		iface MIXER
 		name 'ADC1 Capture Volume'
-		value.0 31
-		value.1 31
+		value.0 23
+		value.1 23
 		comment {
 			access 'read write'
 			type INTEGER
@@ -1879,11 +1373,11 @@ state.sofbdwrt5677 {
 			range '0 - 63'
 			dbmin -1725
 			dbmax 3000
-			dbvalue.0 600
-			dbvalue.1 600
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
-	control.16 {
+	control.22 {
 		iface MIXER
 		name 'ADC2 Capture Volume'
 		value.0 23
@@ -1899,7 +1393,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.17 {
+	control.23 {
 		iface MIXER
 		name 'ADC3 Capture Volume'
 		value.0 23
@@ -1915,7 +1409,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.18 {
+	control.24 {
 		iface MIXER
 		name 'ADC4 Capture Volume'
 		value.0 23
@@ -1931,7 +1425,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.19 {
+	control.25 {
 		iface MIXER
 		name 'Mono ADC Capture Volume'
 		value.0 23
@@ -1947,7 +1441,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.20 {
+	control.26 {
 		iface MIXER
 		name 'Sidetone Volume'
 		value 11
@@ -1961,11 +1455,11 @@ state.sofbdwrt5677 {
 			dbvalue.0 -3000
 		}
 	}
-	control.21 {
+	control.27 {
 		iface MIXER
 		name 'STO1 ADC Boost Volume'
-		value.0 2
-		value.1 2
+		value.0 0
+		value.1 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -1973,11 +1467,11 @@ state.sofbdwrt5677 {
 			range '0 - 3'
 			dbmin 0
 			dbmax 3600
-			dbvalue.0 2400
-			dbvalue.1 2400
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
-	control.22 {
+	control.28 {
 		iface MIXER
 		name 'STO2 ADC Boost Volume'
 		value.0 0
@@ -1993,7 +1487,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.23 {
+	control.29 {
 		iface MIXER
 		name 'STO3 ADC Boost Volume'
 		value.0 0
@@ -2009,7 +1503,7 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.24 {
+	control.30 {
 		iface MIXER
 		name 'STO4 ADC Boost Volume'
 		value.0 0
@@ -2025,11 +1519,11 @@ state.sofbdwrt5677 {
 			dbvalue.1 0
 		}
 	}
-	control.25 {
+	control.31 {
 		iface MIXER
 		name 'Mono ADC Boost Volume'
-		value.0 2
-		value.1 2
+		value.0 0
+		value.1 0
 		comment {
 			access 'read write'
 			type INTEGER
@@ -2037,11 +1531,11 @@ state.sofbdwrt5677 {
 			range '0 - 3'
 			dbmin 0
 			dbmax 3600
-			dbvalue.0 2400
-			dbvalue.1 2400
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
-	control.26 {
+	control.32 {
 		iface MIXER
 		name 'DSP VAD Switch'
 		value false
@@ -2051,7 +1545,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.27 {
+	control.33 {
 		iface CARD
 		name 'Headphone Jack'
 		value false
@@ -2061,7 +1555,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.28 {
+	control.34 {
 		iface CARD
 		name 'Headset Mic Jack'
 		value false
@@ -2071,7 +1565,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.29 {
+	control.35 {
 		iface MIXER
 		name 'Speaker Switch'
 		value true
@@ -2081,7 +1575,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.30 {
+	control.36 {
 		iface MIXER
 		name 'Headphone Switch'
 		value false
@@ -2091,7 +1585,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.31 {
+	control.37 {
 		iface MIXER
 		name 'Headset Mic Switch'
 		value false
@@ -2101,7 +1595,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.32 {
+	control.38 {
 		iface MIXER
 		name 'Local DMICs Switch'
 		value true
@@ -2111,7 +1605,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.33 {
+	control.39 {
 		iface MIXER
 		name 'Remote DMICs Switch'
 		value true
@@ -2121,7 +1615,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.34 {
+	control.40 {
 		iface MIXER
 		name 'Stereo1 DMIC Mux'
 		value DMIC1
@@ -2135,7 +1629,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.35 {
+	control.41 {
 		iface MIXER
 		name 'Stereo1 ADC1 Mux'
 		value ADC1/2
@@ -2148,7 +1642,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.36 {
+	control.42 {
 		iface MIXER
 		name 'Stereo1 ADC2 Mux'
 		value DMIC
@@ -2161,7 +1655,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.37 {
+	control.43 {
 		iface MIXER
 		name 'Stereo2 DMIC Mux'
 		value DMIC1
@@ -2175,7 +1669,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.38 {
+	control.44 {
 		iface MIXER
 		name 'Stereo2 ADC1 Mux'
 		value ADC1/2
@@ -2188,7 +1682,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.39 {
+	control.45 {
 		iface MIXER
 		name 'Stereo2 ADC2 Mux'
 		value DMIC
@@ -2201,7 +1695,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.40 {
+	control.46 {
 		iface MIXER
 		name 'Stereo2 ADC LR Mux'
 		value L
@@ -2213,7 +1707,7 @@ state.sofbdwrt5677 {
 			item.1 LR
 		}
 	}
-	control.41 {
+	control.47 {
 		iface MIXER
 		name 'Stereo3 DMIC Mux'
 		value DMIC1
@@ -2227,7 +1721,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.42 {
+	control.48 {
 		iface MIXER
 		name 'Stereo3 ADC1 Mux'
 		value ADC1/2
@@ -2240,7 +1734,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.43 {
+	control.49 {
 		iface MIXER
 		name 'Stereo3 ADC2 Mux'
 		value DMIC
@@ -2253,7 +1747,7 @@ state.sofbdwrt5677 {
 			item.2 'Stereo DAC MIX'
 		}
 	}
-	control.44 {
+	control.50 {
 		iface MIXER
 		name 'Stereo4 DMIC Mux'
 		value DMIC1
@@ -2267,7 +1761,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.45 {
+	control.51 {
 		iface MIXER
 		name 'Stereo4 ADC1 Mux'
 		value ADC1/2
@@ -2280,7 +1774,7 @@ state.sofbdwrt5677 {
 			item.2 'DD MIX2'
 		}
 	}
-	control.46 {
+	control.52 {
 		iface MIXER
 		name 'Stereo4 ADC2 Mux'
 		value DMIC
@@ -2293,7 +1787,7 @@ state.sofbdwrt5677 {
 			item.2 'DD MIX2'
 		}
 	}
-	control.47 {
+	control.53 {
 		iface MIXER
 		name 'Mono DMIC L Mux'
 		value DMIC1
@@ -2307,7 +1801,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.48 {
+	control.54 {
 		iface MIXER
 		name 'Mono DMIC R Mux'
 		value DMIC2
@@ -2321,7 +1815,7 @@ state.sofbdwrt5677 {
 			item.3 DMIC4
 		}
 	}
-	control.49 {
+	control.55 {
 		iface MIXER
 		name 'Mono ADC2 L Mux'
 		value DMIC
@@ -2334,7 +1828,7 @@ state.sofbdwrt5677 {
 			item.2 'MONO DAC MIXL'
 		}
 	}
-	control.50 {
+	control.56 {
 		iface MIXER
 		name 'Mono ADC1 L Mux'
 		value ADC1
@@ -2347,7 +1841,7 @@ state.sofbdwrt5677 {
 			item.2 'MONO DAC MIXL'
 		}
 	}
-	control.51 {
+	control.57 {
 		iface MIXER
 		name 'Mono ADC1 R Mux'
 		value ADC2
@@ -2360,7 +1854,7 @@ state.sofbdwrt5677 {
 			item.2 'MONO DAC MIXR'
 		}
 	}
-	control.52 {
+	control.58 {
 		iface MIXER
 		name 'Mono ADC2 R Mux'
 		value 'DD MIX1R'
@@ -2373,7 +1867,7 @@ state.sofbdwrt5677 {
 			item.2 'MONO DAC MIXR'
 		}
 	}
-	control.53 {
+	control.59 {
 		iface MIXER
 		name 'Sto1 ADC MIXL ADC1 Switch'
 		value false
@@ -2383,69 +1877,9 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.54 {
-		iface MIXER
-		name 'Sto1 ADC MIXL ADC2 Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.55 {
-		iface MIXER
-		name 'Sto1 ADC MIXR ADC1 Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.56 {
-		iface MIXER
-		name 'Sto1 ADC MIXR ADC2 Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.57 {
-		iface MIXER
-		name 'Sto2 ADC MIXL ADC1 Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.58 {
-		iface MIXER
-		name 'Sto2 ADC MIXL ADC2 Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.59 {
-		iface MIXER
-		name 'Sto2 ADC MIXR ADC1 Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
 	control.60 {
 		iface MIXER
-		name 'Sto2 ADC MIXR ADC2 Switch'
+		name 'Sto1 ADC MIXL ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2455,7 +1889,7 @@ state.sofbdwrt5677 {
 	}
 	control.61 {
 		iface MIXER
-		name 'Sto3 ADC MIXL ADC1 Switch'
+		name 'Sto1 ADC MIXR ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2465,7 +1899,7 @@ state.sofbdwrt5677 {
 	}
 	control.62 {
 		iface MIXER
-		name 'Sto3 ADC MIXL ADC2 Switch'
+		name 'Sto1 ADC MIXR ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2475,7 +1909,7 @@ state.sofbdwrt5677 {
 	}
 	control.63 {
 		iface MIXER
-		name 'Sto3 ADC MIXR ADC1 Switch'
+		name 'Sto2 ADC MIXL ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2485,7 +1919,7 @@ state.sofbdwrt5677 {
 	}
 	control.64 {
 		iface MIXER
-		name 'Sto3 ADC MIXR ADC2 Switch'
+		name 'Sto2 ADC MIXL ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2495,7 +1929,7 @@ state.sofbdwrt5677 {
 	}
 	control.65 {
 		iface MIXER
-		name 'Sto4 ADC MIXL ADC1 Switch'
+		name 'Sto2 ADC MIXR ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2505,7 +1939,7 @@ state.sofbdwrt5677 {
 	}
 	control.66 {
 		iface MIXER
-		name 'Sto4 ADC MIXL ADC2 Switch'
+		name 'Sto2 ADC MIXR ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2515,7 +1949,7 @@ state.sofbdwrt5677 {
 	}
 	control.67 {
 		iface MIXER
-		name 'Sto4 ADC MIXR ADC1 Switch'
+		name 'Sto3 ADC MIXL ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2525,7 +1959,7 @@ state.sofbdwrt5677 {
 	}
 	control.68 {
 		iface MIXER
-		name 'Sto4 ADC MIXR ADC2 Switch'
+		name 'Sto3 ADC MIXL ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2535,7 +1969,7 @@ state.sofbdwrt5677 {
 	}
 	control.69 {
 		iface MIXER
-		name 'Mono ADC MIXL ADC1 Switch'
+		name 'Sto3 ADC MIXR ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2545,8 +1979,8 @@ state.sofbdwrt5677 {
 	}
 	control.70 {
 		iface MIXER
-		name 'Mono ADC MIXL ADC2 Switch'
-		value true
+		name 'Sto3 ADC MIXR ADC2 Switch'
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -2555,7 +1989,7 @@ state.sofbdwrt5677 {
 	}
 	control.71 {
 		iface MIXER
-		name 'Mono ADC MIXR ADC1 Switch'
+		name 'Sto4 ADC MIXL ADC1 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2565,7 +1999,7 @@ state.sofbdwrt5677 {
 	}
 	control.72 {
 		iface MIXER
-		name 'Mono ADC MIXR ADC2 Switch'
+		name 'Sto4 ADC MIXL ADC2 Switch'
 		value false
 		comment {
 			access 'read write'
@@ -2574,6 +2008,66 @@ state.sofbdwrt5677 {
 		}
 	}
 	control.73 {
+		iface MIXER
+		name 'Sto4 ADC MIXR ADC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.74 {
+		iface MIXER
+		name 'Sto4 ADC MIXR ADC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.75 {
+		iface MIXER
+		name 'Mono ADC MIXL ADC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.76 {
+		iface MIXER
+		name 'Mono ADC MIXL ADC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.77 {
+		iface MIXER
+		name 'Mono ADC MIXR ADC1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.78 {
+		iface MIXER
+		name 'Mono ADC MIXR ADC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.79 {
 		iface MIXER
 		name 'IB9 Mux'
 		value 'STO1 ADC MIX R'
@@ -2590,7 +2084,7 @@ state.sofbdwrt5677 {
 			item.6 'DAC1 FS'
 		}
 	}
-	control.74 {
+	control.80 {
 		iface MIXER
 		name 'IB8 Mux'
 		value 'STO1 ADC MIX L'
@@ -2606,7 +2100,7 @@ state.sofbdwrt5677 {
 			item.5 'DACL1 FS'
 		}
 	}
-	control.75 {
+	control.81 {
 		iface MIXER
 		name 'IB7 Mux'
 		value 'IF1 DAC 7'
@@ -2624,7 +2118,7 @@ state.sofbdwrt5677 {
 			item.7 'STO3 ADC MIX R'
 		}
 	}
-	control.76 {
+	control.82 {
 		iface MIXER
 		name 'IB6 Mux'
 		value 'IF1 DAC 6'
@@ -2642,7 +2136,7 @@ state.sofbdwrt5677 {
 			item.7 'STO3 ADC MIX L'
 		}
 	}
-	control.77 {
+	control.83 {
 		iface MIXER
 		name 'IB45 Mux'
 		value 'IF1 DAC 45'
@@ -2657,7 +2151,7 @@ state.sofbdwrt5677 {
 			item.4 'IF3 DAC'
 		}
 	}
-	control.78 {
+	control.84 {
 		iface MIXER
 		name 'IB23 Mux'
 		value 'IF1 DAC 23'
@@ -2673,10 +2167,10 @@ state.sofbdwrt5677 {
 			item.5 'IF4 DAC'
 		}
 	}
-	control.79 {
+	control.85 {
 		iface MIXER
 		name 'IB01 Mux'
-		value 'VAD ADC/DAC1 FS'
+		value 'IF1 DAC 01'
 		comment {
 			access 'read write'
 			type ENUMERATED
@@ -2688,7 +2182,7 @@ state.sofbdwrt5677 {
 			item.4 'VAD ADC/DAC1 FS'
 		}
 	}
-	control.80 {
+	control.86 {
 		iface MIXER
 		name 'IB45 Bypass Mux'
 		value Bypass
@@ -2700,7 +2194,7 @@ state.sofbdwrt5677 {
 			item.1 'Pass SRC'
 		}
 	}
-	control.81 {
+	control.87 {
 		iface MIXER
 		name 'IB23 Bypass Mux'
 		value Bypass
@@ -2712,7 +2206,7 @@ state.sofbdwrt5677 {
 			item.1 'Pass SRC'
 		}
 	}
-	control.82 {
+	control.88 {
 		iface MIXER
 		name 'IB01 Bypass Mux'
 		value Bypass
@@ -2724,7 +2218,7 @@ state.sofbdwrt5677 {
 			item.1 'Pass SRC'
 		}
 	}
-	control.83 {
+	control.89 {
 		iface MIXER
 		name 'OB23 Bypass Mux'
 		value Bypass
@@ -2736,7 +2230,7 @@ state.sofbdwrt5677 {
 			item.1 'Pass SRC'
 		}
 	}
-	control.84 {
+	control.90 {
 		iface MIXER
 		name 'OB01 Bypass Mux'
 		value Bypass
@@ -2748,7 +2242,7 @@ state.sofbdwrt5677 {
 			item.1 'Pass SRC'
 		}
 	}
-	control.85 {
+	control.91 {
 		iface MIXER
 		name 'IF1 ADC1 Mux'
 		value 'STO1 ADC MIX'
@@ -2761,7 +2255,7 @@ state.sofbdwrt5677 {
 			item.2 'VAD ADC'
 		}
 	}
-	control.86 {
+	control.92 {
 		iface MIXER
 		name 'IF1 ADC2 Mux'
 		value 'STO2 ADC MIX'
@@ -2773,7 +2267,7 @@ state.sofbdwrt5677 {
 			item.1 OB23
 		}
 	}
-	control.87 {
+	control.93 {
 		iface MIXER
 		name 'IF1 ADC3 Mux'
 		value 'STO3 ADC MIX'
@@ -2786,7 +2280,7 @@ state.sofbdwrt5677 {
 			item.2 OB45
 		}
 	}
-	control.88 {
+	control.94 {
 		iface MIXER
 		name 'IF1 ADC4 Mux'
 		value 'STO4 ADC MIX'
@@ -2799,7 +2293,7 @@ state.sofbdwrt5677 {
 			item.2 OB01
 		}
 	}
-	control.89 {
+	control.95 {
 		iface MIXER
 		name 'IF1 ADC1 Swap Mux'
 		value L/R
@@ -2813,7 +2307,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.90 {
+	control.96 {
 		iface MIXER
 		name 'IF1 ADC2 Swap Mux'
 		value L/R
@@ -2827,7 +2321,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.91 {
+	control.97 {
 		iface MIXER
 		name 'IF1 ADC3 Swap Mux'
 		value L/R
@@ -2841,7 +2335,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.92 {
+	control.98 {
 		iface MIXER
 		name 'IF1 ADC4 Swap Mux'
 		value L/R
@@ -2855,7 +2349,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.93 {
+	control.99 {
 		iface MIXER
 		name 'IF1 ADC TDM Swap Mux'
 		value '1/2/3/4'
@@ -2873,7 +2367,7 @@ state.sofbdwrt5677 {
 			item.7 '3/4/1/2'
 		}
 	}
-	control.94 {
+	control.100 {
 		iface MIXER
 		name 'IF2 ADC1 Mux'
 		value 'STO1 ADC MIX'
@@ -2886,7 +2380,7 @@ state.sofbdwrt5677 {
 			item.2 'VAD ADC'
 		}
 	}
-	control.95 {
+	control.101 {
 		iface MIXER
 		name 'IF2 ADC2 Mux'
 		value 'STO2 ADC MIX'
@@ -2898,7 +2392,7 @@ state.sofbdwrt5677 {
 			item.1 OB23
 		}
 	}
-	control.96 {
+	control.102 {
 		iface MIXER
 		name 'IF2 ADC3 Mux'
 		value 'STO3 ADC MIX'
@@ -2911,7 +2405,7 @@ state.sofbdwrt5677 {
 			item.2 OB45
 		}
 	}
-	control.97 {
+	control.103 {
 		iface MIXER
 		name 'IF2 ADC4 Mux'
 		value 'STO4 ADC MIX'
@@ -2924,7 +2418,7 @@ state.sofbdwrt5677 {
 			item.2 OB01
 		}
 	}
-	control.98 {
+	control.104 {
 		iface MIXER
 		name 'IF2 ADC1 Swap Mux'
 		value L/R
@@ -2938,7 +2432,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.99 {
+	control.105 {
 		iface MIXER
 		name 'IF2 ADC2 Swap Mux'
 		value L/R
@@ -2952,7 +2446,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.100 {
+	control.106 {
 		iface MIXER
 		name 'IF2 ADC3 Swap Mux'
 		value L/R
@@ -2966,7 +2460,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.101 {
+	control.107 {
 		iface MIXER
 		name 'IF2 ADC4 Swap Mux'
 		value L/R
@@ -2980,7 +2474,7 @@ state.sofbdwrt5677 {
 			item.3 R/R
 		}
 	}
-	control.102 {
+	control.108 {
 		iface MIXER
 		name 'IF2 ADC TDM Swap Mux'
 		value '1/2/3/4'
@@ -2998,7 +2492,7 @@ state.sofbdwrt5677 {
 			item.7 '3/4/1/2'
 		}
 	}
-	control.103 {
+	control.109 {
 		iface MIXER
 		name 'IF3 ADC Mux'
 		value 'STO1 ADC MIX'
@@ -3016,7 +2510,7 @@ state.sofbdwrt5677 {
 			item.7 'VAD ADC'
 		}
 	}
-	control.104 {
+	control.110 {
 		iface MIXER
 		name 'IF4 ADC Mux'
 		value 'STO1 ADC MIX'
@@ -3034,7 +2528,7 @@ state.sofbdwrt5677 {
 			item.7 'VAD ADC'
 		}
 	}
-	control.105 {
+	control.111 {
 		iface MIXER
 		name 'SLB ADC1 Mux'
 		value 'STO1 ADC MIX'
@@ -3047,7 +2541,7 @@ state.sofbdwrt5677 {
 			item.2 'VAD ADC'
 		}
 	}
-	control.106 {
+	control.112 {
 		iface MIXER
 		name 'SLB ADC2 Mux'
 		value 'STO2 ADC MIX'
@@ -3059,7 +2553,7 @@ state.sofbdwrt5677 {
 			item.1 OB23
 		}
 	}
-	control.107 {
+	control.113 {
 		iface MIXER
 		name 'SLB ADC3 Mux'
 		value 'STO3 ADC MIX'
@@ -3072,7 +2566,7 @@ state.sofbdwrt5677 {
 			item.2 OB45
 		}
 	}
-	control.108 {
+	control.114 {
 		iface MIXER
 		name 'SLB ADC4 Mux'
 		value 'STO4 ADC MIX'
@@ -3085,7 +2579,7 @@ state.sofbdwrt5677 {
 			item.2 OB01
 		}
 	}
-	control.109 {
+	control.115 {
 		iface MIXER
 		name 'IF1 DAC0 Mux'
 		value Slot0
@@ -3103,7 +2597,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.110 {
+	control.116 {
 		iface MIXER
 		name 'IF1 DAC1 Mux'
 		value Slot1
@@ -3121,7 +2615,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.111 {
+	control.117 {
 		iface MIXER
 		name 'IF1 DAC2 Mux'
 		value Slot2
@@ -3139,7 +2633,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.112 {
+	control.118 {
 		iface MIXER
 		name 'IF1 DAC3 Mux'
 		value Slot3
@@ -3157,7 +2651,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.113 {
+	control.119 {
 		iface MIXER
 		name 'IF1 DAC4 Mux'
 		value Slot4
@@ -3175,7 +2669,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.114 {
+	control.120 {
 		iface MIXER
 		name 'IF1 DAC5 Mux'
 		value Slot5
@@ -3193,7 +2687,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.115 {
+	control.121 {
 		iface MIXER
 		name 'IF1 DAC6 Mux'
 		value Slot6
@@ -3211,7 +2705,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.116 {
+	control.122 {
 		iface MIXER
 		name 'IF1 DAC7 Mux'
 		value Slot7
@@ -3229,7 +2723,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.117 {
+	control.123 {
 		iface MIXER
 		name 'IF2 DAC0 Mux'
 		value Slot0
@@ -3247,7 +2741,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.118 {
+	control.124 {
 		iface MIXER
 		name 'IF2 DAC1 Mux'
 		value Slot1
@@ -3265,7 +2759,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.119 {
+	control.125 {
 		iface MIXER
 		name 'IF2 DAC2 Mux'
 		value Slot2
@@ -3283,7 +2777,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.120 {
+	control.126 {
 		iface MIXER
 		name 'IF2 DAC3 Mux'
 		value Slot3
@@ -3301,7 +2795,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.121 {
+	control.127 {
 		iface MIXER
 		name 'IF2 DAC4 Mux'
 		value Slot4
@@ -3319,7 +2813,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.122 {
+	control.128 {
 		iface MIXER
 		name 'IF2 DAC5 Mux'
 		value Slot5
@@ -3337,7 +2831,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.123 {
+	control.129 {
 		iface MIXER
 		name 'IF2 DAC6 Mux'
 		value Slot6
@@ -3355,7 +2849,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.124 {
+	control.130 {
 		iface MIXER
 		name 'IF2 DAC7 Mux'
 		value Slot7
@@ -3373,7 +2867,7 @@ state.sofbdwrt5677 {
 			item.7 Slot7
 		}
 	}
-	control.125 {
+	control.131 {
 		iface MIXER
 		name 'Sidetone Mux'
 		value 'DMIC1 L'
@@ -3389,10 +2883,10 @@ state.sofbdwrt5677 {
 			item.5 ADC2
 		}
 	}
-	control.126 {
+	control.132 {
 		iface MIXER
 		name 'VAD ADC Mux'
-		value 'MONO ADC MIX L'
+		value 'STO1 ADC MIX L'
 		comment {
 			access 'read write'
 			type ENUMERATED
@@ -3404,7 +2898,7 @@ state.sofbdwrt5677 {
 			item.4 'STO3 ADC MIX L'
 		}
 	}
-	control.127 {
+	control.133 {
 		iface MIXER
 		name 'OB01 MIX IB01 Switch'
 		value false
@@ -3414,7 +2908,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.128 {
+	control.134 {
 		iface MIXER
 		name 'OB01 MIX IB23 Switch'
 		value false
@@ -3424,7 +2918,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.129 {
+	control.135 {
 		iface MIXER
 		name 'OB01 MIX IB45 Switch'
 		value false
@@ -3434,7 +2928,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.130 {
+	control.136 {
 		iface MIXER
 		name 'OB01 MIX IB6 Switch'
 		value false
@@ -3444,7 +2938,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.131 {
+	control.137 {
 		iface MIXER
 		name 'OB01 MIX IB7 Switch'
 		value false
@@ -3454,7 +2948,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.132 {
+	control.138 {
 		iface MIXER
 		name 'OB01 MIX IB8 Switch'
 		value false
@@ -3464,7 +2958,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.133 {
+	control.139 {
 		iface MIXER
 		name 'OB01 MIX IB9 Switch'
 		value false
@@ -3474,7 +2968,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.134 {
+	control.140 {
 		iface MIXER
 		name 'OB23 MIX IB01 Switch'
 		value false
@@ -3484,7 +2978,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.135 {
+	control.141 {
 		iface MIXER
 		name 'OB23 MIX IB23 Switch'
 		value false
@@ -3494,7 +2988,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.136 {
+	control.142 {
 		iface MIXER
 		name 'OB23 MIX IB45 Switch'
 		value false
@@ -3504,7 +2998,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.137 {
+	control.143 {
 		iface MIXER
 		name 'OB23 MIX IB6 Switch'
 		value false
@@ -3514,7 +3008,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.138 {
+	control.144 {
 		iface MIXER
 		name 'OB23 MIX IB7 Switch'
 		value false
@@ -3524,7 +3018,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.139 {
+	control.145 {
 		iface MIXER
 		name 'OB23 MIX IB8 Switch'
 		value false
@@ -3534,7 +3028,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.140 {
+	control.146 {
 		iface MIXER
 		name 'OB23 MIX IB9 Switch'
 		value false
@@ -3544,7 +3038,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.141 {
+	control.147 {
 		iface MIXER
 		name 'OB4 MIX IB01 Switch'
 		value false
@@ -3554,7 +3048,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.142 {
+	control.148 {
 		iface MIXER
 		name 'OB4 MIX IB23 Switch'
 		value false
@@ -3564,7 +3058,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.143 {
+	control.149 {
 		iface MIXER
 		name 'OB4 MIX IB45 Switch'
 		value false
@@ -3574,7 +3068,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.144 {
+	control.150 {
 		iface MIXER
 		name 'OB4 MIX IB6 Switch'
 		value false
@@ -3584,7 +3078,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.145 {
+	control.151 {
 		iface MIXER
 		name 'OB4 MIX IB7 Switch'
 		value false
@@ -3594,7 +3088,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.146 {
+	control.152 {
 		iface MIXER
 		name 'OB4 MIX IB8 Switch'
 		value false
@@ -3604,7 +3098,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.147 {
+	control.153 {
 		iface MIXER
 		name 'OB4 MIX IB9 Switch'
 		value false
@@ -3614,7 +3108,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.148 {
+	control.154 {
 		iface MIXER
 		name 'OB5 MIX IB01 Switch'
 		value false
@@ -3624,7 +3118,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.149 {
+	control.155 {
 		iface MIXER
 		name 'OB5 MIX IB23 Switch'
 		value false
@@ -3634,7 +3128,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.150 {
+	control.156 {
 		iface MIXER
 		name 'OB5 MIX IB45 Switch'
 		value false
@@ -3644,7 +3138,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.151 {
+	control.157 {
 		iface MIXER
 		name 'OB5 MIX IB6 Switch'
 		value false
@@ -3654,7 +3148,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.152 {
+	control.158 {
 		iface MIXER
 		name 'OB5 MIX IB7 Switch'
 		value false
@@ -3664,7 +3158,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.153 {
+	control.159 {
 		iface MIXER
 		name 'OB5 MIX IB8 Switch'
 		value false
@@ -3674,7 +3168,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.154 {
+	control.160 {
 		iface MIXER
 		name 'OB5 MIX IB9 Switch'
 		value false
@@ -3684,7 +3178,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.155 {
+	control.161 {
 		iface MIXER
 		name 'OB6 MIX IB01 Switch'
 		value false
@@ -3694,7 +3188,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.156 {
+	control.162 {
 		iface MIXER
 		name 'OB6 MIX IB23 Switch'
 		value false
@@ -3704,7 +3198,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.157 {
+	control.163 {
 		iface MIXER
 		name 'OB6 MIX IB45 Switch'
 		value false
@@ -3714,7 +3208,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.158 {
+	control.164 {
 		iface MIXER
 		name 'OB6 MIX IB6 Switch'
 		value false
@@ -3724,7 +3218,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.159 {
+	control.165 {
 		iface MIXER
 		name 'OB6 MIX IB7 Switch'
 		value false
@@ -3734,7 +3228,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.160 {
+	control.166 {
 		iface MIXER
 		name 'OB6 MIX IB8 Switch'
 		value false
@@ -3744,7 +3238,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.161 {
+	control.167 {
 		iface MIXER
 		name 'OB6 MIX IB9 Switch'
 		value false
@@ -3754,7 +3248,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.162 {
+	control.168 {
 		iface MIXER
 		name 'OB7 MIX IB01 Switch'
 		value false
@@ -3764,7 +3258,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.163 {
+	control.169 {
 		iface MIXER
 		name 'OB7 MIX IB23 Switch'
 		value false
@@ -3774,7 +3268,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.164 {
+	control.170 {
 		iface MIXER
 		name 'OB7 MIX IB45 Switch'
 		value false
@@ -3784,7 +3278,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.165 {
+	control.171 {
 		iface MIXER
 		name 'OB7 MIX IB6 Switch'
 		value false
@@ -3794,7 +3288,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.166 {
+	control.172 {
 		iface MIXER
 		name 'OB7 MIX IB7 Switch'
 		value false
@@ -3804,7 +3298,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.167 {
+	control.173 {
 		iface MIXER
 		name 'OB7 MIX IB8 Switch'
 		value false
@@ -3814,7 +3308,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.168 {
+	control.174 {
 		iface MIXER
 		name 'OB7 MIX IB9 Switch'
 		value false
@@ -3824,7 +3318,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.169 {
+	control.175 {
 		iface MIXER
 		name 'DAC1 MIXL Stereo ADC Switch'
 		value false
@@ -3834,7 +3328,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.170 {
+	control.176 {
 		iface MIXER
 		name 'DAC1 MIXL DAC1 Switch'
 		value true
@@ -3844,7 +3338,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.171 {
+	control.177 {
 		iface MIXER
 		name 'DAC1 MIXR Stereo ADC Switch'
 		value false
@@ -3854,7 +3348,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.172 {
+	control.178 {
 		iface MIXER
 		name 'DAC1 MIXR DAC1 Switch'
 		value true
@@ -3864,7 +3358,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.173 {
+	control.179 {
 		iface MIXER
 		name 'DAC1 Mux'
 		value 'IF1 DAC 01'
@@ -3880,7 +3374,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 01'
 		}
 	}
-	control.174 {
+	control.180 {
 		iface MIXER
 		name 'ADDA1 Mux'
 		value 'STO1 ADC MIX'
@@ -3893,7 +3387,7 @@ state.sofbdwrt5677 {
 			item.2 'OB 67'
 		}
 	}
-	control.175 {
+	control.181 {
 		iface MIXER
 		name 'DAC12 SRC Mux'
 		value 'STO1 DAC MIX'
@@ -3907,7 +3401,7 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2'
 		}
 	}
-	control.176 {
+	control.182 {
 		iface MIXER
 		name 'DAC3 SRC Mux'
 		value 'MONO DAC MIXL'
@@ -3921,7 +3415,7 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2L'
 		}
 	}
-	control.177 {
+	control.183 {
 		iface MIXER
 		name 'DAC2 L Mux'
 		value 'IF2 DAC 2'
@@ -3937,7 +3431,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 2'
 		}
 	}
-	control.178 {
+	control.184 {
 		iface MIXER
 		name 'DAC2 R Mux'
 		value 'IF2 DAC 3'
@@ -3955,7 +3449,7 @@ state.sofbdwrt5677 {
 			item.7 'VAD ADC'
 		}
 	}
-	control.179 {
+	control.185 {
 		iface MIXER
 		name 'DAC3 L Mux'
 		value 'IF2 DAC 4'
@@ -3971,7 +3465,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 4'
 		}
 	}
-	control.180 {
+	control.186 {
 		iface MIXER
 		name 'DAC3 R Mux'
 		value 'IF2 DAC 5'
@@ -3987,7 +3481,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 5'
 		}
 	}
-	control.181 {
+	control.187 {
 		iface MIXER
 		name 'DAC4 L Mux'
 		value 'IF2 DAC 6'
@@ -4003,7 +3497,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 6'
 		}
 	}
-	control.182 {
+	control.188 {
 		iface MIXER
 		name 'DAC4 R Mux'
 		value 'IF2 DAC 7'
@@ -4019,7 +3513,7 @@ state.sofbdwrt5677 {
 			item.5 'OB 7'
 		}
 	}
-	control.183 {
+	control.189 {
 		iface MIXER
 		name 'Stereo DAC MIXL ST L Switch'
 		value false
@@ -4029,7 +3523,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.184 {
+	control.190 {
 		iface MIXER
 		name 'Stereo DAC MIXL DAC1 L Switch'
 		value false
@@ -4039,7 +3533,7 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.185 {
+	control.191 {
 		iface MIXER
 		name 'Stereo DAC MIXL DAC2 L Switch'
 		value false
@@ -4049,69 +3543,9 @@ state.sofbdwrt5677 {
 			count 1
 		}
 	}
-	control.186 {
-		iface MIXER
-		name 'Stereo DAC MIXL DAC1 R Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.187 {
-		iface MIXER
-		name 'Stereo DAC MIXR ST R Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.188 {
-		iface MIXER
-		name 'Stereo DAC MIXR DAC1 R Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.189 {
-		iface MIXER
-		name 'Stereo DAC MIXR DAC2 R Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.190 {
-		iface MIXER
-		name 'Stereo DAC MIXR DAC1 L Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.191 {
-		iface MIXER
-		name 'Mono DAC MIXL ST L Switch'
-		value false
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
 	control.192 {
 		iface MIXER
-		name 'Mono DAC MIXL DAC1 L Switch'
+		name 'Stereo DAC MIXL DAC1 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4121,7 +3555,7 @@ state.sofbdwrt5677 {
 	}
 	control.193 {
 		iface MIXER
-		name 'Mono DAC MIXL DAC2 L Switch'
+		name 'Stereo DAC MIXR ST R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4131,7 +3565,7 @@ state.sofbdwrt5677 {
 	}
 	control.194 {
 		iface MIXER
-		name 'Mono DAC MIXL DAC2 R Switch'
+		name 'Stereo DAC MIXR DAC1 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4141,7 +3575,7 @@ state.sofbdwrt5677 {
 	}
 	control.195 {
 		iface MIXER
-		name 'Mono DAC MIXR ST R Switch'
+		name 'Stereo DAC MIXR DAC2 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4151,7 +3585,7 @@ state.sofbdwrt5677 {
 	}
 	control.196 {
 		iface MIXER
-		name 'Mono DAC MIXR DAC1 R Switch'
+		name 'Stereo DAC MIXR DAC1 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4161,7 +3595,7 @@ state.sofbdwrt5677 {
 	}
 	control.197 {
 		iface MIXER
-		name 'Mono DAC MIXR DAC2 R Switch'
+		name 'Mono DAC MIXL ST L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4171,7 +3605,7 @@ state.sofbdwrt5677 {
 	}
 	control.198 {
 		iface MIXER
-		name 'Mono DAC MIXR DAC2 L Switch'
+		name 'Mono DAC MIXL DAC1 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4181,7 +3615,7 @@ state.sofbdwrt5677 {
 	}
 	control.199 {
 		iface MIXER
-		name 'DD1 MIXL Sto DAC Mix L Switch'
+		name 'Mono DAC MIXL DAC2 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4191,7 +3625,7 @@ state.sofbdwrt5677 {
 	}
 	control.200 {
 		iface MIXER
-		name 'DD1 MIXL Mono DAC Mix L Switch'
+		name 'Mono DAC MIXL DAC2 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4201,7 +3635,7 @@ state.sofbdwrt5677 {
 	}
 	control.201 {
 		iface MIXER
-		name 'DD1 MIXL DAC3 L Switch'
+		name 'Mono DAC MIXR ST R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4211,7 +3645,7 @@ state.sofbdwrt5677 {
 	}
 	control.202 {
 		iface MIXER
-		name 'DD1 MIXL DAC3 R Switch'
+		name 'Mono DAC MIXR DAC1 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4221,7 +3655,7 @@ state.sofbdwrt5677 {
 	}
 	control.203 {
 		iface MIXER
-		name 'DD1 MIXR Sto DAC Mix R Switch'
+		name 'Mono DAC MIXR DAC2 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4231,7 +3665,7 @@ state.sofbdwrt5677 {
 	}
 	control.204 {
 		iface MIXER
-		name 'DD1 MIXR Mono DAC Mix R Switch'
+		name 'Mono DAC MIXR DAC2 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4241,7 +3675,7 @@ state.sofbdwrt5677 {
 	}
 	control.205 {
 		iface MIXER
-		name 'DD1 MIXR DAC3 R Switch'
+		name 'DD1 MIXL Sto DAC Mix L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4251,7 +3685,7 @@ state.sofbdwrt5677 {
 	}
 	control.206 {
 		iface MIXER
-		name 'DD1 MIXR DAC3 L Switch'
+		name 'DD1 MIXL Mono DAC Mix L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4261,7 +3695,7 @@ state.sofbdwrt5677 {
 	}
 	control.207 {
 		iface MIXER
-		name 'DD2 MIXL Sto DAC Mix L Switch'
+		name 'DD1 MIXL DAC3 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4271,7 +3705,7 @@ state.sofbdwrt5677 {
 	}
 	control.208 {
 		iface MIXER
-		name 'DD2 MIXL Mono DAC Mix L Switch'
+		name 'DD1 MIXL DAC3 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4281,7 +3715,7 @@ state.sofbdwrt5677 {
 	}
 	control.209 {
 		iface MIXER
-		name 'DD2 MIXL DAC4 L Switch'
+		name 'DD1 MIXR Sto DAC Mix R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4291,7 +3725,7 @@ state.sofbdwrt5677 {
 	}
 	control.210 {
 		iface MIXER
-		name 'DD2 MIXL DAC4 R Switch'
+		name 'DD1 MIXR Mono DAC Mix R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4301,7 +3735,7 @@ state.sofbdwrt5677 {
 	}
 	control.211 {
 		iface MIXER
-		name 'DD2 MIXR Sto DAC Mix R Switch'
+		name 'DD1 MIXR DAC3 R Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4311,7 +3745,7 @@ state.sofbdwrt5677 {
 	}
 	control.212 {
 		iface MIXER
-		name 'DD2 MIXR Mono DAC Mix R Switch'
+		name 'DD1 MIXR DAC3 L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4321,7 +3755,7 @@ state.sofbdwrt5677 {
 	}
 	control.213 {
 		iface MIXER
-		name 'DD2 MIXR DAC4 R Switch'
+		name 'DD2 MIXL Sto DAC Mix L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4331,7 +3765,7 @@ state.sofbdwrt5677 {
 	}
 	control.214 {
 		iface MIXER
-		name 'DD2 MIXR DAC4 L Switch'
+		name 'DD2 MIXL Mono DAC Mix L Switch'
 		value false
 		comment {
 			access 'read write'
@@ -4340,6 +3774,66 @@ state.sofbdwrt5677 {
 		}
 	}
 	control.215 {
+		iface MIXER
+		name 'DD2 MIXL DAC4 L Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.216 {
+		iface MIXER
+		name 'DD2 MIXL DAC4 R Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.217 {
+		iface MIXER
+		name 'DD2 MIXR Sto DAC Mix R Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.218 {
+		iface MIXER
+		name 'DD2 MIXR Mono DAC Mix R Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.219 {
+		iface MIXER
+		name 'DD2 MIXR DAC4 R Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.220 {
+		iface MIXER
+		name 'DD2 MIXR DAC4 L Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.221 {
 		iface MIXER
 		name 'PDM1 L Mux'
 		value 'STO1 DAC MIX'
@@ -4353,7 +3847,7 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2'
 		}
 	}
-	control.216 {
+	control.222 {
 		iface MIXER
 		name 'PDM1 R Mux'
 		value 'STO1 DAC MIX'
@@ -4367,7 +3861,7 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2'
 		}
 	}
-	control.217 {
+	control.223 {
 		iface MIXER
 		name 'PDM2 L Mux'
 		value 'STO1 DAC MIX'
@@ -4381,7 +3875,7 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2'
 		}
 	}
-	control.218 {
+	control.224 {
 		iface MIXER
 		name 'PDM2 R Mux'
 		value 'STO1 DAC MIX'
@@ -4395,70 +3889,6 @@ state.sofbdwrt5677 {
 			item.3 'DD MIX2'
 		}
 	}
-	control.219 {
-		iface MIXER
-		name 'PGA1.0 1 PCM 0 Playback Volume'
-		value.0 32
-		value.1 32
-		comment {
-			access 'read write'
-			type INTEGER
-			count 2
-			range '0 - 32'
-			dbmin -9999999
-			dbmax 0
-			dbvalue.0 0
-			dbvalue.1 0
-		}
-	}
-	control.220 {
-		iface MIXER
-		name 'PGA1.1 1 Master Playback Volume'
-		value.0 32
-		value.1 32
-		comment {
-			access 'read write'
-			type INTEGER
-			count 2
-			range '0 - 32'
-			dbmin -9999999
-			dbmax 0
-			dbvalue.0 0
-			dbvalue.1 0
-		}
-	}
-	control.221 {
-		iface MIXER
-		name 'PGA2.0 2 PCM 0 Capture Volume'
-		value.0 32
-		value.1 32
-		comment {
-			access 'read write'
-			type INTEGER
-			count 2
-			range '0 - 40'
-			dbmin -9999999
-			dbmax 1600
-			dbvalue.0 0
-			dbvalue.1 0
-		}
-	}
-	control.222 {
-		iface MIXER
-		name 'PGA3.0 3 PCM 1 Playback Volume'
-		value.0 32
-		value.1 32
-		comment {
-			access 'read write'
-			type INTEGER
-			count 2
-			range '0 - 32'
-			dbmin -9999999
-			dbmax 0
-			dbvalue.0 0
-			dbvalue.1 0
-		}
-	}
 }
 --endcollapse--
 
@@ -4466,27 +3896,88 @@ state.sofbdwrt5677 {
 !!All Loaded Modules
 !!------------------
 
+ac97_bus
+acpi_als
+aesni_intel
+af_alg
+ahci
+algif_hash
+algif_skcipher
 atmel_mxt_ts
+autofs4
+ax88179_178a
+bluetooth
+bnep
+btbcm
+btintel
+btrtl
+btusb
+ccm
+cfg80211
 chromeos_laptop
+chromeos_pstore
+cmac
+coretemp
+crc32_pclmul
+crct10dif_pclmul
+cros_ec
+cros_ec_chardev
+cros_ec_debugfs
+cros_ec_dev
+cros_ec_lightbar
+cros_ec_lpcs
+cros_ec_sensors
+cros_ec_sensors_core
+cros_ec_sysfs
+cros_kbd_led_backlight
+cros_usbpd_charger
+cros_usbpd_logger
+cryptd
+crypto_simd
 drm
 drm_kms_helper
+dw_dmac
+dw_dmac_core
+ecc
+ecdh_generic
 fb_sys_fops
+ghash_clmulni_intel
+glue_helper
 i2c_algo_bit
 i915
+industrialio
+industrialio_triggered_buffer
+input_leds
+intel_cstate
 intel_pch_thermal
 intel_powerclamp
+intel_rapl_common
+intel_rapl_msr
+intel_rapl_perf
+ip_tables
 iwlmvm
 iwlwifi
-regmap_i2c
+joydev
+kfifo_buf
+kvm
+libahci
+libarc4
+lp
+lpc_ich
+mac80211
+mac_hid
+mc
+mii
+parport
+parport_pc
+ppdev
+rfcomm
+sch_fq_codel
+serio_raw
 snd
 snd_compress
-snd_hda_codec
-snd_hda_codec_hdmi
-snd_hda_core
-snd_hda_intel
-snd_hwdep
-snd_intel_dspcfg
 snd_pcm
+snd_pcm_dmaengine
 snd_rawmidi
 snd_seq
 snd_seq_device
@@ -4498,43 +3989,51 @@ snd_soc_core
 snd_soc_rl6231
 snd_soc_rt5677
 snd_soc_rt5677_spi
+snd_soc_sst_acpi
 snd_soc_sst_bdw_rt5677_mach
-snd_sof
-snd_sof_acpi
-snd_sof_intel_bdw
-snd_sof_intel_byt
-snd_sof_intel_ipc
-snd_sof_xtensa_dsp
+snd_soc_sst_dsp
+snd_soc_sst_firmware
+snd_soc_sst_haswell_pcm
+snd_soc_sst_ipc
 snd_timer
 soundcore
 spi_pxa2xx_platform
 syscopyarea
 sysfillrect
 sysimgblt
+usbnet
+uvcvideo
+video
+videobuf2_common
+videobuf2_memops
+videobuf2_v4l2
+videobuf2_vmalloc
+videodev
 x86_pkg_temp_thermal
-xhci_hcd
-xhci_pci
-
-
-!!Sysfs Files
-!!-----------
-
-/sys/class/sound/hwC0D0/init_pin_configs:
-0x05 0x18560010
-0x06 0x18560010
-0x07 0x18560010
-
-/sys/class/sound/hwC0D0/driver_pin_configs:
-
-/sys/class/sound/hwC0D0/user_pin_configs:
-
-/sys/class/sound/hwC0D0/init_verbs:
-
-/sys/class/sound/hwC0D0/hints:
+x_tables
+zram
 
 
 !!ALSA/HDA dmesg
 !!--------------
 
+[    0.157698] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.157699] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.157700] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+--
+[    4.211140] intel_rapl_common: Found RAPL domain dram
+[    4.231129] bdw-rt5677 bdw-rt5677: snd-soc-dummy-dai <-> System Pin mapping ok
+[    4.232599] bdw-rt5677 bdw-rt5677: rt5677-aif1 <-> snd-soc-dummy-dai mapping ok
+[    4.232737] bdw-rt5677 bdw-rt5677: ASoC: no DMI vendor name!
+[    4.249748] input: bdw-rt5677 Headphone Jack as /devices/pci0000:00/INT3438:00/bdw-rt5677/sound/card0/input7
+[    4.249822] input: bdw-rt5677 Mic Jack as /devices/pci0000:00/INT3438:00/bdw-rt5677/sound/card0/input8
+[    4.250678] ax88179_178a 2-1:1.0 enx00051ba2250c: renamed from eth0
 
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-topology-conf                         1.2.2-1                             all          ALSA topology configuration files
+ii  alsa-ucm-conf                              1.2.2-1                             all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                 1.2.2-1ubuntu1                      amd64        Utilities for configuring and using ALSA
 
