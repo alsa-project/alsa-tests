@@ -27,8 +27,8 @@ SKIP_DRIVERS2=[
 
 class Ucm2(Ucm):
 
-    def log(self, msg, *args):
-        log(msg, *args)
+    def log(self, lvl, msg, *args):
+        log(lvl, msg, *args)
 
     def warn(self, msg, *args):
         warning(msg, *args)
@@ -156,6 +156,9 @@ def do_configs(*args):
                         warning('  Path#%s: %s', idx, repr(l))
                         idx += 1
                     continue
+                c.log(1, '*** configuration %s @ %s ***', repr(path2), repr(card))
+                if card.components:
+                    c.log(1, '  Components: %s', repr(card.components))
                 c.conditions = conditions
                 c.load(l)
                 paths.append(c.shortfn())
