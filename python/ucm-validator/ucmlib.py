@@ -128,6 +128,7 @@ class AlsaConfigUcm(AlsaConfigTree):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.origin = None
+        self.prefix = None
 
     def origin_id(self):
         return self.origin
@@ -135,7 +136,7 @@ class AlsaConfigUcm(AlsaConfigTree):
     def _load(self, c):
 
         def one(n):
-            n.origin = n.full_id()
+            n.origin = self.prefix + n.full_id()
             if n.is_compound():
                 for n2 in n:
                     one(n2)
@@ -143,6 +144,11 @@ class AlsaConfigUcm(AlsaConfigTree):
         super()._load(c)
         one(self)
 
+    def load(self, filename, origin=None):
+        self.prefix = ''
+        if origin:
+            self.prefix = origin
+        super().load(filename)
 
 class AlsaControlError(Exception):
     """Indicates exceptions raised by AlsaControl class."""
@@ -925,6 +931,7 @@ class Ucm:
                     before_node = node2
                 elif id == 'After':
                     after_node = node2
+            origin_text = node.origin
             node.remove()
             if ctx_node is None:
                 self.error(inc_node, 'File string is not defined')
@@ -934,8 +941,8 @@ class Ucm:
             else:
                 filename = self.topdir() + '/' + filename[1:]
             nodes = AlsaConfigUcm()
-            self.log(1, "Include '%s', file '%s'", node.full_id(), self.shortfn(filename))
-            nodes.load(filename)
+            self.log(1, "Include %s, file '%s'", node.full_id(), self.shortfn(filename))
+            nodes.load(filename, origin_text + '.')
             self.evaluate_inplace(nodes, origin)
             if not nodes.is_compound():
                 self.error(ctx_node, 'included block is not a compound')
