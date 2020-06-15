@@ -789,25 +789,28 @@ class Ucm:
                     self.error(snode, 'compound type expected for the merged block')
             before = get_position_node(before_node, 'Before')
             after = get_position_node(after_node, 'After')
-            if before and after:
+            if (not before is None) and (not after is None):
                 self.error('both Before and After identifiers in the If or Include block')
             array = False
+            idx = 0
             if snode.is_array():
                 if not dnode.is_array():
                     self.error(snode, 'source and destination nodes must be arrays!')
                 array = True
-            idx = 0
+                for ctx in dnode:
+                    ctx.set_id('_tmp_%s' % idx)
+                    idx += 1
             for ctx in snode:
                 ctx.remove()
                 if array:
                     ctx.set_id("_tmp_%s" % idx)
                     idx += 1
-                if before:
+                if not before is None:
                     unique_id(before.parent, ctx)
                     before.add_before(ctx)
                     before = None
                     after = ctx
-                elif after:
+                elif not after is None:
                     unique_id(after.parent, ctx)
                     after.add_after(ctx)
                     after = ctx
