@@ -29,15 +29,15 @@ VALID_ID_LISTS = {
     },
     'Include': {
         'File': 'string',
-        'After': 'compound',
-        'Before': 'compound'
+        'After': 'compoundstring',
+        'Before': 'compoundstring'
     },
     'If': {
         'Condition': 'compound',
         'True': 'compound',
         'False': 'compound',
-        'After': 'compound',
-        'Before': 'compound'
+        'After': 'compoundstring',
+        'Before': 'compoundstring'
     },
     'DefineRegex': {
         'String': 'string',
@@ -676,8 +676,15 @@ class Ucm:
                     val = int(node.value())
                 except:
                     self.error(node, "%svalue %s cannot be converted to integer" % (prefix, repr(node.value())))
-                return
+                return id
             t = 'integer'
+        if t == 'compoundstring':
+            if not node.is_compound():
+                self.error(node, "%sis not type compound (has type '%s')" % (prefix, node.typename()))
+            for x in node:
+                if not x.is_string():
+                    self.error(x, "%sis not type string (has type '%s')" % (prefix, x.typename()))
+            return id
         if t != node.typename():
             self.error(node, "%sis not type %s (has type '%s')" % (prefix, repr(t), node.typename()))
         return id
