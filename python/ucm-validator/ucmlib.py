@@ -57,6 +57,11 @@ VALID_ID_LISTS = {
         'Needle': 'string',
         'Empty': 'string'
     },
+    'ConditionRegex': {
+        'Type': 'string',
+        'Regex': 'string',
+        'String': 'string'
+    },
     'SectionUseCase': {
         'File': 'string',
         'Comment': 'string'
@@ -756,7 +761,14 @@ class Ucm:
             n = node[snode.id]
             if not n is None and not n.is_string():
                 self.error(node, '%s node has not a string value', what)
-            return dnode[n.value()]
+            id = n.value()
+            if not id in dnode:
+                if dnode.is_array():
+                    s = 'array(0...%s)' % (len(dnode) - 1)
+                else:
+                    s = dnode.keys()
+                self.error(node, 'identifier %s not found in parent compound (%s)', repr(id), s)
+            return dnode[id]
 
         def unique_id(node1, node2):
             if not self.verify:
@@ -852,6 +864,14 @@ class Ucm:
             self.log(2, "Empty(%s): %s", repr(empty), r)
         else:
             self.error(node, 'Empty condition')
+        return r
+
+    def condition_Regex(self, node):
+        rstr = self.substitute(0, node['Regex'])
+        str = self.substitute(0, node['String'])
+        m = re.search(rstr, str)
+        r = not m is None
+        self.log(2, "RegexMatch(%s, %s): %s", repr(rstr), repr(str), r)
         return r
 
     def condition_ran(self, condition_node, result, true_node, false_node, origin):

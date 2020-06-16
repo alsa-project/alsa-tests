@@ -106,6 +106,14 @@ class AlsaConfigBase:
     def is_empty(self):
         return len(self) == 0
 
+    def keys(self):
+        if self.type != SND_CONFIG_TYPE_COMPOUND:
+            return False
+        r = []
+        for n in self:
+            r.append(n.id)
+        return r
+
     def full_id(self):
         id = repr(self.id)
         parent = self.parent
