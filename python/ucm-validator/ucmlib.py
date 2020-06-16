@@ -756,7 +756,7 @@ class Ucm:
     def merge_config(self, dst, src, before_node, after_node):
 
         def get_position_node(node, what):
-            if not node:
+            if not node or not snode.id in node:
                 return None
             n = node[snode.id]
             if not n is None and not n.is_string():
