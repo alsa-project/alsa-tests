@@ -1,0 +1,1629 @@
+upload=true&script=true&cardinfo=
+!!################################
+!!ALSA Information Script v 0.4.65
+!!################################
+
+!!Script ran on: Sat May 16 19:24:00 UTC 2020
+
+
+!!Linux Distribution
+!!------------------
+
+Ubuntu 20.04 LTS \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04 LTS" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=focal
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      AAEON
+Product Name:      UP-WHL01
+Product Version:   V1.0
+Firmware Version:  UPW1AM17
+Board Vendor:      AAEON
+Board Name:        UP-WHL01
+
+
+!!ACPI Device Status Information
+!!---------------
+
+/sys/bus/acpi/devices/AANT0F04:00/status 	 15
+/sys/bus/acpi/devices/ACPI000C:00/status 	 15
+/sys/bus/acpi/devices/ACPI000E:00/status 	 15
+/sys/bus/acpi/devices/ADC081C:00/status 	 15
+/sys/bus/acpi/devices/INT33A1:00/status 	 15
+/sys/bus/acpi/devices/INT340E:00/status 	 15
+/sys/bus/acpi/devices/INT34BB:00/status 	 15
+/sys/bus/acpi/devices/INT3F0D:00/status 	 15
+/sys/bus/acpi/devices/LNXPOWER:02/status 	 15
+/sys/bus/acpi/devices/LNXPOWER:04/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:05/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:06/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:08/status 	 1
+/sys/bus/acpi/devices/MSFT0101:00/status 	 15
+/sys/bus/acpi/devices/PNP0103:00/status 	 15
+/sys/bus/acpi/devices/PNP0501:00/status 	 15
+/sys/bus/acpi/devices/PNP0501:01/status 	 15
+/sys/bus/acpi/devices/PNP0C02:00/status 	 3
+/sys/bus/acpi/devices/PNP0C02:04/status 	 3
+/sys/bus/acpi/devices/PNP0C02:06/status 	 3
+/sys/bus/acpi/devices/PNP0C0C:00/status 	 15
+/sys/bus/acpi/devices/PNP0C0E:00/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:00/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:01/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:02/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:03/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:04/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:05/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:06/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:07/status 	 9
+/sys/bus/acpi/devices/PRP00001:00/status 	 11
+/sys/bus/acpi/devices/device:80/status 	 15
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.7.0-rc5-test+
+Operating System:  GNU/Linux
+Architecture:      x86_64
+Processor:         x86_64
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.7.0-rc5-test+
+Library version:    1.2.2
+Utilities version:  1.2.2
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+(efault)
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [sofsoundwire   ]: sof-soundwire - sof-soundwire
+                      Intel Soundwire SOF
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:1f.3 Multimedia audio controller [0401]: Intel Corporation Cannon Point-LP High Definition Audio Controller [8086:9dc8] (rev 30)
+	DeviceName: Onboard - Sound
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_usb_audio: index=-2
+snd_usb_caiaq: index=-2
+snd_usb_ua101: index=-2
+snd_usb_us122l: index=-2
+snd_usb_usx2y: index=-2
+snd_cmipci: mpu_port=0x330 fm_port=0x388
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_sof_intel_byt: dyndbg=+p
+snd_sof_intel_bdw: dyndbg=+p
+snd_sof_intel_ipc: dyndbg=+p
+snd_sof_intel_hda_common: dyndbg=+p
+snd_sof_intel_hda: dyndbg=+p
+snd_sof: dyndbg=+p
+snd_sof_pci: dyndbg=+p
+snd_sof_acpi: dyndbg=+p
+snd_sof_of: dyndbg=+p
+snd_sof_nocodec: dyndbg=+p
+snd_soc_skl_hda_dsp: dyndbg=+p
+snd_intel_dspcfg: dyndbg=+p
+snd_soc_rt5682_sdw: dyndbg=+p
+snd_soc_rt5682: dyndbg=+p
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: (efault)
+	* : 
+
+
+!!HDA-Intel Codec information
+!!---------------------------
+--startcollapse--
+
+Codec: Intel Kabylake HDMI
+Address: 2
+AFG Function Id: 0x1 (unsol 0)
+Vendor Id: 0x8086280b
+Subsystem Id: 0x80860101
+Revision Id: 0x100000
+No Modem Function Group found
+Default PCM:
+    rates [0x0]:
+    bits [0x0]:
+    formats [0x0]:
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+State of AFG node 0x01:
+  Power states:  D0 D3 CLKSTOP EPSS
+  Power: setting=D0, actual=D0, Clock-stop-OK
+GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
+Node 0x02 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x03 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x40: OUT
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 3
+     0x02* 0x03 0x04
+Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x07 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x08 [Vendor Defined Widget] wcaps 0xf00000: Mono
+--endcollapse--
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----+ 1 root audio 116,  8 May 16 14:17 /dev/snd/controlC0
+crw-rw----+ 1 root audio 116,  7 May 16 14:17 /dev/snd/hwC0D2
+crw-rw----+ 1 root audio 116,  2 May 16 14:19 /dev/snd/pcmC0D0p
+crw-rw----+ 1 root audio 116,  3 May 16 14:19 /dev/snd/pcmC0D1c
+crw-rw----+ 1 root audio 116,  4 May 16 14:17 /dev/snd/pcmC0D2p
+crw-rw----+ 1 root audio 116,  5 May 16 14:17 /dev/snd/pcmC0D3p
+crw-rw----+ 1 root audio 116,  6 May 16 14:17 /dev/snd/pcmC0D4p
+crw-rw----+ 1 root audio 116,  1 May 16 14:17 /dev/snd/seq
+crw-rw----+ 1 root audio 116, 33 May 16 14:17 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 May 16 14:17 .
+drwxr-xr-x 3 root root 240 May 16 14:17 ..
+lrwxrwxrwx 1 root root  12 May 16 14:17 pci-0000:00:1f.3-platform-sof_sdw -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: sofsoundwire [sof-soundwire], device 0: Headphone (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 2: HDMI1 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 3: HDMI2 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 4: HDMI3 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: sofsoundwire [sof-soundwire], device 1: Headset mic (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card sofsoundwire
+
+Card hw:0 'sofsoundwire'/'Intel Soundwire SOF'
+  Mixer name	: 'Intel Kabylake HDMI'
+  Components	: 'HDA:8086280b,80860101,00100000 cfg-spk:2 cfg-amp:0 hs:rt5682'
+  Controls      : 68
+  Simple ctrls  : 46
+Simple mixer control 'Headphone',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Headset Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'PGA1.0 1 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA2.0 2 Master',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 80
+  Front Left: Capture 50 [62%] [0.00dB] [on]
+  Front Right: Capture 50 [62%] [0.00dB] [on]
+Simple mixer control 'PGA3.0 3 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA4.0 4 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA5.0 5 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'rt5682 ADCDAT Mux',0
+  Capabilities: enum
+  Items: 'ADCDAT1' 'ADCDAT2'
+  Item0: 'ADCDAT1'
+Simple mixer control 'rt5682 CBJ Boost',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 8
+  Mono: 3 [38%] [30.00dB]
+Simple mixer control 'rt5682 DAC L Mux',0
+  Capabilities: enum
+  Items: 'IF1' 'SOUND'
+  Item0: 'SOUND'
+Simple mixer control 'rt5682 DAC L1 Source',0
+  Capabilities: enum
+  Items: 'Stereo1 DAC Mixer' 'DAC1'
+  Item0: 'DAC1'
+Simple mixer control 'rt5682 DAC R Mux',0
+  Capabilities: enum
+  Items: 'IF1' 'SOUND'
+  Item0: 'SOUND'
+Simple mixer control 'rt5682 DAC R1 Source',0
+  Capabilities: enum
+  Items: 'Stereo1 DAC Mixer' 'DAC1'
+  Item0: 'DAC1'
+Simple mixer control 'rt5682 DAC1',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 87
+  Mono:
+  Front Left: Playback 87 [100%] [0.00dB]
+  Front Right: Playback 87 [100%] [0.00dB]
+Simple mixer control 'rt5682 DAC1 MIXL DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 DAC1 MIXL Stereo ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 DAC1 MIXR DAC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 DAC1 MIXR Stereo ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 HPOL',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 HPOR',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 IF1 01 ADC Swap Mux',0
+  Capabilities: enum
+  Items: 'L/R' 'R/L' 'L/L' 'R/R'
+  Item0: 'L/L'
+Simple mixer control 'rt5682 IF1 23 ADC Swap Mux',0
+  Capabilities: enum
+  Items: 'L/R' 'R/L' 'L/L' 'R/R'
+  Item0: 'L/R'
+Simple mixer control 'rt5682 IF1 45 ADC Swap Mux',0
+  Capabilities: enum
+  Items: 'L/R' 'R/L' 'L/L' 'R/R'
+  Item0: 'L/R'
+Simple mixer control 'rt5682 IF1 67 ADC Swap Mux',0
+  Capabilities: enum
+  Items: 'L/R' 'R/L' 'L/L' 'R/R'
+  Item0: 'L/R'
+Simple mixer control 'rt5682 IF1_ADC Mux',0
+  Capabilities: enum
+  Items: 'Slot 0' 'Slot 2' 'Slot 4' 'Slot 6'
+  Item0: 'Slot 0'
+Simple mixer control 'rt5682 IF2 ADC Swap Mux',0
+  Capabilities: enum
+  Items: 'L/R' 'R/L' 'L/L' 'R/R'
+  Item0: 'L/R'
+Simple mixer control 'rt5682 RECMIX1L CBJ',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 STO1 ADC',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 23 [37%] [0.00dB] [off]
+  Front Right: Capture 23 [37%] [0.00dB] [off]
+Simple mixer control 'rt5682 STO1 ADC Boost Gain',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
+Simple mixer control 'rt5682 Stereo1 ADC L Mux',0
+  Capabilities: enum
+  Items: 'ADC1 L' 'ADC1 R'
+  Item0: 'ADC1 L'
+Simple mixer control 'rt5682 Stereo1 ADC L1 Mux',0
+  Capabilities: enum
+  Items: 'DAC MIX' 'ADC'
+  Item0: 'ADC'
+Simple mixer control 'rt5682 Stereo1 ADC L2 Mux',0
+  Capabilities: enum
+  Items: 'DAC MIX' 'DMIC'
+  Item0: 'DAC MIX'
+Simple mixer control 'rt5682 Stereo1 ADC MIXL ADC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 Stereo1 ADC MIXL ADC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 Stereo1 ADC MIXR ADC1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 Stereo1 ADC MIXR ADC2',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 Stereo1 ADC R Mux',0
+  Capabilities: enum
+  Items: 'ADC1 L' 'ADC1 R'
+  Item0: 'ADC1 L'
+Simple mixer control 'rt5682 Stereo1 ADC R1 Mux',0
+  Capabilities: enum
+  Items: 'DAC MIX' 'ADC'
+  Item0: 'ADC'
+Simple mixer control 'rt5682 Stereo1 ADC R2 Mux',0
+  Capabilities: enum
+  Items: 'DAC MIX' 'DMIC'
+  Item0: 'DAC MIX'
+Simple mixer control 'rt5682 Stereo1 DAC MIXL DAC L1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt5682 Stereo1 DAC MIXL DAC R1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 Stereo1 DAC MIXR DAC L1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'rt5682 Stereo1 DAC MIXR DAC R1',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.sofsoundwire {
+	control.1 {
+		iface MIXER
+		name 'rt5682 DAC1 Playback Volume'
+		value.0 87
+		value.1 87
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 87'
+			dbmin -6525
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'rt5682 CBJ Boost Volume'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 8'
+			dbmin 0
+			dbmax 5200
+			dbvalue.0 3000
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'rt5682 STO1 ADC Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'rt5682 STO1 ADC Capture Volume'
+		value.0 23
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'rt5682 STO1 ADC Boost Gain Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Headphone Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface CARD
+		name 'Headphone Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface CARD
+		name 'Headset Mic Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface CARD
+		name 'HDMI/DP,pcm=2 Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.15 {
+		iface PCM
+		device 2
+		name ELD
+		value '100007006816000100000000000000003dcb320a54582d535233303809070700'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 32
+		}
+	}
+	control.16 {
+		iface CARD
+		name 'HDMI/DP,pcm=3 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 1
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 1
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 1
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.21 {
+		iface PCM
+		device 3
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.22 {
+		iface CARD
+		name 'HDMI/DP,pcm=4 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 2
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 2
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 2
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 2
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface PCM
+		device 4
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.28 {
+		iface PCM
+		device 2
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.29 {
+		iface PCM
+		device 3
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.30 {
+		iface PCM
+		device 4
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'rt5682 RECMIX1L CBJ Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC L1 Mux'
+		value ADC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'DAC MIX'
+			item.1 ADC
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC R1 Mux'
+		value ADC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'DAC MIX'
+			item.1 ADC
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC L2 Mux'
+		value 'DAC MIX'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'DAC MIX'
+			item.1 DMIC
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC R2 Mux'
+		value 'DAC MIX'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'DAC MIX'
+			item.1 DMIC
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC L Mux'
+		value 'ADC1 L'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'ADC1 L'
+			item.1 'ADC1 R'
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC R Mux'
+		value 'ADC1 L'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'ADC1 L'
+			item.1 'ADC1 R'
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'rt5682 IF1_ADC Mux'
+		value 'Slot 0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Slot 0'
+			item.1 'Slot 2'
+			item.2 'Slot 4'
+			item.3 'Slot 6'
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC MIXL ADC1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC MIXL ADC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC MIXR ADC1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'rt5682 Stereo1 ADC MIXR ADC2 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'rt5682 IF1 01 ADC Swap Mux'
+		value L/L
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 L/R
+			item.1 R/L
+			item.2 L/L
+			item.3 R/R
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'rt5682 IF1 23 ADC Swap Mux'
+		value L/R
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 L/R
+			item.1 R/L
+			item.2 L/L
+			item.3 R/R
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'rt5682 IF1 45 ADC Swap Mux'
+		value L/R
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 L/R
+			item.1 R/L
+			item.2 L/L
+			item.3 R/R
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'rt5682 IF1 67 ADC Swap Mux'
+		value L/R
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 L/R
+			item.1 R/L
+			item.2 L/L
+			item.3 R/R
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'rt5682 IF2 ADC Swap Mux'
+		value L/R
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 L/R
+			item.1 R/L
+			item.2 L/L
+			item.3 R/R
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'rt5682 ADCDAT Mux'
+		value ADCDAT1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 ADCDAT1
+			item.1 ADCDAT2
+		}
+	}
+	control.49 {
+		iface MIXER
+		name 'rt5682 DAC L Mux'
+		value SOUND
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 IF1
+			item.1 SOUND
+		}
+	}
+	control.50 {
+		iface MIXER
+		name 'rt5682 DAC R Mux'
+		value SOUND
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 IF1
+			item.1 SOUND
+		}
+	}
+	control.51 {
+		iface MIXER
+		name 'rt5682 DAC1 MIXL Stereo ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.52 {
+		iface MIXER
+		name 'rt5682 DAC1 MIXL DAC1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.53 {
+		iface MIXER
+		name 'rt5682 DAC1 MIXR Stereo ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'rt5682 DAC1 MIXR DAC1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'rt5682 DAC L1 Source'
+		value DAC1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Stereo1 DAC Mixer'
+			item.1 DAC1
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'rt5682 DAC R1 Source'
+		value DAC1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Stereo1 DAC Mixer'
+			item.1 DAC1
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'rt5682 Stereo1 DAC MIXL DAC L1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'rt5682 Stereo1 DAC MIXL DAC R1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'rt5682 Stereo1 DAC MIXR DAC L1 Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.60 {
+		iface MIXER
+		name 'rt5682 Stereo1 DAC MIXR DAC R1 Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'rt5682 HPOL Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'rt5682 HPOR Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'PGA1.0 1 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'PGA2.0 2 Master Capture Volume'
+		value.0 50
+		value.1 50
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 80'
+			dbmin -9999999
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'PGA2.0 2 Master Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'PGA3.0 3 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'PGA4.0 4 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.68 {
+		iface MIXER
+		name 'PGA5.0 5 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+cqhci
+drm
+drm_kms_helper
+efivarfs
+fb_sys_fops
+i2c_algo_bit
+i915
+igb
+int340x_thermal_zone
+intel_lpss
+intel_lpss_pci
+intel_pch_thermal
+intel_powerclamp
+intel_soc_dts_iosf
+ledtrig_audio
+mei
+mei_me
+mfd_core
+mmc_block
+processor_thermal_device
+regmap_i2c
+regmap_sdw
+sdhci
+sdhci_pci
+snd
+snd_hda_codec
+snd_hda_codec_hdmi
+snd_hda_core
+snd_hda_ext_core
+snd_hwdep
+snd_intel_dspcfg
+snd_pcm
+snd_rawmidi
+snd_seq
+snd_seq_device
+snd_seq_midi
+snd_seq_midi_event
+snd_soc_acpi
+snd_soc_acpi_intel_match
+snd_soc_core
+snd_soc_dmic
+snd_soc_hdac_hda
+snd_soc_hdac_hdmi
+snd_soc_rl6231
+snd_soc_rt5682
+snd_soc_rt5682_sdw
+snd_soc_rt700
+snd_soc_sof_sdw
+snd_sof
+snd_sof_intel_hda
+snd_sof_intel_hda_common
+snd_sof_pci
+snd_sof_xtensa_dsp
+snd_timer
+soundcore
+soundwire_bus
+soundwire_cadence
+soundwire_generic_allocation
+soundwire_intel
+spi_pxa2xx_platform
+syscopyarea
+sysfillrect
+sysimgblt
+wmi
+wmi_bmof
+x86_pkg_temp_thermal
+xhci_hcd
+xhci_pci
+
+
+!!Sysfs Files
+!!-----------
+
+/sys/class/sound/hwC0D2/init_pin_configs:
+0x05 0x18560010
+0x06 0x18560010
+0x07 0x18560010
+
+/sys/class/sound/hwC0D2/driver_pin_configs:
+
+/sys/class/sound/hwC0D2/user_pin_configs:
+
+/sys/class/sound/hwC0D2/init_verbs:
+
+/sys/class/sound/hwC0D2/hints:
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[    5.374863] sof-audio-pci 0000:00:1f.3: codec #1 probe error, ret: -5
+[    5.374950] sof-audio-pci 0000:00:1f.3: HDA codec #2 probed OK: response: 8086280b
+[    5.375781] hdaudio ehdaudio0D2: loading codec module: hdaudio:v8086280Br00100000a01
+--
+[    5.394699] sof-audio-pci 0000:00:1f.3: SoundWire machine driver sof_sdw topology sof-cnl-rt5682-sdw2.tplg
+[    5.394700] sof-audio-pci 0000:00:1f.3: hda codecs found, mask 4
+[    5.394716] sof-audio-pci 0000:00:1f.3: loading firmware
+--
+[    5.792841] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30200000: GLB_TPLG_MSG: BUFFER_NEW
+[    5.792844] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 16 pipe 3 type 27 name : HDA0.OUT stream iDisp1
+[    5.792846] sof-audio-pci 0000:00:1f.3: dai HDA0.OUT: type 3 index 0
+[    5.792853] sof-audio-pci 0000:00:1f.3:  config: periods snk 0 src 2 fmt 2
+--
+[    5.793063] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30010000: GLB_TPLG_MSG: COMP_NEW
+[    5.793066] sof-audio-pci 0000:00:1f.3: tplg: connected widget HDA0.OUT -> DAI link iDisp1
+[    5.793069] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 17 pipe 3 type 32 name : PIPELINE.3.HDA0.OUT stream HDA0.OUT
+[    5.793071] sof-audio-pci 0000:00:1f.3: tplg: pipeline id 3 comp 17 scheduling comp id 16
+[    5.793074] sof-audio-pci 0000:00:1f.3: pipeline PIPELINE.3.HDA0.OUT: period 1000 pri 0 mips 5000 core 0 frames 0
+[    5.793077] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30100000: GLB_TPLG_MSG: PIPE_NEW
+--
+[    5.793758] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30200000: GLB_TPLG_MSG: BUFFER_NEW
+[    5.793761] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 22 pipe 4 type 27 name : HDA1.OUT stream iDisp2
+[    5.793764] sof-audio-pci 0000:00:1f.3: dai HDA1.OUT: type 3 index 1
+[    5.793765] sof-audio-pci 0000:00:1f.3:  config: periods snk 0 src 2 fmt 2
+--
+[    5.793902] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30010000: GLB_TPLG_MSG: COMP_NEW
+[    5.793905] sof-audio-pci 0000:00:1f.3: tplg: connected widget HDA1.OUT -> DAI link iDisp2
+[    5.793908] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 23 pipe 4 type 32 name : PIPELINE.4.HDA1.OUT stream HDA1.OUT
+[    5.793910] sof-audio-pci 0000:00:1f.3: tplg: pipeline id 4 comp 23 scheduling comp id 22
+[    5.793912] sof-audio-pci 0000:00:1f.3: pipeline PIPELINE.4.HDA1.OUT: period 1000 pri 0 mips 5000 core 0 frames 0
+[    5.793915] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30100000: GLB_TPLG_MSG: PIPE_NEW
+--
+[    5.794570] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30200000: GLB_TPLG_MSG: BUFFER_NEW
+[    5.794573] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 28 pipe 5 type 27 name : HDA2.OUT stream iDisp3
+[    5.794576] sof-audio-pci 0000:00:1f.3: dai HDA2.OUT: type 3 index 2
+[    5.794577] sof-audio-pci 0000:00:1f.3:  config: periods snk 0 src 2 fmt 2
+--
+[    5.794758] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30010000: GLB_TPLG_MSG: COMP_NEW
+[    5.794761] sof-audio-pci 0000:00:1f.3: tplg: connected widget HDA2.OUT -> DAI link iDisp3
+[    5.794764] sof-audio-pci 0000:00:1f.3: tplg: ready widget id 29 pipe 5 type 32 name : PIPELINE.5.HDA2.OUT stream HDA2.OUT
+[    5.794766] sof-audio-pci 0000:00:1f.3: tplg: pipeline id 5 comp 29 scheduling comp id 28
+[    5.794768] sof-audio-pci 0000:00:1f.3: pipeline PIPELINE.5.HDA2.OUT: period 1000 pri 0 mips 5000 core 0 frames 0
+[    5.794771] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30100000: GLB_TPLG_MSG: PIPE_NEW
+--
+[    5.794927] sof-audio-pci 0000:00:1f.3: tplg: load pcm Headset mic 1
+[    5.794939] sof-audio-pci 0000:00:1f.3: tplg: load pcm HDMI1 2
+[    5.794947] sof-audio-pci 0000:00:1f.3: tplg: load pcm HDMI2 3
+[    5.794957] sof-audio-pci 0000:00:1f.3: tplg: load pcm HDMI3 4
+[    5.794970] sof-audio-pci 0000:00:1f.3: sink BUF1.0 control none source PCM0P
+--
+[    5.796343] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+[    5.796348] sof-audio-pci 0000:00:1f.3: sink HDA0.OUT control none source BUF3.1
+[    5.796350] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+[    5.796521] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+[    5.796526] sof-audio-pci 0000:00:1f.3: sink HDA1.OUT control none source BUF4.1
+[    5.796529] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+[    5.796593] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+[    5.796598] sof-audio-pci 0000:00:1f.3: sink HDA2.OUT control none source BUF5.1
+[    5.796600] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30030000: GLB_TPLG_MSG: COMP_CONNECT
+--
+[    5.796941] sof-audio-pci 0000:00:1f.3: tplg: 1 hw_configs found, default id: 2!
+[    5.796943] sof-audio-pci 0000:00:1f.3: HDA config rate 48000 channels 2
+[    5.796953] sof-audio-pci 0000:00:1f.3: ipc tx: 0x80010000: GLB_DAI_MSG: CONFIG
+--
+[    5.797151] sof-audio-pci 0000:00:1f.3: tplg: 1 hw_configs found, default id: 3!
+[    5.797153] sof-audio-pci 0000:00:1f.3: HDA config rate 48000 channels 2
+[    5.797162] sof-audio-pci 0000:00:1f.3: ipc tx: 0x80010000: GLB_DAI_MSG: CONFIG
+--
+[    5.797275] sof-audio-pci 0000:00:1f.3: tplg: 1 hw_configs found, default id: 4!
+[    5.797276] sof-audio-pci 0000:00:1f.3: HDA config rate 48000 channels 2
+[    5.797285] sof-audio-pci 0000:00:1f.3: ipc tx: 0x80010000: GLB_DAI_MSG: CONFIG
+--
+[    5.797390] sof-audio-pci 0000:00:1f.3: ASoC: Parent card not yet available, widget card binding deferred
+[    5.797392] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[    5.797394] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[    5.797548] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[    5.797550] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[    5.797552] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[    5.797717] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[    5.797719] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[    5.797721] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[    5.804067] sof-audio-pci 0000:00:1f.3: spcm: allocate Passthrough Playback 0 playback DMA buffer size 0x10000 max 0x10000
+[    5.804069] sof_sdw sof_sdw: snd-soc-dummy-dai <-> Headphone 0 mapping ok
+[    5.804076] sof-audio-pci 0000:00:1f.3: creating new PCM Headset mic
+[    5.804077] sof-audio-pci 0000:00:1f.3: spcm: allocate Passthrough Capture 1 capture DMA buffer size 0x10000 max 0x10000
+[    5.804079] sof_sdw sof_sdw: snd-soc-dummy-dai <-> Headset mic 1 mapping ok
+[    5.804084] sof-audio-pci 0000:00:1f.3: creating new PCM HDMI1
+[    5.804085] sof-audio-pci 0000:00:1f.3: spcm: allocate Passthrough Playback 2 playback DMA buffer size 0x10000 max 0x10000
+[    5.804087] sof_sdw sof_sdw: snd-soc-dummy-dai <-> HDMI1 2 mapping ok
+[    5.804093] sof-audio-pci 0000:00:1f.3: creating new PCM HDMI2
+[    5.804094] sof-audio-pci 0000:00:1f.3: spcm: allocate Passthrough Playback 3 playback DMA buffer size 0x10000 max 0x10000
+[    5.804096] sof_sdw sof_sdw: snd-soc-dummy-dai <-> HDMI2 3 mapping ok
+[    5.804103] sof-audio-pci 0000:00:1f.3: creating new PCM HDMI3
+[    5.804104] sof-audio-pci 0000:00:1f.3: spcm: allocate Passthrough Playback 4 playback DMA buffer size 0x10000 max 0x10000
+[    5.804105] sof_sdw sof_sdw: snd-soc-dummy-dai <-> HDMI3 4 mapping ok
+[    5.817820] input: sof-soundwire Headset Jack as /devices/pci0000:00/0000:00:1f.3/sof_sdw/sound/card0/input12
+[    5.817946] input: sof-soundwire HDMI/DP,pcm=2 as /devices/pci0000:00/0000:00:1f.3/sof_sdw/sound/card0/input13
+[    5.818013] input: sof-soundwire HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1f.3/sof_sdw/sound/card0/input14
+[    5.818075] input: sof-soundwire HDMI/DP,pcm=4 as /devices/pci0000:00/0000:00:1f.3/sof_sdw/sound/card0/input15
+[    5.919250] sof-audio-pci 0000:00:1f.3: ipc tx: 0x50010000: GLB_COMP_MSG: SET_VALUE
+--
+[    9.574778] sof-audio-pci 0000:00:1f.3: Debug PCIW: 00000010 at  00000044
+[    9.574784] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[    9.574786] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+[   15.750705] rfkill: input handler enabled
+[   15.951013] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 1
+[   15.955796] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000000 at  00000044
+--
+[   16.060732] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x80010000: GLB_DAI_MSG: CONFIG
+[   16.060735] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[   16.060737] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   16.060945] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   16.060947] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[   16.060949] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   16.061025] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   16.061027] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[   16.061029] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[   81.399770] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000010 at  00000044
+[   81.399778] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[   81.399786] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+[   85.471258] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 1
+[   85.475573] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000000 at  00000044
+--
+[   85.579937] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x80010000: GLB_DAI_MSG: CONFIG
+[   85.579940] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[   85.579943] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   85.580176] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   85.580180] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[   85.580184] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   85.580262] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[   85.580265] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[   85.580268] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[   93.827604] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000010 at  00000044
+[   93.827610] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[   93.827614] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+[  107.933354] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 1
+[  107.937907] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000000 at  00000044
+--
+[  108.042855] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x80010000: GLB_DAI_MSG: CONFIG
+[  108.042860] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[  108.042865] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  108.043028] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  108.043033] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[  108.043038] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  108.043111] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  108.043114] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[  108.043119] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[  124.612319] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000010 at  00000044
+[  124.612325] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[  124.612329] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+[  347.023099] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 1
+[  347.027466] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000000 at  00000044
+--
+[  347.132396] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x80010000: GLB_DAI_MSG: CONFIG
+[  347.132402] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[  347.132407] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  347.132592] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  347.132601] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[  347.132606] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  347.132684] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  347.132688] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[  347.132693] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[  349.208720] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000010 at  00000044
+[  349.208726] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[  349.208730] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+[  368.043133] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 1
+[  368.047488] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000000 at  00000044
+--
+[  368.152671] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x80010000: GLB_DAI_MSG: CONFIG
+[  368.152676] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.5.HDA2.OUT id 29
+[  368.152682] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  368.152860] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  368.152864] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.4.HDA1.OUT id 23
+[  368.152869] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  368.152948] sof-audio-pci 0000:00:1f.3: ipc tx succeeded: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+[  368.152952] sof-audio-pci 0000:00:1f.3: tplg: complete pipeline PIPELINE.3.HDA0.OUT id 17
+[  368.152957] sof-audio-pci 0000:00:1f.3: ipc tx: 0x30130000: GLB_TPLG_MSG: PIPE_COMPLETE
+--
+[  370.282258] sof-audio-pci 0000:00:1f.3: Debug PCIR: 00000010 at  00000044
+[  370.282264] sof-audio-pci 0000:00:1f.3: Turning i915 HDAC power 0
+[  370.282268] sof-audio-pci 0000:00:1f.3: Current DSP power state: D3
+
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-topology-conf                         1.2.2-1                               all          ALSA topology configuration files
+ii  alsa-ucm-conf                              1.2.2-1                               all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                 1.2.2-1ubuntu1                        amd64        Utilities for configuring and using ALSA
+
