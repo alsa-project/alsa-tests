@@ -56,7 +56,12 @@ class AlsaInfoSoundcard:
         self.longname = ''
         self.mixername = ''
         self.components = ''
+        self.module = None
         self.state = {}
+
+    def getsys(self, path):
+        if path == 'class/sound/card%s/device/driver' % self.card and self.module:
+            return self.module
 
     def control_exists(self, ctl):
         base = self.state['control']
@@ -168,6 +173,12 @@ class AlsaInfoModopts:
     def __init__(self, parent, text):
         self.parent = parent
         self.text = text
+        for m in text.split('!!Module:'):
+            if not m: continue
+            l = m.splitlines()
+            mod = l[0].strip()
+            if not mod: continue
+            self.parent.modules.append(mod)
 
 class AlsaInfoHdaCodec:
 
@@ -260,6 +271,7 @@ class AlsaInfo:
         self.filename = None
         self.tree = {}
         self.cards = {}
+        self.modules = []
 
     def card(self, card):
         if card in self.cards:
@@ -293,3 +305,7 @@ class AlsaInfo:
                     print(''.join(backlog))
                     raise AlsaInfoError("%s: unknown section %s" % (filename, repr(name)))
                 section = SECTIONS[name]
+        # a bit heuristic, should be improved
+        for c in self.cards:
+            if self.modules:
+                self.cards[c].module = self.modules.pop(0)

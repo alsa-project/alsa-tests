@@ -10,7 +10,7 @@ import json
 from ucmlib import AlsaControl
 
 VALID_JSON_FIELDS = [
-    'comment', 'id', 'driver', 'name', 'longname', 'mixername', 'components'
+    'comment', 'id', 'driver', 'name', 'longname', 'mixername', 'module', 'components'
 ]
 
 class AlsaJsonError(Exception):
@@ -35,7 +35,12 @@ class AlsaJsonSoundcard:
         self.longname = ''
         self.mixername = ''
         self.components = ''
+        self.module = ''
         self.controls = []
+
+    def getsys(self, path):
+        if path == 'class/sound/card%s/device/driver' % self.card and self.module:
+            return self.module
 
     def control_exists(self, ctl):
         for c in self.controls:

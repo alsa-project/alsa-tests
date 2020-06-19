@@ -628,7 +628,7 @@ class Ucm:
         pass
 
     def warning(self, node, msg, *args):
-        if node:
+        if not node is None:
             self.warn("%s: %s %s", self.id(), node.full_id(), msg % args)
         else:
             self.warn("%s: %s", self.id(), msg % args)
@@ -748,9 +748,25 @@ class Ucm:
             s = s.replace('${var:%s}' % m, self.var[m])
         if self.verify is None:
             return s
-        r1 = r"\${(env|sys):([a-zA-Z0-9_]+)}"
+        if s.find('${CardNumber}') >= 0:
+            if self.syntax < 3:
+                self.error(node, "cannot substitute ${CardNumber} (requires 'Syntax 3')")
+            s = s.replace('${CardNumber}', str(self.verify.card))
+        if self.syntax < 3:
+            r1 = r"\${(env|sys):([a-zA-Z0-9_]+)}"
+        else:
+            r1 = r"\${(env|sys):([$]*[a-zA-Z0-9_]+)}"
         for m in re.findall(r1, s):
-            raise UcmError("substitution for ${%s:%s} is not implemented" % m)
+            cmd, arg = m
+            if arg[0] == '$':
+                if not arg[1:] in self.var:
+                    raise UcmError("variable ${var:%s} is not defined" % arg[1:])
+                arg = self.var[arg[1:]]
+            r = getattr(self.verify, 'get%s' % cmd)(arg)
+            if r is None:
+                self.warning(node, "substitution for ${%s:%s} is not available (%s)" % (cmd, arg, repr(self.verify)))
+                r = "****unknown****"
+            s = s.replace("${%s:%s}" % m, r)
         confname = os.path.split(self.filename)[1]
         s = s.replace('${ConfName}', confname). \
               replace('${CardId}', self.verify.id). \
