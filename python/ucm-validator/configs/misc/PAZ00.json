@@ -2,6 +2,7 @@
     "PAZ00": {
         "comment":	"Dummy test configuration for PAZ00",
         "id":		"PAZ00",
+        "module":	"snd_soc_tegra_alc5632",
         "driver":	"PAZ00",
         "name":		"PAZ00",
         "longname":	"PAZ00"

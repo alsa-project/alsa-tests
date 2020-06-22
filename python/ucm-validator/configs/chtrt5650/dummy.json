@@ -2,6 +2,7 @@
     "chtrt5650-1": {
         "comment":	"Dummy test configuration for chtrt5650",
         "id":		"chtrt5650",
+        "module":	"snd_soc_sst_bdw_rt5650_mach",
         "driver":	"chtrt5650",
         "name":		"chtrt5650",
         "longname":	"chtrt5650"
@@ -9,6 +10,7 @@
     "chtrt5650-2": {
         "comment":	"Dummy test configuration for chtrt5650",
         "id":		"chtrt5650",
+        "module":	"snd_soc_sst_bdw_rt5650_mach",
         "driver":	"chtrt5650",
         "name":		"chtrt5650",
         "longname":	"chtrt5650",

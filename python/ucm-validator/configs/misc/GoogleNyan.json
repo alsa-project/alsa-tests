@@ -2,6 +2,7 @@
     "GoogleNyan": {
         "comment":	"Dummy test configuration for GoogleNyan",
         "id":		"GoogleNyan",
+        "module":	"snd_soc_tegra_max98090",
         "driver":	"GoogleNyan",
         "name":		"GoogleNyan",
         "longname":	"GoogleNyan"

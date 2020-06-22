@@ -2,6 +2,7 @@
     "SDP4430": {
         "comment":	"Dummy test configuration for SDP4430",
         "id":		"SDP4430",
+        "module":	"snd_soc_omap_abe_twl6040",
         "driver":	"SDP4430",
         "name":		"SDP4430",
         "longname":	"SDP4430"

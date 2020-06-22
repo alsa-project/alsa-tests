@@ -2,6 +2,7 @@
     "-1": {
         "comment":	"Dummy test configuration for broadwell-rt286",
         "id":		"broadwell-rt286",
+        "module":	"snd_soc_sst_broadwell",
         "driver":	"broadwell-rt286",
         "name":		"broadwell-rt286",
         "longname":	"broadwell-rt286"

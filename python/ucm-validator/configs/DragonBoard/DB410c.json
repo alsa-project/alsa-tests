@@ -2,6 +2,7 @@
     "DB410c": {
         "comment":	"Dummy test configuration for DB410c",
         "id":		"DB410c",
+        "module":	"snd_soc_apq8016_sbc",
         "driver":	"DB410c",
         "name":		"DB410c",
         "longname":	"DB410c"

@@ -72,6 +72,9 @@ Pulseaudio:
 !!Loaded sound module options
 !!---------------------------
 
+!!Module: snd-soc-snow.o
+	* : 
+
 
 !!ALSA Device nodes
 !!-----------------

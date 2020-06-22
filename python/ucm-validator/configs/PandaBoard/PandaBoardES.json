@@ -2,6 +2,7 @@
     "PandaBoardES": {
         "comment":	"Dummy test configuration for PandaBoardES",
         "id":		"PandaBoardES",
+        "module":	"snd_soc_omap_abe_twl6040",
         "driver":	"PandaBoardES",
         "name":		"PandaBoardES",
         "longname":	"PandaBoardES"

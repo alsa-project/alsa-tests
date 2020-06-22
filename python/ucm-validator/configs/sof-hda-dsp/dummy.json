@@ -2,6 +2,7 @@
     "sof-hda-dsp-1": {
         "comment":	"Dummy test configuration for sof-hda-dsp",
         "id":		"sof-hda-dsp",
+        "module":	"snd_soc_skl_hda_dsp",
         "driver":	"sof-hda-dsp",
         "name":		"sof-hda-dsp",
         "longname":	"sof-hda-dsp",

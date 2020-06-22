@@ -2,6 +2,7 @@
     "bytcht-cx2072x-1": {
         "comment":	"Dummy test configuration for bytcht-cx2072x",
         "id":		"bytcht-cx2072x",
+        "module":	"snd_soc_sst_byt_cht_cx2072x",
         "driver":	"bytcht-cx2072x",
         "name":		"bytcht-cx2072x",
         "longname":	"bytcht-cx2072x",

@@ -2,6 +2,7 @@
     "tegraalc5632": {
         "comment":	"Dummy test configuration for tegraalc5632",
         "id":		"tegraalc5632",
+        "module":	"snd_soc_tegra_alc5632",
         "driver":	"tegraalc5632",
         "name":		"tegraalc5632",
         "longname":	"tegraalc5632"

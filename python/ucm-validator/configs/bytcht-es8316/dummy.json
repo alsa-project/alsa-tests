@@ -2,6 +2,7 @@
     "bytcht-es8316-1": {
         "comment":	"Dummy test configuration for bytcht-es8316",
         "id":		"bytcht-es8316",
+        "module":	"snd_soc_sst_byt_cht_es8316",
         "driver":	"bytcht-es8316",
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316",
@@ -13,6 +14,7 @@
     "bytcht-es8316-2": {
         "comment":	"Dummy test configuration for bytcht-es8316",
         "id":		"bytcht-es8316",
+        "module":	"snd_soc_sst_byt_cht_es8316",
         "driver":	"bytcht-es8316",
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316-mono-spk-in1-mic",
@@ -23,6 +25,7 @@
     "bytcht-es8316-3": {
         "comment":	"Dummy test configuration for bytcht-es8316",
         "id":		"bytcht-es8316",
+        "module":	"snd_soc_sst_byt_cht_es8316",
         "driver":	"bytcht-es8316",
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316",
@@ -34,6 +37,7 @@
     "bytcht-es8316-4": {
         "comment":	"Dummy test configuration for bytcht-es8316",
         "id":		"bytcht-es8316",
+        "module":	"snd_soc_sst_byt_cht_es8316",
         "driver":	"bytcht-es8316",
         "name":		"bytcht-es8316",
         "longname":	"bytcht-es8316-stereo-spk-in2-mic",

@@ -2,6 +2,7 @@
     "hda-dsp-1": {
         "comment":	"Dummy test configuration for hda-dsp",
         "id":		"hdadsp",
+        "module":	"snd_soc_skl_hda_dsp",
         "driver":	"hda-dsp",
         "name":		"hda-dsp",
         "longname":	"hda-dsp",

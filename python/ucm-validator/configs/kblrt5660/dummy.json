@@ -2,6 +2,7 @@
     "kblrt5660-1": {
         "comment":	"Dummy test configuration for kblrt5660",
         "id":		"kblrt5660",
+        "module":	"snd_soc_kbl_rt5660",
         "driver":	"kblrt5660",
         "name":		"kblrt5660",
         "longname":	"kblrt5660",
@@ -13,6 +14,7 @@
     "kblrt5660-2": {
         "comment":	"Dummy test configuration for kblrt5660",
         "id":		"kblrt5660",
+        "module":	"snd_soc_kbl_rt5660",
         "driver":	"kblrt5660",
         "name":		"kblrt5660",
         "longname":	"kblrt5660",

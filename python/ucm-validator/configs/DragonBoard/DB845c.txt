@@ -84,6 +84,9 @@ snd_via82xx_modem: index=-2
 !!Loaded sound module options
 !!---------------------------
 
+!!Module: snd_soc_sdm845
+	* : 
+
 
 !!ALSA Device nodes
 !!-----------------
