@@ -999,12 +999,18 @@ class Ucm:
     def evaluate_define(self, def_node, origin=None):
         if self.syntax < 3:
             self.error(def_node, "Define is not supported (requires 'Syntax 3')")
+        ret = False
         for node in def_node:
-            self.var[node.id] = self.substitute(0, node, origin)
+            r = self.substitute(0, node, origin)
+            self.var[node.id] = r
+            self.log(1, "Define.%s = %s", node.id, r)
+            ret = True
+        return ret
 
     def evaluate_defineregex(self, re_node, origin=None):
         if self.syntax < 3:
             self.error(re_node, "DefineRegex is not supported (requires 'Syntax 3')")
+        ret = False
         for node in re_node:
             if not node.is_compound():
                 self.error(node, "DefineRegex must be compound")
@@ -1037,8 +1043,8 @@ class Ucm:
             for a in g:
                 self.var[node.id + str(idx)] = a
                 idx += 1
-            m = True
-        return False
+            ret = True
+        return ret
 
     def evaluate_inplace(self, top_node, origin=None):
         define_flag = True
@@ -1052,25 +1058,29 @@ class Ucm:
             if_flag = False
             for node in top_node:
                 id = self.get_id(node)
-                if id == 'Define' and self.evaluate_define(node, origin):
-                    define_flag = True
+                if id == 'Define':
+                    if self.evaluate_define(node, origin):
+                        define_flag = True
+                    node.remove()
             for node in top_node:
                 id = self.get_id(node)
-                if id == 'DefineRegex' and self.evaluate_defineregex(node, origin):
-                    defineregex_flag = True
+                if id == 'DefineRegex':
+                    if self.evaluate_defineregex(node, origin):
+                        defineregex_flag = True
+                    node.remove()
             for node in top_node:
                 id = self.get_id(node)
-                if id == 'Include' and self.evaluate_include(node, origin):
-                    include_flag = True
+                if id == 'Include':
+                    if self.evaluate_include(node, origin):
+                        include_flag = True
+                    node.remove()
             if include_flag:
                 continue
             for node in top_node:
                 id = self.get_id(node)
-                if id == 'If' and self.evaluate_if(node, origin):
-                    if_flag = True
-        for id in ('Define', 'DefineRegex', 'Include', 'If'):
-            for node in top_node:
-                if node.id == id or node.id.startswith(id + '#'):
+                if id == 'If':
+                    if self.evaluate_if(node, origin):
+                        if_flag = True
                     node.remove()
 
     def load_use_case_top(self, compound):
