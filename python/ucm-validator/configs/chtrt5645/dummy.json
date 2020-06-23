@@ -16,7 +16,7 @@
         "module":	"snd_soc_sst_cht_bsw_rt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
-        "longname":	"chtrt5645-dmic1",
+        "longname":	"ASUSTeKCOMPUTERINC.-T100HAN-1.0-T100HAN",
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
@@ -27,7 +27,7 @@
         "module":	"snd_soc_sst_cht_bsw_rt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
-        "longname":	"chtrt5645-dmic2",
+        "longname":	"gpd-win-pocket-rt5645",
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
@@ -38,7 +38,7 @@
         "module":	"snd_soc_sst_cht_bsw_rt5645",
         "driver":	"chtrt5645",
         "name":		"chtrt5645",
-        "longname":	"chtrt5645-mono-speaker-analog-mic",
+        "longname":	"LENOVO-80XF-LenovoMIIX320_10ICR-LNVNB161216",
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]

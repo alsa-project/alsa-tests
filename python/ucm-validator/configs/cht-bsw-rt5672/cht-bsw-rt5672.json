@@ -9,5 +9,27 @@
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
+    },
+    "cht-bsw-rt5672-2": {
+        "comment":	"Dummy test configuration for cht-bsw-rt5672",
+        "id":		"cht-bsw-rt5672",
+        "module":	"snd_soc_sst_cht_bsw_rt5672",
+        "driver":	"cht-bsw-rt5672",
+        "name":		"cht-bsw-rt5672",
+        "longname":	"LENOVO-20BN002QGE-ThinkPad8",
+	"control": [
+	    { "id": "name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "cht-bsw-rt5672-3": {
+        "comment":	"Dummy test configuration for cht-bsw-rt5672",
+        "id":		"cht-bsw-rt5672",
+        "module":	"snd_soc_sst_cht_bsw_rt5672",
+        "driver":	"cht-bsw-rt5672",
+        "name":		"cht-bsw-rt5672",
+        "longname":	"SoMeThInK1",
+	"control": [
+	    { "id": "name='media0_in Gain 0 Switch'" }
+        ]
     }
 }

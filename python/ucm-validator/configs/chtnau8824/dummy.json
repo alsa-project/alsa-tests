@@ -16,7 +16,7 @@
         "module":	"snd_soc_sst_cht_bsw_nau8824",
         "driver":	"chtnau8824",
         "name":		"chtnau8824",
-        "longname":	"chtnau8824",
+        "longname":	"cube-i1_TF-Defaultstring-CherryTrailCR",
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
