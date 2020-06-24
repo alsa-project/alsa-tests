@@ -144,7 +144,7 @@ snd_soc_rt5682: dyndbg=+p
 !!Loaded sound module options
 !!---------------------------
 
-!!Module: (efault)
+!!Module: snd_soc_skl_hda_dsp
 	* : 
 
 
