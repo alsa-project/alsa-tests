@@ -628,7 +628,7 @@ class Ucm:
         pass
 
     def warning(self, node, msg, *args):
-        if not node is None:
+        if not node is None and node != 0:
             self.warn("%s: %s %s", self.id(), node.full_id(), msg % args)
         else:
             self.warn("%s: %s", self.id(), msg % args)
