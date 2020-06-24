@@ -960,6 +960,9 @@ class Ucm:
 
         return r
 
+    def invalid_filename(self, filename):
+        return False
+
     def evaluate_include(self, inc_node, origin=None):
         if self.syntax < 3:
             self.error(inc_node, "Include is not supported (requires 'Syntax 3')")
@@ -986,6 +989,8 @@ class Ucm:
                 filename = self.cfgdir() + '/' + filename
             else:
                 filename = self.topdir() + '/' + filename[1:]
+            if not self.verify and self.invalid_filename(filename):
+                continue
             nodes = AlsaConfigUcm()
             self.log(1, "Include %s, file '%s'", node.full_id(), self.shortfn(filename))
             nodes.load(filename, origin_text + '.')

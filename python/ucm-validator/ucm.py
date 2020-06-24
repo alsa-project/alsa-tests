@@ -56,6 +56,11 @@ class Ucm2(Ucm):
         if false_node is None or false_node.is_empty():
             d[repr(False)] = 1
 
+    def invalid_filename(self, filename):
+        return filename.endswith('/codecs//init.conf') or \
+               filename.endswith('/sof-soundwire/.conf') or \
+               filename.endswith('/sof-soundwire/-2.conf')
+
 def error1(msg, *args):
     sys.stderr.write('ERR: ')
     sys.stderr.write(msg % args + '\n')    
