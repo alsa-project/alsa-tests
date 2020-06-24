@@ -145,7 +145,7 @@ snd_usb_audio: index=-2
 !!Loaded sound module options
 !!---------------------------
 
-!!Module: snd_soc_skl_hda_dsp
+!!Module: snd_soc_sof_sdw
 	* : 
 
 
