@@ -1037,10 +1037,12 @@ class Ucm:
             m = re.match('.*' + reg, string)
             if not m:
                 continue
+            self.log(1, "DefineRegex.%s = %s", node.id, m.group(0))
             self.var[node.id] = m.group(0)
             g = m.groups()
             idx = 1
             for a in g:
+                self.log(1, "DefineRegex.%s%s = %s", node.id, str(idx), a)
                 self.var[node.id + str(idx)] = a
                 idx += 1
             ret = True
