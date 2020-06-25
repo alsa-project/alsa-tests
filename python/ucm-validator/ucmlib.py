@@ -280,6 +280,18 @@ class UcmDevice:
         v = self.getval(name)
         return v is None and None or int(v)
 
+    def getsval(self, name):
+        v = self.getval(name)
+        if v is None:
+            return None
+        return self.substitute2(2, None, v)
+
+    def getsintval(self, name):
+        v = self.getsval(name)
+        if v is None:
+            return None
+        return int(v)
+
     def evaluate_inplace(self, if_node, origin=None):
         return self.ucm.evaluate_inplace(if_node, origin and origin or self)
 
@@ -320,18 +332,21 @@ class UcmDevice:
         if not self.getval(name):
             return None
         d = {}
-        d['prio'] = self.getintval(stream + 'Priority')
+        d['prio'] = self.getsintval(stream + 'Priority')
         return d
 
     def check_pcm_name(self, name):
-        r1 = r"^(plug|)hw:\${CardId}(,[0-9]+|)$"
-        m = re.match(r1, name)
-        if not m:
-            self.error(0, 'PCM name %s is invalid' % repr(name))
         r2 = r"^(plug|)hw:\${CardId},0$"
         m = re.match(r2, name)
         if m:
             self.warning(0, 'PCM name %s can be trucated (remove trailing zero /,0/)' % repr(name))
+        r1 = r"^(plug|)hw:\${CardId}(,[0-9]+|)$"
+        name = name.replace('${CardId}', '${_CardId_}')
+        name = self.substitute2(2, None, name)
+        name = name.replace('${_CardId_}', '${CardId}')
+        m = re.match(r1, name)
+        if not m:
+            self.error(0, 'PCM name %s is invalid' % repr(name))
 
     def check_pcm(self):
         count = 0
@@ -347,13 +362,13 @@ class UcmDevice:
                         self.error(0, '%s defined in SectionVerb' % name)
                 self.check_pcm_name(pcm)
                 pname = prefix + 'Priority'
-                v = self.getval(pname)
+                v = self.getsintval(pname)
                 if v is None:
                     self.error(0, '%s not defined' % pname)
                 if type(v) == type(''):
                     self.warning(0, '%s is not an integer' % pname)
                 cname = prefix + 'Channels'
-                v = self.getval(cname)
+                v = self.getsintval(cname)
                 if type(v) == type(''):
                     self.warning(0, '%s is not an integer' % cname)
                 if v == 2:
@@ -673,7 +688,7 @@ class Ucm:
         if t == 'intstring':
             if t2 == 'string':
                 try:
-                    val = int(node.value())
+                    val = int(self.substitute(2, node))
                 except:
                     self.error(node, "%svalue %s cannot be converted to integer" % (prefix, repr(node.value())))
                 return id
@@ -723,7 +738,11 @@ class Ucm:
     def substitute(self, syntax, node, origin=None):
         if node.is_compound():
             self.error(node, "expected a string or integer")
-        return self.substitute2(syntax, node, str(node.value()), origin)
+        o = str(node.value())
+        r = self.substitute2(syntax, node, o, origin)
+        if o != r:
+            self.log(3, 'Substitute(%s -> %s)' % (repr(o), repr(r)))
+        return r
 
     def substitute2(self, syntax, node, s, origin=None):
         s = str(s)
@@ -859,7 +878,7 @@ class Ucm:
                     idx += 1
 
     def condition_ControlExists(self, node):
-        control = node['Control'].value()
+        control = self.substitute(2, node['Control'])
         c = AlsaControl()
         c.parse(control)
         r = False
