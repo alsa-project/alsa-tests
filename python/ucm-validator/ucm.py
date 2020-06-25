@@ -21,7 +21,6 @@ SKIP_DRIVERS=[
 
 # skip this driver if longname does not exists
 SKIP_DRIVERS2=[
-    'HDA-Intel',
     'USB-Audio'
 ]
 

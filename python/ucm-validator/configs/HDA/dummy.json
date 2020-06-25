@@ -1,0 +1,27 @@
+{
+    "hda-1": {
+        "comment":	"Dummy test configuration for HDA",
+        "id":		"hda-1",
+        "module":	"snd_hda_intel",
+        "driver":	"HDA-Intel",
+        "name":		"HDA-Intel",
+        "longname":	"HDA-Intel Dummy",
+        "control": [
+            { "id": "iface=CARD,name='Headphone Mic Jack'" },
+            { "id": "name='Input Source'" },
+            { "id": "name='Master Playback Switch'" },
+            { "id": "name='Bass Speaker Playback Switch'" }
+        ],
+	"linked": {
+		"acp": "acp"
+	}
+    },
+    "hda-2": {
+        "comment":	"Dummy test configuration for HDA",
+        "id":		"hda-1",
+        "module":	"snd_hda_intel",
+        "driver":	"HDA-Intel",
+        "name":		"HDA-Intel",
+        "longname":	"HDA-Intel Dummy"
+    }
+}
