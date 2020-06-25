@@ -1041,7 +1041,7 @@ class Ucm:
             if not self.verify and self.invalid_filename(filename):
                 continue
             nodes = AlsaConfigUcm()
-            self.log(1, "Include %s, file '%s'", node.full_id(), self.shortfn(filename))
+            self.log(2, "Include %s, file '%s'", node.full_id(), self.shortfn(filename))
             nodes.load(filename, origin_text + '.')
             self.evaluate_inplace(nodes, origin)
             if not nodes.is_compound():
@@ -1057,7 +1057,7 @@ class Ucm:
         for node in def_node:
             r = self.substitute(0, node, origin)
             self.var[node.id] = r
-            self.log(1, "Define.%s = %s", node.id, r)
+            self.log(2, "Define.%s = %s", node.id, r)
             ret = True
         return ret
 
@@ -1091,12 +1091,12 @@ class Ucm:
             m = re.match('.*' + reg, string)
             if not m:
                 continue
-            self.log(1, "DefineRegex.%s = %s", node.id, m.group(0))
+            self.log(2, "DefineRegex.%s = %s", node.id, m.group(0))
             self.var[node.id] = m.group(0)
             g = m.groups()
             idx = 1
             for a in g:
-                self.log(1, "DefineRegex.%s%s = %s", node.id, str(idx), a)
+                self.log(2, "DefineRegex.%s%s = %s", node.id, str(idx), a)
                 self.var[node.id + str(idx)] = a
                 idx += 1
             ret = True
