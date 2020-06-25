@@ -336,17 +336,23 @@ class UcmDevice:
         return d
 
     def check_pcm_name(self, name):
+        oname = name
         r2 = r"^(plug|)hw:\${CardId},0$"
-        m = re.match(r2, name)
-        if m:
+        m2 = re.match(r2, name)
+        if m2:
             self.warning(0, 'PCM name %s can be trucated (remove trailing zero /,0/)' % repr(name))
         r1 = r"^(plug|)hw:\${CardId}(,[0-9]+|)$"
         name = name.replace('${CardId}', '${_CardId_}')
         name = self.substitute2(2, None, name)
         name = name.replace('${_CardId_}', '${CardId}')
-        m = re.match(r1, name)
-        if not m:
-            self.error(0, 'PCM name %s is invalid' % repr(name))
+        m1 = re.match(r1, name)
+        if m1:
+            return
+        r3 = "^(plug|)hw:\${var:[a-zA-Z0-9_-]+}(,[0-9]+|)$"
+        m3 = re.match(r3, oname)
+        if m3:
+            return
+        self.error(0, 'PCM name %s is invalid' % repr(name))
 
     def check_pcm(self):
         count = 0
