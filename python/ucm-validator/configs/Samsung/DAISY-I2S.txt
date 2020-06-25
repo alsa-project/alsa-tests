@@ -72,7 +72,7 @@ Pulseaudio:
 !!Loaded sound module options
 !!---------------------------
 
-!!Module: snd-soc-snow.o
+!!Module: snd_soc_snow
 	* : 
 
 

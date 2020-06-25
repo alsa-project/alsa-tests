@@ -509,7 +509,7 @@ class UcmVerb:
         if filename[0] != '/':
             filename = self.ucm.cfgdir() + '/' + filename
         else:
-            filename = self.ucm.cfgtop() + '/' + filename[1:]
+            filename = self.ucm.topdir() + '/' + filename[1:]
         self.ucm.indent_check(filename)
         aconfig = AlsaConfigUcm()
         self.log(1, "Verb '%s', file '%s'", verbname, self.ucm.shortfn(filename))
@@ -1151,7 +1151,10 @@ class Ucm:
             id = self.validate('SectionUseCase', node)
             if id == 'File':
                 verb = UcmVerb(self)
-                verb.load_verb(self.substitute2(3, compound, compound.id), self.substitute(3, node))
+                filename = self.substitute(3, node)
+                if self.invalid_filename(filename):
+                    continue
+                verb.load_verb(self.substitute2(3, compound, compound.id), filename)
         if verb is None:
             self.error(compound, "field 'File' not found")
         self.verbs.append(verb)
