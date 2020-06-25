@@ -37,12 +37,15 @@ class AlsaJsonSoundcard:
         self.components = ''
         self.module = ''
         self.controls = []
+        self.linked = {}
 
     def getsys(self, path):
         if path == 'class/sound/card%s/device/driver' % self.card and self.module:
             return self.module
 
     def getCardIdByName(self, name):
+        if name in self.linked:
+            return self.linked[name]
         return ''
 
     def control_exists(self, ctl):
@@ -57,12 +60,19 @@ class AlsaJsonSoundcard:
             ctl.parse(c['id'])
             self.controls.append(ctl)
 
+    def load_linked(self, linked):
+        for l in linked:
+            self.linked[l] = linked[l]
+
     def load(self, config):
         for f in config:
             if f == 'comment':
                 continue
             if f == 'control':
                 self.load_control(config[f])
+                continue
+            if f == 'linked':
+                self.load_linked(config[f])
                 continue
             if not f in VALID_JSON_FIELDS:
                 raise AlsaJsonError("field '%s' is not valid" % f)
