@@ -752,48 +752,75 @@ class Ucm:
             return s
         if self.syntax < 2:
             self.error(node, "cannot substitute (requires 'Syntax 2')")
-        if s.find('${ConfTopDir}') >= 0:
-            if self.syntax < 3:
-                self.error(node, "cannot substitute ${ConfTopDir} (requires 'Syntax 3')")
-            s = s.replace('${ConfTopDir}', self.topdir())
-        if s.find('${ConfDir}') >= 0:
-            if self.syntax < 3:
-                self.error(node, "cannot substitute ${ConfDir} (requires 'Syntax 3')")
-            s = s.replace('${ConfDir}', self.cfgdir())
-        r1 = r"\${var:([a-zA-Z0-9_]+)}"
+        r1 = "\$[\$]{0,1}{[\$.,:;@_a-zA-Z0-9-]+}"
         for m in re.findall(r1, s):
-            if not m in self.var:
-                raise UcmError("variable ${var:%s} is not defined" % m)
-            s = s.replace('${var:%s}' % m, self.var[m])
-        if self.verify is None:
-            return s
-        if s.find('${CardNumber}') >= 0:
-            if self.syntax < 3:
-                self.error(node, "cannot substitute ${CardNumber} (requires 'Syntax 3')")
-            s = s.replace('${CardNumber}', str(self.verify.card))
-        if self.syntax < 3:
-            r1 = r"\${(env|sys):([a-zA-Z0-9_]+)}"
-        else:
-            r1 = r"\${(env|sys):([$]*[a-zA-Z0-9_]+)}"
-        for m in re.findall(r1, s):
-            cmd, arg = m
-            if arg[0] == '$':
-                if not arg[1:] in self.var:
-                    raise UcmError("variable ${var:%s} is not defined" % arg[1:])
-                arg = self.var[arg[1:]]
+            if m[0:2] == '$$':
+                id = m[1:]
+                ignore = True
+            else:
+                id = m
+                ignore = False
+            if id == '${ConfTopDir}':
+                if self.syntax < 3:
+                    self.error(node, "cannot substitute ${ConfTopDir} (requires 'Syntax 3')")
+                s = s.replace(m, self.topdir())
+            elif id == '${ConfDir}':
+                if self.syntax < 3:
+                    self.error(node, "cannot substitute ${ConfDir} (requires 'Syntax 3')")
+                s = s.replace(m, self.cfgdir())
+            elif id.startswith('${var:'):
+                v = id[6:-1]
+                var = ''
+                if not v in self.var:
+                    if not ignore:
+                        raise UcmError("variable ${var:%s} is not defined" % v)
+                else:
+                    var = self.var[v]
+                s = s.replace(m, self.var[v])
+            if self.verify is None:
+                continue
+            if id == '${ConfName}':
+                confname = os.path.split(self.filename)[1]
+                s = s.replace(m, confname)
+            elif id == '${CardId}':
+                s = s.replace(m, self.verify.id)
+            elif id == '${CardDriver}':
+                s = s.replace(m, self.verify.driver)
+            elif id == '${CardName}':
+                s = s.replace(m, self.verify.name)
+            elif id == '${CardLongName}':
+                s = s.replace(m, self.verify.longname)
+            elif id == '${CardComponents}':
+                s = s.replace(m, self.verify.components)
+            elif id == '${CardNumber}':
+                if self.syntax < 3:
+                    self.error(node, "cannot substitute ${CardNumber} (requires 'Syntax 3')")
+                s = s.replace(m, str(self.verify.card))
+            elif id.startswith('${env:') or id.startswith('${sys:'):
+                r = self.getsvalue2(node, id[2:5], id[6:-1], ignore)
+                s = s.replace(m, r)
+            elif id.startswith('${CardIdByName:'):
+                r = self.getsvalue2(node, id[2:14], id[15:-1], ignore)
+                s = s.replace(m, r)
+            elif id.startswith('${CardNumberByName:'):
+                r = self.getsvalue2(node, id[2:18], id[19:-1], ignore)
+                s = s.replace(m, r)
+        return s
+
+    def getsvalue2(self, node, cmd, arg, ignore):
+        if arg[0] == '$':
+            if not arg[1:] in self.var:
+                if ignore:
+                    return ''
+                raise UcmError("variable ${var:%s} is not defined" % arg[1:])
+            arg = self.var[arg[1:]]
+        if not arg is None:
             r = getattr(self.verify, 'get%s' % cmd)(arg)
             if r is None:
                 self.warning(node, "substitution for ${%s:%s} is not available (%s)" % (cmd, arg, repr(self.verify)))
-                r = "****unknown****"
-            s = s.replace("${%s:%s}" % m, r)
-        confname = os.path.split(self.filename)[1]
-        s = s.replace('${ConfName}', confname). \
-              replace('${CardId}', self.verify.id). \
-              replace('${CardDriver}', self.verify.driver). \
-              replace('${CardName}', self.verify.name). \
-              replace('${CardLongName}', self.verify.longname). \
-              replace('${CardComponents}', self.verify.components)
-        return s
+                return "****unknown****"
+            return r
+        return ''
 
     def merge_config(self, dst, src, before_node, after_node):
 

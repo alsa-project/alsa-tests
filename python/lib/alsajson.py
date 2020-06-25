@@ -42,6 +42,9 @@ class AlsaJsonSoundcard:
         if path == 'class/sound/card%s/device/driver' % self.card and self.module:
             return self.module
 
+    def getCardIdByName(self, name):
+        return ''
+
     def control_exists(self, ctl):
         for c in self.controls:
             if c.match(ctl):

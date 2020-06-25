@@ -40,9 +40,10 @@ class AlsaInfoError(Exception):
 
 class AlsaInfoSoundcard:
 
-    def __init__(self, card):
+    def __init__(self, card, parent=None):
         """The class with the soundcard information."""
         self.card = card
+        self.parent = parent
         self.reset()
 
     def __repr__(self):
@@ -62,6 +63,13 @@ class AlsaInfoSoundcard:
     def getsys(self, path):
         if path == 'class/sound/card%s/device/driver' % self.card and self.module:
             return self.module
+
+    def getCardIdByName(self, name):
+        for c in self.parent.cards:
+            card = self.parent.cards[c]
+            if card.name == name:
+                return card.id
+        return ''
 
     def control_exists(self, ctl):
         base = self.state['control']
@@ -276,7 +284,7 @@ class AlsaInfo:
     def card(self, card):
         if card in self.cards:
             return self.cards[card]
-        c = AlsaInfoSoundcard(card)
+        c = AlsaInfoSoundcard(card, self)
         self.cards[card] = c
         return c
 
