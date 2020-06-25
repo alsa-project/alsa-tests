@@ -220,16 +220,16 @@ class UcmValue:
     def shortfn(self):
         return self.parent.shortfn()
 
-    def validate(self, what, node, prefix=''):
-        return self.parent.validate(what, node)
+    def validate(self, what, node, prefix='', extra=None):
+        return self.parent.validate(what, node, extra=extra)
 
     def substitute(self, node):
         return self.parent.substitute(0, node, self)
 
-    def load_value(self, value_node):
+    def load_value(self, value_node, vextra=None):
         self.parent.evaluate_inplace(value_node)
         for node in value_node:
-            id = self.validate('Value', node)
+            id = self.validate('Value', node, extra=vextra)
             self.substitute(node) # only for test
             self.values[id] = node.value()
 
@@ -258,9 +258,9 @@ class UcmDevice:
         self.disable = None
         self.values = None
 
-    def validate(self, what, node, prefix=''):
+    def validate(self, what, node, prefix='', extra=None):
         prefix = "%s(Device=%s) " % (prefix, self.name)
-        return self.verb.validate(what, node, prefix)
+        return self.verb.validate(what, node, prefix, extra=extra)
 
     def substitute(self, syntax, node, origin=None):
         return self.verb.substitute(syntax, node, origin and origin or self)
@@ -432,9 +432,9 @@ class UcmVerb:
         self.boot = []
         self.devices = {}
 
-    def validate(self, what, node, prefix=''):
+    def validate(self, what, node, prefix='', extra=None):
         prefix = "%s(Verb=%s) " % (prefix, self.name)
-        return self.ucm.validate(what, node, prefix)
+        return self.ucm.validate(what, node, prefix, extra=extra)
 
     def substitute(self, syntax, node, origin=None):
         return self.ucm.substitute(syntax, node, origin and origin or self)
@@ -676,13 +676,16 @@ class Ucm:
             id = node.id
         return id
 
-    def validate(self, what, node, prefix=''):
+    def validate(self, what, node, prefix='', extra=None):
         if not what in VALID_ID_LISTS:
             raise UcmError("%sdefine validity list for '%s'" % (prefix, what))
         vlist = VALID_ID_LISTS[what]
         id = self.get_id(node)
         if not id in vlist:
-            self.error(node, "%sfield is not known" % prefix)
+            if not extra and not id in extra:
+                self.error(node, "%sfield is not known" % prefix)
+            else:
+                vlist = extra
         t = vlist[id]
         t2 = node.typename()
         if t == 'intstring':
@@ -1183,7 +1186,7 @@ class Ucm:
                     self.load_use_case_top(node2)
             elif id == 'ValueDefaults':
                 self.values = UcmValue(self)
-                self.values.load_value(node)
+                self.values.load_value(node, {'Linked':'intstring'})
             elif id == 'BootSequence':
                 self.boot = self.load_sequence(node)
 
