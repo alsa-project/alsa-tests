@@ -57,7 +57,7 @@ VALID_ID_LISTS = {
         'Needle': 'string',
         'Empty': 'string'
     },
-    'ConditionRegex': {
+    'ConditionRegexMatch': {
         'Type': 'string',
         'Regex': 'string',
         'String': 'string'
@@ -944,7 +944,7 @@ class Ucm:
             self.error(node, 'Empty condition')
         return r
 
-    def condition_Regex(self, node):
+    def condition_RegexMatch(self, node):
         rstr = self.substitute(0, node['Regex'])
         str = self.substitute(0, node['String'])
         m = re.search(rstr, str)
