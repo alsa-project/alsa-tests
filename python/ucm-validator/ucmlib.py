@@ -908,7 +908,14 @@ class Ucm:
                     after = ctx
                 else:
                     unique_id(dnode, ctx)
-                    dnode.add(ctx)
+                    if ctx in dnode:
+                        snode2 = AlsaConfigUcm(snode)
+                        snode2.set_id('__merge__')
+                        snode2.make_compound()
+                        snode2.add(ctx)
+                        self.merge_config(dnode, snode2, None, None)
+                    else:
+                        dnode.add(ctx)
             if array:
                 idx = 0
                 for ctx in dnode:

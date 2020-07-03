@@ -534,6 +534,10 @@ class AlsaConfigTree(AlsaConfigBase):
         self.parent.val.insert(idx + 1, node)
         node.parent = self.parent
 
+    def make_compound(self):
+        self.type = SND_CONFIG_TYPE_COMPOUND
+        self.val = []
+
 if __name__ == '__main__':
 
     c = AlsaConfig()
