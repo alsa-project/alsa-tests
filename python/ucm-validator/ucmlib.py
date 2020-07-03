@@ -341,16 +341,9 @@ class UcmDevice:
         m2 = re.match(r2, name)
         if m2:
             self.warning(0, 'PCM name %s can be trucated (remove trailing zero /,0/)' % repr(name))
-        r1 = r"^(plug|)hw:\${CardId}(,[0-9]+|)$"
-        name = name.replace('${CardId}', '${_CardId_}')
-        name = self.substitute2(2, None, name)
-        name = name.replace('${_CardId_}', '${CardId}')
+        r1 = r"^(plug|)hw:([\${}a-zA-Z0-9_-]+)(,[0-9]+|)$"
         m1 = re.match(r1, name)
         if m1:
-            return
-        r3 = "^(plug|)hw:\${var:[a-zA-Z0-9_-]+}(,[0-9]+|)$"
-        m3 = re.match(r3, oname)
-        if m3:
             return
         self.error(0, 'PCM name %s is invalid' % repr(name))
 
@@ -779,13 +772,11 @@ class Ucm:
                 s = s.replace(m, self.cfgdir())
             elif id.startswith('${var:'):
                 v = id[6:-1]
-                var = ''
                 if not v in self.var:
                     if not ignore:
                         raise UcmError("variable ${var:%s} is not defined" % v)
                 else:
-                    var = self.var[v]
-                s = s.replace(m, self.var[v])
+                    s = s.replace(m, self.var[v])
             if self.verify is None:
                 continue
             if id == '${ConfName}':
@@ -855,8 +846,20 @@ class Ucm:
                 while node2 in node1:
                     node2.set_id(id + '#' + str(idx))
                     idx += 1
+
+        def do_substitute(node):
+            if self.syntax < 3:
+                return
+            node.set_id(self.substitute2(self.syntax, node, node.id))
+            if node.is_string():
+                node.val = self.substitute2(self.syntax, node, node.val)
+            elif node.is_compound():
+                for node2 in node:
+                    do_substitute(node2)
+
         if not src.is_compound():
             self.error(nodes, "merge block is not a compound")
+        do_substitute(src)
         for snode in src:
             if not snode.id:
                 snode.remove()
@@ -876,7 +879,6 @@ class Ucm:
                     continue
                 else:
                     self.error(snode, 'compound type expected for the merged block')
-            substitute_id = dnode.id in ['SectionUseCase', 'SectionDevice', 'SectionModifier']
             before = get_position_node(before_node, 'Before')
             after = get_position_node(after_node, 'After')
             if (not before is None) and (not after is None):
@@ -895,8 +897,6 @@ class Ucm:
                 if array:
                     ctx.set_id("_tmp_%s" % idx)
                     idx += 1
-                if self.syntax >= 3 and substitute_id:
-                    ctx.set_id(self.substitute2(self.syntax, ctx, ctx.id))
                 if not before is None:
                     unique_id(before.parent, ctx)
                     before.add_before(ctx)
