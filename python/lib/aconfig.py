@@ -511,12 +511,16 @@ class AlsaConfigTree(AlsaConfigBase):
     def add(self, node):
         if not self.is_compound():
             raise AlsaConfigError("node %s is not a compound" % self.full_id())
+        if node in self:
+            raise AlsaConfigError("id '%s' already in parent node %s" % (node.id, self.full_id()))
         node.parent = self
         self.val.append(node)
 
     def add_before(self, node):
         if self.parent is None:
             raise AlsaConfigError("node %s has not a parent" % self.full_id())
+        if node in self.parent:
+            raise AlsaConfigError("id '%s' already in parent node %s" % (node.id, self.parent.full_id()))
         idx = self.parent.val.index(self)
         self.parent.val.insert(idx, node)
         node.parent = self.parent
@@ -524,6 +528,8 @@ class AlsaConfigTree(AlsaConfigBase):
     def add_after(self, node):
         if self.parent is None:
             raise AlsaConfigError("node %s has not a parent" % self.full_id())
+        if node in self.parent:
+            raise AlsaConfigError("id '%s' already in parent node %s" % (node.id, self.parent.full_id()))
         idx = self.parent.val.index(self)
         self.parent.val.insert(idx + 1, node)
         node.parent = self.parent
