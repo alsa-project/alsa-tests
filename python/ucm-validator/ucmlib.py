@@ -855,7 +855,6 @@ class Ucm:
                 while node2 in node1:
                     node2.set_id(id + '#' + str(idx))
                     idx += 1
-
         if not src.is_compound():
             self.error(nodes, "merge block is not a compound")
         for snode in src:
@@ -877,6 +876,7 @@ class Ucm:
                     continue
                 else:
                     self.error(snode, 'compound type expected for the merged block')
+            substitute_id = dnode.id in ['SectionUseCase', 'SectionDevice', 'SectionModifier']
             before = get_position_node(before_node, 'Before')
             after = get_position_node(after_node, 'After')
             if (not before is None) and (not after is None):
@@ -895,6 +895,8 @@ class Ucm:
                 if array:
                     ctx.set_id("_tmp_%s" % idx)
                     idx += 1
+                if self.syntax >= 3 and substitute_id:
+                    ctx.set_id(self.substitute2(self.syntax, ctx, ctx.id))
                 if not before is None:
                     unique_id(before.parent, ctx)
                     before.add_before(ctx)
