@@ -41,14 +41,12 @@ class Ucm2(Ucm):
         if not hasattr(self, 'conditions'):
             return
 
-        v = repr(condition_node.value())
+        id = condition_node.origin_id()
         r = repr(result)
         f = origin and origin.shortfn() or self.shortfn()
-        id = condition_node.origin_id()
         ee(self.conditions, f)
-        ee(self.conditions[f], v)
-        d = self.conditions[f][v]
-        d['id'] = id
+        ee(self.conditions[f], id)
+        d = self.conditions[f][id]
         d[r] = 1
         if true_node is None or true_node.is_empty():
             d[repr(True)] = 1
@@ -194,11 +192,11 @@ def do_configs(*args):
             errors += 1
     # check, if all conditions were executed
     for filename in conditions:
-        for cond in conditions[filename]:
-            v = conditions[filename][cond]
+        for id in conditions[filename]:
+            v = conditions[filename][id]
             if not ('True' in v and 'False' in v):
                 what = 'True' in v and 'False' or 'True'
-                ifstr = '%s: %s - %s' % (filename, v['id'], what)
+                ifstr = '%s: %s - %s' % (filename, id, what)
                 if not ifstr in configs['suppress_if'] or not configs['suppress_if'][ifstr]:
                     error1('%s block not executed', ifstr)
                     errors += 1
