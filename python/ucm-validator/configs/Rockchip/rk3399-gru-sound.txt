@@ -1,0 +1,1921 @@
+
+!!################################
+!!ALSA Information Script v 0.4.64
+!!################################
+
+!!Script ran on: Wed Jul  8 18:58:19 UTC 2020
+
+
+!!Linux Distribution
+!!------------------
+
+Debian GNU/Linux bullseye/sid \n \l PRETTY_NAME="Debian GNU/Linux bullseye/sid" NAME="Debian GNU/Linux" ID=debian HOME_URL="https://www.debian.org/" SUPPORT_URL="https://www.debian.org/support" BUG_REPORT_URL="https://bugs.debian.org/"
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      
+Product Name:      
+Product Version:   
+Firmware Version:  
+Board Vendor:      
+Board Name:        
+
+
+!!ACPI Device Status Information
+!!---------------
+
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.8.0-rc4
+Operating System:  GNU/Linux
+Architecture:      aarch64
+Processor:         unknown
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.8.0-rc4
+Library version:    1.2.2
+Utilities version:  1.2.2
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [rk3399grusound ]: rk3399-gru-soun - rk3399-gru-sound
+                      rk3399-gru-sound
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: rk3399-gru-sound
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw---- 1 root audio 116,  8 Jul  8 21:51 /dev/snd/controlC0
+crw-rw---- 1 root audio 116,  2 Jul  8 21:51 /dev/snd/pcmC0D0p
+crw-rw---- 1 root audio 116,  3 Jul  8 21:51 /dev/snd/pcmC0D1c
+crw-rw---- 1 root audio 116,  5 Jul  8 21:51 /dev/snd/pcmC0D2c
+crw-rw---- 1 root audio 116,  4 Jul  8 21:51 /dev/snd/pcmC0D2p
+crw-rw---- 1 root audio 116,  6 Jul  8 21:51 /dev/snd/pcmC0D3c
+crw-rw---- 1 root audio 116,  7 Jul  8 21:51 /dev/snd/pcmC0D4p
+crw-rw---- 1 root audio 116, 33 Jul  8 21:51 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jul  8 21:51 .
+drwxr-xr-x 3 root root 220 Jul  8 21:51 ..
+lrwxrwxrwx 1 root root  12 Jul  8 21:51 platform-sound -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: rk3399grusound [rk3399-gru-sound], device 0: MAX98357A PCM HiFi-0 [MAX98357A PCM HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: rk3399grusound [rk3399-gru-sound], device 2: DA7219 PCM da7219-hifi-2 [DA7219 PCM da7219-hifi-2]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: rk3399grusound [rk3399-gru-sound], device 4: DP PCM spdif-hifi-4 [DP PCM spdif-hifi-4]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: rk3399grusound [rk3399-gru-sound], device 1: RT5514 PCM rt5514-aif1-1 [RT5514 PCM rt5514-aif1-1]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: rk3399grusound [rk3399-gru-sound], device 2: DA7219 PCM da7219-hifi-2 [DA7219 PCM da7219-hifi-2]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: rk3399grusound [rk3399-gru-sound], device 3: Wake on Voice snd-soc-dummy-dai-3 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card rk3399grusound
+
+Card hw:0 'rk3399grusound'/'rk3399-gru-sound'
+  Mixer name	: ''
+  Components	: ''
+  Controls      : 98
+  Simple ctrls  : 90
+Simple mixer control 'Headphone',0
+  Capabilities: volume pswitch
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 63
+  Front Left: 42 [67%] [-15.00dB] Playback [on]
+  Front Right: 42 [67%] [-15.00dB] Playback [on]
+Simple mixer control 'Headphone Gain Ramp',0
+  Capabilities: pswitch
+  Playback channels: Front Left - Front Right
+  Mono:
+  Front Left: Playback [on]
+  Front Right: Playback [on]
+Simple mixer control 'Headphone ZC Gain',0
+  Capabilities: pswitch
+  Playback channels: Front Left - Front Right
+  Mono:
+  Front Left: Playback [off]
+  Front Right: Playback [off]
+Simple mixer control 'Headphones',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Speakers',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ToneGen',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 0 [0%] [-45.00dB]
+Simple mixer control 'ToneGen DTMF',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ToneGen DTMF Key',0
+  Capabilities: enum
+  Items: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'A' 'B' 'C' 'D' '*' '#'
+  Item0: '0'
+Simple mixer control 'ToneGen Off Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 1 [2%]
+Simple mixer control 'ToneGen On Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 2 [3%]
+Simple mixer control 'ToneGen Sinewave Gen Type',0
+  Capabilities: enum
+  Items: 'Sum' 'SWG1' 'SWG2' 'SWG1_1-Cos'
+  Item0: 'Sum'
+Simple mixer control 'ToneGen Sinewave1 Freq',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 65535
+  Mono: 5461 [8%]
+Simple mixer control 'ToneGen Sinewave2 Freq',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 65535
+  Mono: 16384 [25%]
+Simple mixer control 'Sidetone',0
+  Capabilities: volume volume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 14
+  Mono: 14 [100%] [0.00dB] Playback [off]
+Simple mixer control 'DSP Voice Wake Up',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Mic',0
+  Capabilities: volume volume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 6 [86%] [30.00dB] Playback [on]
+Simple mixer control 'Playback Digital',0
+  Capabilities: volume pswitch
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 127
+  Front Left: 111 [87%] [0.00dB] Playback [on]
+  Front Right: 111 [87%] [0.00dB] Playback [on]
+Simple mixer control 'Playback Digital Gain Ramp',0
+  Capabilities: pswitch
+  Playback channels: Front Left - Front Right
+  Mono:
+  Front Left: Playback [on]
+  Front Right: Playback [on]
+Simple mixer control 'Capture Digital',0
+  Capabilities: volume volume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 127
+  Mono: 111 [87%] [0.00dB] Playback [on]
+Simple mixer control 'Capture Digital Gain Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mixer In Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mixer Out FilterL DACL',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mixer Out FilterR DACR',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mixin',0
+  Capabilities: volume volume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 11 [73%] [12.00dB] Playback [on]
+Simple mixer control 'Mixin Gain Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mixin ZC Gain',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ADC HPF Corner Audio',0
+  Capabilities: enum
+  Items: '2Hz' '4Hz' '8Hz' '16Hz'
+  Item0: '2Hz'
+Simple mixer control 'ADC HPF Corner Voice',0
+  Capabilities: enum
+  Items: '2.5Hz' '25Hz' '50Hz' '100Hz' '150Hz' '200Hz' '300Hz' '400Hz'
+  Item0: '2.5Hz'
+Simple mixer control 'ADC HPF Mode',0
+  Capabilities: enum
+  Items: 'Disabled' 'Audio' 'Voice'
+  Item0: 'Audio'
+Simple mixer control 'ADC1',0
+  Capabilities: cvolume
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 63 [100%] [30.00dB]
+  Front Right: Capture 63 [100%] [30.00dB]
+Simple mixer control 'ADC2',0
+  Capabilities: cvolume
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 23 [37%] [0.00dB]
+  Front Right: Capture 23 [37%] [0.00dB]
+Simple mixer control 'ALC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ALC Anticlip',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ALC Anticlip Step',0
+  Capabilities: enum
+  Items: '0.034dB/fs' '0.068dB/fs' '0.136dB/fs' '0.272dB/fs'
+  Item0: '0.034dB/fs'
+Simple mixer control 'ALC Attack Rate',0
+  Capabilities: enum
+  Items: '7.33/fs' '14.66/fs' '29.32/fs' '58.64/fs' '117.3/fs' '234.6/fs' '469.1/fs' '938.2/fs' '1876/fs' '3753/fs' '7506/fs' '15012/fs' '30024/fs'
+  Item0: '7.33/fs'
+Simple mixer control 'ALC Envelope Attack Rate',0
+  Capabilities: enum
+  Items: '1/4' '1/16' '1/256' '1/65536'
+  Item0: '1/4'
+Simple mixer control 'ALC Envelope Release Rate',0
+  Capabilities: enum
+  Items: '1/4' '1/16' '1/256' '1/65536'
+  Item0: '1/4'
+Simple mixer control 'ALC Hold Time',0
+  Capabilities: enum
+  Items: '62/fs' '124/fs' '248/fs' '496/fs' '992/fs' '1984/fs' '3968/fs' '7936/fs' '15872/fs' '31744/fs' '63488/fs' '126976/fs' '253952/fs' '507904/fs' '1015808/fs' '2031616/fs'
+  Item0: '62/fs'
+Simple mixer control 'ALC Max',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 15 [100%] [90.00dB]
+Simple mixer control 'ALC Max Analog',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 6
+  Mono: 6 [100%] [36.00dB]
+Simple mixer control 'ALC Max Attenuation',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 15 [100%]
+Simple mixer control 'ALC Max Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 63 [100%]
+Simple mixer control 'ALC Min Analog',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 6
+  Mono: 0 [0%] [0.00dB]
+Simple mixer control 'ALC Min Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 0 [0%]
+Simple mixer control 'ALC Noise Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 0 [0%]
+Simple mixer control 'ALC Release Rate',0
+  Capabilities: enum
+  Items: '28.66/fs' '57.33/fs' '114.6/fs' '229.3/fs' '458.6/fs' '917.1/fs' '1834/fs' '3668/fs' '7337/fs' '14674/fs' '29348/fs'
+  Item0: '28.66/fs'
+Simple mixer control 'Charge Pump Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 63
+  Mono: 14 [22%]
+Simple mixer control 'Charge Pump Track Mode',0
+  Capabilities: enum
+  Items: 'Largest Volume' 'DAC Volume' 'Signal Magnitude'
+  Item0: 'DAC Volume'
+Simple mixer control 'DAC EQ',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC EQ Band1',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 8 [53%] [1.50dB]
+Simple mixer control 'DAC EQ Band2',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 8 [53%] [1.50dB]
+Simple mixer control 'DAC EQ Band3',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 8 [53%] [1.50dB]
+Simple mixer control 'DAC EQ Band4',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 8 [53%] [1.50dB]
+Simple mixer control 'DAC EQ Band5',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 15
+  Mono: 8 [53%] [1.50dB]
+Simple mixer control 'DAC HPF Corner Audio',0
+  Capabilities: enum
+  Items: '2Hz' '4Hz' '8Hz' '16Hz'
+  Item0: '2Hz'
+Simple mixer control 'DAC HPF Corner Voice',0
+  Capabilities: enum
+  Items: '2.5Hz' '25Hz' '50Hz' '100Hz' '150Hz' '200Hz' '300Hz' '400Hz'
+  Item0: '2.5Hz'
+Simple mixer control 'DAC HPF Mode',0
+  Capabilities: enum
+  Items: 'Disabled' 'Audio' 'Voice'
+  Item0: 'Audio'
+Simple mixer control 'DAC NG',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC NG Off Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 0 [0%]
+Simple mixer control 'DAC NG On Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 0 [0%]
+Simple mixer control 'DAC NG Rampdown Rate',0
+  Capabilities: enum
+  Items: '0.88ms/dB' '14.08ms/dB'
+  Item0: '0.88ms/dB'
+Simple mixer control 'DAC NG Rampup Rate',0
+  Capabilities: enum
+  Items: '0.22ms/dB' '0.0138ms/dB'
+  Item0: '0.22ms/dB'
+Simple mixer control 'DAC NG Setup Time',0
+  Capabilities: enum
+  Items: '256 Samples' '512 Samples' '1024 Samples' '2048 Samples'
+  Item0: '256 Samples'
+Simple mixer control 'DAC Soft Mute',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC Soft Mute Rate',0
+  Capabilities: enum
+  Items: '1 Sample' '2 Samples' '4 Samples' '8 Samples' '16 Samples' '32 Samples' '64 Samples'
+  Item0: '1 Sample'
+Simple mixer control 'Gain Ramp Rate',0
+  Capabilities: enum
+  Items: 'Nominal Rate * 8' 'Nominal Rate' 'Nominal Rate / 8' 'Nominal Rate / 16'
+  Item0: 'Nominal Rate * 8'
+Simple mixer control 'HDMI',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Headset Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Int Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'MIC Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 8
+  Front Left: 0 [0%] [-3.00dB]
+  Front Right: 0 [0%] [-3.00dB]
+Simple mixer control 'Out DACL Mux',0
+  Capabilities: enum
+  Items: 'ADC' 'Tone Generator' 'DAIL' 'DAIR'
+  Item0: 'DAIL'
+Simple mixer control 'Out DACR Mux',0
+  Capabilities: enum
+  Items: 'ADC' 'Tone Generator' 'DAIL' 'DAIR'
+  Item0: 'DAIR'
+Simple mixer control 'Out DAIL Mux',0
+  Capabilities: enum
+  Items: 'ADC' 'Tone Generator' 'DAIL' 'DAIR'
+  Item0: 'ADC'
+Simple mixer control 'Out DAIR Mux',0
+  Capabilities: enum
+  Items: 'ADC' 'Tone Generator' 'DAIL' 'DAIR'
+  Item0: 'ADC'
+Simple mixer control 'ST Mixer Out FilterL Out FilterL',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ST Mixer Out FilterL Out FilterR',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ST Mixer Out FilterL Sidetone',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ST Mixer Out FilterR Out FilterL',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ST Mixer Out FilterR Out FilterR',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'ST Mixer Out FilterR Sidetone',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Stereo1 DMIC Mux',0
+  Capabilities: enum
+  Items: 'DMIC1' 'DMIC2'
+  Item0: 'DMIC1'
+Simple mixer control 'Stereo2 DMIC Mux',0
+  Capabilities: enum
+  Items: 'DMIC1' 'DMIC2'
+  Item0: 'DMIC2'
+Simple mixer control 'Sto1 ADC MIXL ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Sto1 ADC MIXL DMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Sto1 ADC MIXR ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Sto1 ADC MIXR DMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Sto2 ADC MIXL ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Sto2 ADC MIXL DMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Sto2 ADC MIXR ADC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Sto2 ADC MIXR DMIC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.rk3399grusound {
+	control.1 {
+		iface MIXER
+		name 'MIC Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 8'
+			dbmin -300
+			dbmax 1700
+			dbvalue.0 -300
+			dbvalue.1 -300
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'ADC1 Capture Volume'
+		value.0 63
+		value.1 63
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 3000
+			dbvalue.1 3000
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'ADC2 Capture Volume'
+		value.0 23
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'DSP Voice Wake Up'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Mic Volume'
+		value 6
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -600
+			dbmax 3600
+			dbvalue.0 3000
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Mixin Volume'
+		value 11
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -450
+			dbmax 1800
+			dbvalue.0 1200
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'Mixin Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Mixin Gain Ramp Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Mixin ZC Gain Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Capture Digital Volume'
+		value 111
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 127'
+			dbmin -8325
+			dbmax 1200
+			dbvalue.0 0
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Capture Digital Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'Capture Digital Gain Ramp Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'ALC Attack Rate'
+		value '7.33/fs'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '7.33/fs'
+			item.1 '14.66/fs'
+			item.2 '29.32/fs'
+			item.3 '58.64/fs'
+			item.4 '117.3/fs'
+			item.5 '234.6/fs'
+			item.6 '469.1/fs'
+			item.7 '938.2/fs'
+			item.8 '1876/fs'
+			item.9 '3753/fs'
+			item.10 '7506/fs'
+			item.11 '15012/fs'
+			item.12 '30024/fs'
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'ALC Release Rate'
+		value '28.66/fs'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '28.66/fs'
+			item.1 '57.33/fs'
+			item.2 '114.6/fs'
+			item.3 '229.3/fs'
+			item.4 '458.6/fs'
+			item.5 '917.1/fs'
+			item.6 '1834/fs'
+			item.7 '3668/fs'
+			item.8 '7337/fs'
+			item.9 '14674/fs'
+			item.10 '29348/fs'
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'ALC Hold Time'
+		value '62/fs'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '62/fs'
+			item.1 '124/fs'
+			item.2 '248/fs'
+			item.3 '496/fs'
+			item.4 '992/fs'
+			item.5 '1984/fs'
+			item.6 '3968/fs'
+			item.7 '7936/fs'
+			item.8 '15872/fs'
+			item.9 '31744/fs'
+			item.10 '63488/fs'
+			item.11 '126976/fs'
+			item.12 '253952/fs'
+			item.13 '507904/fs'
+			item.14 '1015808/fs'
+			item.15 '2031616/fs'
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'ALC Envelope Attack Rate'
+		value '1/4'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '1/4'
+			item.1 '1/16'
+			item.2 '1/256'
+			item.3 '1/65536'
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'ALC Envelope Release Rate'
+		value '1/4'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '1/4'
+			item.1 '1/16'
+			item.2 '1/256'
+			item.3 '1/65536'
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'ALC Noise Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+			dbmin -9450
+			dbmax 0
+			dbvalue.0 -9450
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'ALC Min Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+			dbmin -9450
+			dbmax 0
+			dbvalue.0 -9450
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'ALC Max Threshold'
+		value 63
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+			dbmin -9450
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'ALC Max Attenuation'
+		value 15
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin 0
+			dbmax 9000
+			dbvalue.0 9000
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'ALC Max Volume'
+		value 15
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin 0
+			dbmax 9000
+			dbvalue.0 9000
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'ALC Min Analog Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 6'
+			dbmin 0
+			dbmax 3600
+			dbvalue.0 0
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'ALC Max Analog Volume'
+		value 6
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 6'
+			dbmin 0
+			dbmax 3600
+			dbvalue.0 3600
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'ALC Anticlip Step'
+		value '0.034dB/fs'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '0.034dB/fs'
+			item.1 '0.068dB/fs'
+			item.2 '0.136dB/fs'
+			item.3 '0.272dB/fs'
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'ALC Anticlip Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'ALC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'ADC HPF Mode'
+		value Audio
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Disabled
+			item.1 Audio
+			item.2 Voice
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'ADC HPF Corner Audio'
+		value '2Hz'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '2Hz'
+			item.1 '4Hz'
+			item.2 '8Hz'
+			item.3 '16Hz'
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'ADC HPF Corner Voice'
+		value '2.5Hz'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '2.5Hz'
+			item.1 '25Hz'
+			item.2 '50Hz'
+			item.3 '100Hz'
+			item.4 '150Hz'
+			item.5 '200Hz'
+			item.6 '300Hz'
+			item.7 '400Hz'
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'Sidetone Volume'
+		value 14
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 14'
+			dbmin -4200
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'Sidetone Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'ToneGen Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -4500
+			dbmax 0
+			dbvalue.0 -4500
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'ToneGen DTMF Key'
+		value '0'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '0'
+			item.1 '1'
+			item.2 '2'
+			item.3 '3'
+			item.4 '4'
+			item.5 '5'
+			item.6 '6'
+			item.7 '7'
+			item.8 '8'
+			item.9 '9'
+			item.10 A
+			item.11 B
+			item.12 C
+			item.13 D
+			item.14 '*'
+			item.15 '#'
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'ToneGen DTMF Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'ToneGen Sinewave Gen Type'
+		value Sum
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Sum
+			item.1 SWG1
+			item.2 SWG2
+			item.3 SWG1_1-Cos
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'ToneGen Sinewave1 Freq'
+		value 5461
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 65535'
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'ToneGen Sinewave2 Freq'
+		value 16384
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 65535'
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'ToneGen On Time'
+		value 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'ToneGen Off Time'
+		value 1
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'Gain Ramp Rate'
+		value 'Nominal Rate * 8'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Nominal Rate * 8'
+			item.1 'Nominal Rate'
+			item.2 'Nominal Rate / 8'
+			item.3 'Nominal Rate / 16'
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'DAC HPF Mode'
+		value Audio
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Disabled
+			item.1 Audio
+			item.2 Voice
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'DAC HPF Corner Audio'
+		value '2Hz'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '2Hz'
+			item.1 '4Hz'
+			item.2 '8Hz'
+			item.3 '16Hz'
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'DAC HPF Corner Voice'
+		value '2.5Hz'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '2.5Hz'
+			item.1 '25Hz'
+			item.2 '50Hz'
+			item.3 '100Hz'
+			item.4 '150Hz'
+			item.5 '200Hz'
+			item.6 '300Hz'
+			item.7 '400Hz'
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'DAC EQ Band1 Volume'
+		value 8
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -1050
+			dbmax 1200
+			dbvalue.0 150
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'DAC EQ Band2 Volume'
+		value 8
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -1050
+			dbmax 1200
+			dbvalue.0 150
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'DAC EQ Band3 Volume'
+		value 8
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -1050
+			dbmax 1200
+			dbvalue.0 150
+		}
+	}
+	control.49 {
+		iface MIXER
+		name 'DAC EQ Band4 Volume'
+		value 8
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -1050
+			dbmax 1200
+			dbvalue.0 150
+		}
+	}
+	control.50 {
+		iface MIXER
+		name 'DAC EQ Band5 Volume'
+		value 8
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 15'
+			dbmin -1050
+			dbmax 1200
+			dbvalue.0 150
+		}
+	}
+	control.51 {
+		iface MIXER
+		name 'DAC EQ Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.52 {
+		iface MIXER
+		name 'DAC Soft Mute Rate'
+		value '1 Sample'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '1 Sample'
+			item.1 '2 Samples'
+			item.2 '4 Samples'
+			item.3 '8 Samples'
+			item.4 '16 Samples'
+			item.5 '32 Samples'
+			item.6 '64 Samples'
+		}
+	}
+	control.53 {
+		iface MIXER
+		name 'DAC Soft Mute Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'DAC NG Setup Time'
+		value '256 Samples'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '256 Samples'
+			item.1 '512 Samples'
+			item.2 '1024 Samples'
+			item.3 '2048 Samples'
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'DAC NG Rampup Rate'
+		value '0.22ms/dB'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '0.22ms/dB'
+			item.1 '0.0138ms/dB'
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'DAC NG Rampdown Rate'
+		value '0.88ms/dB'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 '0.88ms/dB'
+			item.1 '14.08ms/dB'
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'DAC NG Off Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -10200
+			dbmax -6000
+			dbvalue.0 -10200
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'DAC NG On Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -10200
+			dbmax -6000
+			dbvalue.0 -10200
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'DAC NG Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.60 {
+		iface MIXER
+		name 'Playback Digital Volume'
+		value.0 111
+		value.1 111
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 127'
+			dbmin -9999999
+			dbmax 1200
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'Playback Digital Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'Playback Digital Gain Ramp Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'Charge Pump Track Mode'
+		value 'DAC Volume'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Largest Volume'
+			item.1 'DAC Volume'
+			item.2 'Signal Magnitude'
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'Charge Pump Threshold'
+		value 14
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'Headphone Volume'
+		value.0 42
+		value.1 42
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -5700
+			dbmax 600
+			dbvalue.0 -1500
+			dbvalue.1 -1500
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'Headphone Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'Headphone Gain Ramp Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.68 {
+		iface MIXER
+		name 'Headphone ZC Gain Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.69 {
+		iface PCM
+		device 4
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.70 {
+		iface PCM
+		device 4
+		name ELD
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 128
+		}
+	}
+	control.71 {
+		iface MIXER
+		name 'Headphones Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.72 {
+		iface MIXER
+		name 'Speakers Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.73 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.74 {
+		iface MIXER
+		name 'Int Mic Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.75 {
+		iface MIXER
+		name 'HDMI Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.76 {
+		iface MIXER
+		name 'Stereo1 DMIC Mux'
+		value DMIC1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DMIC1
+			item.1 DMIC2
+		}
+	}
+	control.77 {
+		iface MIXER
+		name 'Stereo2 DMIC Mux'
+		value DMIC2
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DMIC1
+			item.1 DMIC2
+		}
+	}
+	control.78 {
+		iface MIXER
+		name 'Sto1 ADC MIXL DMIC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.79 {
+		iface MIXER
+		name 'Sto1 ADC MIXL ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.80 {
+		iface MIXER
+		name 'Sto1 ADC MIXR DMIC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.81 {
+		iface MIXER
+		name 'Sto1 ADC MIXR ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.82 {
+		iface MIXER
+		name 'Sto2 ADC MIXL DMIC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.83 {
+		iface MIXER
+		name 'Sto2 ADC MIXL ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.84 {
+		iface MIXER
+		name 'Sto2 ADC MIXR DMIC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.85 {
+		iface MIXER
+		name 'Sto2 ADC MIXR ADC Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.86 {
+		iface MIXER
+		name 'Mixer In Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.87 {
+		iface MIXER
+		name 'Out DAIL Mux'
+		value ADC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 ADC
+			item.1 'Tone Generator'
+			item.2 DAIL
+			item.3 DAIR
+		}
+	}
+	control.88 {
+		iface MIXER
+		name 'Out DAIR Mux'
+		value ADC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 ADC
+			item.1 'Tone Generator'
+			item.2 DAIL
+			item.3 DAIR
+		}
+	}
+	control.89 {
+		iface MIXER
+		name 'Out DACL Mux'
+		value DAIL
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 ADC
+			item.1 'Tone Generator'
+			item.2 DAIL
+			item.3 DAIR
+		}
+	}
+	control.90 {
+		iface MIXER
+		name 'Out DACR Mux'
+		value DAIR
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 ADC
+			item.1 'Tone Generator'
+			item.2 DAIL
+			item.3 DAIR
+		}
+	}
+	control.91 {
+		iface MIXER
+		name 'Mixer Out FilterL DACL Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.92 {
+		iface MIXER
+		name 'Mixer Out FilterR DACR Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.93 {
+		iface MIXER
+		name 'ST Mixer Out FilterL Out FilterL Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.94 {
+		iface MIXER
+		name 'ST Mixer Out FilterL Out FilterR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.95 {
+		iface MIXER
+		name 'ST Mixer Out FilterL Sidetone Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.96 {
+		iface MIXER
+		name 'ST Mixer Out FilterR Out FilterL Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.97 {
+		iface MIXER
+		name 'ST Mixer Out FilterR Out FilterR Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.98 {
+		iface MIXER
+		name 'ST Mixer Out FilterR Sidetone Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+af_alg
+analogix_dp
+atmel_mxt_ts
+bluetooth
+btbcm
+btintel
+btrtl
+btusb
+cec
+cfg80211
+crct10dif_ce
+cros_ec_sensors
+cros_ec_sensors_core
+drm
+drm_kms_helper
+dw_hdmi
+dw_mipi_dsi
+ecc
+ecdh_generic
+gpu_sched
+i2c_hid
+industrialio_triggered_buffer
+ip_tables
+ipv6
+kfifo_buf
+mc
+mwifiex
+mwifiex_pcie
+nf_defrag_ipv6
+panel_simple
+panfrost
+pcie_rockchip_host
+phy_rockchip_pcie
+pwm_bl
+pwm_cros_ec
+rfkill
+rockchip_saradc
+rockchip_thermal
+rockchipdrm
+sbs_battery
+snd_soc_da7219
+snd_soc_hdmi_codec
+snd_soc_max98357a
+snd_soc_rk3399_gru_sound
+snd_soc_rl6231
+snd_soc_rockchip_i2s
+snd_soc_rockchip_pcm
+snd_soc_rt5514
+snd_soc_rt5514_spi
+uvcvideo
+vctrl_regulator
+videobuf2_common
+videobuf2_memops
+videobuf2_v4l2
+videobuf2_vmalloc
+videodev
+x_tables
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[    5.144592] input: gpio-keys as /devices/platform/gpio-keys/input/input2
+[    5.153330] ALSA device list:
+[    5.156726]   No soundcards found.
+[    5.160742] dw-apb-uart ff1a0000.serial: forbid DMA for kernel console
+--
+[   13.139304] pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x000fffff 64bit pref]
+[   13.139966] rk3399-gru-sound sound: HiFi <-> ff880000.i2s mapping ok
+[   13.150545] pci 0000:01:00.0: Upstream bridge's Max Payload Size set to 128 (was 256, max 256)
+[   13.179153] rk3399-gru-sound sound: rt5514-aif1 <-> ff880000.i2s mapping ok
+[   13.197263] pci 0000:01:00.0: Max Payload Size set to 128 (was 128, max 128)
+--
+[   13.222650] mc: Linux media interface: v0.10
+[   13.240855] rk3399-gru-sound sound: da7219-hifi <-> ff880000.i2s mapping ok
+[   13.263578] pci 0000:01:00.0: PME# supported from D0 D1 D3hot D3cold
+[   13.275628] pci 0000:01:00.0: 2.000 Gb/s available PCIe bandwidth, limited by 2.5 GT/s PCIe x1 link at 0000:00:00.0 (capable of 4.000 Gb/s with 5.0 GT/s PCIe x1 link)
+[   13.278674] rk3399-gru-sound sound: snd-soc-dummy-dai <-> spi1.0 mapping ok
+[   13.309850] pci_bus 0000:01: busn_res: [bus 01-1f] end is updated to 01
+--
+[   13.367370] videodev: Linux video capture interface: v2.00
+[   13.367872] rk3399-gru-sound sound: spdif-hifi <-> ff8a0000.i2s mapping ok
+[   13.439847] atmel_mxt_ts 3-004b: Touchscreen size X4095Y2729
+[   13.440423] rk3399-gru-sound sound: ASoC: no DMI vendor name!
+[   13.454678] input: Atmel maXTouch Touchscreen as /devices/platform/ff130000.i2c/i2c-3/3-004b/input/input7
+[   13.465675] input: rk3399-gru-sound Headset Jack as /devices/platform/sound/sound/card0/input6
+[   13.496156] atmel_mxt_ts 5-004a: Touchscreen size X1920Y1080
+
+

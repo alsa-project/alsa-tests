@@ -681,8 +681,8 @@ class Ucm:
         vlist = VALID_ID_LISTS[what]
         id = self.get_id(node)
         if not id in vlist:
-            if not extra and not id in extra:
-                self.error(node, "%sfield is not known" % prefix)
+            if not extra or not id in extra:
+                self.error(node, "%sfield is not known for '%s'" % (prefix, what))
             else:
                 vlist = extra
         t = vlist[id]
