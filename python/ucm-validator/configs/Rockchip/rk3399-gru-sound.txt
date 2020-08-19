@@ -84,7 +84,7 @@ snd_via82xx_modem: index=-2
 !!Loaded sound module options
 !!---------------------------
 
-!!Module: rk3399-gru-sound
+!!Module: snd_soc_rk3399_gru_sound
 
 
 !!ALSA Device nodes
