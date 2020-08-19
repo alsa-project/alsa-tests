@@ -61,7 +61,7 @@ class AlsaInfoSoundcard:
         self.state = {}
 
     def getsys(self, path):
-        if path == 'class/sound/card%s/device/driver' % self.card and self.module:
+        if path == 'class/sound/card%s/device/driver/module' % self.card and self.module:
             return self.module
 
     def getCardIdByName(self, name):
