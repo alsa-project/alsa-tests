@@ -178,7 +178,7 @@ snd_usb_audio: index=-2
 	single_cmd : -1
 	snoop : -1
 
-!!Module: acp_pdm_mach
+!!Module: snd_acp3x_rn
 	* : 
 
 
