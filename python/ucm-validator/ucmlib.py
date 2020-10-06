@@ -25,7 +25,8 @@ VALID_ID_LISTS = {
         'SectionDefaults': 'compound',
         'SectionUseCase': 'compound',
         'BootSequence': 'compound',
-        'ValueDefaults': 'compound'
+        'ValueDefaults': 'compound',
+        'Error': 'string'
     },
     'Include': {
         'File': 'string',
