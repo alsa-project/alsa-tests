@@ -20,5 +20,16 @@
 	"control": [
 	    { "id": "name='media0_in Gain 0 Switch'" }
         ]
+    },
+    "chtnau8824-3": {
+        "comment":	"Dummy test configuration for chtnau8824",
+        "id":		"chtnau8824",
+        "module":	"snd_soc_sst_cht_bsw_nau8824",
+        "driver":	"chtnau8824",
+        "name":		"chtnau8824",
+        "longname":	"MEDION-E22xxTy-Something-DMIC-",
+	"control": [
+	    { "id": "name='media0_in Gain 0 Switch'" }
+        ]
     }
 }
