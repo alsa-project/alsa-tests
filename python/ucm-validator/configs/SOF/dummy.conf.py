@@ -12,6 +12,7 @@ SUPPRESS_IF = {
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_es8316'.'True'.'Include'.'main'.'If'.'0'.'True'.'Include'.'comp'.'If'.'in1'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_nau8824'.'True'.'Include'.'main'.'SectionVerb'.'If'.'Controls'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_nau8824'.'True'.'Include'.'main'.'If'.'cfg-mspk'.'Condition' - True": 1,
+  "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_nau8824'.'True'.'Include'.'main'.'If'.'cfg-mic'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5640'.'True'.'Include'.'main'.'If'.'0'.'True'.'Include'.'comp'.'If'.'dmic1'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5640'.'True'.'Include'.'main'.'If'.'0'.'True'.'Include'.'comp'.'If'.'in3'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5645'.'True'.'Include'.'main'.'SectionVerb'.'If'.'Controls'.'Condition' - True": 1,
