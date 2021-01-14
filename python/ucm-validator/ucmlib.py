@@ -104,6 +104,7 @@ VALID_ID_LISTS = {
         'CaptureSwitch': 'string',
         'JackControl': 'string',
         'JackHWMute': 'string',
+        'JackCTL': 'string',
         'JackDev': 'string',
         'MinBufferLevel': 'intstring',
     }
