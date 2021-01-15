@@ -343,7 +343,7 @@ class UcmDevice:
         m2 = re.match(r2, name)
         if m2:
             self.warning(0, 'PCM name %s can be trucated (remove trailing zero /,0/)' % repr(name))
-        r1 = r"^(plug|)hw:([\${}a-zA-Z0-9_-]+)(,[0-9]+|)$"
+        r1 = r"^(plug|)hw:([\${}:a-zA-Z0-9_-]+)(,[0-9]+|)$"
         m1 = re.match(r1, name)
         if m1:
             return
