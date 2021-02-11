@@ -40,6 +40,7 @@ SUPPRESS_IF = {
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5672'.'True'.'Include'.'main'.'If'.'dmic1'.'False'.'If'.'dmic2'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5672'.'True'.'Include'.'main'.'If'.'dmic2'.'False'.'If'.'dmic1'.'Condition' - True": 1,
   "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_rt5672'.'True'.'Include'.'main'.'If'.'dmic2'.'Condition' - True": 1,
+  "SOF/SOF.conf@HiFi.conf: 'If'.'bytcht_wm5102'.'Condition' - True": 1,
 }
 
 def generate_config(topdir):

@@ -1,0 +1,13 @@
+{
+    "bytcr-wm5102-1": {
+        "comment":	"Dummy test configuration for bytcr-wm5102",
+        "id":		"bytcr-wm5102",
+        "module":	"snd_soc_sst_bytcr_wm5102",
+        "driver":	"bytcr-wm5102",
+        "name":		"bytcr-wm5102",
+        "longname":	"bytcr-wm5102",
+	"control": [
+	    { "id": "name='media0_in Gain 0 Switch'" }
+        ]
+    }
+}
