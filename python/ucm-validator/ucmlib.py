@@ -660,7 +660,12 @@ class Ucm:
         return os.path.split(self.filename)[0]
 
     def topdir(self):
-        return os.path.split(self.cfgdir())[0]
+        d = self.cfgdir()
+        for x in range(2):
+            d = os.path.split(d)[0]
+            if os.path.exists('%s/ucm.conf' % d):
+                return d
+        raise UcmError("unable to determine top directory (%s)!" % self.cfgdir())
 
     def shortfn(self, filename=None):
         if filename is None:
