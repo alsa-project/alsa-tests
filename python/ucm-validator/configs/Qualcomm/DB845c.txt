@@ -62,7 +62,7 @@ Pulseaudio:
 !!Soundcards recognised by ALSA
 !!-----------------------------
 
- 0 [DB845c         ]: DB845c - DB845c
+ 0 [DB845c         ]: sdm845 - DB845c
                       DB845c
 
 
