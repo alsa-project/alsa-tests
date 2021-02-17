@@ -504,7 +504,7 @@ class UcmVerb:
         if filename[0] != '/':
             filename = self.ucm.cfgdir() + '/' + filename
         else:
-            filename = self.ucm.topdir() + '/' + filename[1:]
+            filename = self.ucm.topdir + '/' + filename[1:]
         self.ucm.indent_check(filename)
         aconfig = AlsaConfigUcm()
         self.log(1, "Verb '%s', file '%s'", verbname, self.ucm.shortfn(filename))
@@ -621,8 +621,9 @@ class UcmVerb:
 
 class Ucm:
 
-    def __init__(self, verify=None):
+    def __init__(self, topdir, verify=None):
         """Ucm configuration class."""
+        self.topdir = os.path.abspath(topdir)
         self.verify = verify
         self.var = {}
 
@@ -659,16 +660,12 @@ class Ucm:
     def cfgdir(self):
         return os.path.split(self.filename)[0]
 
-    def topdir(self):
-        return os.path.split(self.cfgdir())[0]
-
     def shortfn(self, filename=None):
         if filename is None:
             filename = self.filename
-        topdir = self.topdir()
-        if not filename.startswith(topdir):
-            raise UcmError("shortfn mismatch '%s' / '%s'" % (topdir, filename))
-        return filename[len(topdir)+1:]
+        if not filename.startswith(self.topdir):
+            raise UcmError("shortfn mismatch '%s' / '%s'" % (self.topdir, filename))
+        return filename[len(self.topdir)+1:]
 
     def get_id(self, node):
         if not self.verify and node.id.find('#') >= 0:
@@ -767,7 +764,7 @@ class Ucm:
             if id == '${ConfTopDir}':
                 if self.syntax < 3:
                     self.error(node, "cannot substitute ${ConfTopDir} (requires 'Syntax 3')")
-                s = s.replace(m, self.topdir())
+                s = s.replace(m, self.topdir)
             elif id == '${ConfDir}':
                 if self.syntax < 3:
                     self.error(node, "cannot substitute ${ConfDir} (requires 'Syntax 3')")
@@ -1054,7 +1051,7 @@ class Ucm:
             if filename[0] != '/':
                 filename = self.cfgdir() + '/' + filename
             else:
-                filename = self.topdir() + '/' + filename[1:]
+                filename = self.topdir + '/' + filename[1:]
             if not self.verify and self.invalid_filename(filename):
                 continue
             nodes = AlsaConfigUcm()

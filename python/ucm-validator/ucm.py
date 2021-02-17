@@ -83,13 +83,14 @@ def env(filename, lvl=0):
 
 def do_one(*args):
     env(args[0], 2)
-    c = Ucm2()
+    # Optional second arg with top dir
+    c = Ucm2(args[1] if len(args) > 1 else args[0] + '/../..')
     c.load(args[0])
 
 def do_all(*args):
 
-    def pp(filename):
-        c = Ucm2()
+    def pp(filename, topdir):
+        c = Ucm2(topdir)
         c.load(filename)
 
     if len(args) == 0:
@@ -98,7 +99,7 @@ def do_all(*args):
     env(args[0])
     cs = ucm_get_configs(args[0])
     for c in cs:
-        pp(c)
+        pp(c, args[0])
 
 def do_configs(*args):
 
@@ -117,7 +118,7 @@ def do_configs(*args):
             else:
                 configs[k].update(config[k])
 
-    def config_walk(path1):
+    def config_walk(path1, topdir):
         errors = 0
         warnings = 0
         for file in os.listdir(path1):
@@ -125,7 +126,7 @@ def do_configs(*args):
                 continue
             path2 = path1 + '/' + file
             if os.path.isdir(path2):
-                errors1, warnings1 = config_walk(path2)
+                errors1, warnings1 = config_walk(path2, topdir)
                 errors += errors1
                 warnings += warnings1
                 continue
@@ -143,7 +144,7 @@ def do_configs(*args):
                 card = info.cards[cardnum]
                 if card.driver in SKIP_DRIVERS:
                     continue
-                c = Ucm2(verify=card)
+                c = Ucm2(topdir, verify=card)
                 for l in c.get_file_list(ucm_path):
                     if os.path.exists(l):
                         break
@@ -181,7 +182,7 @@ def do_configs(*args):
     filter = args[2:]
     conditions = {}
     configs = {'suppress_if': {}}
-    errors, warnings = config_walk(alsainfo_path)
+    errors, warnings = config_walk(alsainfo_path, ucm_path)
     # check, if all configuration files were handled
     cs = ucm_get_configs(args[0], short=True, link=False)
     for c in cs:
