@@ -6,7 +6,16 @@
         "driver":	"SOF",
         "name":		"sof-bytcht rt5640",
         "longname":	"sof-bytcht rt5640",
-        "components":	"cfg-spk:2 cfg-mic:in1"
+        "components":	"cfg-spk:2 cfg-mic:in1 aif:1"
+    },
+    "rt5640-2": {
+        "comment":	"Dummy test configuration for rt5640",
+        "id":		"rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"SOF",
+        "name":		"sof-bytcht rt5640",
+        "longname":	"sof-bytcht rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in1 aif:2"
     },
     "rt5651-1": {
         "comment":	"Dummy test configuration for rt5651",

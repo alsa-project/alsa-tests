@@ -6,7 +6,7 @@
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
         "longname":	"bytcr-rt5640",
-        "components":	"cfg-spk:1 cfg-mic:dmic1",
+        "components":	"cfg-spk:1 cfg-mic:dmic1 aif:1",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
@@ -17,7 +17,8 @@
         "module":	"snd_soc_sst_bytcr_rt5640",
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
-        "longname":	"bytcr-rt5640-mono-spk-dmic1-mic",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:1 cfg-mic:dmic1 aif:2",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
@@ -28,8 +29,7 @@
         "module":	"snd_soc_sst_bytcr_rt5640",
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
-        "longname":	"bytcr-rt5640",
-        "components":	"cfg-spk:2 cfg-mic:dmic1",
+        "longname":	"bytcr-rt5640-mono-spk-dmic1-mic",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
@@ -40,7 +40,8 @@
         "module":	"snd_soc_sst_bytcr_rt5640",
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
-        "longname":	"bytcr-rt5640-stereo-spk-dmic1-mic",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:dmic1 aif:1",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
@@ -52,7 +53,7 @@
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
         "longname":	"bytcr-rt5640",
-        "components":	"cfg-spk:2 cfg-mic:in1",
+        "components":	"cfg-spk:2 cfg-mic:dmic1 aif:2",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
@@ -63,12 +64,71 @@
         "module":	"snd_soc_sst_bytcr_rt5640",
         "driver":	"bytcr-rt5640",
         "name":		"bytcr-rt5640",
-        "longname":	"bytcr-rt5640-stereo-spk-in1-mic",
+        "longname":	"bytcr-rt5640-stereo-spk-dmic1-mic",
 	"control": [
             { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
         ]
     },
     "bytcr-rt5640-7": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in1 aif:1",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "bytcr-rt5640-8": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in1 aif:2",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "bytcr-rt5640-9": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in3 aif:1",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "bytcr-rt5640-10": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640",
+        "components":	"cfg-spk:2 cfg-mic:in3 aif:2",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "bytcr-rt5640-11": {
+        "comment":	"Dummy test configuration for bytcr-rt5640",
+        "id":		"bytcr-rt5640",
+        "module":	"snd_soc_sst_bytcr_rt5640",
+        "driver":	"bytcr-rt5640",
+        "name":		"bytcr-rt5640",
+        "longname":	"bytcr-rt5640-stereo-spk-in1-mic",
+	"control": [
+            { "id": "iface=CARD,name='media0_in Gain 0 Switch'" }
+        ]
+    },
+    "bytcr-rt5640-12": {
         "comment":	"Dummy test configuration for bytcr-rt5640 in SOF mode",
         "id":		"bytcr-rt5640",
         "module":	"snd_soc_sst_bytcr_rt5640",
