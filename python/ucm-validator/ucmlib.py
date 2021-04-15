@@ -24,9 +24,11 @@ VALID_ID_LISTS = {
         'Comment': 'string',
         'SectionDefaults': 'compound',
         'SectionUseCase': 'compound',
+        'FixedBootSequence': 'compound',
         'BootSequence': 'compound',
         'ValueDefaults': 'compound',
-        'Error': 'string'
+        'LibraryConfig': 'compound',
+        'Error': 'string',
     },
     'Include': {
         'File': 'string',
