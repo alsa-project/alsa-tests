@@ -56,6 +56,7 @@ class Ucm2(Ucm):
     def invalid_filename(self, filename):
         return filename.endswith('/codecs//init.conf') or \
                filename.endswith('/sof-soundwire/.conf') or \
+               filename.endswith('/sof-soundwire/-0.conf') or \
                filename.endswith('/sof-soundwire/-2.conf')
 
 def error1(msg, *args):
