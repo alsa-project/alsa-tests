@@ -7,12 +7,14 @@
 import os
 import sys
 import re
+import types
 from aconfig import AlsaConfigTree
 
 VALID_ID_LISTS = {
     'top': {
         'Syntax': 'integer',
         'UseCasePath': 'compound',
+        'LibraryConfig': 'compound',
     },
     'UseCasePath': {
         'Version': 'integer',
@@ -1238,11 +1240,18 @@ class Ucm:
         return [l1, l2]
 
     def get_file_list(self, path):
+
+        def list_topdir(self):
+            return os.path.split(fn)[0]
+
         self.reset()
-        fn = path + '/ucm.conf'
+        fn = os.path.abspath(os.path.realpath(path + '/ucm.conf'))
         if not os.path.exists(fn):
             return self.get_file_list1(path)
         c = AlsaConfigUcm()
+        self.filename = fn
+        self.cfgdir = types.MethodType(list_topdir, self)
+        self.topdir = types.MethodType(list_topdir, self)
         c.load(fn)
         if not 'Syntax' in c:
             self.error(c, 'Syntax field is missing in toplevel file')
@@ -1272,6 +1281,8 @@ class Ucm:
                     if r and fn2 in r:
                         continue
                     r.append(path + '/' + dir + '/' + file)
+        self.cfgdir = types.MethodType(Ucm.cfgdir, self)
+        self.topdir = types.MethodType(Ucm.topdir, self)
         return r
 
 def ucm_env_get(alsa_config_path):
