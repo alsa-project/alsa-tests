@@ -1,0 +1,1601 @@
+
+!!################################
+!!ALSA Information Script v 0.4.65
+!!################################
+
+!!Script ran on: Wed Jun 17 19:14:03 UTC 2020
+
+
+!!Linux Distribution
+!!------------------
+
+Ubuntu 20.04 LTS \n \l DISTRIB_ID=Ubuntu DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS" NAME="Ubuntu" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04 LTS" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" UBUNTU_CODENAME=focal
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      Dell Inc.
+Product Name:      Latitude 9510
+Product Version:   
+Firmware Version:  0.1.3
+Board Vendor:      Dell Inc.
+Board Name:        
+
+
+!!ACPI Device Status Information
+!!---------------
+
+/sys/bus/acpi/devices/ACPI0003:00/status 	 15
+/sys/bus/acpi/devices/ACPI000C:00/status 	 15
+/sys/bus/acpi/devices/DELL08AF:00/status 	 15
+/sys/bus/acpi/devices/DLLK09C6:00/status 	 15
+/sys/bus/acpi/devices/INT33A1:00/status 	 15
+/sys/bus/acpi/devices/INT33D3:00/status 	 15
+/sys/bus/acpi/devices/INT33D4:00/status 	 15
+/sys/bus/acpi/devices/INT33D5:00/status 	 15
+/sys/bus/acpi/devices/INT3400:00/status 	 15
+/sys/bus/acpi/devices/INT3403:00/status 	 15
+/sys/bus/acpi/devices/INT3403:01/status 	 15
+/sys/bus/acpi/devices/INT3403:02/status 	 15
+/sys/bus/acpi/devices/INT3403:03/status 	 15
+/sys/bus/acpi/devices/INT3403:04/status 	 15
+/sys/bus/acpi/devices/INT3403:05/status 	 15
+/sys/bus/acpi/devices/INT340E:00/status 	 15
+/sys/bus/acpi/devices/INT34BB:00/status 	 15
+/sys/bus/acpi/devices/INT3F0D:00/status 	 15
+/sys/bus/acpi/devices/LNXPOWER:00/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:01/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:02/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:03/status 	 15
+/sys/bus/acpi/devices/LNXPOWER:05/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:06/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:07/status 	 1
+/sys/bus/acpi/devices/LNXPOWER:09/status 	 1
+/sys/bus/acpi/devices/MSFT0101:00/status 	 15
+/sys/bus/acpi/devices/PNP0103:00/status 	 15
+/sys/bus/acpi/devices/PNP0B00:00/status 	 15
+/sys/bus/acpi/devices/PNP0C02:00/status 	 3
+/sys/bus/acpi/devices/PNP0C02:02/status 	 3
+/sys/bus/acpi/devices/PNP0C02:05/status 	 3
+/sys/bus/acpi/devices/PNP0C09:00/status 	 15
+/sys/bus/acpi/devices/PNP0C0A:00/status 	 31
+/sys/bus/acpi/devices/PNP0C0C:00/status 	 15
+/sys/bus/acpi/devices/PNP0C0F:00/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:01/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:02/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:03/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:04/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:05/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:06/status 	 9
+/sys/bus/acpi/devices/PNP0C0F:07/status 	 9
+/sys/bus/acpi/devices/PRP00001:00/status 	 11
+/sys/bus/acpi/devices/USBC000:00/status 	 15
+/sys/bus/acpi/devices/WCOM494A:00/status 	 15
+/sys/bus/acpi/devices/device:09/status 	 15
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.8.0-rc1-test 
+Operating System:  GNU/Linux
+Architecture:      x86_64
+Processor:         x86_64
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.8.0-rc1-test 
+Library version:    1.2.2
+Utilities version:  1.2.2
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+(efault)
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [sofsoundwire   ]: sof-soundwire - sof-soundwire
+                      Intel Soundwire SOF
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:1f.3 Multimedia audio controller [0401]: Intel Corporation Device [8086:02c8]
+	DeviceName: Onboard - Sound
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_usb_audio: index=-2
+snd_usb_caiaq: index=-2
+snd_usb_ua101: index=-2
+snd_usb_us122l: index=-2
+snd_usb_usx2y: index=-2
+snd_cmipci: mpu_port=0x330 fm_port=0x388
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: snd_soc_sof_sdw
+	* : 
+
+
+!!HDA-Intel Codec information
+!!---------------------------
+--startcollapse--
+
+Codec: Intel Kabylake HDMI
+Address: 2
+AFG Function Id: 0x1 (unsol 0)
+Vendor Id: 0x8086280b
+Subsystem Id: 0x80860101
+Revision Id: 0x100000
+No Modem Function Group found
+Default PCM:
+    rates [0x0]:
+    bits [0x0]:
+    formats [0x0]:
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+State of AFG node 0x01:
+  Power states:  D0 D3 CLKSTOP EPSS
+  Power: setting=D0, actual=D0, Clock-stop-OK
+GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
+Node 0x02 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x03 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x07 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x08 [Vendor Defined Widget] wcaps 0xf00000: Mono
+--endcollapse--
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----  1 root audio 116, 10 Jun 15 14:28 /dev/snd/controlC0
+crw-rw----  1 root audio 116,  9 Jun 15 14:28 /dev/snd/hwC0D2
+crw-rw----  1 root audio 116,  2 Jun 17 14:13 /dev/snd/pcmC0D0p
+crw-rw----  1 root audio 116,  3 Jun 17 14:13 /dev/snd/pcmC0D1c
+crw-rw----  1 root audio 116,  4 Jun 17 14:13 /dev/snd/pcmC0D2p
+crw-rw----  1 root audio 116,  5 Jun 17 14:13 /dev/snd/pcmC0D4c
+crw-rw----  1 root audio 116,  6 Jun 17 14:13 /dev/snd/pcmC0D5p
+crw-rw----  1 root audio 116,  7 Jun 17 14:13 /dev/snd/pcmC0D6p
+crw-rw----  1 root audio 116,  8 Jun 17 14:13 /dev/snd/pcmC0D7p
+crw-rw----  1 root audio 116,  1 Jun 15 14:28 /dev/snd/seq
+crw-rw----  1 root audio 116, 33 Jun 15 14:28 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jun 15 14:28 .
+drwxr-xr-x 3 root root 280 Jun 15 14:28 ..
+lrwxrwxrwx 1 root root  12 Jun 15 14:28 pci-0000:00:1f.3-platform-sof_sdw -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: sofsoundwire [sof-soundwire], device 0: Headphone (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 2: SDW1-speakers (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 5: HDMI1 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 6: HDMI2 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 7: HDMI3 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: sofsoundwire [sof-soundwire], device 1: Headset mic (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: sofsoundwire [sof-soundwire], device 4: Microphones (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card sofsoundwire
+
+Card hw:0 'sofsoundwire'/'Intel Soundwire SOF'
+  Mixer name	: 'Intel Kabylake HDMI'
+  Components	: 'HDA:8086280b,80860101,00100000 cfg-spk:2 cfg-amp:1 hs:rt711 spk:rt1308 mic:rt715'
+  Controls      : 69
+  Simple ctrls  : 40
+Simple mixer control 'Headphone',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Speaker',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Headset Mic',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'PGA1.0 1 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA2.0 2 Master',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 80
+  Front Left: Capture 50 [62%] [0.00dB] [on]
+  Front Right: Capture 50 [62%] [0.00dB] [on]
+Simple mixer control 'PGA3.0 3 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA5.0 5 Master',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 80
+  Front Left: Capture 80 [100%] [30.00dB] [on]
+  Front Right: Capture 80 [100%] [30.00dB] [on]
+Simple mixer control 'PGA6.0 6 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA7.0 7 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 32 [100%] [0.00dB]
+  Front Right: Playback 32 [100%] [0.00dB]
+Simple mixer control 'PGA8.0 8 Master',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 32
+  Mono:
+  Front Left: Playback 31 [97%] [-2.00dB]
+  Front Right: Playback 31 [97%] [-2.00dB]
+Simple mixer control 'rt1308-1 DAC L',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt1308-1 DAC R',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'rt1308-1 RX Channel Select',0
+  Capabilities: enum
+  Items: 'LR' 'LL' 'RL' 'RR'
+  Item0: 'LR'
+Simple mixer control 'rt711 ADC 08',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 63 [100%] [30.00dB] [on]
+  Front Right: Capture 63 [100%] [30.00dB] [on]
+Simple mixer control 'rt711 ADC 09',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 0 [0%] [-17.25dB] [off]
+  Front Right: Capture 23 [37%] [0.00dB] [off]
+Simple mixer control 'rt711 ADC 22 Mux',0
+  Capabilities: enum
+  Items: 'MIC2' 'LINE1' 'LINE2' 'DMIC'
+  Item0: 'MIC2'
+Simple mixer control 'rt711 ADC 23 Mux',0
+  Capabilities: enum
+  Items: 'MIC2' 'LINE1' 'LINE2' 'DMIC'
+  Item0: 'MIC2'
+Simple mixer control 'rt711 AMIC',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 1 [33%] [10.00dB]
+  Front Right: 1 [33%] [10.00dB]
+Simple mixer control 'rt711 DAC Surr',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 87
+  Mono:
+  Front Left: Playback 87 [100%] [0.00dB]
+  Front Right: Playback 87 [100%] [0.00dB]
+Simple mixer control 'rt711 DMIC1',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
+Simple mixer control 'rt711 DMIC2',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
+Simple mixer control 'rt715 ADC 07',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 0 [0%] [-17.25dB] [on]
+  Front Right: Capture 23 [37%] [0.00dB] [on]
+Simple mixer control 'rt715 ADC 08',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 0 [0%] [-17.25dB] [off]
+  Front Right: Capture 23 [37%] [0.00dB] [off]
+Simple mixer control 'rt715 ADC 09',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 0 [0%] [-17.25dB] [off]
+  Front Right: Capture 23 [37%] [0.00dB] [off]
+Simple mixer control 'rt715 ADC 22 Mux',0
+  Capabilities: enum
+  Items: 'MIC1' 'MIC2' 'LINE1' 'LINE2' 'DMIC1' 'DMIC2' 'DMIC3' 'DMIC4'
+  Item0: 'LINE1'
+Simple mixer control 'rt715 ADC 23 Mux',0
+  Capabilities: enum
+  Items: 'MIC1' 'MIC2' 'LINE1' 'LINE2' 'DMIC1' 'DMIC2' 'DMIC3' 'DMIC4'
+  Item0: 'LINE2'
+Simple mixer control 'rt715 ADC 24 Mux',0
+  Capabilities: enum
+  Items: 'MIC2' 'DMIC1' 'DMIC2' 'DMIC3' 'DMIC4'
+  Item0: 'DMIC3'
+Simple mixer control 'rt715 ADC 25 Mux',0
+  Capabilities: enum
+  Items: 'MIC1' 'DMIC1' 'DMIC2' 'DMIC3' 'DMIC4'
+  Item0: 'DMIC4'
+Simple mixer control 'rt715 ADC 27',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 0 [0%] [-17.25dB] [on]
+  Front Right: Capture 23 [37%] [0.00dB] [on]
+Simple mixer control 'rt715 DMIC1 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'rt715 DMIC2 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'rt715 DMIC3 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 2 [67%]
+  Front Right: 2 [67%]
+Simple mixer control 'rt715 DMIC4 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 2 [67%]
+  Front Right: 2 [67%]
+Simple mixer control 'rt715 LINE1 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'rt715 LINE2 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'rt715 MIC1 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'rt715 MIC2 Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.sofsoundwire {
+	control.1 {
+		iface MIXER
+		name 'rt711 DAC Surr Playback Volume'
+		value.0 87
+		value.1 87
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 87'
+			dbmin -6525
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'rt711 ADC 08 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'rt711 ADC 09 Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'rt711 ADC 08 Capture Volume'
+		value.0 63
+		value.1 63
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 3000
+			dbvalue.1 3000
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'rt711 ADC 09 Capture Volume'
+		value.0 0
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 -1725
+			dbvalue.1 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'rt711 AMIC Volume'
+		value.0 1
+		value.1 1
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 1000
+			dbvalue.1 1000
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'rt711 DMIC1 Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'rt711 DMIC2 Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'rt1308-1 RX Channel Select'
+		value LR
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 LR
+			item.1 LL
+			item.2 RL
+			item.3 RR
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'rt715 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'rt715 ADC 08 Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'rt715 ADC 09 Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'rt715 ADC 27 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'rt715 Capture Volume'
+		value.0 0
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 -1725
+			dbvalue.1 0
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'rt715 ADC 08 Capture Volume'
+		value.0 0
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 -1725
+			dbvalue.1 0
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'rt715 ADC 09 Capture Volume'
+		value.0 0
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 -1725
+			dbvalue.1 0
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'rt715 ADC 27 Capture Volume'
+		value.0 0
+		value.1 23
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 -1725
+			dbvalue.1 0
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'rt715 DMIC1 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'rt715 DMIC2 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'rt715 DMIC3 Boost'
+		value.0 2
+		value.1 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 2000
+			dbvalue.1 2000
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'rt715 DMIC4 Boost'
+		value.0 2
+		value.1 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 2000
+			dbvalue.1 2000
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'rt715 MIC1 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'rt715 MIC2 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'rt715 LINE1 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'rt715 LINE2 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'Headphone Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface CARD
+		name 'Headphone Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface CARD
+		name 'Headset Mic Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'Speaker Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface CARD
+		name 'HDMI/DP,pcm=5 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.36 {
+		iface PCM
+		device 5
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.37 {
+		iface CARD
+		name 'HDMI/DP,pcm=6 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 1
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 1
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 1
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface PCM
+		device 6
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.43 {
+		iface CARD
+		name 'HDMI/DP,pcm=7 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 2
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 2
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 2
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 2
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.48 {
+		iface PCM
+		device 7
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.49 {
+		iface PCM
+		device 5
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.50 {
+		iface PCM
+		device 6
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.51 {
+		iface PCM
+		device 7
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.52 {
+		iface MIXER
+		name 'rt711 ADC 22 Mux'
+		value MIC2
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC2
+			item.1 LINE1
+			item.2 LINE2
+			item.3 DMIC
+		}
+	}
+	control.53 {
+		iface MIXER
+		name 'rt711 ADC 23 Mux'
+		value MIC2
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC2
+			item.1 LINE1
+			item.2 LINE2
+			item.3 DMIC
+		}
+	}
+	control.54 {
+		iface MIXER
+		name 'PGA1.0 1 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.55 {
+		iface MIXER
+		name 'PGA2.0 2 Master Capture Volume'
+		value.0 50
+		value.1 50
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 80'
+			dbmin -9999999
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.56 {
+		iface MIXER
+		name 'PGA2.0 2 Master Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.57 {
+		iface MIXER
+		name 'PGA3.0 3 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.58 {
+		iface MIXER
+		name 'PGA5.0 5 Master Capture Volume'
+		value.0 80
+		value.1 80
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 80'
+			dbmin -9999999
+			dbmax 3000
+			dbvalue.0 3000
+			dbvalue.1 3000
+		}
+	}
+	control.59 {
+		iface MIXER
+		name 'PGA5.0 5 Master Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.61 {
+		iface MIXER
+		name 'PGA6.0 6 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.62 {
+		iface MIXER
+		name 'PGA7.0 7 Master Playback Volume'
+		value.0 32
+		value.1 32
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.63 {
+		iface MIXER
+		name 'PGA8.0 8 Master Playback Volume'
+		value.0 31
+		value.1 31
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 32'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -200
+			dbvalue.1 -200
+		}
+	}
+	control.64 {
+		iface MIXER
+		name 'rt1308-1 DAC L Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.65 {
+		iface MIXER
+		name 'rt1308-1 DAC R Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.66 {
+		iface MIXER
+		name 'rt715 ADC 22 Mux'
+		value LINE1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC1
+			item.1 MIC2
+			item.2 LINE1
+			item.3 LINE2
+			item.4 DMIC1
+			item.5 DMIC2
+			item.6 DMIC3
+			item.7 DMIC4
+		}
+	}
+	control.67 {
+		iface MIXER
+		name 'rt715 ADC 23 Mux'
+		value LINE2
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC1
+			item.1 MIC2
+			item.2 LINE1
+			item.3 LINE2
+			item.4 DMIC1
+			item.5 DMIC2
+			item.6 DMIC3
+			item.7 DMIC4
+		}
+	}
+	control.68 {
+		iface MIXER
+		name 'rt715 ADC 24 Mux'
+		value DMIC3
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC2
+			item.1 DMIC1
+			item.2 DMIC2
+			item.3 DMIC3
+			item.4 DMIC4
+		}
+	}
+	control.69 {
+		iface MIXER
+		name 'rt715 ADC 25 Mux'
+		value DMIC4
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC1
+			item.1 DMIC1
+			item.2 DMIC2
+			item.3 DMIC3
+			item.4 DMIC4
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+acpi_thermal_rel
+dcdbas
+dell_laptop
+dell_smbios
+dell_wmi
+dell_wmi_descriptor
+drm
+drm_kms_helper
+efivarfs
+fb_sys_fops
+hid_multitouch
+i2c_algo_bit
+i2c_hid
+i915
+int3400_thermal
+int3403_thermal
+int340x_thermal_zone
+intel_lpss
+intel_lpss_pci
+intel_powerclamp
+intel_soc_dts_iosf
+iwlmvm
+iwlwifi
+ledtrig_audio
+mei
+mei_me
+mfd_core
+processor_thermal_device
+regmap_i2c
+regmap_sdw
+snd
+snd_hda_codec
+snd_hda_codec_hdmi
+snd_hda_core
+snd_hda_ext_core
+snd_hwdep
+snd_intel_dspcfg
+snd_pcm
+snd_rawmidi
+snd_seq
+snd_seq_device
+snd_seq_midi
+snd_seq_midi_event
+snd_soc_acpi
+snd_soc_acpi_intel_match
+snd_soc_core
+snd_soc_da7213
+snd_soc_da7219
+snd_soc_dmic
+snd_soc_hdac_hda
+snd_soc_hdac_hdmi
+snd_soc_max98090
+snd_soc_max98357a
+snd_soc_max98373
+snd_soc_pcm512x
+snd_soc_pcm512x_i2c
+snd_soc_rl6231
+snd_soc_rl6347a
+snd_soc_rt1011
+snd_soc_rt1308
+snd_soc_rt1308_sdw
+snd_soc_rt286
+snd_soc_rt5640
+snd_soc_rt5645
+snd_soc_rt5651
+snd_soc_rt5660
+snd_soc_rt5670
+snd_soc_rt5677
+snd_soc_rt5677_spi
+snd_soc_rt5682
+snd_soc_rt5682_i2c
+snd_soc_rt5682_sdw
+snd_soc_rt700
+snd_soc_rt711
+snd_soc_rt715
+snd_soc_sof_sdw
+snd_soc_wm8804
+snd_soc_wm8804_i2c
+snd_sof
+snd_sof_acpi
+snd_sof_intel_bdw
+snd_sof_intel_byt
+snd_sof_intel_hda
+snd_sof_intel_hda_common
+snd_sof_intel_ipc
+snd_sof_pci
+snd_sof_xtensa_dsp
+snd_timer
+snd_usb_audio
+snd_usbmidi_lib
+soundcore
+soundwire_bus
+soundwire_cadence
+soundwire_generic_allocation
+soundwire_intel
+syscopyarea
+sysfillrect
+sysimgblt
+wmi
+wmi_bmof
+x86_pkg_temp_thermal
+xhci_hcd
+xhci_pci
+
+
+!!Sysfs Files
+!!-----------
+
+/sys/class/sound/hwC0D2/init_pin_configs:
+0x05 0x18560010
+0x06 0x18560010
+0x07 0x18560010
+
+/sys/class/sound/hwC0D2/driver_pin_configs:
+
+/sys/class/sound/hwC0D2/user_pin_configs:
+
+/sys/class/sound/hwC0D2/init_verbs:
+
+/sys/class/sound/hwC0D2/hints:
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-topology-conf                         1.2.2-1                               all          ALSA topology configuration files
+ii  alsa-ucm-conf                              1.2.2-1                               all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                 1.2.2-1ubuntu1                        amd64        Utilities for configuring and using ALSA
+
