@@ -352,6 +352,10 @@ class UcmDevice:
         m1 = re.match(r1, name)
         if m1:
             return
+        r1 = r"^(plug|)hw:[\$]{1,2}\{.*\}(,[0-9]+|)$"
+        m1 = re.match(r1, name)
+        if m1:
+            return
         self.error(0, 'PCM name %s is invalid' % repr(name))
 
     def check_pcm(self):
