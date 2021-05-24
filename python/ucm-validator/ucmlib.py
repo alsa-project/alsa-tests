@@ -75,7 +75,8 @@ VALID_ID_LISTS = {
         'SectionVerb': 'compound',
         'SectionDevice': 'compound',
         'RenameDevice': 'compound',
-        'RemoveDevice': 'compound'
+        'RemoveDevice': 'compound',
+        'LibraryConfig': 'compound'
     },
     'SectionVerb': {
         'Value': 'compound',
