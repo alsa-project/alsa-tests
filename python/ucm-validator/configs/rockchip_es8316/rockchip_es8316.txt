@@ -1,0 +1,930 @@
+upload=true&script=true&cardinfo=
+!!################################
+!!ALSA Information Script v 0.4.65
+!!################################
+
+!!Script ran on: Tue Sep  7 02:49:01 UTC 2021
+
+
+!!Linux Distribution
+!!------------------
+
+ID_LIKE="ubuntu debian"
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      
+Product Name:      
+Product Version:   
+Firmware Version:  
+System SKU:        
+Board Vendor:      
+Board Name:        
+
+
+!!ACPI Device Status Information
+!!---------------
+
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.11.0-19-generic
+Operating System:  GNU/Linux
+Architecture:      aarch64
+Processor:         unknown
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.11.0-19-generic
+Library version:    
+Utilities version:  1.2.4
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+snd_soc_simple_card
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - Yes
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [rockchipes8316c]: rockchip_es8316 - rockchip,es8316-codec
+                      rockchip,es8316-codec
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: snd_soc_simple_card
+	* : 
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----+ 1 root audio 116,  4 Sep  7 10:47 /dev/snd/controlC0
+crw-rw----+ 1 root audio 116,  3 Sep  7 10:47 /dev/snd/pcmC0D0c
+crw-rw----+ 1 root audio 116,  2 Sep  7 10:47 /dev/snd/pcmC0D0p
+crw-rw----+ 1 root audio 116,  1 Sep  7 10:47 /dev/snd/seq
+crw-rw----+ 1 root audio 116, 33 Sep  7 10:47 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Sep  7 10:47 .
+drwxr-xr-x 3 root root 160 Sep  7 10:47 ..
+lrwxrwxrwx 1 root root  12 Sep  7 10:47 platform-es8316-sound -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: rockchipes8316c [rockchip,es8316-codec], device 0: ff890000.i2s-ES8316 HiFi ES8316 HiFi-0 [ff890000.i2s-ES8316 HiFi ES8316 HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: rockchipes8316c [rockchip,es8316-codec], device 0: ff890000.i2s-ES8316 HiFi ES8316 HiFi-0 [ff890000.i2s-ES8316 HiFi ES8316 HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card rockchipes8316c
+
+Card hw:0 'rockchipes8316c'/'rockchip,es8316-codec'
+  Mixer name	: ''
+  Components	: ''
+  Controls      : 37
+  Simple ctrls  : 36
+Simple mixer control 'Headphone',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 3
+  Mono:
+  Front Left: Playback 3 [100%] [0.00dB]
+  Front Right: Playback 3 [100%] [0.00dB]
+Simple mixer control 'Headphone Mixer',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 11
+  Front Left: 11 [100%] [0.00dB]
+  Front Right: 11 [100%] [0.00dB]
+Simple mixer control 'Speaker',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Mic Boost',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Playback Polarity',0
+  Capabilities: enum
+  Items: 'Normal' 'R Invert' 'L Invert' 'L + R Invert'
+  Item0: 'R Invert'
+Simple mixer control 'Capture Polarity',0
+  Capabilities: enum
+  Items: 'Normal' 'Invert'
+  Item0: 'Normal'
+Simple mixer control 'ADC',0
+  Capabilities: cvolume cvolume-joined
+  Capture channels: Mono
+  Limits: Capture 0 - 192
+  Mono: Capture 192 [100%] [0.00dB]
+Simple mixer control 'ADC Double Fs',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ADC PGA Gain',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 10
+  Mono: 7 [70%] [16.00dB]
+Simple mixer control 'ADC Soft Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ALC',0
+  Capabilities: cswitch cswitch-joined
+  Capture channels: Mono
+  Mono: Capture [off]
+Simple mixer control 'ALC Capture Attack Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 10
+  Mono: 2 [20%]
+Simple mixer control 'ALC Capture Decay Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 10
+  Mono: 3 [30%]
+Simple mixer control 'ALC Capture Hold Time',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 10
+  Mono: 0 [0%]
+Simple mixer control 'ALC Capture Max',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 28
+  Mono: 28 [100%] [35.50dB]
+Simple mixer control 'ALC Capture Min',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 28
+  Mono: 0 [0%] [-12.00dB]
+Simple mixer control 'ALC Capture Noise Gate',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ALC Capture Noise Gate Threshold',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 31
+  Mono: 0 [0%]
+Simple mixer control 'ALC Capture Noise Gate Type',0
+  Capabilities: enum
+  Items: 'Constant PGA Gain' 'Mute ADC Output'
+  Item0: 'Constant PGA Gain'
+Simple mixer control 'ALC Capture Target',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 10
+  Mono: 10 [100%] [-1.50dB]
+Simple mixer control 'DAC',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 192
+  Mono:
+  Front Left: Playback 192 [100%] [0.00dB]
+  Front Right: Playback 192 [100%] [0.00dB]
+Simple mixer control 'DAC Double Fs',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC Mono Mix',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC Notch Filter',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC Soft Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'DAC Soft Ramp Rate',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 4
+  Mono: 4 [100%]
+Simple mixer control 'DAC Source Mux',0
+  Capabilities: enum
+  Items: 'LDATA TO LDAC, RDATA TO RDAC' 'LDATA TO LDAC, LDATA TO RDAC' 'RDATA TO LDAC, RDATA TO RDAC' 'RDATA TO LDAC, LDATA TO RDAC'
+  Item0: 'LDATA TO LDAC, RDATA TO RDAC'
+Simple mixer control 'DAC Stereo Enhancement',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 7
+  Mono: 5 [71%]
+Simple mixer control 'Differential Mux',0
+  Capabilities: enum
+  Items: 'lin1-rin1' 'lin2-rin2' 'lin1-rin1 with 20db Boost' 'lin2-rin2 with 20db Boost'
+  Item0: 'lin1-rin1'
+Simple mixer control 'Digital Mic Mux',0
+  Capabilities: enum
+  Items: 'dmic disable' 'dmic data at high level' 'dmic data at low level'
+  Item0: 'dmic disable'
+Simple mixer control 'Left Headphone Mixer LLIN',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Left Headphone Mixer Left DAC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Left Headphone Mux',0
+  Capabilities: enum
+  Items: 'lin1-rin1' 'lin2-rin2' 'lin-rin with Boost' 'lin-rin with Boost and PGA'
+  Item0: 'lin1-rin1'
+Simple mixer control 'Right Headphone Mixer RLIN',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'Right Headphone Mixer Right DAC',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Right Headphone Mux',0
+  Capabilities: enum
+  Items: 'lin1-rin1' 'lin2-rin2' 'lin-rin with Boost' 'lin-rin with Boost and PGA'
+  Item0: 'lin1-rin1'
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.rockchipes8316c {
+	control.1 {
+		iface CARD
+		name 'Headphones Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value.0 3
+		value.1 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin -4800
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Headphone Mixer Volume'
+		value.0 11
+		value.1 11
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 11'
+			dbmin -1200
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Playback Polarity'
+		value 'R Invert'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Normal
+			item.1 'R Invert'
+			item.2 'L Invert'
+			item.3 'L + R Invert'
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'DAC Playback Volume'
+		value.0 192
+		value.1 192
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'DAC Soft Ramp Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'DAC Soft Ramp Rate'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 4'
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'DAC Notch Filter Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'DAC Double Fs Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'DAC Stereo Enhancement'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'DAC Mono Mix Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Capture Polarity'
+		value Normal
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Normal
+			item.1 Invert
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'Mic Boost Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'ADC Capture Volume'
+		value 192
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 0
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'ADC PGA Gain Volume'
+		value 7
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+			dbmin -350
+			dbmax 2400
+			dbvalue.0 1600
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'ADC Soft Ramp Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'ADC Double Fs Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'ALC Capture Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'ALC Capture Max Volume'
+		value 28
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 28'
+			dbmin -650
+			dbmax 3550
+			dbvalue.0 3550
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'ALC Capture Min Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 28'
+			dbmin -1200
+			dbmax 3000
+			dbvalue.0 -1200
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'ALC Capture Target Volume'
+		value 10
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+			dbmin -1650
+			dbmax -150
+			dbvalue.0 -150
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'ALC Capture Hold Time'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'ALC Capture Decay Time'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'ALC Capture Attack Time'
+		value 2
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 10'
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Threshold'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'ALC Capture Noise Gate Type'
+		value 'Constant PGA Gain'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Constant PGA Gain'
+			item.1 'Mute ADC Output'
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'Speaker Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'Differential Mux'
+		value lin1-rin1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin1-rin1 with 20db Boost'
+			item.3 'lin2-rin2 with 20db Boost'
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'Digital Mic Mux'
+		value 'dmic disable'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'dmic disable'
+			item.1 'dmic data at high level'
+			item.2 'dmic data at low level'
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'DAC Source Mux'
+		value 'LDATA TO LDAC, RDATA TO RDAC'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'LDATA TO LDAC, RDATA TO RDAC'
+			item.1 'LDATA TO LDAC, LDATA TO RDAC'
+			item.2 'RDATA TO LDAC, RDATA TO RDAC'
+			item.3 'RDATA TO LDAC, LDATA TO RDAC'
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'Left Headphone Mux'
+		value lin1-rin1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin-rin with Boost'
+			item.3 'lin-rin with Boost and PGA'
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'Right Headphone Mux'
+		value lin1-rin1
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 lin1-rin1
+			item.1 lin2-rin2
+			item.2 'lin-rin with Boost'
+			item.3 'lin-rin with Boost and PGA'
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'Left Headphone Mixer LLIN Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'Left Headphone Mixer Left DAC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'Right Headphone Mixer RLIN Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'Right Headphone Mixer Right DAC Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+ac97_bus
+aes_ce_blk
+aes_ce_cipher
+aes_neon_blk
+aes_neon_bs
+af_alg
+algif_hash
+algif_skcipher
+analogix_dp
+autofs4
+bfq
+bluetooth
+bnep
+brcmfmac
+brcmutil
+btbcm
+btintel
+btqca
+btrtl
+btsdio
+cec
+cfg80211
+clk_rk808
+cmdlinepart
+cqhci
+crct10dif_ce
+cryptd
+crypto_simd
+cw2015_battery
+dm_log
+dm_mirror
+dm_region_hash
+drm
+drm_kms_helper
+dw_hdmi
+dw_mipi_dsi
+dw_mmc
+dw_mmc_pltfm
+dw_mmc_rockchip
+dwc3
+dwc3_of_simple
+ecc
+ecdh_generic
+ehci_platform
+fan53555
+fb_sys_fops
+fixed
+fusb302
+ghash_ce
+gpio_charger
+gpio_keys
+gpu_sched
+hantro_vpu
+hci_uart
+hid
+hid_generic
+hid_multitouch
+i2c_rk3x
+industrialio
+industrialio_triggered_buffer
+input_leds
+io_domain
+ip6_udp_tunnel
+ip_tables
+joydev
+kfifo_buf
+l2tp_core
+l2tp_netlink
+l2tp_ppp
+leds_gpio
+libcrc32c
+lp
+mc
+mtd
+nf_tables
+nfnetlink
+nvmem_rockchip_efuse
+ofpart
+ohci_platform
+overlay
+panel_simple
+panfrost
+parport
+pcie_rockchip_host
+phy_rockchip_emmc
+phy_rockchip_inno_usb2
+phy_rockchip_pcie
+phy_rockchip_typec
+pl330
+ppdev
+pppox
+pwm_bl
+pwm_regulator
+pwm_rockchip
+pwrseq_simple
+rc_core
+rfcomm
+rk808
+rk808_regulator
+rockchip_rga
+rockchip_saradc
+rockchip_thermal
+rockchip_vdec
+rockchipdrm
+rtc_rk808
+sdhci
+sdhci_of_arasan
+sdhci_pltfm
+sha1_ce
+sha256_arm64
+sha2_ce
+snd
+snd_pcm
+snd_pcm_dmaengine
+snd_soc_core
+snd_soc_es8316
+snd_soc_rockchip_i2s
+snd_soc_rockchip_pcm
+snd_soc_simple_amplifier
+snd_soc_simple_card
+snd_soc_simple_card_utils
+snd_timer
+soundcore
+spi_nor
+spi_rockchip
+syscopyarea
+sysfillrect
+sysimgblt
+tcpm
+typec
+udc_core
+udp_tunnel
+uio
+uio_pdrv_genirq
+ulpi
+usbhid
+usbmouse
+v4l2_h264
+v4l2_mem2mem
+videobuf2_common
+videobuf2_dma_contig
+videobuf2_dma_sg
+videobuf2_memops
+videobuf2_v4l2
+videobuf2_vmalloc
+videodev
+x_tables
+xhci_plat_hcd
+zram
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[   12.053111] Bluetooth: hci1: BCM4345C5 'brcm/BCM4345C5.hcd' Patch
+[   12.158104] input: rockchip,es8316-codec Headphones as /devices/platform/es8316-sound/sound/card0/input14
+[   12.446961] usb 2-1: device not accepting address 4, error -62
+
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-topology-conf                               1.2.4-1                              all          ALSA topology configuration files
+ii  alsa-ucm-conf                                    1.2.4-2endless1bem1                  all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                       1.2.4-1                              arm64        Utilities for configuring and using ALSA
+
