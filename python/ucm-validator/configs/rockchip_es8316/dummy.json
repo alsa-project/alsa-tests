@@ -1,0 +1,13 @@
+{
+    "rockchip_es8316": {
+        "comment":	"Dummy test configuration for rockchip_es8316",
+        "id":		"rockchip_es8316",
+        "module":	"snd_soc_simple_card",
+        "driver":	"rockchip_es8316",
+        "name":		"rockchip_es8316",
+        "longname":	"rockchip,es8316-codec",
+	"control": [
+	    { "id": "name='Speaker Switch'" }
+        ]
+    }
+}
