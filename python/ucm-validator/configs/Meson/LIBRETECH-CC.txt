@@ -1,0 +1,470 @@
+upload=true&script=true&cardinfo=
+!!################################
+!!ALSA Information Script v 0.5.1
+!!################################
+
+!!Script ran on: Thu Jan 27 17:27:19 UTC 2022
+
+
+!!Linux Distribution
+!!------------------
+
+Debian GNU/Linux bookworm/sid \n \l PRETTY_NAME="Debian GNU/Linux bookworm/sid" NAME="Debian GNU/Linux" ID=debian HOME_URL="https://www.debian.org/" SUPPORT_URL="https://www.debian.org/support" BUG_REPORT_URL="https://bugs.debian.org/"
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      
+Product Name:      
+Product Version:   
+Firmware Version:  
+System SKU:        
+Board Vendor:      
+Board Name:        
+
+
+!!ACPI Device Status Information
+!!---------------
+
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    5.17.0-rc1-00050-g84d3eb56b6f2
+Operating System:  GNU/Linux
+Architecture:      aarch64
+Processor:         unknown
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k5.17.0-rc1-00050-g84d3eb56b6f2
+Library version:    1.2.6.1
+Utilities version:  1.2.6
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+No sound servers found.
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [LIBRETECHCC    ]: gx-sound-card - LIBRETECH-CC
+                      LIBRETECH-CC
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+
+!!Sysfs card info
+!!---------------
+
+!!Card: /sys/class/sound/card0
+Driver: /sys/bus/platform/drivers/gx-sound-card
+Tree:
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw---- 1 root audio 116,  3 Jan 26 23:35 /dev/snd/controlC0
+crw-rw---- 1 root audio 116,  2 Jan 26 23:35 /dev/snd/pcmC0D0p
+crw-rw---- 1 root audio 116, 33 Jan 26 23:35 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jan 26 23:35 .
+drwxr-xr-x 3 root root 120 Jan 26 23:35 ..
+lrwxrwxrwx 1 root root  12 Jan 26 23:35 platform-sound -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: LIBRETECHCC [LIBRETECH-CC], device 0: fe.dai-link-0 (*) []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card LIBRETECHCC
+
+Card sysdefault:0 'LIBRETECHCC'/'LIBRETECH-CC'
+  Mixer name	: ''
+  Components	: ''
+  Controls      : 18
+  Simple ctrls  : 12
+Simple mixer control 'ACODEC',0
+  Capabilities: pvolume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 255
+  Mono:
+  Front Left: Playback 0 [0%] [-99999.99dB] [on]
+  Front Right: Playback 0 [0%] [-99999.99dB] [on]
+Simple mixer control 'ACODEC Left DAC Sel',0
+  Capabilities: enum
+  Items: 'Left' 'Right'
+  Item0: 'Left'
+Simple mixer control 'ACODEC Mute Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'ACODEC Playback Channel Mode',0
+  Capabilities: enum
+  Items: 'Stereo' 'Mono'
+  Item0: 'Stereo'
+Simple mixer control 'ACODEC Ramp Rate',0
+  Capabilities: enum
+  Items: 'Fast' 'Slow'
+  Item0: 'Fast'
+Simple mixer control 'ACODEC Right DAC Sel',0
+  Capabilities: enum
+  Items: 'Right' 'Left'
+  Item0: 'Right'
+Simple mixer control 'ACODEC Unmute Ramp',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'AIU ACODEC I2S Lane Select',0
+  Capabilities: volume volume-joined
+  Playback channels: Mono
+  Capture channels: Mono
+  Limits: 0 - 3
+  Mono: 0 [0%]
+Simple mixer control 'AIU ACODEC OUT EN',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'AIU ACODEC SRC',0
+  Capabilities: enum
+  Items: 'DISABLED' 'I2S' 'PCM'
+  Item0: 'DISABLED'
+Simple mixer control 'AIU HDMI CTRL SRC',0
+  Capabilities: enum
+  Items: 'DISABLED' 'PCM' 'I2S'
+  Item0: 'DISABLED'
+Simple mixer control 'AIU SPDIF SRC SEL',0
+  Capabilities: enum
+  Items: 'SPDIF' 'I2S'
+  Item0: 'SPDIF'
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.LIBRETECHCC {
+	control.1 {
+		iface MIXER
+		name 'AIU ACODEC I2S Lane Select'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 3'
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'ACODEC Playback Channel Mode'
+		value Stereo
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Stereo
+			item.1 Mono
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'ACODEC Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'ACODEC Playback Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 255'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -9999999
+			dbvalue.1 -9999999
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'ACODEC Ramp Rate'
+		value Fast
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Fast
+			item.1 Slow
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'ACODEC Volume Ramp Switch'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 1'
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'ACODEC Mute Ramp Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'ACODEC Unmute Ramp Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.9 {
+		iface PCM
+		device 2
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access read
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.10 {
+		iface PCM
+		device 2
+		name 'IEC958 Playback Mask'
+		value ffffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.11 {
+		iface PCM
+		device 2
+		name 'IEC958 Playback Default'
+		value '0400000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.12 {
+		iface PCM
+		device 2
+		name ELD
+		value '0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 128
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'AIU SPDIF SRC SEL'
+		value SPDIF
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 SPDIF
+			item.1 I2S
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'AIU HDMI CTRL SRC'
+		value DISABLED
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DISABLED
+			item.1 PCM
+			item.2 I2S
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'AIU ACODEC SRC'
+		value DISABLED
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DISABLED
+			item.1 I2S
+			item.2 PCM
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'AIU ACODEC OUT EN Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'ACODEC Right DAC Sel'
+		value Right
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Right
+			item.1 Left
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'ACODEC Left DAC Sel'
+		value Left
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Left
+			item.1 Right
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+amlogic_gxl_crypto
+cec
+crct10dif_ce
+crypto_engine
+display_connector
+drm
+drm_cma_helper
+drm_kms_helper
+drm_shmem_helper
+dw_hdmi
+dw_hdmi_i2s_audio
+fuse
+gpu_sched
+ip_tables
+ipv6
+lima
+meson_canvas
+meson_drm
+meson_dw_hdmi
+meson_gxbb_wdt
+meson_ir
+meson_rng
+nvmem_meson_efuse
+rc_core
+rng_core
+rtc_meson_vrtc
+snd_soc_hdmi_codec
+snd_soc_meson_aiu
+snd_soc_meson_card_utils
+snd_soc_meson_codec_glue
+snd_soc_meson_gx_sound_card
+snd_soc_meson_t9015
+snd_soc_simple_amplifier
+x_tables
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+[    3.467092]      nameserver0=10.0.5.1
+[    3.480268] ALSA device list:
+[    3.480437]   No soundcards found.
+[    3.510423] VFS: Mounted root (nfs filesystem) on device 0:20.
+--
+[   11.474593] [drm] Initialized lima 1.1.0 20191231 for d00c0000.gpu on minor 0
+[   11.475008] meson-dw-hdmi c883a000.hdmi-tx: Detected HDMI TX controller v2.01a with HDCP (meson_dw_hdmi_phy)
+[   11.491618] meson-dw-hdmi c883a000.hdmi-tx: registered DesignWare HDMI I2C bus driver
+[   11.499622] meson-drm d0100000.vpu: bound c883a000.hdmi-tx (ops meson_dw_hdmi_ops [meson_dw_hdmi])
+[   11.508332] [drm] Initialized meson 1.0.0 20161109 for d0100000.vpu on minor 1
+[   11.644283] debugfs: Directory 'c1105400.audio-controller' with parent 'LIBRETECH-CC' already present!
+[   11.648460] debugfs: Directory 'c1105400.audio-controller' with parent 'LIBRETECH-CC' already present!
+[   12.156240] Console: switching to colour frame buffer device 240x67
+
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-ucm-conf              1.2.6.3-1                         all          ALSA Use Case Manager configuration files
+ii  alsa-utils                 1.2.6-1                           arm64        Utilities for configuring and using ALSA
+
