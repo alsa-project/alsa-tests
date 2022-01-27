@@ -1,0 +1,10 @@
+{
+    "GXL-P241": {
+        "comment":	"Dummy test configuration for GXL-P241",
+        "id":		"GXL-P241",
+        "module":	"snd_soc_meson_gx_sound_card",
+        "driver":	"gx-sound-card",
+        "name":		"GXL-P241",
+        "longname":	"GXL-P241"
+    }
+}
