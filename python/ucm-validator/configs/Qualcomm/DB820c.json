@@ -3,7 +3,7 @@
         "comment":	"Dummy test configuration for DB820c",
         "id":		"DB820c",
         "module":	"snd_soc_apq8096",
-        "driver":	"DB820c",
+        "driver":	"apq8096",
         "name":		"DB820c",
         "longname":	"DB820c"
     }
