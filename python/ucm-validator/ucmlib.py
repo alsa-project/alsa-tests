@@ -770,7 +770,7 @@ class Ucm:
             return s
         if self.syntax < 2:
             self.error(node, "cannot substitute (requires 'Syntax 2')")
-        r1 = "\$[\$]{0,1}{[\$.,:;@_a-zA-Z0-9-]+}"
+        r1 = r"\$\$?{[$.,:;@_a-zA-Z0-9-]+}"
         for m in re.findall(r1, s):
             if m[0:2] == '$$':
                 id = m[1:]
